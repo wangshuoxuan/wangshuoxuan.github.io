@@ -36,8 +36,8 @@ class PublishingTests(unittest.TestCase):
         page=build.collection('books','zh')
         self.assertIn('href="https://example.org/books"',page)
         self.assertIn('A short recommendation',page)
-        self.assertNotIn('class="category-index"',page)
-        self.assertNotIn('id="cat-',page)
+        self.assertIn('class="category-index"',page)
+        self.assertIn('id="cat-general"',page)
     def test_bad_category_rejected(self):
         self.write('videos',[{'category':'not-a-category','title':'Test'}])
         with self.assertRaises(ValueError):build.collection('videos','zh')

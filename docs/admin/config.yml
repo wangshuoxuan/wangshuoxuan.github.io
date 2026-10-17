@@ -215,6 +215,13 @@ collections:
         description:
           zh: 写作、设计、创业与做事的方法。
           en: ''
+      - id: general
+        name:
+          zh: 综合阅读与资源网站
+          en: General reading & resources
+        description:
+          zh: 跨学科书籍、综合书库与阅读网站。
+          en: Cross-disciplinary books and reading websites.
     - name: entries
       label: 书籍与阅读网站
       widget: list
@@ -223,6 +230,33 @@ collections:
       - name: title
         label: 名称（书名或网站名）
         widget: string
+      - name: category
+        label: 学科 / 门类
+        widget: select
+        default: general
+        options:
+        - value: computing
+          label: 计算机与人工智能
+        - value: electronics
+          label: 微电子与半导体
+        - value: math
+          label: 数学与统计
+        - value: physics
+          label: 物理与自然科学
+        - value: economics
+          label: 经济与金融
+        - value: history
+          label: 历史与传记
+        - value: philosophy
+          label: 哲学与心智
+        - value: society
+          label: 社会与政治
+        - value: literature
+          label: 文学与艺术
+        - value: creation
+          label: 创造与实践
+        - value: general
+          label: 综合阅读与资源网站
       - name: url
         label: 访问链接
         widget: string
@@ -240,7 +274,7 @@ collections:
         default: false
       collapsed: true
       summary: '{{fields.title}}'
-      hint: 点添加，填写名称和完整链接；推荐语可以留空。排列顺序就是网页显示顺序。
+      hint: 填写名称、学科和完整链接；推荐语可留空。综合书库或跨学科网站可选择「综合阅读与资源网站」。
 - name: videos
   label: 视频
   files:

@@ -109,6 +109,17 @@
         "zh": "写作、设计、创业与做事的方法。",
         "en": ""
       }
+    },
+    {
+      "id": "general",
+      "name": {
+        "zh": "综合阅读与资源网站",
+        "en": "General reading & resources"
+      },
+      "description": {
+        "zh": "跨学科书籍、综合书库与阅读网站。",
+        "en": "Cross-disciplinary books and reading websites."
+      }
     }
   ],
   "entries": []
