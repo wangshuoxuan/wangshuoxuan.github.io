@@ -1,0 +1,115 @@
+{
+  "categories": [
+    {
+      "id": "computing",
+      "name": {
+        "zh": "计算机与人工智能",
+        "en": "Computing & AI"
+      },
+      "description": {
+        "zh": "计算理论、算法、人工智能与计算系统。",
+        "en": ""
+      }
+    },
+    {
+      "id": "electronics",
+      "name": {
+        "zh": "微电子与半导体",
+        "en": "Microelectronics"
+      },
+      "description": {
+        "zh": "器件物理、集成电路、芯片与产业。",
+        "en": ""
+      }
+    },
+    {
+      "id": "math",
+      "name": {
+        "zh": "数学与统计",
+        "en": "Mathematics & statistics"
+      },
+      "description": {
+        "zh": "数学方法、概率、统计与因果推断。",
+        "en": ""
+      }
+    },
+    {
+      "id": "physics",
+      "name": {
+        "zh": "物理与自然科学",
+        "en": "Physics & natural science"
+      },
+      "description": {
+        "zh": "物理、生物、复杂系统与科学方法。",
+        "en": ""
+      }
+    },
+    {
+      "id": "economics",
+      "name": {
+        "zh": "经济与金融",
+        "en": "Economics & finance"
+      },
+      "description": {
+        "zh": "微观、宏观、经济史与金融。",
+        "en": ""
+      }
+    },
+    {
+      "id": "history",
+      "name": {
+        "zh": "历史与传记",
+        "en": "History & biography"
+      },
+      "description": {
+        "zh": "人物、制度、技术与历史变化。",
+        "en": ""
+      }
+    },
+    {
+      "id": "philosophy",
+      "name": {
+        "zh": "哲学与心智",
+        "en": "Philosophy & mind"
+      },
+      "description": {
+        "zh": "知识、伦理、意识与理性。",
+        "en": ""
+      }
+    },
+    {
+      "id": "society",
+      "name": {
+        "zh": "社会与政治",
+        "en": "Society & politics"
+      },
+      "description": {
+        "zh": "社会科学、制度、公共事务与文化。",
+        "en": ""
+      }
+    },
+    {
+      "id": "literature",
+      "name": {
+        "zh": "文学与艺术",
+        "en": "Literature & art"
+      },
+      "description": {
+        "zh": "小说、诗歌、艺术、建筑与审美。",
+        "en": ""
+      }
+    },
+    {
+      "id": "creation",
+      "name": {
+        "zh": "创造与实践",
+        "en": "Creation & practice"
+      },
+      "description": {
+        "zh": "写作、设计、创业与做事的方法。",
+        "en": ""
+      }
+    }
+  ],
+  "entries": []
+}

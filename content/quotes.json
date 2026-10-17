@@ -1,0 +1,49 @@
+{
+  "categories": [
+    {
+      "id": "knowledge",
+      "name": {
+        "zh": "求知与科学",
+        "en": "Knowledge & science"
+      },
+      "description": {
+        "zh": "关于证据、理解、怀疑与发现。",
+        "en": ""
+      }
+    },
+    {
+      "id": "creation",
+      "name": {
+        "zh": "创造与行动",
+        "en": "Creation & action"
+      },
+      "description": {
+        "zh": "关于实践、判断、勇气与长期投入。",
+        "en": ""
+      }
+    },
+    {
+      "id": "society",
+      "name": {
+        "zh": "社会与历史",
+        "en": "Society & history"
+      },
+      "description": {
+        "zh": "关于人、组织、制度与历史。",
+        "en": ""
+      }
+    },
+    {
+      "id": "life",
+      "name": {
+        "zh": "生活与审美",
+        "en": "Life & aesthetics"
+      },
+      "description": {
+        "zh": "关于经验、价值与感受。",
+        "en": ""
+      }
+    }
+  ],
+  "entries": []
+}

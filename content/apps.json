@@ -1,0 +1,82 @@
+{
+  "categories": [
+    {
+      "id": "research",
+      "name": {
+        "zh": "文献与科研",
+        "en": "Research & references"
+      },
+      "description": {
+        "zh": "检索、文献管理、标注与科研辅助。",
+        "en": ""
+      }
+    },
+    {
+      "id": "writing",
+      "name": {
+        "zh": "笔记与写作",
+        "en": "Notes & writing"
+      },
+      "description": {
+        "zh": "知识组织、长文写作、排版与发布。",
+        "en": ""
+      }
+    },
+    {
+      "id": "engineering",
+      "name": {
+        "zh": "编程与工程",
+        "en": "Programming & engineering"
+      },
+      "description": {
+        "zh": "开发工具、仿真、计算与工程实践。",
+        "en": ""
+      }
+    },
+    {
+      "id": "reading",
+      "name": {
+        "zh": "阅读与信息获取",
+        "en": "Reading & discovery"
+      },
+      "description": {
+        "zh": "阅读器、信息订阅、播客与内容发现。",
+        "en": ""
+      }
+    },
+    {
+      "id": "productivity",
+      "name": {
+        "zh": "效率与协作",
+        "en": "Productivity & collaboration"
+      },
+      "description": {
+        "zh": "任务、日历、文件、协作与自动化。",
+        "en": ""
+      }
+    },
+    {
+      "id": "creative",
+      "name": {
+        "zh": "创作与设计",
+        "en": "Creation & design"
+      },
+      "description": {
+        "zh": "图像、音视频、设计与创意工具。",
+        "en": ""
+      }
+    },
+    {
+      "id": "life",
+      "name": {
+        "zh": "生活与其他",
+        "en": "Everyday tools"
+      },
+      "description": {
+        "zh": "其他经实际使用后值得介绍的工具。",
+        "en": ""
+      }
+    }
+  ],
+  "entries": []
+}

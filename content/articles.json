@@ -1,0 +1,82 @@
+{
+  "categories": [
+    {
+      "id": "wechat",
+      "name": {
+        "zh": "微信公众号",
+        "en": "WeChat articles"
+      },
+      "description": {
+        "zh": "保留文章标题、作者或公众号、发布日期和原文链接。",
+        "en": ""
+      }
+    },
+    {
+      "id": "blogs",
+      "name": {
+        "zh": "个人博客",
+        "en": "Personal blogs"
+      },
+      "description": {
+        "zh": "具体文章与作者；推荐整个博客时注明推荐范围。",
+        "en": ""
+      }
+    },
+    {
+      "id": "newsletters",
+      "name": {
+        "zh": "通讯与专栏",
+        "en": "Newsletters & columns"
+      },
+      "description": {
+        "zh": "长期专栏、独立通讯与定期刊物。",
+        "en": ""
+      }
+    },
+    {
+      "id": "science",
+      "name": {
+        "zh": "科学与技术",
+        "en": "Science & technology"
+      },
+      "description": {
+        "zh": "技术解释、研究随笔与工程实践。",
+        "en": ""
+      }
+    },
+    {
+      "id": "economics",
+      "name": {
+        "zh": "经济与社会",
+        "en": "Economics & society"
+      },
+      "description": {
+        "zh": "产业、制度、商业与社会观察。",
+        "en": ""
+      }
+    },
+    {
+      "id": "culture",
+      "name": {
+        "zh": "人文与艺术",
+        "en": "Humanities & art"
+      },
+      "description": {
+        "zh": "历史、哲学、文学、艺术与文化。",
+        "en": ""
+      }
+    },
+    {
+      "id": "methods",
+      "name": {
+        "zh": "方法与实践",
+        "en": "Methods & practice"
+      },
+      "description": {
+        "zh": "学习、写作、研究与协作的方法。",
+        "en": ""
+      }
+    }
+  ],
+  "entries": []
+}

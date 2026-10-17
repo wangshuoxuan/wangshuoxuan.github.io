@@ -1,0 +1,49 @@
+{
+  "categories": [
+    {
+      "id": "podcasts",
+      "name": {
+        "zh": "播客与长谈",
+        "en": "Podcasts & conversations"
+      },
+      "description": {
+        "zh": "完整对话、访谈与系列播客；可附音频入口。",
+        "en": ""
+      }
+    },
+    {
+      "id": "talks",
+      "name": {
+        "zh": "演讲与公开讲座",
+        "en": "Talks & lectures"
+      },
+      "description": {
+        "zh": "学术报告、公开演讲与主题讲座。",
+        "en": ""
+      }
+    },
+    {
+      "id": "courses",
+      "name": {
+        "zh": "课程与系列教程",
+        "en": "Courses & tutorials"
+      },
+      "description": {
+        "zh": "系统课程、课程主页、讲义与配套练习。",
+        "en": ""
+      }
+    },
+    {
+      "id": "short",
+      "name": {
+        "zh": "中短视频",
+        "en": "Short & medium videos"
+      },
+      "description": {
+        "zh": "独立解释、技术演示、评论与短纪录内容。",
+        "en": ""
+      }
+    }
+  ],
+  "entries": []
+}

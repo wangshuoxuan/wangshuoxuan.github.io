@@ -1,0 +1,93 @@
+{
+  "categories": [
+    {
+      "id": "devices",
+      "name": {
+        "zh": "器件与微电子",
+        "en": "Devices & microelectronics"
+      },
+      "description": {
+        "zh": "忆阻器、器件物理、材料与集成电路。",
+        "en": ""
+      }
+    },
+    {
+      "id": "computing",
+      "name": {
+        "zh": "计算架构与存算一体",
+        "en": "Architecture & compute-in-memory"
+      },
+      "description": {
+        "zh": "电路、架构、系统与评估方法。",
+        "en": ""
+      }
+    },
+    {
+      "id": "ai",
+      "name": {
+        "zh": "人工智能与神经形态",
+        "en": "AI & neuromorphic computing"
+      },
+      "description": {
+        "zh": "学习算法、计算模型与神经形态系统。",
+        "en": ""
+      }
+    },
+    {
+      "id": "math",
+      "name": {
+        "zh": "数学与统计",
+        "en": "Mathematics & statistics"
+      },
+      "description": {
+        "zh": "形式化方法、概率、统计与理论。",
+        "en": ""
+      }
+    },
+    {
+      "id": "economics",
+      "name": {
+        "zh": "经济与金融",
+        "en": "Economics & finance"
+      },
+      "description": {
+        "zh": "理论、实证、因果识别与经济史。",
+        "en": ""
+      }
+    },
+    {
+      "id": "social",
+      "name": {
+        "zh": "社会科学与人文",
+        "en": "Social sciences & humanities"
+      },
+      "description": {
+        "zh": "制度、行为、历史与跨学科研究。",
+        "en": ""
+      }
+    },
+    {
+      "id": "natural",
+      "name": {
+        "zh": "其他自然科学",
+        "en": "Other natural sciences"
+      },
+      "description": {
+        "zh": "物理、生命科学及其他相关方向。",
+        "en": ""
+      }
+    },
+    {
+      "id": "methods",
+      "name": {
+        "zh": "综述与研究方法",
+        "en": "Surveys & research methods"
+      },
+      "description": {
+        "zh": "领域综述、复现、实验设计与方法论。",
+        "en": ""
+      }
+    }
+  ],
+  "entries": []
+}
