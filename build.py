@@ -206,6 +206,17 @@ def sync_editor():
         if key in ('videos','questions','articles'):
             subjects=json.loads((DATA/('media-subjects.json' if key in ('articles','videos') else 'subjects.json')).read_text(encoding='utf-8'))['subjects']
             next(f for f in entry_fields if f['name']=='subjects')['options']=[{'value':c['id'],'label':text(c,'name','zh')} for c in subjects]
+    def validate_selects(node):
+        if isinstance(node,dict):
+            if node.get('widget')=='select' and 'default' in node:
+                options=[x.get('value') if isinstance(x,dict) else x for x in node.get('options',[])]
+                defaults=node['default'] if isinstance(node['default'],list) else [node['default']]
+                if any(x not in options for x in defaults):
+                    raise ValueError('CMS select default is absent from options: '+node.get('name',''))
+            for value in node.values():validate_selects(value)
+        elif isinstance(node,list):
+            for value in node:validate_selects(value)
+    validate_selects(config)
     config_text=yaml.safe_dump(config,allow_unicode=True,sort_keys=False)
     config_path.write_text(config_text,encoding='utf-8')
     version=hashlib.sha256(config_text.encode()).hexdigest()[:12]

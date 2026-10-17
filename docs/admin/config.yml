@@ -1343,7 +1343,7 @@ collections:
       - name: category
         label: 学科 / 门类
         widget: select
-        default: general
+        default: interdisciplinary
         options:
         - value: history
           label: 历史
