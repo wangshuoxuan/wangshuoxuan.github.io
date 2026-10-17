@@ -5,8 +5,8 @@
   "github": "https://github.com/wangshuoxuan",
   "zh": {
     "identity": "北京大学 · 微电子与经济学",
-    "lead": "阅读、思考，探索更广阔的世界。",
-    "introduction": "<p>我在北京大学学习微电子与经济学。这里收纳我的写作、阅读推荐，以及想继续探索的问题。</p>",
+    "lead": "学习 · 思考 · 探索 · 深耕",
+    "introduction": "",
     "research_summary": "存算一体，以及忆阻器相关的电路设计与架构。",
     "disciplines": [
       "历史",
@@ -53,8 +53,8 @@
   },
   "en": {
     "identity": "Peking University · Microelectronics & Economics",
-    "lead": "Read, reflect, and explore a wider world.",
-    "introduction": "<p>I study microelectronics and economics at Peking University. This is a home for my writing, reading recommendations, and questions I want to keep exploring.</p>",
+    "lead": "Learn · Think · Explore · Deepen",
+    "introduction": "",
     "research_summary": "Compute-in-memory, and memristor-related circuit design and architecture.",
     "disciplines": [
       "History",
