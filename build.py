@@ -31,9 +31,10 @@ def site_contact():
 def home_content(lang):
     return personal.home(DATA,lang)
 SECTIONS = [
+ ('courses','课程','Courses','按学科整理值得学习的课程。','Courses worth studying, organized by subject.'),
  ('books','书籍','Books','书籍与阅读网站，附上一点推荐理由。','Books and reading websites, with a short recommendation.'),
  ('videos','视频','Videos','播客、演讲、课程，以及值得留存的中短视频。','Podcasts, talks, courses, and shorter videos.'),
- ('articles','文章收藏','Articles','来自公众号、博客与开放网络的文章。','Articles from newsletters, blogs, and the open web.'),
+ ('articles','文章','Articles','来自公众号、博客与开放网络的文章。','Articles from newsletters, blogs, and the open web.'),
  ('papers','论文','Papers','值得阅读的论文与学术资源，附上简短推荐。','Recommended papers and academic resources, with brief notes.'),
  ('questions','感兴趣的问题','Questions','为值得长期追问的问题保留一个位置。','A place for questions worth sustained attention.'),
  ('apps','应用与工具','Apps & tools','按实际用途整理应用、软件与工作流。','Apps, software, and workflows, organized by use.'),
@@ -57,14 +58,14 @@ def navigation(lang,current):
     en = lang=='en'
     home = 'en.html' if en else 'index.html'
     groups = [
-      ('About','关于我', [('about','关于','About',home+'#about'),('interests','学科兴趣','Interests',home+'#interests'),('life','生活与爱好','Life',home+'#life')]),
-      ('Writing & thinking','写作与思考',[('blog','我的博客','Blog',file('blog',lang)),('questions','感兴趣的问题','Questions',file('questions',lang)),('quotes','格言','Quotes',file('quotes',lang))]),
-      ('Library','收藏与推荐',[(k,z,e,file(k,lang)) for k,z,e,*_ in SECTIONS if k in ['books','videos','articles','papers','apps']]),
+      ('About','关于我', []),
+      ('Writing & thinking','写作与思考',[('blog','我的博客','Blog',file('blog',lang)),('questions','感兴趣的问题','Questions',file('questions',lang)),('thoughts','短文章','Short notes',file('thoughts',lang))]),
+      ('Library','收藏与推荐',[(k,z,e,file(k,lang)) for k,z,e,*_ in SECTIONS if k in ['books','videos','articles','courses','apps','quotes']]),
     ]
     parts=[]
     for eg,zg,items in groups:
         links=''.join(f'<a href="{href}"'+(' aria-current="page"' if current==k else '')+f'>{esc(e if en else z)}</a>' for k,z,e,href in items)
-        parts.append(f'<div class="nav-group"><div class="nav-label">{eg if en else zg}</div>{links}</div>')
+        parts.append(f'<div class="nav-group"><a class="nav-label" href="{home}">{eg if en else zg}</a></div>' if not items else f'<div class="nav-group"><div class="nav-label">{eg if en else zg}</div>{links}</div>')
     parts.append(f'<div class="nav-contact"><a href="{file("contact",lang)}"'+(' aria-current="page"' if current=='contact' else '')+f'>{"Contact" if en else "联系我"} <span aria-hidden="true">↗</span></a></div>')
     return '<nav class="nav site-nav" aria-label="'+('Site navigation' if en else '全站目录')+'">'+''.join(parts)+'</nav>'
 
@@ -85,7 +86,7 @@ def shell(key,lang,title,description,body):
 <link rel="alternate" hreflang="{'zh-CN' if en else 'en'}" href="{other}">
 </head><body><a class="skip" href="#main">{'Skip to content' if en else '跳至正文'}</a>
 <div class="layout"><header class="sidebar"><a class="wordmark" href="{'en.html' if en else 'index.html'}">{name}<span aria-hidden="true" style="color:var(--accent)">.</span></a><span class="side-caption">A PERSONAL WEBSITE</span>
-<div class="desktop-menu">{nav}</div><details class="mobile-menu"><summary>{'Explore this site' if en else '浏览全站目录'} <span>12</span></summary>{nav}</details>
+<div class="desktop-menu">{nav}</div><details class="mobile-menu"><summary>{'Explore this site' if en else '浏览全站目录'} <span>11</span></summary>{nav}</details>
 <div class="language">{language}</div><p class="side-note">{'Learning in public' if en else '阅读 · 思考 · 写作'}</p></header>
 <main id="main" tabindex="-1">{body}{footer}</main></div></body></html>'''
 
@@ -124,6 +125,7 @@ def collection(key,lang):
     en=lang=='en'; _,zh,eng,zd,ed=NAMES[key]
     title=eng if en else zh
     intro=heading(title,eng,ed if en else zd,lang)
+    if key=='articles':intro+='<p class="text-links"><a href="'+file('papers',lang)+'">'+('Research papers ↗' if en else '论文 ↗')+'</a></p>'
     count=f'{len(entries)} '+('entries' if en else '条记录')
     intro+=f'<p class="collection-count">{count}</p>'
     intro+='<nav class="category-index" aria-label="'+('Categories' if en else '分类索引')+'">'+''.join(f'<a href="#cat-{c["id"]}">{esc(text(c,"name",lang))}<span>{sum(e["category"]==c["id"] for e in entries)}</span></a>' for c in d['categories'])+'</nav>'
@@ -195,7 +197,7 @@ def sync_editor():
     config=yaml.safe_load(config_path.read_text(encoding='utf-8'))
     for collection_config in config['collections']:
         key=collection_config['name']
-        if key not in ['books','papers','videos','articles','questions']:continue
+        if key not in ['books','papers','videos','articles','questions','courses']:continue
         data=json.loads((DATA/f'{key}.json').read_text(encoding='utf-8'))
         fields=collection_config['files'][0]['fields']
         next(f for f in fields if f['name']=='categories')['default']=data['categories']
@@ -226,6 +228,9 @@ def build():
         (OUT/file('contact',lang)).write_text(shell('contact',lang,title,'Contact Wangshuoxuan.',body),encoding='utf-8')
     for lang in ('zh','en'):
         (OUT/file('cv',lang)).write_text(shell('home',lang,'About' if lang=='en' else '关于我','Personal profile',home_content(lang)),encoding='utf-8')
+    for lang in ('zh','en'):
+        title='Short notes' if lang=='en' else '短文章'
+        (OUT/file('thoughts',lang)).write_text(shell('thoughts',lang,title,title,heading(title,'Short notes','Brief thoughts, recorded and revisited.' if lang=='en' else '简短地记录想法，也为之后的思考留白。',lang)+personal.thoughts(DATA,lang)),encoding='utf-8')
     items=posts()
     for lang in ('zh','en'):(OUT/file('blog',lang)).write_text(blog(lang,items),encoding='utf-8')
     for d in items:

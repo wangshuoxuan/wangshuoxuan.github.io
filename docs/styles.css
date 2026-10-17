@@ -220,3 +220,6 @@ h2 { letter-spacing:-.02em; }
 
 .profile-records { padding-left:1.2em; }
 .profile-records li { padding-left:.2em; margin:0 0 18px; line-height:1.9; }
+
+.short-note { padding:28px 0; border-bottom:1px solid var(--line); max-width:640px; }
+.short-note p { white-space:normal; overflow-wrap:anywhere; }

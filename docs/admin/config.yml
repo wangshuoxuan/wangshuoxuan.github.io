@@ -547,7 +547,7 @@ collections:
       summary: '{{fields.title}}'
       hint: 内容形式与学科是两个独立维度，例如「课程」+「数学」。跨学科内容可以选择多个学科。
 - name: articles
-  label: 文章收藏
+  label: 文章
   files:
   - name: articles
     label: 文章收藏
@@ -651,7 +651,7 @@ collections:
       summary: '{{fields.title}}'
       hint: 填写名称、分类和链接；推荐语可留空。可放单篇内容，也可放平台入口。
 - name: papers
-  label: 论文
+  label: 文章 · 论文
   files:
   - name: papers
     label: 论文
@@ -1203,3 +1203,200 @@ collections:
         default: true
       collapsed: true
       summary: '{{fields.title.zh}}'
+- name: courses
+  label: 课程
+  files:
+  - name: courses
+    label: 课程
+    file: content/courses.json
+    fields:
+    - name: categories
+      widget: hidden
+      default:
+      - id: history
+        name:
+          zh: 历史
+          en: History
+        description:
+          zh: ''
+          en: ''
+      - id: economics
+        name:
+          zh: 经济学
+          en: Economics
+        description:
+          zh: ''
+          en: ''
+      - id: art
+        name:
+          zh: 艺术
+          en: Art
+        description:
+          zh: ''
+          en: ''
+      - id: psychology
+        name:
+          zh: 心理学
+          en: Psychology
+        description:
+          zh: ''
+          en: ''
+      - id: sociology
+        name:
+          zh: 社会学
+          en: Sociology
+        description:
+          zh: ''
+          en: ''
+      - id: philosophy
+        name:
+          zh: 哲学
+          en: Philosophy
+        description:
+          zh: ''
+          en: ''
+      - id: business
+        name:
+          zh: 商业
+          en: Business
+        description:
+          zh: ''
+          en: ''
+      - id: geopolitics
+        name:
+          zh: 地缘政治
+          en: Geopolitics
+        description:
+          zh: ''
+          en: ''
+      - id: ai
+        name:
+          zh: AI
+          en: AI
+        description:
+          zh: ''
+          en: ''
+      - id: engineering
+        name:
+          zh: 工程学
+          en: Engineering
+        description:
+          zh: ''
+          en: ''
+      - id: neuroscience
+        name:
+          zh: 神经科学
+          en: Neuroscience
+        description:
+          zh: ''
+          en: ''
+      - id: physics
+        name:
+          zh: 物理学
+          en: Physics
+        description:
+          zh: ''
+          en: ''
+      - id: math
+        name:
+          zh: 数学
+          en: Mathematics
+        description:
+          zh: ''
+          en: ''
+      - id: interdisciplinary
+        name:
+          zh: 跨学科 / 综合
+          en: Interdisciplinary
+        description:
+          zh: ''
+          en: ''
+    - name: entries
+      label: 推荐课程
+      widget: list
+      required: false
+      fields:
+      - name: title
+        label: 名称（书名或网站名）
+        widget: string
+      - name: category
+        label: 学科 / 门类
+        widget: select
+        default: general
+        options:
+        - value: history
+          label: 历史
+        - value: economics
+          label: 经济学
+        - value: art
+          label: 艺术
+        - value: psychology
+          label: 心理学
+        - value: sociology
+          label: 社会学
+        - value: philosophy
+          label: 哲学
+        - value: business
+          label: 商业
+        - value: geopolitics
+          label: 地缘政治
+        - value: ai
+          label: AI
+        - value: engineering
+          label: 工程学
+        - value: neuroscience
+          label: 神经科学
+        - value: physics
+          label: 物理学
+        - value: math
+          label: 数学
+        - value: interdisciplinary
+          label: 跨学科 / 综合
+      - name: url
+        label: 访问链接
+        widget: string
+        pattern:
+        - ^https?://.+
+        - 请粘贴以 https:// 或 http:// 开头的完整链接。
+      - name: note
+        label: 一句话推荐（可留空）
+        widget: text
+        required: false
+      - name: draft
+        label: 暂存草稿，不显示到网站
+        widget: boolean
+        required: false
+        default: false
+      collapsed: true
+      summary: '{{fields.title}}'
+      hint: 填写名称、学科和完整链接；推荐语可留空。综合书库或跨学科网站可选择「综合阅读与资源网站」。
+- name: thoughts
+  label: 短文章 · 思想记录
+  files:
+  - name: thoughts
+    label: 短文章
+    file: content/thoughts.json
+    fields:
+    - name: entries
+      label: 思想记录
+      widget: list
+      summary: '{{fields.date}} · {{fields.body.zh}}'
+      fields:
+      - name: date
+        label: 日期（YYYY-MM-DD）
+        widget: string
+      - name: body
+        label: 正文
+        widget: object
+        fields:
+        - name: zh
+          label: 中文
+          widget: text
+        - name: en
+          label: 英文（可留空）
+          widget: text
+          required: false
+      - name: draft
+        label: 暂存草稿，不公开
+        widget: boolean
+        default: true

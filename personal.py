@@ -25,7 +25,7 @@ def home(data, lang):
     if avatar.startswith('/') and not avatar.startswith('//'):avatar=avatar[1:]
     if not avatar.startswith('assets/') or '..' in avatar:raise ValueError('Profile image must be in assets/')
     name=d['name_en' if en else 'name_zh']
-    b=f'<section class="profile-hero" id="about"><img class="profile-avatar" src="{esc(avatar,quote=True)}" width="2048" height="966" alt="'+('Personal profile image' if en else '个人头像')+f'"><div><p class="eyebrow">READ · THINK · EXPLORE</p><h1>{esc(name)}</h1><p class="identity">{esc(p["identity"])}</p></div></section>'
+    b=f'<section class="profile-hero" id="about"><img class="profile-avatar" src="{esc(avatar,quote=True)}" width="2048" height="966" alt="'+('Personal profile image' if en else '个人头像')+f'"><div><p class="eyebrow">LEARN · THINK · EXPLORE · DEEPEN</p><h1>{esc(name)}</h1><p class="identity">{esc(p["identity"])}</p></div></section>'
     b+=f'<p class="profile-lead">{esc(p.get("lead",""))}</p>'+p.get('introduction','')
     b+='<div class="text-links"><a href="'+('blog-en.html' if en else 'blog.html')+'">'+('My writing ↗' if en else '读我的博客 ↗')+'</a><a href="'+('contact-en.html' if en else 'contact.html')+'">'+('Get in touch ↗' if en else '联系我 ↗')+'</a></div>'
     for key,anchor,zh,eng,kind in [('education','education','学业经历','Education','records'),('honors','honors','所获荣誉','Honors','records'),('disciplines','interests','学科兴趣','Academic interests','chips'),('research_summary','research','研究兴趣','Research interests','text'),('hobbies','life','生活与爱好','Beyond study','chips')]:
@@ -100,3 +100,13 @@ def collection(data,key,lang):
         b+='</article>'
     b+='</div><p class="collection-empty" data-empty'+(' hidden' if entries else '')+'>'+('No matching entries yet.' if en else '这里还没有符合条件的内容，后续会逐步补充。')+'</p><script src="browse.js" defer></script>'
     return b
+
+
+def thoughts(data,lang):
+    entries=[e for e in read(data,'thoughts.json')['entries'] if not e.get('draft',True)]
+    entries.sort(key=lambda e:e.get('date',''),reverse=True)
+    if not entries:return '<p class="collection-empty">'+('Notes will appear here.' if lang=='en' else '新的想法，会陆续记录在这里。')+'</p>'
+    b='<div class="short-notes">'
+    for e in entries:
+        b+='<article class="short-note"><p class="meta">'+esc(e.get('date',''))+'</p>'+paragraph(localized(e.get('body',''),lang))+'</article>'
+    return b+'</div>'
