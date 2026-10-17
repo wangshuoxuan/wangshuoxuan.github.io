@@ -204,7 +204,7 @@ def sync_editor():
         entry_fields=next(f for f in fields if f['name']=='entries')['fields']
         next(f for f in entry_fields if f['name']=='category')['options']=[{'value':c['id'],'label':text(c,'name','zh')} for c in data['categories']]
         if key in ('videos','questions','articles'):
-            subjects=json.loads((DATA/'subjects.json').read_text(encoding='utf-8'))['subjects']
+            subjects=json.loads((DATA/('media-subjects.json' if key in ('articles','videos') else 'subjects.json')).read_text(encoding='utf-8'))['subjects']
             next(f for f in entry_fields if f['name']=='subjects')['options']=[{'value':c['id'],'label':text(c,'name','zh')} for c in subjects]
     config_text=yaml.safe_dump(config,allow_unicode=True,sort_keys=False)
     config_path.write_text(config_text,encoding='utf-8')

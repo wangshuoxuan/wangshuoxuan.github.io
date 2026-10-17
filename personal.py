@@ -64,10 +64,10 @@ def contacts(data,lang):
     return b
 
 def collection(data,key,lang):
-    d=read(data,key+'.json');en=lang=='en';subjects=read(data,'subjects.json')['subjects']
+    d=read(data,key+'.json');en=lang=='en';subjects=read(data,'media-subjects.json' if key in ('articles','videos') else 'subjects.json')['subjects']
     if key=='articles':
         papers=read(data,'papers.json')
-        mapping={'electronics':'engineering','math':'math','economics':'economics','social':'sociology','natural':'interdisciplinary','methods':'interdisciplinary'}
+        mapping={'electronics':'engineering','math':'natural','economics':'social','social':'social','natural':'natural','methods':'interdisciplinary'}
         d['entries']=d['entries']+[dict(e,category='papers',subjects=e.get('subjects') or [mapping.get(e.get('category'),'interdisciplinary')]) for e in papers['entries']]
     categories={x['id']:localized(x['name'],lang) for x in d['categories']}
     subject_names={x['id']:localized(x['name'],lang) for x in subjects}
@@ -84,7 +84,7 @@ def collection(data,key,lang):
         return '<label>'+label+f'<select data-filter="{name}"><option value="">'+('All' if en else '全部')+'</option>'+''.join(f'<option value="{esc(k,quote=True)}">{esc(v)}</option>' for k,v in options.items())+'</select></label>'
     b='<div class="filters" hidden>'+select('subject','Subject' if en else '学科',subject_names)+select('category',('Format' if en else ('媒介类型' if key=='articles' else '内容形式')) if key in ('videos','articles') else ('Topic' if en else '问题主题'),categories)
     if key=='questions':b+=select('stage','Stage' if en else '探索状态',stages)
-    b+='<button type="button" data-reset>'+('Reset' if en else '重置')+'</button></div>'
+    b+='<button type="button" data-reset>'+(('Back to start' if en else '回到起始') if key in ('articles','videos') else ('Reset' if en else '重置'))+'</button></div>'
     b+=f'<p class="collection-count" data-count aria-live="polite">{len(entries)} '+('entries' if en else '条内容')+'</p><div class="filtered-list">'
     grouped=key in ('videos','articles')
     if grouped:
@@ -117,7 +117,7 @@ def collection(data,key,lang):
             b+='</details>'
         b+='</article>'
     if group is not None:b+='</section>'
-    b+='</div><p class="collection-empty" data-empty'+(' hidden' if entries else '')+'>'+('No matching entries yet.' if en else '这里还没有符合条件的内容，后续会逐步补充。')+'</p><script src="browse.js?v=dual-filter-2" defer></script>'
+    b+='</div><p class="collection-empty" data-empty'+(' hidden' if entries else '')+'>'+('No matching entries yet.' if en else '这里还没有符合条件的内容，后续会逐步补充。')+'</p><script src="browse.js?v=broad-subjects-3" defer></script>'
     return b
 
 

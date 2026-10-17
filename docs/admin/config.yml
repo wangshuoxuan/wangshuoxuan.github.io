@@ -530,34 +530,20 @@ collections:
         required: false
         multiple: true
         options:
-        - value: history
-          label: 历史
-        - value: economics
-          label: 经济学
-        - value: art
-          label: 艺术
-        - value: psychology
-          label: 心理学
-        - value: sociology
-          label: 社会学
-        - value: philosophy
-          label: 哲学
-        - value: business
-          label: 商业
-        - value: geopolitics
-          label: 地缘政治
-        - value: ai
-          label: AI
+        - value: humanities
+          label: 人文与艺术
+        - value: social
+          label: 社会科学与商业
+        - value: natural
+          label: 自然科学与数学
         - value: engineering
-          label: 工程学
-        - value: neuroscience
-          label: 神经科学
-        - value: physics
-          label: 物理学
-        - value: math
-          label: 数学
+          label: 工程与信息技术
+        - value: health
+          label: 医学与健康
+        - value: agriculture
+          label: 农业与食品科学
         - value: interdisciplinary
-          label: 跨学科 / 综合
+          label: 跨学科与综合
       - name: url
         label: 访问链接
         widget: string
@@ -668,34 +654,20 @@ collections:
         required: false
         multiple: true
         options:
-        - value: history
-          label: 历史
-        - value: economics
-          label: 经济学
-        - value: art
-          label: 艺术
-        - value: psychology
-          label: 心理学
-        - value: sociology
-          label: 社会学
-        - value: philosophy
-          label: 哲学
-        - value: business
-          label: 商业
-        - value: geopolitics
-          label: 地缘政治
-        - value: ai
-          label: AI
+        - value: humanities
+          label: 人文与艺术
+        - value: social
+          label: 社会科学与商业
+        - value: natural
+          label: 自然科学与数学
         - value: engineering
-          label: 工程学
-        - value: neuroscience
-          label: 神经科学
-        - value: physics
-          label: 物理学
-        - value: math
-          label: 数学
+          label: 工程与信息技术
+        - value: health
+          label: 医学与健康
+        - value: agriculture
+          label: 农业与食品科学
         - value: interdisciplinary
-          label: 跨学科 / 综合
+          label: 跨学科与综合
       collapsed: true
       summary: '{{fields.title}}'
       hint: 填写名称、分类和链接；推荐语可留空。可放单篇内容，也可放平台入口。

@@ -1,0 +1,53 @@
+{
+  "subjects": [
+    {
+      "id": "humanities",
+      "name": {
+        "zh": "人文与艺术",
+        "en": "Humanities & arts"
+      }
+    },
+    {
+      "id": "social",
+      "name": {
+        "zh": "社会科学与商业",
+        "en": "Social sciences & business"
+      }
+    },
+    {
+      "id": "natural",
+      "name": {
+        "zh": "自然科学与数学",
+        "en": "Natural sciences & mathematics"
+      }
+    },
+    {
+      "id": "engineering",
+      "name": {
+        "zh": "工程与信息技术",
+        "en": "Engineering & information technology"
+      }
+    },
+    {
+      "id": "health",
+      "name": {
+        "zh": "医学与健康",
+        "en": "Medicine & health"
+      }
+    },
+    {
+      "id": "agriculture",
+      "name": {
+        "zh": "农业与食品科学",
+        "en": "Agriculture & food science"
+      }
+    },
+    {
+      "id": "interdisciplinary",
+      "name": {
+        "zh": "跨学科与综合",
+        "en": "Interdisciplinary & general"
+      }
+    }
+  ]
+}
