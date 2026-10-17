@@ -124,17 +124,59 @@
   ],
   "entries": [
     {
-      "title": "理性乐观派",
+      "title": "马特·里德利 《理性乐观派：一部人类经济进步史》",
       "category": "economics",
       "url": "https://weread.qq.com/web/reader/f0532c00727d9ee9f051afa",
       "note": "这本书让我成为了一名坚定的理性乐观主义者",
       "draft": false
     },
     {
-      "title": "曼昆《经济学原理》微观",
+      "title": "格里高利·曼昆《经济学原理》微观",
       "category": "economics",
       "url": "https://zh.eng101.ru/book/gB8MxZXAq5/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%88%86%E5%86%8C-%E7%AC%AC8%E7%89%88-principles-of-economics.html",
       "note": "今天如果问英语世界各大学经济学系学生：你的第一本经济学教材是什么？曼昆必定高居榜首",
+      "draft": false
+    },
+    {
+      "title": "格里高利·曼昆《经济学原理》宏观",
+      "category": "economics",
+      "url": "https://zh.eng101.ru/book/3BJ8Ex8LVz/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86-%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%88%86%E5%86%8C-%E7%AC%AC8%E7%89%88-principles-of-economics.html",
+      "note": "",
+      "draft": false
+    },
+    {
+      "title": "哈尔·罗纳德·范里安 《中级微观经济学：现代方法》",
+      "category": "economics",
+      "url": "https://zh.eng101.ru/book/4VN3dO0gYR/%E4%B8%AD%E7%BA%A7%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%8E%B0%E4%BB%A3%E6%96%B9%E6%B3%95%E7%AC%AC%E5%85%AB%E7%89%88-%E8%8C%83%E9%87%8C%E5%AE%89%E5%90%AB%E7%9B%AE%E5%BD%95-%E6%9B%B9%E4%B9%BE%E8%AF%91.html",
+      "note": "于我而言，经济学最大的魅力在于微观",
+      "draft": false
+    },
+    {
+      "title": "马修·杰克逊 《人类网络：社会位置决定命运》",
+      "category": "economics",
+      "url": "https://weread.qq.com/web/bookDetail/60e32710718caa2b60e1c59",
+      "note": "流量的逻辑，社群的建构，金融的危机、疾病的传播，无不与人类网络相关",
+      "draft": false
+    },
+    {
+      "title": "摩根·豪泽尔 《一如既往》",
+      "category": "economics",
+      "url": "https://weread.qq.com/web/reader/f8e322b0813ab8db0g01952e",
+      "note": "当我们问未来可能变成的各种模样时，往往轻视了那些底层永恒不变的东西，它们与人性相关：复利、时间、风险、运气、知足⋯⋯",
+      "draft": false
+    },
+    {
+      "title": "丹尼尔·卡尼曼 《思考，快与慢》",
+      "category": "economics",
+      "url": "https://weread.qq.com/web/reader/af83263058c217af81f8979",
+      "note": "若行为经济学是经济与心理合铸的桂冠，此书便是其上最核心的荣光",
+      "draft": false
+    },
+    {
+      "title": "乔治·吉尔德 《后资本主义生活》",
+      "category": "economics",
+      "url": "https://weread.qq.com/web/reader/9c832080813ab94f8g0171bd",
+      "note": "在智能时代，财富的本质在于知识的积累，而经济的增长源自学习和创新的过程。做个“知本家”",
       "draft": false
     }
   ]
