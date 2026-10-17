@@ -76,7 +76,7 @@ def shell(key,lang,title,description,body):
     nav=navigation(lang,key)
     name=esc(site_data().get('name_en' if en else 'name_zh','Wangshuoxuan' if en else '王烁瑄'))
     language=f'<a href="{other}" lang="'+('zh-CN">中文' if en else 'en">English')+'</a>'
-    footer=f'<footer><span>© 2026 {name}</span><span>'+('A growing personal website' if en else '持续积累，随时修订')+'</span><a href="admin/index.html">'+('Edit site' if en else '管理内容')+f'</a><a href="#main">'+('Back to top ↑' if en else '回到顶部 ↑')+'</a></footer>'
+    footer='<footer><small>'+('Always learning, always revising' if en else '持续积累，随时修订')+'</small></footer>'
     return f'''<!doctype html>
 <html lang="{'en' if en else 'zh-CN'}"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
