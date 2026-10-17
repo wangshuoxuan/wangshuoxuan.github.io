@@ -1,21 +1,28 @@
-# Deployment status
+# 部署状态：已上线
 
-Updated: 2026-10-17 (Asia/Shanghai)
+核验日期：2026-10-17（Asia/Shanghai）
 
-Repository: https://github.com/Peace21th/peace21th.github.io
+- **个人主页：https://peace21th.github.io/**
+- 英文版：https://peace21th.github.io/en.html
+- 源码仓库：https://github.com/Peace21th/peace21th.github.io
+- 发布配置：Deploy from a branch → main → /docs；HTTPS 已启用。
+- 首次站点部署成功记录：https://github.com/Peace21th/peace21th.github.io/actions/runs/38998217046
+- 核验的站点源码提交：dc8b79658814bcb5d3d2ea8e3d5ea89250759139
 
-Status: source upload and Pages configuration in progress. The repository was created specifically for this site; no existing project was overwritten.
+## 已核验
 
-Intended Pages source: main /docs.
-Intended public URL: https://peace21th.github.io/
+使用不带 Cookie、令牌或其他登录凭据的公开 HTTP 请求：中文首页、英文首页、中英文履历、CSS 和 SVG 图标均返回 200。HTML 文本与交付源码一致（本地与远程换行符不同）；CSS 和 SVG 字节一致。浏览器已打开正式网址并确认显示王烁瑄及全部栏目。部署任务结论为 success。
 
-## Local checks
+本地检查：5 个 HTML 页面、48 处站内引用通过；中英文首页在 320、768、1440 px 下无横向溢出。导航、语言切换、折叠提示和 CV 链接已检查。
 
-- Five HTML pages; 48 local references checked without missing targets.
-- Chinese and English homepages checked at 320, 768, and 1440 px with no horizontal overflow.
-- Language navigation, section navigation, expandable prompts, and CV navigation checked in a browser.
-- Public name: 王烁瑄 / Wangshuoxuan.
-- Public email: 2400012712@stu.pku.edu.cn, published with the owner's explicit authorization.
-- Unconfirmed experience, publications, dates, reading records and formal CV remain clearly marked placeholders.
+## 访问范围
 
-Public availability will be recorded after the deployment completes and an unauthenticated request returns the actual site content. Availability on all regional networks is not implied.
+网站公开，访客不需要 GitHub 账号。上述检查证明本次测试环境可访问，不代表中国大陆各运营商、校园网络及所有境外网络均稳定可达。GitHub 仓库域名 github.com 与站点域名 github.io 的网络可达性也不能相互替代。实际分享前可在日常 Wi-Fi 和手机流量下分别测试。
+
+## 维护
+
+在本仓库修改 docs/index.html、docs/en.html 等文件并提交到 main，即可触发后续部署。操作方法见 README。此次创建的是独立新仓库，没有覆盖其他项目。根目录说明文件不属于 /docs 网站发布内容。
+
+## 个人资料
+
+公开姓名为王烁瑄 / Wangshuoxuan，公开邮箱为 2400012712@stu.pku.edu.cn，均经本人确认或授权。具体经历、论文、年份、阅读记录和正式 CV 仍为明确标注的待补内容，未虚构成果。

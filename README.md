@@ -2,7 +2,9 @@
 
 一个文字优先、中英文双语的个人主页 MVP。背景为北京大学微电子与经济学，研究兴趣为忆阻器、存算一体与神经形态计算。
 
-仓库：[Peace21th/peace21th.github.io](https://github.com/Peace21th/peace21th.github.io)。部署状态见 `DEPLOYMENT-STATUS.md`。
+**已上线：[个人主页](https://peace21th.github.io/) · [English](https://peace21th.github.io/en.html)**
+
+仓库：[Peace21th/peace21th.github.io](https://github.com/Peace21th/peace21th.github.io)。已配置 `main /docs` 发布，后续编辑并提交即可更新。核验记录见 `DEPLOYMENT-STATUS.md`。
 
 **当前内容是可编辑底稿。** 公开姓名已确认为王烁瑄 / Wangshuoxuan；Peace21th 是已核实的 GitHub 用户名。学位、年份、项目经历、文章、阅读记录和正式 CV 尚待补充。公开邮箱已按本人授权设置为 2400012712@stu.pku.edu.cn。未编造论文、奖项、实验结果或熟练掌握的技能。
 
@@ -32,13 +34,13 @@ personal-homepage/
     └── .nojekyll          关闭不必要的 Jekyll 处理
 ```
 
-## 发布到 GitHub Pages：网页操作即可
+## 从零部署或迁移时参考（本站已完成，无须重做）
 
 1. 登录 `Peace21th`，打开 <https://github.com/new>。
 2. 新建公开仓库 **`peace21th.github.io`**。不要选择或覆盖已有项目。若该名称已存在，先检查其中内容；有已有内容时改用独立仓库名，例如 `personal-homepage`。
 3. 上传本目录中的内容，保留 `docs` 这一层；仓库中应出现 `docs/index.html`，而不是 `personal-homepage/docs/index.html`。**不要上传 ZIP 本身。** 可先创建带 README 的仓库，再用 Add file → Upload files 上传 `docs` 文件夹及其他说明文件。已有 README 不必覆盖，可在后续合并说明。
 4. 打开仓库 **Settings → Pages**。在 Build and deployment 中选择 **Deploy from a branch**，分支选 **main**，目录选 **/docs**，保存。
-5. 等待 Pages 部署任务结束，按 Settings → Pages 显示的 **Visit site** 打开网站。标准用户站点预期地址为 <https://peace21th.github.io/>。这是预期地址，不代表本文件写成时已经上线；以 `DEPLOYMENT-STATUS.md` 和实际部署状态为准。
+5. 等待 Pages 部署任务结束，按 Settings → Pages 显示的 **Visit site** 打开网站。标准用户站点预期地址为 <https://peace21th.github.io/>。本站已完成部署并核验该地址；重新部署时仍以 Pages 状态与实际页面为准。
 6. 如果采用 `personal-homepage` 仓库，预期地址为 `https://peace21th.github.io/personal-homepage/`。主页、语言切换和 CV 使用相对路径，可在两种地址下运行；但应把 `docs/404.html` 的返回主页链接改成实际站点地址。
 
 如果网页上传忽略了隐藏文件，在 GitHub 创建 `docs/.nojekyll` 空文件即可。即使遗漏，它也不影响当前普通 HTML/CSS 的核心展示；保留它可以明确表示纯静态发布。
@@ -53,7 +55,7 @@ GitHub 官方说明：
 
 | 要修改的内容 | 修改位置 |
 |---|---|
-| 姓名 / 简介 | `docs/index.html` 与 `docs/en.html`，搜索 `EDIT`、`Peace21th` 或 `id="about"` |
+| 姓名 / 简介 | `docs/index.html` 与 `docs/en.html`，搜索 `EDIT`、`王烁瑄` / `Wangshuoxuan` 或 `id="about"` |
 | 研究方向 | 两个首页中的 `id="research"` |
 | 项目 | 两个首页中的 `id="projects"` |
 | 文章 / 笔记 | 两个首页中的 `id="writing"` |
@@ -63,7 +65,7 @@ GitHub 官方说明：
 | 配色、间距、字号 | `docs/styles.css` 顶部变量和对应样式 |
 | 最后更新时间 | 两个首页页脚中的 `2026.10.17` / `17 Oct 2026` |
 
-**姓名与账号是两回事。** 替换公开姓名时，只改显示姓名、网页标题和页脚署名，不要把 `https://github.com/Peace21th` 中的账号也替换成姓名。英文拼写由本人确认后再填写。经济学的主修/双学位/辅修身份尚未确认，当前只写学习领域。
+**姓名与账号是两回事。** 替换公开姓名时，只改显示姓名、网页标题和页脚署名，不要把 `https://github.com/Peace21th` 中的账号也替换成姓名。英文拼写已由本人确认为 Wangshuoxuan。经济学的主修/双学位/辅修身份尚未确认，当前只写学习领域。
 
 HTML 的 `<标签>` 与 `</标签>` 配对保留，只修改其中的文字。正文里的 `&` 写成 `&amp;`，`<` 写成 `&lt;`。图片使用相对路径、写好 `alt` 文字，不依赖本机绝对路径。中英文为两个独立静态文件，修改事实时请同步两边。
 
@@ -83,9 +85,9 @@ HTML 的 `<标签>` 与 `</标签>` 配对保留，只修改其中的文字。�
 
 当前履历框架可直接编辑、打印，页面明确标注“不完整”。完成并核实后，用浏览器打印为 PDF，保存为 `docs/cv.pdf`。将首页 `href="cv.html"` / `href="cv-en.html"` 改为 `href="cv.pdf"`，同时把链接文字改成“下载 CV（PDF）” / “Download CV (PDF)”。**不要只改按钮文字而未上传文件。** 中文和英文 CV 也可以各上传一份并分别链接。
 
-### 添加公开邮箱
+### 修改公开邮箱
 
-把“公开邮箱待补充”替换成 `<a href="mailto:公开邮箱">公开邮箱</a>`，并同步英文页和 CV 页。这里只放你选择公开的联系方式，不自动采用登录账号邮箱。
+当前已按本人授权公开 2400012712@stu.pku.edu.cn。修改时，在两个首页及两个 CV 页中同时更新 `mailto:` 链接地址和显示文字；不要只改显示文字。
 
 ## 发布后核验
 
