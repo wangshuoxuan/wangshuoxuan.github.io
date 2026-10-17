@@ -38,6 +38,15 @@ class PublishingTests(unittest.TestCase):
         self.assertIn('A short recommendation',page)
         self.assertIn('class="category-index"',page)
         self.assertIn('id="cat-general"',page)
+    def test_editor_categories_match_public_data(self):
+        build.sync_editor()
+        config=build.yaml.safe_load((build.OUT/'admin'/'config.yml').read_text(encoding='utf-8'))
+        for key in ['books','papers','videos','articles']:
+            fields=next(c for c in config['collections'] if c['name']==key)['files'][0]['fields']
+            options=next(f for f in next(f for f in fields if f['name']=='entries')['fields'] if f['name']=='category')['options']
+            data=json.loads((build.DATA/f'{key}.json').read_text(encoding='utf-8'))
+            self.assertEqual([o['value'] for o in options],[c['id'] for c in data['categories']])
+    
     def test_bad_category_rejected(self):
         self.write('videos',[{'category':'not-a-category','title':'Test'}])
         with self.assertRaises(ValueError):build.collection('videos','zh')

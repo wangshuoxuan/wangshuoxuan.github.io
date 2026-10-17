@@ -192,6 +192,27 @@ def feed(items):
         ET.SubElement(entry,'{'+ns+'}link',{'href':link})
     ET.ElementTree(root).write(OUT/'feed.xml',encoding='utf-8',xml_declaration=True)
 
+def sync_editor():
+    """Use content taxonomy for both public sections and CMS choices."""
+    import hashlib
+    config_path=OUT/'admin'/'config.yml'
+    config=yaml.safe_load(config_path.read_text(encoding='utf-8'))
+    for collection_config in config['collections']:
+        key=collection_config['name']
+        if key not in ['books','papers','videos','articles']:continue
+        data=json.loads((DATA/f'{key}.json').read_text(encoding='utf-8'))
+        fields=collection_config['files'][0]['fields']
+        next(f for f in fields if f['name']=='categories')['default']=data['categories']
+        entry_fields=next(f for f in fields if f['name']=='entries')['fields']
+        next(f for f in entry_fields if f['name']=='category')['options']=[{'value':c['id'],'label':text(c,'name','zh')} for c in data['categories']]
+    config_text=yaml.safe_dump(config,allow_unicode=True,sort_keys=False)
+    config_path.write_text(config_text,encoding='utf-8')
+    version=hashlib.sha256(config_text.encode()).hexdigest()[:12]
+    p=OUT/'admin'/'index.html'
+    html=p.read_text(encoding='utf-8')
+    html=re.sub(r'href="config.yml\?v=[^"]+"',f'href="config.yml?v={version}"',html)
+    p.write_text(html,encoding='utf-8')
+
 def build():
     OUT.mkdir(exist_ok=True)
     for p in OUT.glob('post-*.html'):p.unlink() # generated post output only; remove unpublished drafts
@@ -216,6 +237,7 @@ def build():
         page=page.replace('class="language"','class="language no-print"')
         (OUT/f'post-{d["slug"]}.html').write_text(page,encoding='utf-8')
     feed(items)
+    sync_editor()
     print(f'Built {len(list(OUT.glob("*.html")))} pages and {len(items)} published posts.')
 
 if __name__=='__main__':build()

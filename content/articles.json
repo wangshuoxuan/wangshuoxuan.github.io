@@ -78,5 +78,20 @@
       }
     }
   ],
-  "entries": []
+  "entries": [
+    {
+      "title": "Paul Graham｜Essays",
+      "category": "blogs",
+      "url": "https://paulgraham.com/articles.html",
+      "note": "关于写作、创造、创业与思考的文章目录。",
+      "draft": false
+    },
+    {
+      "title": "Patrick Collison｜个人网站",
+      "category": "blogs",
+      "url": "https://patrickcollison.com/",
+      "note": "从问题清单、阅读与研究机构等主题继续探索。",
+      "draft": false
+    }
+  ]
 }

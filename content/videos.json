@@ -45,5 +45,20 @@
       }
     }
   ],
-  "entries": []
+  "entries": [
+    {
+      "title": "MIT OpenCourseWare｜开放课程",
+      "category": "courses",
+      "url": "https://ocw.mit.edu/",
+      "note": "按课程查找讲义、作业与部分课程的视频。",
+      "draft": false
+    },
+    {
+      "title": "TED｜演讲",
+      "category": "talks",
+      "url": "https://www.ted.com/talks",
+      "note": "跨领域演讲入口，适合发现新问题与进一步追踪原始资料。",
+      "draft": false
+    }
+  ]
 }

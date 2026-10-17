@@ -319,18 +319,8 @@ collections:
       required: false
       fields:
       - name: title
-        label: 标题
-        widget: object
-        required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: string
-          required: true
-        - name: en
-          label: 英文（可留空）
-          widget: string
-          required: false
+        label: 名称（内容标题或平台名）
+        widget: string
       - name: category
         label: 分类
         widget: select
@@ -344,79 +334,24 @@ collections:
           label: 课程与系列教程
         - value: short
           label: 中短视频
-      - name: creator
-        label: 作者 / 创作者
-        widget: string
-        required: false
-      - name: year
-        label: 年份 / 日期
-        widget: string
-        required: false
       - name: url
-        label: 原文或官方链接
+        label: 访问链接
         widget: string
-        required: false
         pattern:
         - ^https?://.+
-        - 请粘贴以 https:// 或 http:// 开头的完整链接。
+        - 请填写完整的 http:// 或 https:// 链接。
       - name: note
-        label: 为什么推荐 / 我的想法
-        widget: object
+        label: 简短推荐（可留空）
+        widget: text
         required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: text
-          required: false
-        - name: en
-          label: 英文（可留空）
-          widget: text
-          required: false
-      - name: status
-        label: 阅读或使用状态
-        widget: object
-        required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: string
-          required: false
-        - name: en
-          label: 英文（可留空）
-          widget: string
-          required: false
-      - name: format
-        label: 内容形式
-        widget: object
-        required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: string
-          required: false
-        - name: en
-          label: 英文（可留空）
-          widget: string
-          required: false
-      - name: duration
-        label: 时长
-        widget: string
-        required: false
-      - name: tags
-        label: 主题标签
-        widget: list
-        required: false
-        field:
-          name: tag
-          label: 标签
-          widget: string
       - name: draft
         label: 暂存草稿，不显示到网站
         widget: boolean
+        default: false
         required: false
-        default: true
       collapsed: true
-      summary: '{{fields.title.zh}}'
+      summary: '{{fields.title}}'
+      hint: 填写名称、分类和链接；推荐语可留空。可放单篇内容，也可放平台入口。
 - name: articles
   label: 文章收藏
   files:
@@ -482,18 +417,8 @@ collections:
       required: false
       fields:
       - name: title
-        label: 标题
-        widget: object
-        required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: string
-          required: true
-        - name: en
-          label: 英文（可留空）
-          widget: string
-          required: false
+        label: 名称（内容标题或平台名）
+        widget: string
       - name: category
         label: 分类
         widget: select
@@ -513,62 +438,24 @@ collections:
           label: 人文与艺术
         - value: methods
           label: 方法与实践
-      - name: creator
-        label: 作者 / 创作者
-        widget: string
-        required: false
-      - name: year
-        label: 年份 / 日期
-        widget: string
-        required: false
       - name: url
-        label: 原文或官方链接
+        label: 访问链接
         widget: string
-        required: false
         pattern:
         - ^https?://.+
-        - 请粘贴以 https:// 或 http:// 开头的完整链接。
+        - 请填写完整的 http:// 或 https:// 链接。
       - name: note
-        label: 为什么推荐 / 我的想法
-        widget: object
+        label: 简短推荐（可留空）
+        widget: text
         required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: text
-          required: false
-        - name: en
-          label: 英文（可留空）
-          widget: text
-          required: false
-      - name: status
-        label: 阅读或使用状态
-        widget: object
-        required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: string
-          required: false
-        - name: en
-          label: 英文（可留空）
-          widget: string
-          required: false
-      - name: tags
-        label: 主题标签
-        widget: list
-        required: false
-        field:
-          name: tag
-          label: 标签
-          widget: string
       - name: draft
         label: 暂存草稿，不显示到网站
         widget: boolean
+        default: false
         required: false
-        default: true
       collapsed: true
-      summary: '{{fields.title.zh}}'
+      summary: '{{fields.title}}'
+      hint: 填写名称、分类和链接；推荐语可留空。可放单篇内容，也可放平台入口。
 - name: papers
   label: 论文
   files:
@@ -641,18 +528,8 @@ collections:
       required: false
       fields:
       - name: title
-        label: 标题
-        widget: object
-        required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: string
-          required: true
-        - name: en
-          label: 英文（可留空）
-          widget: string
-          required: false
+        label: 名称（内容标题或平台名）
+        widget: string
       - name: category
         label: 分类
         widget: select
@@ -674,62 +551,24 @@ collections:
           label: 其他自然科学
         - value: methods
           label: 综述与研究方法
-      - name: creator
-        label: 作者 / 创作者
-        widget: string
-        required: false
-      - name: year
-        label: 年份 / 日期
-        widget: string
-        required: false
       - name: url
-        label: 原文或官方链接
+        label: 访问链接
         widget: string
-        required: false
         pattern:
         - ^https?://.+
-        - 请粘贴以 https:// 或 http:// 开头的完整链接。
+        - 请填写完整的 http:// 或 https:// 链接。
       - name: note
-        label: 为什么推荐 / 我的想法
-        widget: object
+        label: 简短推荐（可留空）
+        widget: text
         required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: text
-          required: false
-        - name: en
-          label: 英文（可留空）
-          widget: text
-          required: false
-      - name: status
-        label: 阅读或使用状态
-        widget: object
-        required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: string
-          required: false
-        - name: en
-          label: 英文（可留空）
-          widget: string
-          required: false
-      - name: tags
-        label: 主题标签
-        widget: list
-        required: false
-        field:
-          name: tag
-          label: 标签
-          widget: string
       - name: draft
         label: 暂存草稿，不显示到网站
         widget: boolean
+        default: false
         required: false
-        default: true
       collapsed: true
-      summary: '{{fields.title.zh}}'
+      summary: '{{fields.title}}'
+      hint: 填写名称、分类和链接；推荐语可留空。可放单篇内容，也可放平台入口。
 - name: questions
   label: 感兴趣的问题
   files:

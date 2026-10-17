@@ -89,5 +89,13 @@
       }
     }
   ],
-  "entries": []
+  "entries": [
+    {
+      "title": "arXiv｜论文预印本",
+      "category": "methods",
+      "url": "https://arxiv.org/",
+      "note": "发现与阅读研究预印本；预印本不等同于已经通过同行评审的论文。",
+      "draft": false
+    }
+  ]
 }
