@@ -8,6 +8,7 @@ import re
 import xml.etree.ElementTree as ET
 import markdown
 import yaml
+import personal
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'docs'
@@ -27,16 +28,7 @@ def site_contact():
     return email,github
 
 def home_content(lang):
-    source=(DATA/f'home-{lang}.html').read_text(encoding='utf-8')
-    d=site_data();p=d.get(lang,{})
-    if not p:return source
-    en=lang=='en';name=d.get('name_en' if en else 'name_zh','Wangshuoxuan' if en else '王烁瑄')
-    intro=f'<section class="intro" id="about" aria-labelledby="about-heading"><div class="eyebrow">Notes on learning &amp; research</div><h1 id="about-heading">{esc(name)}</h1><p class="identity">{esc(p.get("identity",""))}</p><p class="lead">{esc(p.get("lead","")).replace(chr(10),"<br>")}</p><div>{p.get("introduction","")}</div><div class="text-links"><a href="#research">'+('Research interests ↓' if en else '研究方向 ↓')+'</a><a href="#projects">'+('Projects ↓' if en else '项目 ↓')+'</a></div></section>'
-    source=re.sub(r'<section class="intro".*?</section>',lambda _:intro,source,count=1,flags=re.S)
-    email,github=site_contact()
-    source=re.sub(r'mailto:[^"\s]+','mailto:'+email,source)
-    source=source.replace('2400012712@stu.pku.edu.cn',esc(email)).replace('https://github.com/wangshuoxuan','__PUBLIC_GITHUB_URL__').replace('github.com/wangshuoxuan',esc(github.removeprefix('https://'),quote=True)).replace('__PUBLIC_GITHUB_URL__',esc(github,quote=True))
-    return source
+    return personal.home(DATA,lang)
 SECTIONS = [
  ('books','书籍','Books','书籍与阅读网站，附上一点推荐理由。','Books and reading websites, with a short recommendation.'),
  ('videos','视频','Videos','播客、演讲、课程，以及值得留存的中短视频。','Podcasts, talks, courses, and shorter videos.'),
@@ -64,7 +56,7 @@ def navigation(lang,current):
     en = lang=='en'
     home = 'en.html' if en else 'index.html'
     groups = [
-      ('About','关于我', [('about','关于','About',home+'#about'),('research','研究','Research',home+'#research'),('projects','项目','Projects',home+'#projects'),('cv','履历','CV',home+'#cv')]),
+      ('About','关于我', [('about','关于','About',home+'#about'),('interests','学科兴趣','Interests',home+'#interests'),('life','生活与爱好','Life',home+'#life')]),
       ('Writing & thinking','写作与思考',[('blog','我的博客','Blog',file('blog',lang)),('questions','感兴趣的问题','Questions',file('questions',lang)),('quotes','格言','Quotes',file('quotes',lang))]),
       ('Library','收藏与推荐',[(k,z,e,file(k,lang)) for k,z,e,*_ in SECTIONS if k in ['books','videos','articles','papers','apps']]),
     ]
@@ -92,7 +84,7 @@ def shell(key,lang,title,description,body):
 <link rel="alternate" hreflang="{'zh-CN' if en else 'en'}" href="{other}">
 </head><body><a class="skip" href="#main">{'Skip to content' if en else '跳至正文'}</a>
 <div class="layout"><header class="sidebar"><a class="wordmark" href="{'en.html' if en else 'index.html'}">{name}<span aria-hidden="true" style="color:var(--accent)">.</span></a><span class="side-caption">A PERSONAL WEBSITE</span>
-<div class="desktop-menu">{nav}</div><details class="mobile-menu"><summary>{'Explore this site' if en else '浏览全站目录'} <span>13</span></summary>{nav}</details>
+<div class="desktop-menu">{nav}</div><details class="mobile-menu"><summary>{'Explore this site' if en else '浏览全站目录'} <span>12</span></summary>{nav}</details>
 <div class="language">{language}</div><p class="side-note">{'Learning in public' if en else '阅读 · 思考 · 写作'}</p></header>
 <main id="main" tabindex="-1">{body}{footer}</main></div></body></html>'''
 
@@ -116,6 +108,9 @@ def render_item(item,lang,kind):
     return f'<article class="library-entry"><h3>{title_html}</h3>{meta_html}{quote_html}'+(f'<p>{esc(note)}</p>' if note else '')+(f'<p class="entry-tags">{esc(" · ".join(tags))}</p>' if tags else '')+'</article>'
 
 def collection(key,lang):
+    if key in ('videos','questions'):
+        _,zh,en,zd,ed=NAMES[key]
+        return shell(key,lang,en if lang=='en' else zh,ed if lang=='en' else zd,heading(en if lang=='en' else zh,en,ed if lang=='en' else zd,lang)+personal.collection(DATA,key,lang))
     d=json.loads((DATA/f'{key}.json').read_text(encoding='utf-8'))
     ids=[c['id'] for c in d['categories']]
     if len(ids)!=len(set(ids)):raise ValueError('Duplicate category id')
@@ -199,12 +194,15 @@ def sync_editor():
     config=yaml.safe_load(config_path.read_text(encoding='utf-8'))
     for collection_config in config['collections']:
         key=collection_config['name']
-        if key not in ['books','papers','videos','articles']:continue
+        if key not in ['books','papers','videos','articles','questions']:continue
         data=json.loads((DATA/f'{key}.json').read_text(encoding='utf-8'))
         fields=collection_config['files'][0]['fields']
         next(f for f in fields if f['name']=='categories')['default']=data['categories']
         entry_fields=next(f for f in fields if f['name']=='entries')['fields']
         next(f for f in entry_fields if f['name']=='category')['options']=[{'value':c['id'],'label':text(c,'name','zh')} for c in data['categories']]
+        if key in ('videos','questions'):
+            subjects=json.loads((DATA/'subjects.json').read_text(encoding='utf-8'))['subjects']
+            next(f for f in entry_fields if f['name']=='subjects')['options']=[{'value':c['id'],'label':text(c,'name','zh')} for c in subjects]
     config_text=yaml.safe_dump(config,allow_unicode=True,sort_keys=False)
     config_path.write_text(config_text,encoding='utf-8')
     version=hashlib.sha256(config_text.encode()).hexdigest()[:12]
@@ -223,9 +221,10 @@ def build():
         en=lang=='en'
         title='Contact' if en else '联系我'
         body=heading(title,'Contact','Find me online, or send an email.' if en else '通过邮件或 GitHub 与我联系。',lang)
-        email,github=site_contact()
-        body+=f'<section class="library-category"><h2>Email</h2><p><a href="mailto:{esc(email,quote=True)}">{esc(email)}</a></p></section><section class="library-category"><h2>GitHub</h2><p><a href="{url(github)}">{esc(github.removeprefix("https://"))} ↗</a></p></section>'
+        body+=personal.contacts(DATA,lang)
         (OUT/file('contact',lang)).write_text(shell('contact',lang,title,'Contact Wangshuoxuan.',body),encoding='utf-8')
+    for lang in ('zh','en'):
+        (OUT/file('cv',lang)).write_text(shell('home',lang,'About' if lang=='en' else '关于我','Personal profile',home_content(lang)),encoding='utf-8')
     items=posts()
     for lang in ('zh','en'):(OUT/file('blog',lang)).write_text(blog(lang,items),encoding='utf-8')
     for d in items:

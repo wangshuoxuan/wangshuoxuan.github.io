@@ -1,0 +1,99 @@
+"""Personal profile, contact routes, and browsable learning collections."""
+import json
+from html import escape as esc
+from urllib.parse import urlsplit
+
+STAGES = [('open','待探索','Open'),('exploring','正在探索','Exploring'),('synthesis','形成初步认识','Initial synthesis'),('revisiting','持续修订','Revisiting')]
+
+def read(data, name):
+    return json.loads((data/name).read_text(encoding='utf-8'))
+
+def localized(value, lang):
+    return value.get(lang) or value.get('zh') or value.get('en') or '' if isinstance(value,dict) else str(value or '')
+
+def link(value):
+    if urlsplit(value).scheme not in ('https','http') or not urlsplit(value).netloc:
+        raise ValueError('Enter a complete http(s) link')
+    return esc(value,quote=True)
+
+def paragraph(value):
+    return ''.join('<p>'+esc(p).replace('\n','<br>')+'</p>' for p in str(value or '').split('\n\n') if p.strip())
+
+def home(data, lang):
+    d=read(data,'site.json');p=d[lang];en=lang=='en'
+    avatar=d.get('avatar','assets/profile.jpg')
+    if avatar.startswith('/') and not avatar.startswith('//'):avatar=avatar[1:]
+    if not avatar.startswith('assets/') or '..' in avatar:raise ValueError('Profile image must be in assets/')
+    name=d['name_en' if en else 'name_zh']
+    b=f'<section class="profile-hero" id="about"><img class="profile-avatar" src="{esc(avatar,quote=True)}" width="192" height="192" alt="'+('Personal profile image' if en else '个人头像')+f'"><div><p class="eyebrow">READ · THINK · EXPLORE</p><h1>{esc(name)}</h1><p class="identity">{esc(p["identity"])}</p></div></section>'
+    b+=f'<p class="profile-lead">{esc(p.get("lead",""))}</p>'+p.get('introduction','')
+    b+='<div class="text-links"><a href="'+('blog-en.html' if en else 'blog.html')+'">'+('My writing ↗' if en else '读我的博客 ↗')+'</a><a href="'+('contact-en.html' if en else 'contact.html')+'">'+('Get in touch ↗' if en else '联系我 ↗')+'</a></div>'
+    b+='<section class="profile-section" id="research"><p class="eyebrow">RESEARCH INTERESTS</p><h2>'+('Research interests' if en else '研究兴趣')+'</h2><p>'+esc(p['research_summary'])+'</p></section>'
+    for key,anchor,zh,eng in [('disciplines','interests','学科兴趣','Academic interests'),('hobbies','life','生活与爱好','Beyond study')]:
+        b+=f'<section class="profile-section" id="{anchor}"><p class="eyebrow">{eng.upper()}</p><h2>{eng if en else zh}</h2><ul class="interest-list">'+''.join('<li>'+esc(v)+'</li>' for v in p[key])+'</ul></section>'
+    return b
+
+def contacts(data,lang):
+    d=read(data,'contact.json');en=lang=='en';b=paragraph(localized(d['intro'],lang))
+    routes=[]
+    for item in d['routes']:
+        email=(item.get('email') or '').strip();u=(item.get('form_url') or '').strip()
+        if not email and not u:continue
+        card='<article class="contact-card"><h2>'+esc(localized(item['name'],lang))+'</h2>'+paragraph(localized(item.get('description',''),lang))
+        if email:
+            import re
+            if not re.fullmatch(r'[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+',email):raise ValueError('Invalid contact email')
+            card+=f'<a href="mailto:{esc(email,quote=True)}">{esc(email)}</a>'
+        if u:card+='<p><a href="'+link(u)+'">'+('Open contact form ↗' if en else '填写联系表单 ↗')+'</a></p>'
+        routes.append(card+'</article>')
+    b+='<div class="contact-grid">'+''.join(routes)+'</div>'
+    social=[]
+    for item in d['socials']:
+        value=(item.get('value') or '').strip();u=(item.get('url') or '').strip()
+        if not value and not u:continue
+        label=esc(item['name']);v=esc(value or item['name'])
+        social.append('<div class="social-line"><strong>'+label+'</strong>'+('<a href="'+link(u)+'">'+v+' ↗</a>' if u else '<span>'+v+'</span>')+'</div>')
+    if social:b+='<section class="profile-section"><h2>'+('Elsewhere' if en else '也可以在这里找到我')+'</h2>'+''.join(social)+'</section>'
+    return b
+
+def collection(data,key,lang):
+    d=read(data,key+'.json');en=lang=='en';subjects=read(data,'subjects.json')['subjects']
+    categories={x['id']:localized(x['name'],lang) for x in d['categories']}
+    subject_names={x['id']:localized(x['name'],lang) for x in subjects}
+    stages={a:c if en else b for a,b,c in STAGES}
+    entries=[]
+    for e in d['entries']:
+        if 'draft' in e and not isinstance(e['draft'],bool):raise ValueError('draft must be boolean')
+        if e.get('draft',False):continue
+        if e.get('category') not in categories:raise ValueError('Unknown category')
+        if not isinstance(e.get('subjects',[]),list) or any(s not in subject_names for s in e.get('subjects',[])):raise ValueError('Unknown subject')
+        if key=='questions' and e.get('stage','open') not in stages:raise ValueError('Unknown question stage')
+        entries.append(e)
+    def select(name,label,options):
+        return '<label>'+label+f'<select data-filter="{name}"><option value="">'+('All' if en else '全部')+'</option>'+''.join(f'<option value="{esc(k,quote=True)}">{esc(v)}</option>' for k,v in options.items())+'</select></label>'
+    b='<div class="filters" hidden>'+select('category',('Format' if en else '内容形式') if key=='videos' else ('Topic' if en else '问题主题'),categories)+select('subject','Subject' if en else '学科',subject_names)
+    if key=='questions':b+=select('stage','Stage' if en else '探索状态',stages)
+    b+='<button type="button" data-reset>'+('Reset' if en else '重置')+'</button></div>'
+    b+=f'<p class="collection-count" data-count aria-live="polite">{len(entries)} '+('entries' if en else '条内容')+'</p><div class="filtered-list">'
+    for e in entries:
+        title=localized(e.get('title'),lang)
+        if not title:raise ValueError('Every entry needs a title')
+        cat=e['category'];sub=e.get('subjects',[]);stage=e.get('stage','open')
+        b+=f'<article class="resource-card" data-entry data-category="{esc(cat,quote=True)}" data-subject="{esc(" ".join(sub),quote=True)}" data-stage="{esc(stage,quote=True)}">'
+        labels=[categories[cat]]+[subject_names[s] for s in sub]
+        if key=='questions':labels.append(stages[stage])
+        b+='<div class="entry-labels">'+''.join('<span>'+esc(v)+'</span>' for v in labels)+'</div><h2>'
+        b+=('<a href="'+link(e['url'])+'">'+esc(title)+' ↗</a>' if e.get('url') else esc(title))+'</h2>'
+        b+=paragraph(localized(e.get('note',''),lang))
+        if key=='questions':
+            b+='<details class="question-notebook"><summary>'+('Materials, reflections & synthesis' if en else '参考材料 · 我的思考 · 总结心得')+'</summary><h3>'+('Reference materials' if en else '参考材料')+'</h3>'
+            materials=e.get('materials',[])
+            if materials:
+                b+='<ul>'+''.join('<li><a href="'+link(m['url'])+'">'+esc(m['title'])+' ↗</a>'+paragraph(m.get('note',''))+'</li>' for m in materials)+'</ul>'
+            else:b+='<p class="muted">'+('Materials will be added here.' if en else '参考材料陆续补充。')+'</p>'
+            for field,zh,english in [('thoughts','我的思考','My reflections'),('summary','总结心得','Working synthesis')]:
+                b+='<h3>'+ (english if en else zh)+'</h3>'+paragraph(e.get(field,'') or ('Notes will grow here.' if en else '留待继续思考与记录。'))
+            b+='</details>'
+        b+='</article>'
+    b+='</div><p class="collection-empty" data-empty'+(' hidden' if entries else '')+'>'+('No matching entries yet.' if en else '这里还没有符合条件的内容，后续会逐步补充。')+'</p><script src="browse.js" defer></script>'
+    return b

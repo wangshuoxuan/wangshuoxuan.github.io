@@ -1,0 +1,102 @@
+{
+  "subjects": [
+    {
+      "id": "history",
+      "name": {
+        "zh": "历史",
+        "en": "History"
+      }
+    },
+    {
+      "id": "economics",
+      "name": {
+        "zh": "经济学",
+        "en": "Economics"
+      }
+    },
+    {
+      "id": "art",
+      "name": {
+        "zh": "艺术",
+        "en": "Art"
+      }
+    },
+    {
+      "id": "psychology",
+      "name": {
+        "zh": "心理学",
+        "en": "Psychology"
+      }
+    },
+    {
+      "id": "sociology",
+      "name": {
+        "zh": "社会学",
+        "en": "Sociology"
+      }
+    },
+    {
+      "id": "philosophy",
+      "name": {
+        "zh": "哲学",
+        "en": "Philosophy"
+      }
+    },
+    {
+      "id": "business",
+      "name": {
+        "zh": "商业",
+        "en": "Business"
+      }
+    },
+    {
+      "id": "geopolitics",
+      "name": {
+        "zh": "地缘政治",
+        "en": "Geopolitics"
+      }
+    },
+    {
+      "id": "ai",
+      "name": {
+        "zh": "AI",
+        "en": "AI"
+      }
+    },
+    {
+      "id": "engineering",
+      "name": {
+        "zh": "工程学",
+        "en": "Engineering"
+      }
+    },
+    {
+      "id": "neuroscience",
+      "name": {
+        "zh": "神经科学",
+        "en": "Neuroscience"
+      }
+    },
+    {
+      "id": "physics",
+      "name": {
+        "zh": "物理学",
+        "en": "Physics"
+      }
+    },
+    {
+      "id": "math",
+      "name": {
+        "zh": "数学",
+        "en": "Mathematics"
+      }
+    },
+    {
+      "id": "interdisciplinary",
+      "name": {
+        "zh": "跨学科 / 综合",
+        "en": "Interdisciplinary"
+      }
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "intro": {
+    "zh": "欢迎联系我，分享想法、推荐内容，或聊聊共同感兴趣的话题。请根据来意选择一种合适的联系方式，简要说明背景和想交流的内容即可。",
+    "en": "You are welcome to share ideas, recommendations, or topics we have in common. Choose the most relevant contact route and briefly introduce what you would like to discuss."
+  },
+  "routes": [
+    {
+      "name": {
+        "zh": "日常联系",
+        "en": "Personal contact"
+      },
+      "description": {
+        "zh": "欢迎交流想法、阅读心得或生活中的发现。",
+        "en": "Ideas, reading notes, and everyday discoveries."
+      },
+      "email": "2400012712@stu.pku.edu.cn",
+      "form_url": ""
+    },
+    {
+      "name": {
+        "zh": "学习与知识交流",
+        "en": "Learning & discussion"
+      },
+      "description": {
+        "zh": "关于学习、知识与共同感兴趣的问题。",
+        "en": "Learning and questions we share."
+      },
+      "email": "",
+      "form_url": ""
+    },
+    {
+      "name": {
+        "zh": "合作与商务",
+        "en": "Collaboration & business"
+      },
+      "description": {
+        "zh": "合作想法与商务提议。",
+        "en": "Collaboration ideas and professional proposals."
+      },
+      "email": "",
+      "form_url": ""
+    },
+    {
+      "name": {
+        "zh": "活动邀请",
+        "en": "Invitations"
+      },
+      "description": {
+        "zh": "活动、对谈与交流邀请。",
+        "en": "Events and conversations."
+      },
+      "email": "",
+      "form_url": ""
+    },
+    {
+      "name": {
+        "zh": "建议与网站反馈",
+        "en": "Suggestions & feedback"
+      },
+      "description": {
+        "zh": "内容建议、勘误或网站使用反馈。",
+        "en": "Suggestions, corrections, and website feedback."
+      },
+      "email": "",
+      "form_url": ""
+    }
+  ],
+  "socials": [
+    {
+      "name": "GitHub",
+      "value": "wangshuoxuan",
+      "url": "https://github.com/wangshuoxuan"
+    },
+    {
+      "name": "微信",
+      "value": "",
+      "url": ""
+    },
+    {
+      "name": "QQ",
+      "value": "",
+      "url": ""
+    },
+    {
+      "name": "微信公众号",
+      "value": "",
+      "url": ""
+    },
+    {
+      "name": "哔哩哔哩",
+      "value": "",
+      "url": ""
+    },
+    {
+      "name": "小红书",
+      "value": "",
+      "url": ""
+    },
+    {
+      "name": "知乎",
+      "value": "",
+      "url": ""
+    },
+    {
+      "name": "豆瓣",
+      "value": "",
+      "url": ""
+    },
+    {
+      "name": "微信读书",
+      "value": "",
+      "url": ""
+    },
+    {
+      "name": "LinkedIn",
+      "value": "",
+      "url": ""
+    },
+    {
+      "name": "X / Twitter",
+      "value": "",
+      "url": ""
+    },
+    {
+      "name": "YouTube",
+      "value": "",
+      "url": ""
+    },
+    {
+      "name": "Instagram",
+      "value": "",
+      "url": ""
+    },
+    {
+      "name": "Telegram",
+      "value": "",
+      "url": ""
+    }
+  ]
+}

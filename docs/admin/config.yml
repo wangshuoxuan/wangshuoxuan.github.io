@@ -11,10 +11,10 @@ media_folder: docs/assets
 public_folder: /assets
 collections:
 - name: site
-  label: 首页简介与联系方式
+  label: 首页与个人介绍
   files:
   - name: site
-    label: 首页简介与联系方式
+    label: 首页与个人介绍
     file: content/site.json
     fields:
     - name: name_zh
@@ -23,14 +23,6 @@ collections:
       required: true
     - name: name_en
       label: 英文姓名
-      widget: string
-      required: true
-    - name: email
-      label: 公开邮箱
-      widget: string
-      required: true
-    - name: github
-      label: GitHub 主页链接
       widget: string
       required: true
     - name: zh
@@ -53,6 +45,28 @@ collections:
         format: html
         modes:
         - rich_text
+      - name: research_summary
+        label: 研究兴趣
+        widget: text
+        required: false
+      - name: disciplines
+        label: 学科兴趣
+        widget: list
+        required: false
+        field:
+          name: interest
+          label: 学科
+          widget: string
+          required: false
+      - name: hobbies
+        label: 兴趣爱好
+        widget: list
+        required: false
+        field:
+          name: hobby
+          label: 爱好
+          widget: string
+          required: false
     - name: en
       label: 英文首页
       widget: object
@@ -73,6 +87,120 @@ collections:
         format: html
         modes:
         - rich_text
+      - name: research_summary
+        label: 研究兴趣
+        widget: text
+        required: false
+      - name: disciplines
+        label: 学科兴趣
+        widget: list
+        required: false
+        field:
+          name: interest
+          label: 学科
+          widget: string
+          required: false
+      - name: hobbies
+        label: 兴趣爱好
+        widget: list
+        required: false
+        field:
+          name: hobby
+          label: 爱好
+          widget: string
+          required: false
+    - name: avatar
+      label: 个人头像
+      widget: image
+      required: false
+- name: contact
+  label: 联系方式 · 填写格子
+  files:
+  - name: contact
+    label: 联系方式（空项不公开）
+    file: content/contact.json
+    fields:
+    - name: intro
+      label: 联系说明
+      widget: object
+      required: false
+      fields:
+      - name: zh
+        label: 中文说明
+        widget: text
+        required: false
+      - name: en
+        label: 英文说明
+        widget: text
+        required: false
+    - name: routes
+      label: 按交流用途填写
+      widget: list
+      required: false
+      collapsed: false
+      summary: '{{fields.name.zh}}'
+      hint: 邮箱与表单链接可任选其一；两项均为空则不展示。表单链接需填写你已有的外部表单地址。
+      fields:
+      - name: name
+        label: 用途名称
+        widget: object
+        required: false
+        fields:
+        - name: zh
+          label: 中文
+          widget: string
+          required: false
+        - name: en
+          label: 英文（可留空）
+          widget: string
+          required: false
+      - name: description
+        label: 简短说明
+        widget: object
+        required: false
+        fields:
+        - name: zh
+          label: 中文
+          widget: string
+          required: false
+        - name: en
+          label: 英文（可留空）
+          widget: string
+          required: false
+      - name: email
+        label: 用于这个用途的邮箱
+        widget: string
+        required: false
+      - name: form_url
+        label: 联系表单网址（可留空）
+        widget: string
+        required: false
+        pattern:
+        - ^https?://.+
+        - 请输入完整表单网址
+    - name: socials
+      label: 社交平台与账号
+      widget: list
+      required: false
+      collapsed: false
+      summary: '{{fields.name}}'
+      hint: 填写想公开的账号或主页链接；空格子不显示。
+      fields:
+      - name: name
+        label: 平台名称
+        widget: string
+        required: false
+      - name: value
+        label: 账号 / 显示文字
+        widget: string
+        required: false
+      - name: url
+        label: 主页链接（可留空）
+        widget: string
+        required: false
+        pattern:
+        - ^https?://.+
+        - 请输入完整主页网址
 - name: posts
   label: 我的博客
   label_singular: 文章
@@ -322,7 +450,7 @@ collections:
         label: 名称（内容标题或平台名）
         widget: string
       - name: category
-        label: 分类
+        label: 内容形式
         widget: select
         required: true
         options:
@@ -334,6 +462,40 @@ collections:
           label: 课程与系列教程
         - value: short
           label: 中短视频
+      - name: subjects
+        label: 学科（可多选）
+        widget: select
+        required: false
+        multiple: true
+        options:
+        - value: history
+          label: 历史
+        - value: economics
+          label: 经济学
+        - value: art
+          label: 艺术
+        - value: psychology
+          label: 心理学
+        - value: sociology
+          label: 社会学
+        - value: philosophy
+          label: 哲学
+        - value: business
+          label: 商业
+        - value: geopolitics
+          label: 地缘政治
+        - value: ai
+          label: AI
+        - value: engineering
+          label: 工程学
+        - value: neuroscience
+          label: 神经科学
+        - value: physics
+          label: 物理学
+        - value: math
+          label: 数学
+        - value: interdisciplinary
+          label: 跨学科 / 综合
       - name: url
         label: 访问链接
         widget: string
@@ -351,7 +513,7 @@ collections:
         required: false
       collapsed: true
       summary: '{{fields.title}}'
-      hint: 填写名称、分类和链接；推荐语可留空。可放单篇内容，也可放平台入口。
+      hint: 内容形式与学科是两个独立维度，例如「课程」+「数学」。跨学科内容可以选择多个学科。
 - name: articles
   label: 文章收藏
   files:
@@ -562,47 +724,47 @@ collections:
     - name: categories
       widget: hidden
       default:
-      - id: devices
+      - id: facts
         name:
-          zh: 器件、电路与计算
-          en: Devices, circuits & computation
+          zh: 事实与解释
+          en: Facts & explanations
         description:
-          zh: 从器件行为到系统收益，哪些联系值得追问？
+          zh: ''
           en: ''
-      - id: intelligence
+      - id: mechanisms
         name:
-          zh: 智能与心智
-          en: Intelligence & mind
+          zh: 机制与因果
+          en: Mechanisms & causes
         description:
-          zh: 学习、推理、智能与意识的开放问题。
+          zh: ''
           en: ''
-      - id: growth
+      - id: decisions
         name:
-          zh: 技术、经济与增长
-          en: Technology, economics & growth
+          zh: 判断与决策
+          en: Judgment & decisions
         description:
-          zh: 技术进步如何转化为生产率与社会价值？
+          zh: ''
           en: ''
-      - id: institutions
+      - id: methods
         name:
-          zh: 制度与科学组织
-          en: Institutions & science
+          zh: 方法与实践
+          en: Methods & practice
         description:
-          zh: 知识如何产生、筛选、传播与积累？
+          zh: ''
           en: ''
-      - id: learning
+      - id: values
         name:
-          zh: 学习与创造
-          en: Learning & creation
+          zh: 价值与意义
+          en: Values & meaning
         description:
-          zh: 如何形成理解、发现问题并创造作品？
+          zh: ''
           en: ''
-      - id: humanities
+      - id: future
         name:
-          zh: 人文与生活
-          en: Humanities & life
+          zh: 未来与趋势
+          en: Future & trends
         description:
-          zh: 历史、审美、价值与日常经验。
+          zh: ''
           en: ''
     - name: entries
       label: 内容列表
@@ -610,91 +772,115 @@ collections:
       required: false
       fields:
       - name: title
-        label: 问题
-        widget: object
-        required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: string
-          required: true
-        - name: en
-          label: 英文（可留空）
-          widget: string
-          required: false
+        label: 我感兴趣的问题
+        widget: string
+        required: true
       - name: category
-        label: 分类
+        label: 问题主题
         widget: select
         required: true
         options:
-        - value: devices
-          label: 器件、电路与计算
-        - value: intelligence
-          label: 智能与心智
-        - value: growth
-          label: 技术、经济与增长
-        - value: institutions
-          label: 制度与科学组织
-        - value: learning
-          label: 学习与创造
-        - value: humanities
-          label: 人文与生活
-      - name: creator
-        label: 作者 / 创作者
-        widget: string
+        - value: facts
+          label: 事实与解释
+        - value: mechanisms
+          label: 机制与因果
+        - value: decisions
+          label: 判断与决策
+        - value: methods
+          label: 方法与实践
+        - value: values
+          label: 价值与意义
+        - value: future
+          label: 未来与趋势
+      - name: subjects
+        label: 涉及学科（可多选）
+        widget: select
         required: false
-      - name: year
-        label: 年份 / 日期
-        widget: string
+        multiple: true
+        options:
+        - value: history
+          label: 历史
+        - value: economics
+          label: 经济学
+        - value: art
+          label: 艺术
+        - value: psychology
+          label: 心理学
+        - value: sociology
+          label: 社会学
+        - value: philosophy
+          label: 哲学
+        - value: business
+          label: 商业
+        - value: geopolitics
+          label: 地缘政治
+        - value: ai
+          label: AI
+        - value: engineering
+          label: 工程学
+        - value: neuroscience
+          label: 神经科学
+        - value: physics
+          label: 物理学
+        - value: math
+          label: 数学
+        - value: interdisciplinary
+          label: 跨学科 / 综合
+      - name: stage
+        label: 探索状态
+        widget: select
         required: false
-      - name: url
-        label: 原文或官方链接
-        widget: string
-        required: false
-        pattern:
-        - ^https?://.+
-        - 请粘贴以 https:// 或 http:// 开头的完整链接。
+        default: open
+        options:
+        - value: open
+          label: 待探索
+        - value: exploring
+          label: 正在探索
+        - value: synthesis
+          label: 形成初步认识
+        - value: revisiting
+          label: 持续修订
       - name: note
-        label: 为什么推荐 / 我的想法
-        widget: object
+        label: 为什么关心这个问题
+        widget: text
         required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: text
-          required: false
-        - name: en
-          label: 英文（可留空）
-          widget: text
-          required: false
-      - name: status
-        label: 阅读或使用状态
-        widget: object
-        required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: string
-          required: false
-        - name: en
-          label: 英文（可留空）
-          widget: string
-          required: false
-      - name: tags
-        label: 主题标签
+      - name: materials
+        label: 有助于解答的材料
         widget: list
         required: false
-        field:
-          name: tag
-          label: 标签
+        summary: '{{fields.title}}'
+        fields:
+        - name: title
+          label: 材料名称
           widget: string
+          required: true
+        - name: url
+          label: 材料链接
+          widget: string
+          required: true
+          pattern:
+          - ^https?://.+
+          - 请输入完整网页链接
+        - name: note
+          label: 它提供了什么启发
+          widget: text
+          required: false
+      - name: thoughts
+        label: 我的思考（可以持续补充）
+        widget: text
+        required: false
+      - name: summary
+        label: 总结与心得（可以修订）
+        widget: text
+        required: false
       - name: draft
-        label: 暂存草稿，不显示到网站
+        label: 暂存草稿，不公开
         widget: boolean
         required: false
         default: true
       collapsed: true
-      summary: '{{fields.title.zh}}'
+      summary: '{{fields.title}}'
+      hint: 每个问题可逐步补充参考材料、自己的思考与总结；草稿不会公开。
 - name: apps
   label: 应用与工具
   files:

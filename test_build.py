@@ -61,14 +61,26 @@ class PublishingTests(unittest.TestCase):
         items=build.posts()
         self.assertEqual(items[0]['date'],'2026-10-17')
         self.assertEqual(items[0]['summary'],'A multiline summary from a visual editor.')
+    def test_question_notebook_and_draft_privacy(self):
+        self.write('questions',[{'title':'A question','category':'methods','subjects':['math'],'stage':'exploring','materials':[{'title':'Reference','url':'https://example.org','note':'Helpful'}],'thoughts':'A <thought>','summary':'A synthesis'},{'title':'PRIVATE','category':'methods','draft':True}])
+        page=build.collection('questions','zh')
+        for expected in ['data-subject="math"','data-stage="exploring"','https://example.org','A &lt;thought&gt;','A synthesis']:
+            self.assertIn(expected,page)
+        self.assertNotIn('PRIVATE',page)
+        self.write('videos',[{'title':'Bad','category':'talks','subjects':['invalid']}])
+        with self.assertRaises(ValueError):build.collection('videos','zh')
+
     def test_profile_updates_home_and_contact(self):
         p=build.DATA/'site.json';d=json.loads(p.read_text(encoding='utf-8'))
-        d['email']='test@example.org';d['github']='https://github.com/example';d['zh']['identity']='Test identity'
-        p.write_text(json.dumps(d),encoding='utf-8');build.build()
+        d['zh']['identity']='Test identity'
+        p.write_text(json.dumps(d),encoding='utf-8')
+        p=build.DATA/'contact.json';d=json.loads(p.read_text(encoding='utf-8'));d['routes'][0]['email']='test@example.org';d['socials'][0]['url']='https://github.com/example';p.write_text(json.dumps(d),encoding='utf-8');build.build()
         home=(build.OUT/'index.html').read_text(encoding='utf-8')
         contact=(build.OUT/'contact.html').read_text(encoding='utf-8')
         self.assertIn('Test identity',home)
         self.assertIn('mailto:test@example.org',contact)
-        self.assertIn('href="https://github.com/example"',home)
+        self.assertIn('href="https://github.com/example"',contact)
+        self.assertNotIn('id="projects"',home)
+        self.assertNotIn('#projects',home)
 
 if __name__=='__main__':unittest.main()

@@ -1,68 +1,68 @@
 {
   "categories": [
     {
-      "id": "devices",
+      "id": "facts",
       "name": {
-        "zh": "器件、电路与计算",
-        "en": "Devices, circuits & computation"
+        "zh": "事实与解释",
+        "en": "Facts & explanations"
       },
       "description": {
-        "zh": "从器件行为到系统收益，哪些联系值得追问？",
+        "zh": "",
         "en": ""
       }
     },
     {
-      "id": "intelligence",
+      "id": "mechanisms",
       "name": {
-        "zh": "智能与心智",
-        "en": "Intelligence & mind"
+        "zh": "机制与因果",
+        "en": "Mechanisms & causes"
       },
       "description": {
-        "zh": "学习、推理、智能与意识的开放问题。",
+        "zh": "",
         "en": ""
       }
     },
     {
-      "id": "growth",
+      "id": "decisions",
       "name": {
-        "zh": "技术、经济与增长",
-        "en": "Technology, economics & growth"
+        "zh": "判断与决策",
+        "en": "Judgment & decisions"
       },
       "description": {
-        "zh": "技术进步如何转化为生产率与社会价值？",
+        "zh": "",
         "en": ""
       }
     },
     {
-      "id": "institutions",
+      "id": "methods",
       "name": {
-        "zh": "制度与科学组织",
-        "en": "Institutions & science"
+        "zh": "方法与实践",
+        "en": "Methods & practice"
       },
       "description": {
-        "zh": "知识如何产生、筛选、传播与积累？",
+        "zh": "",
         "en": ""
       }
     },
     {
-      "id": "learning",
+      "id": "values",
       "name": {
-        "zh": "学习与创造",
-        "en": "Learning & creation"
+        "zh": "价值与意义",
+        "en": "Values & meaning"
       },
       "description": {
-        "zh": "如何形成理解、发现问题并创造作品？",
+        "zh": "",
         "en": ""
       }
     },
     {
-      "id": "humanities",
+      "id": "future",
       "name": {
-        "zh": "人文与生活",
-        "en": "Humanities & life"
+        "zh": "未来与趋势",
+        "en": "Future & trends"
       },
       "description": {
-        "zh": "历史、审美、价值与日常经验。",
+        "zh": "",
         "en": ""
       }
     }

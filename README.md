@@ -4,7 +4,7 @@
 
 [我的博客](https://wangshuoxuan.github.io/blog.html) · [书籍](https://wangshuoxuan.github.io/books.html) · [视频](https://wangshuoxuan.github.io/videos.html) · [文章](https://wangshuoxuan.github.io/articles.html) · [论文](https://wangshuoxuan.github.io/papers.html) · [问题](https://wangshuoxuan.github.io/questions.html) · [应用](https://wangshuoxuan.github.io/apps.html) · [格言](https://wangshuoxuan.github.io/quotes.html) · [联系我](https://wangshuoxuan.github.io/contact.html)
 
-这是一份以文字、持续写作和可核验内容为中心的个人网站。中文与英文页面共享导航与内容分类。当前新增收藏页只有分类框架，没有把未经本人确认的条目写成个人推荐，也没有自动发布任何个人博客。
+这是一份以写作、阅读与兴趣探索为中心的个人网站。中文与英文页面共享内容，首页只保留本人指定的研究兴趣，不展示科研项目。
 
 ## 日常编辑：优先使用可视化后台
 
@@ -70,3 +70,9 @@ python -m http.server 8080 --directory docs
 公开姓名：王烁瑄 / Wangshuoxuan；GitHub：wangshuoxuan；公开邮箱：2400012712@stu.pku.edu.cn，均经本人确认或授权。学位、年份、论文、奖项和具体研究结果未猜填。
 
 构建阶段使用 Python 与 Markdown 库；公开内容页面仍是静态 HTML / CSS；只有 /admin/ 管理页面加载本地托管的编辑器脚本。空分类和草稿不会被伪装成已完成的内容。公开仓库里的草稿源文件仍可被查看，私密材料请勿提交。
+
+## 个人介绍、联系与多维清单
+
+`content/site.json` 管理头像、简介、研究兴趣和全部兴趣列表；`content/contact.json` 管理按用途填写的联系方式，空项不公开。`content/subjects.json` 提供视频与问题共用的学科。
+
+视频使用内容形式和多选学科；问题使用问题主题、多选学科和探索状态，并支持参考材料、个人思考、总结。`personal.py` 渲染这些栏目，`docs/browse.js` 负责筛选。无 JavaScript 时仍能阅读完整列表。编辑入口都在可视化后台。旧 CV 地址保留为当前个人介绍页。
