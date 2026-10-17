@@ -1,67 +1,91 @@
 {
   "intro": {
-    "zh": "欢迎联系我，分享想法、推荐内容，或聊聊共同感兴趣的话题。请根据来意选择一种合适的联系方式，简要说明背景和想交流的内容即可。",
-    "en": "You are welcome to share ideas, recommendations, or topics we have in common. Choose the most relevant contact route and briefly introduce what you would like to discuss."
+    "zh": "很高兴你来到这里，也欢迎你主动认识我。无论你的年龄、专业、职业或生活经历如何，都可以来打个招呼。不必和我有相似的背景，也不必先准备一个成熟的观点；我尤其期待那些能让我看见不同生活、不同问题和不同可能性的相遇。\n\n我每周都会为社交留出时间，希望认识新朋友，也愿意花时间加深已有的关系。可以认真讨论，也可以轻松闲聊；可以一起学习、做点事情，也可以只是喝杯咖啡、散散步，体验一点新鲜事。\n\n如果你想咨询我、希望得到一点帮助，或单纯想认识我，都很欢迎。你不需要先证明自己能带来什么。带着好奇、真诚和彼此尊重来就好。",
+    "en": "I’m glad you’re here, and you’re welcome to say hello. Whatever your age, field, work, or life experience, I’d be happy to hear from you. We don’t need similar backgrounds or fully formed opinions. I’m especially curious about perspectives and experiences different from my own.\n\nI set aside time each week to meet new people and deepen existing friendships. We can discuss an idea, learn or make something together, or simply have coffee, take a walk, and try something new.\n\nIf you have a question, could use some help, or just want to get acquainted, please reach out. You don’t need to arrive with something to offer—curiosity, sincerity, and mutual respect are a good start."
   },
   "routes": [
     {
       "name": {
-        "zh": "日常联系",
-        "en": "Personal contact"
+        "zh": "研究 / 学术",
+        "en": "Research & academic exchange"
       },
       "description": {
-        "zh": "欢迎交流想法、阅读心得或生活中的发现。",
-        "en": "Ideas, reading notes, and everyday discoveries."
+        "zh": "欢迎讨论存算一体、忆阻器相关电路设计与架构，也欢迎跨学科的问题、论文交流、读书讨论和一起学习的提议。",
+        "en": "Compute-in-memory, memristor circuit design and architecture, interdisciplinary questions, papers, reading groups, and learning together."
       },
       "email": "2400012712@stu.pku.edu.cn",
       "form_url": ""
     },
     {
       "name": {
-        "zh": "学习与知识交流",
-        "en": "Learning & discussion"
+        "zh": "商业合作",
+        "en": "Business & collaboration"
       },
       "description": {
-        "zh": "关于学习、知识与共同感兴趣的问题。",
-        "en": "Learning and questions we share."
+        "zh": "如果你有值得一起尝试的产品、内容、活动或其他合作想法，欢迎聊聊。简单说说正在做什么、希望如何合作即可，想法还在早期也没关系。",
+        "en": "Tell me about a product, piece of content, event, or other idea you would like to explore together. Early-stage ideas are welcome."
       },
-      "email": "",
+      "email": "2400012712@stu.pku.edu.cn",
       "form_url": ""
     },
     {
       "name": {
-        "zh": "合作与商务",
-        "en": "Collaboration & business"
+        "zh": "个人想法 / 建议",
+        "en": "Ideas & suggestions"
       },
       "description": {
-        "zh": "合作想法与商务提议。",
-        "en": "Collaboration ideas and professional proposals."
+        "zh": "欢迎分享一个问题、一段经历、不同意见，或推荐一本书、一篇文章、一门课。对网站和我的写作有建议或发现错误，也请直接告诉我。",
+        "en": "Share a question, an experience, a different view, or a book, article, or course. Suggestions and corrections to my writing or website are welcome too."
       },
-      "email": "",
+      "email": "2400012712@stu.pku.edu.cn",
       "form_url": ""
     },
     {
       "name": {
-        "zh": "活动邀请",
-        "en": "Invitations"
+        "zh": "播客 / 演讲 / 论坛 / 沙龙",
+        "en": "Podcasts, talks & gatherings"
       },
       "description": {
-        "zh": "活动、对谈与交流邀请。",
-        "en": "Events and conversations."
+        "zh": "欢迎邀请我参与对谈、播客、论坛、沙龙、读书会或小型聚会。可以作为分享者，也可以作为一起讨论和学习的参与者；告诉我主题、形式和大致时间就好。",
+        "en": "I’m open to conversations, podcasts, forums, salons, reading groups, and small gatherings—as a contributor or fellow participant. Please share the topic, format, and approximate timing."
       },
-      "email": "",
+      "email": "2400012712@stu.pku.edu.cn",
       "form_url": ""
     },
     {
       "name": {
-        "zh": "建议与网站反馈",
-        "en": "Suggestions & feedback"
+        "zh": "生活 / 一起体验",
+        "en": "Coffee & shared experiences"
       },
       "description": {
-        "zh": "内容建议、勘误或网站使用反馈。",
-        "en": "Suggestions, corrections, and website feedback."
+        "zh": "咖啡、下午茶、吃饭、散步、运动、看展、逛博物馆、听演出、城市探索或结伴出行，都可以约。也欢迎带我尝试你熟悉而我还不了解的事；不在这份清单里的好主意，同样欢迎。",
+        "en": "Coffee, tea, meals, walks, sports, exhibitions, museums, performances, exploring a city, or a trip together—all are welcome ideas. Introduce me to something you enjoy that I haven’t tried."
       },
-      "email": "",
+      "email": "2400012712@stu.pku.edu.cn",
+      "form_url": ""
+    },
+    {
+      "name": {
+        "zh": "咨询 / 互相帮助",
+        "en": "Questions & mutual support"
+      },
+      "description": {
+        "zh": "学习方法、大学生活、跨学科学习，或者一个你正在琢磨的选择，都可以聊。我会在自己的经验和能力范围内分享、一起想办法；不确定的地方也会坦诚说明。",
+        "en": "We can talk about learning, university life, interdisciplinary study, or a decision you’re working through. I’m happy to share what I know and think it through with you, while being honest about what I don’t know."
+      },
+      "email": "2400012712@stu.pku.edu.cn",
+      "form_url": ""
+    },
+    {
+      "name": {
+        "zh": "认识彼此 / 重新联系",
+        "en": "Say hello or reconnect"
+      },
+      "description": {
+        "zh": "没有明确主题也可以联系。说说你最近在关注什么，或只是介绍一下自己。老朋友也随时欢迎回来聊聊近况；不同城市、不同时区，也可以先从文字或一次线上聊天开始。",
+        "en": "No agenda is required. Tell me what has caught your attention lately, or simply introduce yourself. Old friends are always welcome to reconnect; distance needn’t prevent a message or an online conversation."
+      },
+      "email": "2400012712@stu.pku.edu.cn",
       "form_url": ""
     }
   ],
@@ -73,7 +97,7 @@
     },
     {
       "name": "微信",
-      "value": "",
+      "value": "wsx15800683426",
       "url": ""
     },
     {
@@ -136,5 +160,9 @@
       "value": "",
       "url": ""
     }
-  ]
+  ],
+  "first_message": {
+    "zh": "不知道怎么开头？随意写两三句就可以：你希望我怎么称呼你、最近关心的一件事，以及想聊聊什么或一起做什么。加微信时可以备注“来自个人网站”，方便我认出你。\n\n例如：“你好，我从你的网站过来，最近对城市历史很感兴趣。想约一次散步或咖啡，听听彼此的观察。”\n\n不用写得正式，也不必把这些逐项填完。若是约见面，顺手带上所在城市和方便的时间；如果我暂时没回复，过几天轻轻提醒一下也可以。期待从一句问候开始，慢慢认识彼此。",
+    "en": "Not sure how to begin? A few lines are enough: what you’d like me to call you, something you’re interested in, and what you’d enjoy discussing or doing together. On WeChat, mentioning that you found me through this website helps me recognize you.\n\nFor example: “Hi, I found your website and have been getting interested in urban history. Would you be up for a walk or coffee to exchange observations?”\n\nThere’s no need to be formal or answer every prompt. For a meetup, your city and a few possible times help. If I haven’t replied, a gentle follow-up after a few days is welcome. I look forward to getting to know you."
+  }
 }

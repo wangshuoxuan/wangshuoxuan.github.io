@@ -223,7 +223,7 @@ def build():
         for key,*_ in SECTIONS:(OUT/file(key,lang)).write_text(collection(key,lang),encoding='utf-8')
         en=lang=='en'
         title='Contact' if en else '联系我'
-        body=heading(title,'Contact','Find me online, or send an email.' if en else '通过邮件或 GitHub 与我联系。',lang)
+        body=heading(title,'Contact','Say hello. Let’s get to know each other.' if en else '欢迎认识我，也让我认识你。',lang)
         body+=personal.contacts(DATA,lang)
         (OUT/file('contact',lang)).write_text(shell('contact',lang,title,'Contact Wangshuoxuan.',body),encoding='utf-8')
     for lang in ('zh','en'):

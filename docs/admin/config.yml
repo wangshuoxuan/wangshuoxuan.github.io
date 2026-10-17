@@ -233,6 +233,18 @@ collections:
         pattern:
         - ^https?://.+
         - 请输入完整主页网址
+    - name: first_message
+      label: 如何开始联系
+      widget: object
+      required: false
+      fields:
+      - name: zh
+        label: 中文
+        widget: text
+      - name: en
+        label: 英文
+        widget: text
+        required: false
 - name: posts
   label: 我的博客
   label_singular: 文章

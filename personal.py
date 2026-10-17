@@ -38,6 +38,8 @@ def home(data, lang):
 
 def contacts(data,lang):
     d=read(data,'contact.json');en=lang=='en';b=paragraph(localized(d['intro'],lang))
+    primary_email=next((x.get('email') for x in d['routes'] if x.get('email')),'')
+    b+='<div class="contact-card"><strong>'+('WeChat' if en else '微信')+'</strong><p>'+esc(next((x.get('value','') for x in d['socials'] if x['name']=='微信'),''))+'</p><strong>'+('Email' if en else '邮箱')+'</strong><p><a href="mailto:'+esc(primary_email,quote=True)+'">'+esc(primary_email)+'</a></p></div>'
     routes=[]
     for item in d['routes']:
         email=(item.get('email') or '').strip();u=(item.get('form_url') or '').strip()
@@ -52,11 +54,13 @@ def contacts(data,lang):
     b+='<div class="contact-grid">'+''.join(routes)+'</div>'
     social=[]
     for item in d['socials']:
+        if item['name']=='微信':continue
         value=(item.get('value') or '').strip();u=(item.get('url') or '').strip()
         if not value and not u:continue
         label=esc(item['name']);v=esc(value or item['name'])
         social.append('<div class="social-line"><strong>'+label+'</strong>'+('<a href="'+link(u)+'">'+v+' ↗</a>' if u else '<span>'+v+'</span>')+'</div>')
     if social:b+='<section class="profile-section"><h2>'+('Elsewhere' if en else '也可以在这里找到我')+'</h2>'+''.join(social)+'</section>'
+    if d.get('first_message'):b+='<section class="profile-section"><h2>'+('A simple way to start' if en else '从一句问候开始')+'</h2>'+paragraph(localized(d['first_message'],lang))+'</section>'
     return b
 
 def collection(data,key,lang):
