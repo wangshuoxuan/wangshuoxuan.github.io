@@ -1,0 +1,16 @@
+{
+  "name_zh": "王烁瑄",
+  "name_en": "Wangshuoxuan",
+  "email": "2400012712@stu.pku.edu.cn",
+  "github": "https://github.com/wangshuoxuan",
+  "zh": {
+    "identity": "北京大学 · 微电子与经济学",
+    "lead": "从器件与电路出发，\n理解计算，也理解技术的价值。",
+    "introduction": "<p>我在北京大学学习微电子与经济学，研究兴趣集中在忆阻器、存算一体与神经形态计算。</p><p>这里记录研究与项目，也收纳阅读、问题和写作。不同领域的材料会在这里慢慢连接起来。</p>"
+  },
+  "en": {
+    "identity": "Peking University · Microelectronics & Economics",
+    "lead": "Understanding computation,\nfrom devices to systems.",
+    "introduction": "<p>I study microelectronics and economics at Peking University. My research interests include memristive devices, compute-in-memory, and neuromorphic computing.</p><p>This is a place for my research interests, projects, and learning notes. I will add specific questions, methods, and shareable results as the work develops.</p>"
+  }
+}

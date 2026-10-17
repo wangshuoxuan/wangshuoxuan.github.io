@@ -6,7 +6,13 @@
 
 这是一份以文字、持续写作和可核验内容为中心的个人网站。中文与英文页面共享导航与内容分类。当前新增收藏页只有分类框架，没有把未经本人确认的条目写成个人推荐，也没有自动发布任何个人博客。
 
-## 最常用的两种维护方式
+## 日常编辑：优先使用可视化后台
+
+**[打开内容编辑器](https://wangshuoxuan.github.io/admin/)** · [首次连接帮助](https://wangshuoxuan.github.io/admin/help.html)
+
+现在可以使用中文表单、分类下拉框和可视化文章编辑器，不必修改 JSON 或 HTML。首次登录由本人创建仅针对本仓库的编辑令牌。详细说明见 CMS-GUIDE.md。实际保存须在首次授权登录后核验。
+
+## 直接维护源文件（供维护者参考）
 
 **写博客：**在 `content/posts/` 新增 Markdown 文件，填写标题、日期和摘要，写好后设 `draft: false`，提交到 main。GitHub Actions 会生成文章、更新博客索引和 RSS / Atom，并重新发布。
 
@@ -32,6 +38,8 @@
 | `CONTENT-CHECKLIST.md` | 学术简介、项目和履历的待补资料 |
 | `DESIGN.md` | 参考来源与设计决策 |
 
+首页简介现在优先从 content/site.json 读取。编辑器脚本由 vendor_cms.py 在构建时下载并校验。
+
 生成页面已提交到仓库，因此下载后可直接双击 `docs/index.html` 预览。以后在 GitHub 上只修改源内容时，自动部署产物会更新，仓库里已提交的生成 HTML 不一定同步变化；网站以最新成功的 Actions 产物为准。下载源码后运行 build.py 可重新生成最新本地页面。
 
 ## 本地预览
@@ -39,6 +47,7 @@
 ```text
 python -m pip install -r requirements.txt
 python build.py
+python vendor_cms.py
 python check_site.py
 python -m unittest test_build.py
 python -m http.server 8080 --directory docs
@@ -60,4 +69,4 @@ python -m http.server 8080 --directory docs
 
 公开姓名：王烁瑄 / Wangshuoxuan；GitHub：wangshuoxuan；公开邮箱：2400012712@stu.pku.edu.cn，均经本人确认或授权。学位、年份、论文、奖项和具体研究结果未猜填。
 
-构建阶段使用 Python 与 Markdown 库；浏览器运行时仍是静态 HTML / CSS，没有外部字体、追踪器或 JavaScript 依赖。空分类和草稿不会被伪装成已完成的内容。公开仓库里的草稿源文件仍可被查看，私密材料请勿提交。
+构建阶段使用 Python 与 Markdown 库；公开内容页面仍是静态 HTML / CSS；只有 /admin/ 管理页面加载本地托管的编辑器脚本。空分类和草稿不会被伪装成已完成的内容。公开仓库里的草稿源文件仍可被查看，私密材料请勿提交。

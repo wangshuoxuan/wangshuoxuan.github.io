@@ -40,5 +40,19 @@ class PublishingTests(unittest.TestCase):
     def test_unsafe_source_scheme_rejected(self):
         self.write('books',[{'category':'computing','title':'Test','url':'javascript:alert(1)'}])
         with self.assertRaises(ValueError):build.collection('books','zh')
+    def test_cms_yaml_frontmatter(self):
+        (build.DATA/'posts'/'20261017-120000.md').write_text('---\ntitle: CMS test\ndate: 2026-10-17\nsummary: >-\n  A multiline summary\n  from a visual editor.\ncategory: essay\nlang: zh\ndraft: false\n---\n\n## Body\n\nA paragraph.\n',encoding='utf-8')
+        items=build.posts()
+        self.assertEqual(items[0]['date'],'2026-10-17')
+        self.assertEqual(items[0]['summary'],'A multiline summary from a visual editor.')
+    def test_profile_updates_home_and_contact(self):
+        p=build.DATA/'site.json';d=json.loads(p.read_text(encoding='utf-8'))
+        d['email']='test@example.org';d['github']='https://github.com/example';d['zh']['identity']='Test identity'
+        p.write_text(json.dumps(d),encoding='utf-8');build.build()
+        home=(build.OUT/'index.html').read_text(encoding='utf-8')
+        contact=(build.OUT/'contact.html').read_text(encoding='utf-8')
+        self.assertIn('Test identity',home)
+        self.assertIn('mailto:test@example.org',contact)
+        self.assertIn('href="https://github.com/example"',home)
 
 if __name__=='__main__':unittest.main()

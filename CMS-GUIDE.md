@@ -1,0 +1,42 @@
+# 使用可视化内容管理
+
+管理入口：https://wangshuoxuan.github.io/admin/
+
+首次连接帮助：https://wangshuoxuan.github.io/admin/help.html
+
+## 为什么现在不用改 JSON
+
+已接入 Sveltia CMS，编辑器直接放在网站的 /admin/ 下。书籍、视频、文章、论文、问题、应用和格言使用中文表单；分类为下拉选项；博客正文是可视化编辑器；主页简介和公开联系方式也可在表单中维护。
+
+当前无需另外注册 CMS 服务。第一次登录需要本人创建仅授权本仓库 Contents 读写的 GitHub 细粒度令牌，在编辑器中输入；不应把令牌发送给助手。保存成功后由现有 GitHub Actions 发布。普通访客不能因为打开管理地址而修改网站。
+
+Sveltia CMS 会把令牌保存在当前浏览器的本地存储中。此功能只应在本人的可信设备上使用；令牌到期或撤销后需要重新连接。首次生成凭据与授权必须由本人完成。当前尚未代替本人生成或使用任何新凭据。
+
+## 日常操作
+
+1. 打开 /admin/ 并登录。
+2. 点击相应中文栏目。
+3. 收藏栏目进入内容列表，添加或展开条目，填写中文标题、分类、来源和想法；英文可留空。
+4. 博客点击新建文章，输入标题、摘要、日期和正文；草稿开关决定是否展示到网站。
+5. 保存，再等待自动部署。发布过程可在 GitHub Actions 查看。
+
+不会的字段可以暂时留空，界面中标为必填的字段除外。源文件格式由编辑器处理。
+
+## 维护者说明
+
+- CMS 配置：docs/admin/config.yml。
+- 首页与公开联系资料：content/site.json；原始首页结构仍在 content/home-zh.html、home-en.html。
+- 文章仍保存为 Markdown + 标准 YAML frontmatter。构建器现在使用 PyYAML，兼容编辑器的多行摘要及日期序列化。
+- 收藏仍保存为原有 JSON，categories 作为隐藏字段保留，不要求作者修改内部标识。
+- 编辑器版本固定为 Sveltia CMS 0.246.1，构建时从 npm 官方注册表下载，核对 SHA-512 完整性后把脚本及分块复制到 docs/admin。访客端从本站加载，不依赖在线 CMS 服务或运行时 CDN。
+- 依赖为 MIT 许可，分发时附带原版 LICENSE。完整性信息及下载逻辑在 vendor_cms.py。
+- 当前启用 token 登录，未配置默认 Netlify OAuth 登录，不向用户展示不可用的 OAuth 入口。
+- CMS 仍为 beta 版本，后续升级应重新检查配置和保存行为。
+
+## 验证边界
+
+本地构建、站内链接、标准 YAML 与日期兼容性、主页资料更新及编辑器登录页面可检查；实际 GitHub 保存必须在本人完成首次登录后验证。在此之前，不能将“后台已部署”描述为“本人已登录并成功发布了一条内容”。
+
+最初研究过 Pages CMS，但其在线服务在本次网络环境出现连接关闭，因此最终使用同源部署的 Sveltia CMS，未安装 Pages CMS 的 GitHub App。
+
+参考：[安装](https://sveltiacms.app/en/docs/start) · [GitHub 登录与令牌](https://sveltiacms.app/en/docs/backends/github) · [富文本编辑器](https://sveltiacms.app/en/docs/fields/richtext)。

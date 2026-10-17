@@ -7,11 +7,36 @@ import json
 import re
 import xml.etree.ElementTree as ET
 import markdown
+import yaml
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'docs'
 DATA = ROOT / 'content'
 BASE = 'https://wangshuoxuan.github.io/'
+
+def site_data():
+    path=DATA/'site.json'
+    return json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
+
+def site_contact():
+    d=site_data()
+    email=d.get('email','2400012712@stu.pku.edu.cn').strip()
+    github=d.get('github','https://github.com/wangshuoxuan').strip()
+    if not re.fullmatch(r'[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+',email):raise ValueError('Enter a valid public email address')
+    url(github)
+    return email,github
+
+def home_content(lang):
+    source=(DATA/f'home-{lang}.html').read_text(encoding='utf-8')
+    d=site_data();p=d.get(lang,{})
+    if not p:return source
+    en=lang=='en';name=d.get('name_en' if en else 'name_zh','Wangshuoxuan' if en else '王烁瑄')
+    intro=f'<section class="intro" id="about" aria-labelledby="about-heading"><div class="eyebrow">Notes on learning &amp; research</div><h1 id="about-heading">{esc(name)}</h1><p class="identity">{esc(p.get("identity",""))}</p><p class="lead">{esc(p.get("lead","")).replace(chr(10),"<br>")}</p><div>{p.get("introduction","")}</div><div class="text-links"><a href="#research">'+('Research interests ↓' if en else '研究方向 ↓')+'</a><a href="#projects">'+('Projects ↓' if en else '项目 ↓')+'</a></div></section>'
+    source=re.sub(r'<section class="intro".*?</section>',lambda _:intro,source,count=1,flags=re.S)
+    email,github=site_contact()
+    source=re.sub(r'mailto:[^"\s]+','mailto:'+email,source)
+    source=source.replace('2400012712@stu.pku.edu.cn',esc(email)).replace('https://github.com/wangshuoxuan','__PUBLIC_GITHUB_URL__').replace('github.com/wangshuoxuan',esc(github.removeprefix('https://'),quote=True)).replace('__PUBLIC_GITHUB_URL__',esc(github,quote=True))
+    return source
 SECTIONS = [
  ('books','书籍','Books','值得反复翻阅的书，以及阅读留下的问题。','Books, reading notes, and questions worth returning to.'),
  ('videos','视频','Videos','播客、演讲、课程，以及值得留存的中短视频。','Podcasts, talks, courses, and shorter videos.'),
@@ -55,9 +80,9 @@ def shell(key,lang,title,description,body):
     this = ('en.html' if en else 'index.html') if key=='home' else file(key,lang)
     other = ('index.html' if en else 'en.html') if key=='home' else file(key,'zh' if en else 'en')
     nav=navigation(lang,key)
-    name='Wangshuoxuan' if en else '王烁瑄'
+    name=esc(site_data().get('name_en' if en else 'name_zh','Wangshuoxuan' if en else '王烁瑄'))
     language=f'<a href="{other}" lang="'+('zh-CN">中文' if en else 'en">English')+'</a>'
-    footer=f'<footer><span>© 2026 {name}</span><span>'+('A growing personal website' if en else '持续积累，随时修订')+f'</span><a href="#main">'+('Back to top ↑' if en else '回到顶部 ↑')+'</a></footer>'
+    footer=f'<footer><span>© 2026 {name}</span><span>'+('A growing personal website' if en else '持续积累，随时修订')+'</span><a href="admin/index.html">'+('Edit site' if en else '管理内容')+f'</a><a href="#main">'+('Back to top ↑' if en else '回到顶部 ↑')+'</a></footer>'
     return f'''<!doctype html>
 <html lang="{'en' if en else 'zh-CN'}"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -120,16 +145,14 @@ def posts():
         raw=p.read_text(encoding='utf-8')
         if not raw.startswith('---\n'):raise ValueError('Posts need metadata between --- lines')
         front,body=raw[4:].split('\n---\n',1)
-        d={}
-        for line in front.splitlines():
-            if not line.strip():continue
-            k,v=line.split(':',1);v=v.strip()
-            d[k.strip()]=json.loads(v) if v in ('true','false') or v.startswith('"') else v
+        d=yaml.safe_load(front)
+        if not isinstance(d,dict):raise ValueError('Invalid post metadata')
         if 'draft' in d and not isinstance(d['draft'],bool):raise ValueError('draft must be true or false')
         if d.get('draft',True):continue
         slug=d.get('slug',p.stem)
         if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',slug):raise ValueError('Use a lowercase ASCII post slug')
         if any(x['slug']==slug for x in result):raise ValueError('Duplicate post slug')
+        if isinstance(d.get('date'),date):d['date']=d['date'].isoformat()[:10]
         date.fromisoformat(d['date'])
         if not d.get('title') or not d.get('summary'):raise ValueError('Published posts need title and summary')
         d.update(slug=slug,body=markdown.markdown(body,extensions=['fenced_code','tables','footnotes','toc']))
@@ -171,13 +194,14 @@ def build():
     OUT.mkdir(exist_ok=True)
     for p in OUT.glob('post-*.html'):p.unlink() # generated post output only; remove unpublished drafts
     for lang in ('zh','en'):
-        source=(DATA/f'home-{lang}.html').read_text(encoding='utf-8')
+        source=home_content(lang)
         (OUT/('en.html' if lang=='en' else 'index.html')).write_text(shell('home',lang,'Home' if lang=='en' else '首页','Personal website of Wangshuoxuan.',source),encoding='utf-8')
         for key,*_ in SECTIONS:(OUT/file(key,lang)).write_text(collection(key,lang),encoding='utf-8')
         en=lang=='en'
         title='Contact' if en else '联系我'
         body=heading(title,'Contact','Find me online, or send an email.' if en else '通过邮件或 GitHub 与我联系。',lang)
-        body+='<section class="library-category"><h2>Email</h2><p><a href="mailto:2400012712@stu.pku.edu.cn">2400012712@stu.pku.edu.cn</a></p></section><section class="library-category"><h2>GitHub</h2><p><a href="https://github.com/wangshuoxuan">github.com/wangshuoxuan ↗</a></p></section>'
+        email,github=site_contact()
+        body+=f'<section class="library-category"><h2>Email</h2><p><a href="mailto:{esc(email,quote=True)}">{esc(email)}</a></p></section><section class="library-category"><h2>GitHub</h2><p><a href="{url(github)}">{esc(github.removeprefix("https://"))} ↗</a></p></section>'
         (OUT/file('contact',lang)).write_text(shell('contact',lang,title,'Contact Wangshuoxuan.',body),encoding='utf-8')
     items=posts()
     for lang in ('zh','en'):(OUT/file('blog',lang)).write_text(blog(lang,items),encoding='utf-8')
