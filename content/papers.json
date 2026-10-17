@@ -1,36 +1,14 @@
 {
   "categories": [
     {
-      "id": "devices",
+      "id": "electronics",
       "name": {
-        "zh": "器件与微电子",
-        "en": "Devices & microelectronics"
+        "zh": "微电子与集成电路",
+        "en": "Microelectronics & integrated circuits"
       },
       "description": {
-        "zh": "忆阻器、器件物理、材料与集成电路。",
-        "en": ""
-      }
-    },
-    {
-      "id": "computing",
-      "name": {
-        "zh": "计算架构与存算一体",
-        "en": "Architecture & compute-in-memory"
-      },
-      "description": {
-        "zh": "电路、架构、系统与评估方法。",
-        "en": ""
-      }
-    },
-    {
-      "id": "ai",
-      "name": {
-        "zh": "人工智能与神经形态",
-        "en": "AI & neuromorphic computing"
-      },
-      "description": {
-        "zh": "学习算法、计算模型与神经形态系统。",
-        "en": ""
+        "zh": "统一收录器件、材料、电路、架构、忆阻器、存算一体与神经形态计算等方向的论文推荐。",
+        "en": "Recommended papers on devices, materials, circuits, architectures, memristors, compute-in-memory, and neuromorphic computing."
       }
     },
     {

@@ -41,7 +41,7 @@ SECTIONS = [
  ('books','书籍','Books','书籍与阅读网站，附上一点推荐理由。','Books and reading websites, with a short recommendation.'),
  ('videos','视频','Videos','播客、演讲、课程，以及值得留存的中短视频。','Podcasts, talks, courses, and shorter videos.'),
  ('articles','文章收藏','Articles','来自公众号、博客与开放网络的文章。','Articles from newsletters, blogs, and the open web.'),
- ('papers','论文','Papers','跨学科的论文阅读、方法与批注。','Papers, methods, and annotations across disciplines.'),
+ ('papers','论文','Papers','值得阅读的论文与学术资源，附上简短推荐。','Recommended papers and academic resources, with brief notes.'),
  ('questions','感兴趣的问题','Questions','为值得长期追问的问题保留一个位置。','A place for questions worth sustained attention.'),
  ('apps','应用与工具','Apps & tools','按实际用途整理应用、软件与工作流。','Apps, software, and workflows, organized by use.'),
  ('quotes','格言','Quotes','保留原话，也保留出处与理解它的语境。','Quotations, their sources, and the context that gives them meaning.'),
