@@ -1,4 +1,4 @@
-# 部署状态：用户名迁移中
+# 部署状态：已上线，用户名迁移完成
 
 核验日期：2026-10-17（Asia/Shanghai）
 
@@ -7,7 +7,8 @@
 - 源码仓库：https://github.com/wangshuoxuan/wangshuoxuan.github.io
 - 发布配置：Deploy from a branch → main → /docs；HTTPS 已启用。
 - 首次站点部署成功记录：https://github.com/wangshuoxuan/wangshuoxuan.github.io/actions/runs/38998217046
-- 核验的站点源码提交：dc8b79658814bcb5d3d2ea8e3d5ea89250759139
+- 当前站点源码提交：8587dcbe91c615162a50a1af44c5102cff8b979f
+- 迁移部署成功记录：https://github.com/wangshuoxuan/wangshuoxuan.github.io/actions/runs/38998836161
 
 ## 已核验
 
@@ -29,4 +30,4 @@
 
 ## 用户名迁移
 
-2026-10-17，经本人明确确认，GitHub 用户名已由原账号名称改为 wangshuoxuan，仓库同步改名为 wangshuoxuan.github.io。站内与说明文件链接已同步更新。新网址部署核验进行中；上述首次部署记录为迁移前的历史记录。
+2026-10-17，经本人明确确认，GitHub 用户名已由原账号名称改为 wangshuoxuan，仓库同步改名为 wangshuoxuan.github.io。站内与说明文件链接已同步更新。新网址已部署并核验：5 个 HTML 页面的无需登录请求均返回 200，内容与本地源码一致（规范化换行符后比较）。浏览器已确认新域名与更新后的 GitHub 账号链接。上述首次部署记录为迁移前的历史记录。旧个人主页地址没有自动跳转保证，请分享新网址。
