@@ -473,6 +473,18 @@ collections:
         description:
           zh: 独立解释、技术演示、评论与短纪录内容。
           en: ''
+      - id: documentary
+        name:
+          zh: 纪录片
+          en: Documentaries
+      - id: interview
+        name:
+          zh: 访谈与圆桌
+          en: Interviews & panels
+      - id: demo
+        name:
+          zh: 演示与实践
+          en: Demonstrations & practice
     - name: entries
       label: 内容列表
       widget: list
@@ -494,6 +506,12 @@ collections:
           label: 课程与系列教程
         - value: short
           label: 中短视频
+        - value: documentary
+          label: 纪录片
+        - value: interview
+          label: 访谈与圆桌
+        - value: demo
+          label: 演示与实践
       - name: subjects
         label: 学科（可多选）
         widget: select
@@ -560,51 +578,34 @@ collections:
         name:
           zh: 微信公众号
           en: WeChat articles
-        description:
-          zh: 保留文章标题、作者或公众号、发布日期和原文链接。
-          en: ''
       - id: blogs
         name:
-          zh: 个人博客
-          en: Personal blogs
-        description:
-          zh: 具体文章与作者；推荐整个博客时注明推荐范围。
-          en: ''
+          zh: 博客与个人网站
+          en: Blogs & personal websites
       - id: newsletters
         name:
           zh: 通讯与专栏
           en: Newsletters & columns
-        description:
-          zh: 长期专栏、独立通讯与定期刊物。
-          en: ''
-      - id: science
+      - id: papers
         name:
-          zh: 科学与技术
-          en: Science & technology
-        description:
-          zh: 技术解释、研究随笔与工程实践。
-          en: ''
-      - id: economics
+          zh: 论文与预印本
+          en: Papers & preprints
+      - id: magazines
         name:
-          zh: 经济与社会
-          en: Economics & society
-        description:
-          zh: 产业、制度、商业与社会观察。
-          en: ''
-      - id: culture
+          zh: 报刊与杂志
+          en: Newspapers & magazines
+      - id: reports
         name:
-          zh: 人文与艺术
-          en: Humanities & art
-        description:
-          zh: 历史、哲学、文学、艺术与文化。
-          en: ''
-      - id: methods
+          zh: 报告与工作论文
+          en: Reports & working papers
+      - id: docs
         name:
-          zh: 方法与实践
-          en: Methods & practice
-        description:
-          zh: 学习、写作、研究与协作的方法。
-          en: ''
+          zh: 文档与教程
+          en: Documentation & tutorials
+      - id: other
+        name:
+          zh: 其他文章
+          en: Other articles
     - name: entries
       label: 内容列表
       widget: list
@@ -614,24 +615,26 @@ collections:
         label: 名称（内容标题或平台名）
         widget: string
       - name: category
-        label: 分类
+        label: 媒介类型
         widget: select
         required: true
         options:
         - value: wechat
           label: 微信公众号
         - value: blogs
-          label: 个人博客
+          label: 博客与个人网站
         - value: newsletters
           label: 通讯与专栏
-        - value: science
-          label: 科学与技术
-        - value: economics
-          label: 经济与社会
-        - value: culture
-          label: 人文与艺术
-        - value: methods
-          label: 方法与实践
+        - value: papers
+          label: 论文与预印本
+        - value: magazines
+          label: 报刊与杂志
+        - value: reports
+          label: 报告与工作论文
+        - value: docs
+          label: 文档与教程
+        - value: other
+          label: 其他文章
       - name: url
         label: 访问链接
         widget: string
@@ -647,6 +650,40 @@ collections:
         widget: boolean
         default: false
         required: false
+      - name: subjects
+        label: 学科（可多选）
+        widget: select
+        required: false
+        multiple: true
+        options:
+        - value: history
+          label: 历史
+        - value: economics
+          label: 经济学
+        - value: art
+          label: 艺术
+        - value: psychology
+          label: 心理学
+        - value: sociology
+          label: 社会学
+        - value: philosophy
+          label: 哲学
+        - value: business
+          label: 商业
+        - value: geopolitics
+          label: 地缘政治
+        - value: ai
+          label: AI
+        - value: engineering
+          label: 工程学
+        - value: neuroscience
+          label: 神经科学
+        - value: physics
+          label: 物理学
+        - value: math
+          label: 数学
+        - value: interdisciplinary
+          label: 跨学科 / 综合
       collapsed: true
       summary: '{{fields.title}}'
       hint: 填写名称、分类和链接；推荐语可留空。可放单篇内容，也可放平台入口。

@@ -61,6 +61,10 @@ def contacts(data,lang):
 
 def collection(data,key,lang):
     d=read(data,key+'.json');en=lang=='en';subjects=read(data,'subjects.json')['subjects']
+    if key=='articles':
+        papers=read(data,'papers.json')
+        mapping={'electronics':'engineering','math':'math','economics':'economics','social':'sociology','natural':'interdisciplinary','methods':'interdisciplinary'}
+        d['entries']=d['entries']+[dict(e,category='papers',subjects=e.get('subjects') or [mapping.get(e.get('category'),'interdisciplinary')]) for e in papers['entries']]
     categories={x['id']:localized(x['name'],lang) for x in d['categories']}
     subject_names={x['id']:localized(x['name'],lang) for x in subjects}
     stages={a:c if en else b for a,b,c in STAGES}
@@ -74,14 +78,24 @@ def collection(data,key,lang):
         entries.append(e)
     def select(name,label,options):
         return '<label>'+label+f'<select data-filter="{name}"><option value="">'+('All' if en else '全部')+'</option>'+''.join(f'<option value="{esc(k,quote=True)}">{esc(v)}</option>' for k,v in options.items())+'</select></label>'
-    b='<div class="filters" hidden>'+select('category',('Format' if en else '内容形式') if key=='videos' else ('Topic' if en else '问题主题'),categories)+select('subject','Subject' if en else '学科',subject_names)
+    b='<div class="filters" hidden>'+select('subject','Subject' if en else '学科',subject_names)+select('category',('Format' if en else ('媒介类型' if key=='articles' else '内容形式')) if key in ('videos','articles') else ('Topic' if en else '问题主题'),categories)
     if key=='questions':b+=select('stage','Stage' if en else '探索状态',stages)
     b+='<button type="button" data-reset>'+('Reset' if en else '重置')+'</button></div>'
     b+=f'<p class="collection-count" data-count aria-live="polite">{len(entries)} '+('entries' if en else '条内容')+'</p><div class="filtered-list">'
+    grouped=key in ('videos','articles')
+    if grouped:
+        entries.sort(key=lambda e:list(subject_names).index((e.get('subjects') or ['interdisciplinary'])[0]))
+    group=None
     for e in entries:
+        if grouped:
+            primary=(e.get('subjects') or ['interdisciplinary'])[0]
+            if primary!=group:
+                if group is not None:b+='</section>'
+                group=primary
+                b+='<section data-subject-group><h2>'+esc(subject_names[group])+'</h2>'
         title=localized(e.get('title'),lang)
         if not title:raise ValueError('Every entry needs a title')
-        cat=e['category'];sub=e.get('subjects',[]);stage=e.get('stage','open')
+        cat=e['category'];sub=e.get('subjects') or (['interdisciplinary'] if grouped else []);stage=e.get('stage','open')
         b+=f'<article class="resource-card" data-entry data-category="{esc(cat,quote=True)}" data-subject="{esc(" ".join(sub),quote=True)}" data-stage="{esc(stage,quote=True)}">'
         labels=[categories[cat]]+[subject_names[s] for s in sub]
         if key=='questions':labels.append(stages[stage])
@@ -98,7 +112,8 @@ def collection(data,key,lang):
                 b+='<h3>'+ (english if en else zh)+'</h3>'+paragraph(e.get(field,'') or ('Notes will grow here.' if en else '留待继续思考与记录。'))
             b+='</details>'
         b+='</article>'
-    b+='</div><p class="collection-empty" data-empty'+(' hidden' if entries else '')+'>'+('No matching entries yet.' if en else '这里还没有符合条件的内容，后续会逐步补充。')+'</p><script src="browse.js" defer></script>'
+    if group is not None:b+='</section>'
+    b+='</div><p class="collection-empty" data-empty'+(' hidden' if entries else '')+'>'+('No matching entries yet.' if en else '这里还没有符合条件的内容，后续会逐步补充。')+'</p><script src="browse.js?v=dual-filter-2" defer></script>'
     return b
 
 

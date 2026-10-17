@@ -14,11 +14,18 @@
       entry.hidden = !matches;
       if (matches) count++;
     });
+    document.querySelectorAll('[data-subject-group]').forEach(group => { group.hidden = ![...group.querySelectorAll('[data-entry]')].some(e => !e.hidden); });
     document.querySelector('[data-count]').textContent = `${count} ${en ? 'entries' : '条内容'}`;
     document.querySelector('[data-empty]').hidden = count > 0;
   }
   controls.hidden = false;
-  selects.forEach(select => select.addEventListener('change', update));
+  selects.forEach(select => {
+    const clear = document.createElement('button');
+    clear.type = 'button'; clear.textContent = en ? 'Clear this filter' : '取消此条件';
+    clear.addEventListener('click', () => { select.value = ''; update(); });
+    select.parentElement.append(clear);
+    select.addEventListener('change', update);
+  });
   controls.querySelector('[data-reset]').addEventListener('click', () => {
     selects.forEach(select => { select.value = ''; });
     update();

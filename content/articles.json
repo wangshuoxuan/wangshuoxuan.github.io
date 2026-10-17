@@ -5,21 +5,13 @@
       "name": {
         "zh": "微信公众号",
         "en": "WeChat articles"
-      },
-      "description": {
-        "zh": "保留文章标题、作者或公众号、发布日期和原文链接。",
-        "en": ""
       }
     },
     {
       "id": "blogs",
       "name": {
-        "zh": "个人博客",
-        "en": "Personal blogs"
-      },
-      "description": {
-        "zh": "具体文章与作者；推荐整个博客时注明推荐范围。",
-        "en": ""
+        "zh": "博客与个人网站",
+        "en": "Blogs & personal websites"
       }
     },
     {
@@ -27,54 +19,41 @@
       "name": {
         "zh": "通讯与专栏",
         "en": "Newsletters & columns"
-      },
-      "description": {
-        "zh": "长期专栏、独立通讯与定期刊物。",
-        "en": ""
       }
     },
     {
-      "id": "science",
+      "id": "papers",
       "name": {
-        "zh": "科学与技术",
-        "en": "Science & technology"
-      },
-      "description": {
-        "zh": "技术解释、研究随笔与工程实践。",
-        "en": ""
+        "zh": "论文与预印本",
+        "en": "Papers & preprints"
       }
     },
     {
-      "id": "economics",
+      "id": "magazines",
       "name": {
-        "zh": "经济与社会",
-        "en": "Economics & society"
-      },
-      "description": {
-        "zh": "产业、制度、商业与社会观察。",
-        "en": ""
+        "zh": "报刊与杂志",
+        "en": "Newspapers & magazines"
       }
     },
     {
-      "id": "culture",
+      "id": "reports",
       "name": {
-        "zh": "人文与艺术",
-        "en": "Humanities & art"
-      },
-      "description": {
-        "zh": "历史、哲学、文学、艺术与文化。",
-        "en": ""
+        "zh": "报告与工作论文",
+        "en": "Reports & working papers"
       }
     },
     {
-      "id": "methods",
+      "id": "docs",
       "name": {
-        "zh": "方法与实践",
-        "en": "Methods & practice"
-      },
-      "description": {
-        "zh": "学习、写作、研究与协作的方法。",
-        "en": ""
+        "zh": "文档与教程",
+        "en": "Documentation & tutorials"
+      }
+    },
+    {
+      "id": "other",
+      "name": {
+        "zh": "其他文章",
+        "en": "Other articles"
       }
     }
   ],
@@ -84,14 +63,20 @@
       "category": "blogs",
       "url": "https://paulgraham.com/articles.html",
       "note": "关于写作、创造、创业与思考的文章目录。",
-      "draft": false
+      "draft": false,
+      "subjects": [
+        "interdisciplinary"
+      ]
     },
     {
       "title": "Patrick Collison｜个人网站",
       "category": "blogs",
       "url": "https://patrickcollison.com/",
       "note": "从问题清单、阅读与研究机构等主题继续探索。",
-      "draft": false
+      "draft": false,
+      "subjects": [
+        "interdisciplinary"
+      ]
     }
   ]
 }

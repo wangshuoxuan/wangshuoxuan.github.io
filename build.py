@@ -110,7 +110,7 @@ def render_item(item,lang,kind):
     return f'<article class="library-entry"><h3>{title_html}</h3>{meta_html}{quote_html}'+(f'<p>{esc(note)}</p>' if note else '')+(f'<p class="entry-tags">{esc(" · ".join(tags))}</p>' if tags else '')+'</article>'
 
 def collection(key,lang):
-    if key in ('videos','questions'):
+    if key in ('videos','questions','articles'):
         _,zh,en,zd,ed=NAMES[key]
         return shell(key,lang,en if lang=='en' else zh,ed if lang=='en' else zd,heading(en if lang=='en' else zh,en,ed if lang=='en' else zd,lang)+personal.collection(DATA,key,lang))
     d=json.loads((DATA/f'{key}.json').read_text(encoding='utf-8'))
@@ -203,7 +203,7 @@ def sync_editor():
         next(f for f in fields if f['name']=='categories')['default']=data['categories']
         entry_fields=next(f for f in fields if f['name']=='entries')['fields']
         next(f for f in entry_fields if f['name']=='category')['options']=[{'value':c['id'],'label':text(c,'name','zh')} for c in data['categories']]
-        if key in ('videos','questions'):
+        if key in ('videos','questions','articles'):
             subjects=json.loads((DATA/'subjects.json').read_text(encoding='utf-8'))['subjects']
             next(f for f in entry_fields if f['name']=='subjects')['options']=[{'value':c['id'],'label':text(c,'name','zh')} for c in subjects]
     config_text=yaml.safe_dump(config,allow_unicode=True,sort_keys=False)

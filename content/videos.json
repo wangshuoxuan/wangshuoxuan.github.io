@@ -43,6 +43,27 @@
         "zh": "独立解释、技术演示、评论与短纪录内容。",
         "en": ""
       }
+    },
+    {
+      "id": "documentary",
+      "name": {
+        "zh": "纪录片",
+        "en": "Documentaries"
+      }
+    },
+    {
+      "id": "interview",
+      "name": {
+        "zh": "访谈与圆桌",
+        "en": "Interviews & panels"
+      }
+    },
+    {
+      "id": "demo",
+      "name": {
+        "zh": "演示与实践",
+        "en": "Demonstrations & practice"
+      }
     }
   ],
   "entries": [
