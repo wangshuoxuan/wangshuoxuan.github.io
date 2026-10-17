@@ -66,7 +66,7 @@ def navigation(lang,current):
     for eg,zg,items in groups:
         links=''.join(f'<a href="{href}"'+(' aria-current="page"' if current==k else '')+f'>{esc(e if en else z)}</a>' for k,z,e,href in items)
         parts.append(f'<div class="nav-group"><a class="nav-label" href="{home}">{eg if en else zg}</a></div>' if not items else f'<div class="nav-group"><div class="nav-label">{eg if en else zg}</div>{links}</div>')
-    parts.append(f'<div class="nav-contact"><a href="{file("contact",lang)}"'+(' aria-current="page"' if current=='contact' else '')+f'>{"Contact" if en else "联系我"} <span aria-hidden="true">↗</span></a></div>')
+    parts.append(f'<div class="nav-contact"><a href="{file("contact",lang)}"'+(' aria-current="page"' if current=='contact' else '')+f'>{"Contact" if en else "联系我"}</a></div>')
     return '<nav class="nav site-nav" aria-label="'+('Site navigation' if en else '全站目录')+'">'+''.join(parts)+'</nav>'
 
 def shell(key,lang,title,description,body):
@@ -76,7 +76,7 @@ def shell(key,lang,title,description,body):
     nav=navigation(lang,key)
     name=esc(site_data().get('name_en' if en else 'name_zh','Wangshuoxuan' if en else '王烁瑄'))
     language=f'<a href="{other}" lang="'+('zh-CN">中文' if en else 'en">English')+'</a>'
-    footer='<footer><small>'+('Always learning, always revising' if en else '持续积累，随时修订')+'</small></footer>'
+    footer='<footer><small>'+('Keep learning' if en else '持续积累')+'</small></footer>'
     return f'''<!doctype html>
 <html lang="{'en' if en else 'zh-CN'}"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -163,7 +163,7 @@ def blog(lang,items):
     en=lang=='en'
     title='Blog' if en else '我的博客'
     body=heading(title,'Blog & notes','Essays, research notes, and working thoughts.' if en else '长文、研究笔记与日常思考，都可以从这里开始。',lang)
-    body+='<p class="collection-count">'+str(len(items))+(' published posts' if en else '篇已发布文章')+' · <a href="feed.xml">RSS / Atom ↗</a></p>'
+    body+='<p class="collection-count">'+str(len(items))+(' published posts' if en else '篇已发布文章')+'</p>'
     body+='<nav class="category-index" aria-label="Blog categories">'+''.join(f'<a href="#blog-{i}">{esc(label)}</a>' for i,label in enumerate(['研究笔记','随笔','阅读札记','其他写作'] if not en else ['Research notes','Essays','Reading notes','Other writing']))+'</nav>'
     groups=[('research','Research notes' if en else '研究笔记'),('essay','Essays' if en else '随笔'),('reading','Reading notes' if en else '阅读札记'),('other','Other writing' if en else '其他写作')]
     for i,(cat,label) in enumerate(groups):

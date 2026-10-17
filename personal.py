@@ -27,7 +27,7 @@ def home(data, lang):
     name=d['name_en' if en else 'name_zh']
     b=f'<section class="profile-hero" id="about"><img class="profile-avatar" src="{esc(avatar,quote=True)}" width="2048" height="966" alt="'+('Personal profile image' if en else '个人头像')+f'"><div><p class="eyebrow">LEARN · THINK · EXPLORE · DEEPEN</p><h1>{esc(name)}</h1><p class="identity">{esc(p["identity"])}</p></div></section>'
     b+=f'<p class="profile-lead">{esc(p.get("lead",""))}</p>'+p.get('introduction','')
-    b+='<div class="text-links"><a href="'+('blog-en.html' if en else 'blog.html')+'">'+('My writing ↗' if en else '读我的博客 ↗')+'</a><a href="'+('contact-en.html' if en else 'contact.html')+'">'+('Get in touch ↗' if en else '联系我 ↗')+'</a></div>'
+    b+='<p>'+('To get to know me, start with my ' if en else '如果你想快速了解我，可以从我的')+'<a href="'+('blog-en.html' if en else 'blog.html')+'">'+('blog' if en else '博客')+'</a>'+(' or ' if en else '／')+'<a href="'+('thoughts-en.html' if en else 'thoughts.html')+'">'+('short notes' if en else '短文章')+'</a>'+('.' if en else '开始。')+'</p><p><a href="'+('contact-en.html' if en else 'contact.html')+'">'+('Contact me' if en else '联系我')+'</a></p>'
     for key,anchor,zh,eng,kind in [('education','education','学业经历','Education','records'),('honors','honors','所获荣誉','Honors','records'),('disciplines','interests','学科兴趣','Academic interests','chips'),('research_summary','research','研究兴趣','Research interests','text'),('hobbies','life','生活与爱好','Beyond study','chips')]:
         if not p.get(key):continue
         b+=f'<section class="profile-section" id="{anchor}"><p class="eyebrow">{eng.upper()}</p><h2>{eng if en else zh}</h2>'
