@@ -2,11 +2,11 @@
 
 一个文字优先、中英文双语的个人主页 MVP。背景为北京大学微电子与经济学，研究兴趣为忆阻器、存算一体与神经形态计算。
 
-**已上线：[个人主页](https://peace21th.github.io/) · [English](https://peace21th.github.io/en.html)**
+**已上线：[个人主页](https://wangshuoxuan.github.io/) · [English](https://wangshuoxuan.github.io/en.html)**
 
-仓库：[Peace21th/peace21th.github.io](https://github.com/Peace21th/peace21th.github.io)。已配置 `main /docs` 发布，后续编辑并提交即可更新。核验记录见 `DEPLOYMENT-STATUS.md`。
+仓库：[wangshuoxuan/wangshuoxuan.github.io](https://github.com/wangshuoxuan/wangshuoxuan.github.io)。已配置 `main /docs` 发布，后续编辑并提交即可更新。核验记录见 `DEPLOYMENT-STATUS.md`。
 
-**当前内容是可编辑底稿。** 公开姓名已确认为王烁瑄 / Wangshuoxuan；Peace21th 是已核实的 GitHub 用户名。学位、年份、项目经历、文章、阅读记录和正式 CV 尚待补充。公开邮箱已按本人授权设置为 2400012712@stu.pku.edu.cn。未编造论文、奖项、实验结果或熟练掌握的技能。
+**当前内容是可编辑底稿。** 公开姓名已确认为王烁瑄 / Wangshuoxuan；wangshuoxuan 是已核实的 GitHub 用户名。学位、年份、项目经历、文章、阅读记录和正式 CV 尚待补充。公开邮箱已按本人授权设置为 2400012712@stu.pku.edu.cn。未编造论文、奖项、实验结果或熟练掌握的技能。
 
 ## 立即预览
 
@@ -36,12 +36,12 @@ personal-homepage/
 
 ## 从零部署或迁移时参考（本站已完成，无须重做）
 
-1. 登录 `Peace21th`，打开 <https://github.com/new>。
-2. 新建公开仓库 **`peace21th.github.io`**。不要选择或覆盖已有项目。若该名称已存在，先检查其中内容；有已有内容时改用独立仓库名，例如 `personal-homepage`。
+1. 登录 `wangshuoxuan`，打开 <https://github.com/new>。
+2. 新建公开仓库 **`wangshuoxuan.github.io`**。不要选择或覆盖已有项目。若该名称已存在，先检查其中内容；有已有内容时改用独立仓库名，例如 `personal-homepage`。
 3. 上传本目录中的内容，保留 `docs` 这一层；仓库中应出现 `docs/index.html`，而不是 `personal-homepage/docs/index.html`。**不要上传 ZIP 本身。** 可先创建带 README 的仓库，再用 Add file → Upload files 上传 `docs` 文件夹及其他说明文件。已有 README 不必覆盖，可在后续合并说明。
 4. 打开仓库 **Settings → Pages**。在 Build and deployment 中选择 **Deploy from a branch**，分支选 **main**，目录选 **/docs**，保存。
-5. 等待 Pages 部署任务结束，按 Settings → Pages 显示的 **Visit site** 打开网站。标准用户站点预期地址为 <https://peace21th.github.io/>。本站已完成部署并核验该地址；重新部署时仍以 Pages 状态与实际页面为准。
-6. 如果采用 `personal-homepage` 仓库，预期地址为 `https://peace21th.github.io/personal-homepage/`。主页、语言切换和 CV 使用相对路径，可在两种地址下运行；但应把 `docs/404.html` 的返回主页链接改成实际站点地址。
+5. 等待 Pages 部署任务结束，按 Settings → Pages 显示的 **Visit site** 打开网站。标准用户站点预期地址为 <https://wangshuoxuan.github.io/>。本站已完成部署并核验该地址；重新部署时仍以 Pages 状态与实际页面为准。
+6. 如果采用 `personal-homepage` 仓库，预期地址为 `https://wangshuoxuan.github.io/personal-homepage/`。主页、语言切换和 CV 使用相对路径，可在两种地址下运行；但应把 `docs/404.html` 的返回主页链接改成实际站点地址。
 
 如果网页上传忽略了隐藏文件，在 GitHub 创建 `docs/.nojekyll` 空文件即可。即使遗漏，它也不影响当前普通 HTML/CSS 的核心展示；保留它可以明确表示纯静态发布。
 
@@ -65,7 +65,7 @@ GitHub 官方说明：
 | 配色、间距、字号 | `docs/styles.css` 顶部变量和对应样式 |
 | 最后更新时间 | 两个首页页脚中的 `2026.10.17` / `17 Oct 2026` |
 
-**姓名与账号是两回事。** 替换公开姓名时，只改显示姓名、网页标题和页脚署名，不要把 `https://github.com/Peace21th` 中的账号也替换成姓名。英文拼写已由本人确认为 Wangshuoxuan。经济学的主修/双学位/辅修身份尚未确认，当前只写学习领域。
+**姓名与账号是两回事。** 替换公开姓名时，只改显示姓名、网页标题和页脚署名，不要把 `https://github.com/wangshuoxuan` 中的账号也替换成姓名。英文拼写已由本人确认为 Wangshuoxuan。经济学的主修/双学位/辅修身份尚未确认，当前只写学习领域。
 
 HTML 的 `<标签>` 与 `</标签>` 配对保留，只修改其中的文字。正文里的 `&` 写成 `&amp;`，`<` 写成 `&lt;`。图片使用相对路径、写好 `alt` 文字，不依赖本机绝对路径。中英文为两个独立静态文件，修改事实时请同步两边。
 

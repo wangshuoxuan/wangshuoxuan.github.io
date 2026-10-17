@@ -1,12 +1,12 @@
-# 部署状态：已上线
+# 部署状态：用户名迁移中
 
 核验日期：2026-10-17（Asia/Shanghai）
 
-- **个人主页：https://peace21th.github.io/**
-- 英文版：https://peace21th.github.io/en.html
-- 源码仓库：https://github.com/Peace21th/peace21th.github.io
+- **个人主页：https://wangshuoxuan.github.io/**
+- 英文版：https://wangshuoxuan.github.io/en.html
+- 源码仓库：https://github.com/wangshuoxuan/wangshuoxuan.github.io
 - 发布配置：Deploy from a branch → main → /docs；HTTPS 已启用。
-- 首次站点部署成功记录：https://github.com/Peace21th/peace21th.github.io/actions/runs/38998217046
+- 首次站点部署成功记录：https://github.com/wangshuoxuan/wangshuoxuan.github.io/actions/runs/38998217046
 - 核验的站点源码提交：dc8b79658814bcb5d3d2ea8e3d5ea89250759139
 
 ## 已核验
@@ -26,3 +26,7 @@
 ## 个人资料
 
 公开姓名为王烁瑄 / Wangshuoxuan，公开邮箱为 2400012712@stu.pku.edu.cn，均经本人确认或授权。具体经历、论文、年份、阅读记录和正式 CV 仍为明确标注的待补内容，未虚构成果。
+
+## 用户名迁移
+
+2026-10-17，经本人明确确认，GitHub 用户名已由原账号名称改为 wangshuoxuan，仓库同步改名为 wangshuoxuan.github.io。站内与说明文件链接已同步更新。新网址部署核验进行中；上述首次部署记录为迁移前的历史记录。
