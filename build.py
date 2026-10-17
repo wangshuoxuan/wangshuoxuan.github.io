@@ -38,7 +38,7 @@ def home_content(lang):
     source=source.replace('2400012712@stu.pku.edu.cn',esc(email)).replace('https://github.com/wangshuoxuan','__PUBLIC_GITHUB_URL__').replace('github.com/wangshuoxuan',esc(github.removeprefix('https://'),quote=True)).replace('__PUBLIC_GITHUB_URL__',esc(github,quote=True))
     return source
 SECTIONS = [
- ('books','书籍','Books','值得反复翻阅的书，以及阅读留下的问题。','Books, reading notes, and questions worth returning to.'),
+ ('books','书籍','Books','书籍与阅读网站，附上一点推荐理由。','Books and reading websites, with a short recommendation.'),
  ('videos','视频','Videos','播客、演讲、课程，以及值得留存的中短视频。','Podcasts, talks, courses, and shorter videos.'),
  ('articles','文章收藏','Articles','来自公众号、博客与开放网络的文章。','Articles from newsletters, blogs, and the open web.'),
  ('papers','论文','Papers','跨学科的论文阅读、方法与批注。','Papers, methods, and annotations across disciplines.'),
@@ -122,12 +122,17 @@ def collection(key,lang):
     if any(not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',i) for i in ids):raise ValueError('Invalid category id')
     if any('draft' in e and not isinstance(e['draft'],bool) for e in d['entries']):raise ValueError('draft must be true or false')
     entries=[e for e in d['entries'] if not e.get('draft',False)]
-    if any(e.get('category') not in ids for e in entries):raise ValueError('Unknown category')
+    if key!='books' and any(e.get('category') not in ids for e in entries):raise ValueError('Unknown category')
     en=lang=='en'; _,zh,eng,zd,ed=NAMES[key]
     title=eng if en else zh
     intro=heading(title,eng,ed if en else zd,lang)
     count=f'{len(entries)} '+('entries' if en else '条记录')
     intro+=f'<p class="collection-count">{count}</p>'
+    if key=='books':
+        if not entries:
+            intro+='<p class="collection-empty">'+('Reading links will appear here.' if en else '阅读链接会陆续放在这里。')+'</p>'
+        intro+=''.join(render_item(e,lang,key) for e in entries)
+        return shell(key,lang,title,ed if en else zd,intro)
     intro+='<nav class="category-index" aria-label="'+('Categories' if en else '分类索引')+'">'+''.join(f'<a href="#cat-{c["id"]}">{esc(text(c,"name",lang))}<span>{sum(e["category"]==c["id"] for e in entries)}</span></a>' for c in d['categories'])+'</nav>'
     if not entries:
         intro+='<p class="collection-empty">'+('No personal entries have been added yet. Categories are ready for future additions.' if en else '尚未添加个人条目。分类已备好，后续逐条补充。')+'</p>'

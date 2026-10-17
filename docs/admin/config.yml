@@ -216,104 +216,31 @@ collections:
           zh: 写作、设计、创业与做事的方法。
           en: ''
     - name: entries
-      label: 内容列表
+      label: 书籍与阅读网站
       widget: list
       required: false
       fields:
       - name: title
-        label: 标题
-        widget: object
-        required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: string
-          required: true
-        - name: en
-          label: 英文（可留空）
-          widget: string
-          required: false
-      - name: category
-        label: 分类
-        widget: select
-        required: true
-        options:
-        - value: computing
-          label: 计算机与人工智能
-        - value: electronics
-          label: 微电子与半导体
-        - value: math
-          label: 数学与统计
-        - value: physics
-          label: 物理与自然科学
-        - value: economics
-          label: 经济与金融
-        - value: history
-          label: 历史与传记
-        - value: philosophy
-          label: 哲学与心智
-        - value: society
-          label: 社会与政治
-        - value: literature
-          label: 文学与艺术
-        - value: creation
-          label: 创造与实践
-      - name: creator
-        label: 作者 / 创作者
+        label: 名称（书名或网站名）
         widget: string
-        required: false
-      - name: year
-        label: 年份 / 日期
-        widget: string
-        required: false
       - name: url
-        label: 原文或官方链接
+        label: 访问链接
         widget: string
-        required: false
         pattern:
         - ^https?://.+
         - 请粘贴以 https:// 或 http:// 开头的完整链接。
       - name: note
-        label: 为什么推荐 / 我的想法
-        widget: object
+        label: 一句话推荐（可留空）
+        widget: text
         required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: text
-          required: false
-        - name: en
-          label: 英文（可留空）
-          widget: text
-          required: false
-      - name: status
-        label: 阅读或使用状态
-        widget: object
-        required: false
-        fields:
-        - name: zh
-          label: 中文
-          widget: string
-          required: false
-        - name: en
-          label: 英文（可留空）
-          widget: string
-          required: false
-      - name: tags
-        label: 主题标签
-        widget: list
-        required: false
-        field:
-          name: tag
-          label: 标签
-          widget: string
       - name: draft
         label: 暂存草稿，不显示到网站
         widget: boolean
         required: false
-        default: true
+        default: false
       collapsed: true
-      summary: '{{fields.title.zh}}'
+      summary: '{{fields.title}}'
+      hint: 点添加，填写名称和完整链接；推荐语可以留空。排列顺序就是网页显示顺序。
 - name: videos
   label: 视频
   files:

@@ -40,3 +40,7 @@ Sveltia CMS 会把令牌保存在当前浏览器的本地存储中。此功能�
 最初研究过 Pages CMS，但其在线服务在本次网络环境出现连接关闭，因此最终使用同源部署的 Sveltia CMS，未安装 Pages CMS 的 GitHub App。
 
 参考：[安装](https://sveltiacms.app/en/docs/start) · [GitHub 登录与令牌](https://sveltiacms.app/en/docs/backends/github) · [富文本编辑器](https://sveltiacms.app/en/docs/fields/richtext)。
+
+## 书籍栏目：简易链接清单
+
+进入「书籍」→「书籍」→添加条目，填写名称、完整访问链接，以及可选的一句话推荐，保存即可发布。既可放单本书，也可放阅读资源网站；不需要填写分类、作者、年份或英文。默认直接发布，打开草稿开关则暂不公开。网站按列表顺序展示，点名称直接访问链接。仅收录自己核实过的网址。

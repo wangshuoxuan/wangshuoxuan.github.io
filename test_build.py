@@ -31,9 +31,16 @@ class PublishingTests(unittest.TestCase):
         self.assertIn('&lt;script&gt;test&lt;/script&gt;',s)
         self.assertIn('A &amp; B',s)
         self.assertNotIn('PRIVATE_DRAFT',s)
+    def test_simple_reading_links(self):
+        self.write('books',[{'title':'Reading website','url':'https://example.org/books','note':'A short recommendation'}])
+        page=build.collection('books','zh')
+        self.assertIn('href="https://example.org/books"',page)
+        self.assertIn('A short recommendation',page)
+        self.assertNotIn('class="category-index"',page)
+        self.assertNotIn('id="cat-',page)
     def test_bad_category_rejected(self):
-        self.write('books',[{'category':'not-a-category','title':'Test'}])
-        with self.assertRaises(ValueError):build.collection('books','zh')
+        self.write('videos',[{'category':'not-a-category','title':'Test'}])
+        with self.assertRaises(ValueError):build.collection('videos','zh')
     def test_quote_needs_source(self):
         self.write('quotes',[{'category':'knowledge','title':'Test','quote':'Test quote'}])
         with self.assertRaises(ValueError):build.collection('quotes','zh')
