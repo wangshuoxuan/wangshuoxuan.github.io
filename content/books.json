@@ -124,10 +124,17 @@
   ],
   "entries": [
     {
-      "title": "理性乐观派：一部人类经济进步史｜微信读书",
+      "title": "理性乐观派",
       "category": "economics",
-      "url": "https://weread.qq.com/web/reader/973324c0813ab9a54g015d34",
+      "url": "https://weread.qq.com/web/reader/f0532c00727d9ee9f051afa",
       "note": "这本书让我成为了一名坚定的理性乐观主义者",
+      "draft": false
+    },
+    {
+      "title": "曼昆《经济学原理》微观",
+      "category": "general",
+      "url": "https://zh.eng101.ru/book/gB8MxZXAq5/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%88%86%E5%86%8C-%E7%AC%AC8%E7%89%88-principles-of-economics.html",
+      "note": "今天如果问英语世界各大学经济学系学生：你的第一本经济学教材是什么？曼昆必定高居榜首",
       "draft": false
     }
   ]
