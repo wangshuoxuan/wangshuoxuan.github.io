@@ -48,7 +48,7 @@ def contacts(data,lang):
         if email:
             import re
             if not re.fullmatch(r'[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+',email):raise ValueError('Invalid contact email')
-            card+=f'<a href="mailto:{esc(email,quote=True)}">{esc(email)}</a>'
+            # The shared email is displayed once above the contact topics.
         if u:card+='<p><a href="'+link(u)+'">'+('Open contact form ↗' if en else '填写联系表单 ↗')+'</a></p>'
         routes.append(card+'</article>')
     b+='<div class="contact-grid">'+''.join(routes)+'</div>'

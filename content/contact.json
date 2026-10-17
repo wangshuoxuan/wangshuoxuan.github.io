@@ -10,8 +10,8 @@
         "en": "Research & academic exchange"
       },
       "description": {
-        "zh": "欢迎讨论存算一体、忆阻器相关电路设计与架构，也欢迎跨学科的问题、论文交流、读书讨论和一起学习的提议。",
-        "en": "Compute-in-memory, memristor circuit design and architecture, interdisciplinary questions, papers, reading groups, and learning together."
+        "zh": "欢迎与我进行学术交流，也欢迎探讨合作的可能，不限于我目前的专业与研究方向。信息科学的其他方向、理工科与工程问题，以及经济学和其他社会科学，都可以聊；我尤其希望交流微观经济学、博弈论、行为经济学与网络科学等领域。无论是讨论论文、一起学习、探索跨学科问题，还是提出一个尚在起步的合作想法，都很欢迎。",
+        "en": "I welcome academic conversations and potential collaborations, both within and beyond my current field. Other areas of information science, the natural sciences and engineering, economics, and the wider social sciences are all welcome. I am particularly interested in exchanging ideas about microeconomics, game theory, behavioral economics, and network science. Feel free to suggest a paper discussion, learning together, an interdisciplinary question, or an early-stage collaboration."
       },
       "email": "2400012712@stu.pku.edu.cn",
       "form_url": ""
@@ -92,8 +92,8 @@
   "socials": [
     {
       "name": "GitHub",
-      "value": "wangshuoxuan",
-      "url": "https://github.com/wangshuoxuan"
+      "value": "",
+      "url": ""
     },
     {
       "name": "微信",
@@ -162,7 +162,7 @@
     }
   ],
   "first_message": {
-    "zh": "不知道怎么开头？随意写两三句就可以：你希望我怎么称呼你、最近关心的一件事，以及想聊聊什么或一起做什么。加微信时可以备注“来自个人网站”，方便我认出你。\n\n例如：“你好，我从你的网站过来，最近对城市历史很感兴趣。想约一次散步或咖啡，听听彼此的观察。”\n\n不用写得正式，也不必把这些逐项填完。若是约见面，顺手带上所在城市和方便的时间；如果我暂时没回复，过几天轻轻提醒一下也可以。期待从一句问候开始，慢慢认识彼此。",
-    "en": "Not sure how to begin? A few lines are enough: what you’d like me to call you, something you’re interested in, and what you’d enjoy discussing or doing together. On WeChat, mentioning that you found me through this website helps me recognize you.\n\nFor example: “Hi, I found your website and have been getting interested in urban history. Would you be up for a walk or coffee to exchange observations?”\n\nThere’s no need to be formal or answer every prompt. For a meetup, your city and a few possible times help. If I haven’t replied, a gentle follow-up after a few days is welcome. I look forward to getting to know you."
+    "zh": "不知道怎么开头？随意写两三句就可以：你希望我怎么称呼你、最近关心的一件事，以及想聊聊什么或一起做什么。加微信时可以备注“来自个人网站”，方便我认出你。\n\n不用写得正式，也不必把这些逐项填完。若是约见面，顺手带上所在城市和方便的时间；如果我暂时没回复，过几天轻轻提醒一下也可以。期待从一句问候开始，慢慢认识彼此。",
+    "en": "Not sure how to begin? A few lines are enough: what you’d like me to call you, something you’re interested in, and what you’d enjoy discussing or doing together. On WeChat, mentioning that you found me through this website helps me recognize you.\n\nThere’s no need to be formal or answer every prompt. For a meetup, your city and a few possible times help. If I haven’t replied, a gentle follow-up after a few days is welcome. I look forward to getting to know you."
   }
 }
