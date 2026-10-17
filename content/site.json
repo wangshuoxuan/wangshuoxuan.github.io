@@ -40,6 +40,15 @@
       "美食",
       "午睡",
       "参加各类体育活动"
+    ],
+    "education": [
+      "2021.09—2024.06｜上海 · 华东师范大学第二附属中学｜基础科学实验班",
+      "2024.09—至今｜北京 · 北京大学信息科学技术学院｜应用物理学（微电子方向）",
+      "2025.09—至今｜北京 · 北京大学国家发展研究院｜经济学"
+    ],
+    "honors": [
+      "高中｜全国中学生物理竞赛决赛银牌（排名前列）、北京大学冬令营优秀营员等",
+      "大学｜华泰证券科技奖学金、北京大学三好学生等"
     ]
   },
   "en": {
@@ -79,6 +88,15 @@
       "Food",
       "Naps",
       "Sports"
+    ],
+    "education": [
+      "Sep 2021–Jun 2024 | Shanghai · No. 2 High School of East China Normal University | Basic Science Experimental Class",
+      "Sep 2024–present | Beijing · School of Electronics Engineering and Computer Science, Peking University | Applied Physics (Microelectronics)",
+      "Sep 2025–present | Beijing · National School of Development, Peking University | Economics"
+    ],
+    "honors": [
+      "High school | Silver medal, Chinese Physics Olympiad finals (among the higher-ranked silver medalists); Outstanding Participant, Peking University Winter Camp; among other honors",
+      "University | Huatai Securities Science and Technology Scholarship; Peking University Merit Student; among other honors"
     ]
   },
   "avatar": "assets/profile.jpg"

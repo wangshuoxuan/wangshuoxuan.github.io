@@ -3,6 +3,7 @@ from pathlib import Path
 from html import escape as esc
 from urllib.parse import urlsplit
 from datetime import date
+import hashlib
 import json
 import re
 import xml.etree.ElementTree as ET
@@ -80,7 +81,7 @@ def shell(key,lang,title,description,body):
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} · {name}</title><meta name="description" content="{esc(description,quote=True)}">
 <meta name="theme-color" content="#faf9f6"><link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css"><link rel="alternate" type="application/atom+xml" title="Blog" href="feed.xml">
+<link rel="stylesheet" href="styles.css?v={hashlib.sha256((OUT / 'styles.css').read_bytes()).hexdigest()[:12]}"><link rel="alternate" type="application/atom+xml" title="Blog" href="feed.xml">
 <link rel="alternate" hreflang="{'zh-CN' if en else 'en'}" href="{other}">
 </head><body><a class="skip" href="#main">{'Skip to content' if en else '跳至正文'}</a>
 <div class="layout"><header class="sidebar"><a class="wordmark" href="{'en.html' if en else 'index.html'}">{name}<span aria-hidden="true" style="color:var(--accent)">.</span></a><span class="side-caption">A PERSONAL WEBSITE</span>

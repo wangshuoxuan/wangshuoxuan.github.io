@@ -67,6 +67,22 @@ collections:
           label: 爱好
           widget: string
           required: false
+      - name: education
+        label: 学业经历（每项一行）
+        widget: list
+        required: false
+        field:
+          name: item
+          label: 内容
+          widget: string
+      - name: honors
+        label: 所获荣誉（每项一行）
+        widget: list
+        required: false
+        field:
+          name: item
+          label: 内容
+          widget: string
     - name: en
       label: 英文首页
       widget: object
@@ -109,6 +125,22 @@ collections:
           label: 爱好
           widget: string
           required: false
+      - name: education
+        label: 学业经历（每项一行）
+        widget: list
+        required: false
+        field:
+          name: item
+          label: 内容
+          widget: string
+      - name: honors
+        label: 所获荣誉（每项一行）
+        widget: list
+        required: false
+        field:
+          name: item
+          label: 内容
+          widget: string
     - name: avatar
       label: 个人头像
       widget: image

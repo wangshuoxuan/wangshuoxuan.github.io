@@ -25,12 +25,15 @@ def home(data, lang):
     if avatar.startswith('/') and not avatar.startswith('//'):avatar=avatar[1:]
     if not avatar.startswith('assets/') or '..' in avatar:raise ValueError('Profile image must be in assets/')
     name=d['name_en' if en else 'name_zh']
-    b=f'<section class="profile-hero" id="about"><img class="profile-avatar" src="{esc(avatar,quote=True)}" width="192" height="192" alt="'+('Personal profile image' if en else '个人头像')+f'"><div><p class="eyebrow">READ · THINK · EXPLORE</p><h1>{esc(name)}</h1><p class="identity">{esc(p["identity"])}</p></div></section>'
+    b=f'<section class="profile-hero" id="about"><img class="profile-avatar" src="{esc(avatar,quote=True)}" width="2048" height="966" alt="'+('Personal profile image' if en else '个人头像')+f'"><div><p class="eyebrow">READ · THINK · EXPLORE</p><h1>{esc(name)}</h1><p class="identity">{esc(p["identity"])}</p></div></section>'
     b+=f'<p class="profile-lead">{esc(p.get("lead",""))}</p>'+p.get('introduction','')
     b+='<div class="text-links"><a href="'+('blog-en.html' if en else 'blog.html')+'">'+('My writing ↗' if en else '读我的博客 ↗')+'</a><a href="'+('contact-en.html' if en else 'contact.html')+'">'+('Get in touch ↗' if en else '联系我 ↗')+'</a></div>'
     b+='<section class="profile-section" id="research"><p class="eyebrow">RESEARCH INTERESTS</p><h2>'+('Research interests' if en else '研究兴趣')+'</h2><p>'+esc(p['research_summary'])+'</p></section>'
     for key,anchor,zh,eng in [('disciplines','interests','学科兴趣','Academic interests'),('hobbies','life','生活与爱好','Beyond study')]:
         b+=f'<section class="profile-section" id="{anchor}"><p class="eyebrow">{eng.upper()}</p><h2>{eng if en else zh}</h2><ul class="interest-list">'+''.join('<li>'+esc(v)+'</li>' for v in p[key])+'</ul></section>'
+    for key,zh,eng in [('education','学业经历','Education'),('honors','所获荣誉','Honors')]:
+        if p.get(key):
+            b+=f'<section class="profile-section" id="{key}"><p class="eyebrow">{eng.upper()}</p><h2>{eng if en else zh}</h2><ul class="profile-records">'+''.join('<li>'+esc(v)+'</li>' for v in p[key])+'</ul></section>'
     return b
 
 def contacts(data,lang):
