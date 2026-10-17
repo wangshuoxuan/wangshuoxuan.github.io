@@ -87,7 +87,7 @@ def shell(key,lang,title,description,body):
 </head><body><a class="skip" href="#main">{'Skip to content' if en else '跳至正文'}</a>
 <div class="layout"><header class="sidebar"><a class="wordmark" href="{'en.html' if en else 'index.html'}">{name}<span aria-hidden="true" style="color:var(--accent)">.</span></a><span class="side-caption">A PERSONAL WEBSITE</span>
 <div class="desktop-menu">{nav}</div><details class="mobile-menu"><summary>{'Explore this site' if en else '浏览全站目录'} <span>11</span></summary>{nav}</details>
-<div class="language">{language}</div><p class="side-note">{'Learning in public' if en else '阅读 · 思考 · 写作'}</p></header>
+<div class="language">{language}</div></header>
 <main id="main" tabindex="-1">{body}{footer}</main></div></body></html>'''
 
 def heading(title,en_title,description,lang):
