@@ -30,3 +30,13 @@
 ## 账号与资料
 
 用户名和站点已由原名称迁移到 wangshuoxuan；请分享新网址。公开姓名为王烁瑄 / Wangshuoxuan，邮箱为 2400012712@stu.pku.edu.cn，均经本人确认或授权。学位、年份、论文、奖项及具体研究结果仍待本人提供。
+
++
++## 可视化编辑器
++
++已部署内置 Sveltia CMS，入口：https://wangshuoxuan.github.io/admin/ 。首次连接帮助：https://wangshuoxuan.github.io/admin/help.html 。中文表单覆盖收藏栏目、博客、主页简介和公开联系资料；博客正文为富文本编辑器。复杂布局和 CV 仍由维护者调整。
++
++代码提交 eecc70efa4461ba882174cdc35c047176aee3661 的工作流 https://github.com/wangshuoxuan/wangshuoxuan.github.io/actions/runs/39003160330 构建和部署成功。7 项测试通过，25 个 HTML 页面及 845 处本地引用通过检查。编辑器包版本固定并校验 SHA-512，构建后与网站同源托管。
++
++本人尚未完成编辑令牌的首次生成和登录；没有代替本人创建、保存或使用新凭据。实际保存到 GitHub 并触发更新的最后一项核验仍待本人授权连接后完成。
++

@@ -89,9 +89,9 @@ RSS / Atom 地址：https://wangshuoxuan.github.io/feed.xml
 
 ## 改主页与联系信息
 
-主页正文源文件是 `content/home-zh.html`、`content/home-en.html`。导航与收藏页由 `build.py` 统一生成，**不要只编辑生成后的 `docs/index.html` 或收藏页**，否则下次构建会被源文件覆盖。
+主页的姓名、简介和公开联系信息优先在可视化后台“首页简介与联系方式”里修改，源数据保存到 `content/site.json`。主页其他结构源文件是 `content/home-zh.html`、`content/home-en.html`。导航与收藏页由 `build.py` 统一生成，**不要只编辑生成后的 `docs/index.html` 或收藏页**，否则下次构建会被源文件覆盖。
 
-联系页面的姓名、邮箱和 GitHub 信息在 `build.py` 中维护；履历仍在 `docs/cv.html`、`docs/cv-en.html` 中直接编辑。样式在 `docs/styles.css`。侧边栏目录只需改 `build.py` 的 `navigation()`，所有生成页面会同步。
+联系页面的邮箱和 GitHub 信息现在从 `content/site.json` 读取；履历仍在 `docs/cv.html`、`docs/cv-en.html` 中直接编辑。样式在 `docs/styles.css`。侧边栏目录只需改 `build.py` 的 `navigation()`，所有生成页面会同步。
 
 ## 自动发布失败时
 
