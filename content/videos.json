@@ -104,7 +104,7 @@
         "interdisciplinary"
       ],
       "url": "https://www.bilibili.com/video/BV11U4y1g78u/?spm_id_from=333.1387.favlist.content.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
-      "note": "",
+      "note": "课程中有不少定量计算，这让我愉快",
       "draft": false
     },
     {
@@ -118,13 +118,53 @@
       "draft": false
     },
     {
-      "title": "迈克尔·桑德尔",
+      "title": "迈克尔·桑德尔 《公正：一场思辨之旅》",
       "category": "courses",
       "subjects": [
         "interdisciplinary"
       ],
       "url": "https://www.bilibili.com/video/BV1ct4y167fM/?spm_id_from=333.337.search-card.all.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
       "note": "网课永远做不到的一点：高质量的现场互动",
+      "draft": false
+    },
+    {
+      "title": "Yale 博弈论",
+      "category": "courses",
+      "subjects": [
+        "social"
+      ],
+      "url": "https://www.bilibili.com/video/BV1xY411Y7Wj/?spm_id_from=333.1387.favlist.content.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
+      "note": "经济学中我最喜欢的就是博弈论",
+      "draft": false
+    },
+    {
+      "title": "马修·杰克逊 社会和经济网络：模型和分析",
+      "category": "courses",
+      "subjects": [
+        "social"
+      ],
+      "url": "https://www.bilibili.com/video/BV1Yv4y1v75V/?spm_id_from=333.1387.favlist.content.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
+      "note": "如果你想获得成功，这绝对是最值得上的课之一",
+      "draft": false
+    },
+    {
+      "title": "张志伟 西方哲学史",
+      "category": "courses",
+      "subjects": [
+        "humanities"
+      ],
+      "url": "https://www.bilibili.com/video/BV1y64y1r7Mt/?spm_id_from=333.1387.favlist.content.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
+      "note": "很好的哲学通识课",
+      "draft": false
+    },
+    {
+      "title": "卢晖临 社会学概论",
+      "category": "courses",
+      "subjects": [
+        "social"
+      ],
+      "url": "https://www.bilibili.com/video/BV1XK4y1n7gp/?spm_id_from=333.337.search-card.all.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
+      "note": "很好的社会学通识课",
       "draft": false
     }
   ]
