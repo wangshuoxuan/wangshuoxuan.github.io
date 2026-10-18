@@ -113,8 +113,8 @@
     {
       "id": "general",
       "name": {
-        "zh": "综合/跨学科",
-        "en": "General / interdisciplinary"
+        "zh": "综合阅读与资源网站",
+        "en": "General reading & resources"
       },
       "description": {
         "zh": "跨学科书籍、综合书库与阅读网站。",
@@ -450,6 +450,27 @@
       "category": "society",
       "url": "https://weread.qq.com/web/reader/42c32fa0813ab8623g013695",
       "note": "永远不要忽视生物学对人类的影响",
+      "draft": false
+    },
+    {
+      "title": "查尔斯·C·曼恩 《1493：物种大交换开创的世界史》",
+      "category": "general",
+      "url": "https://book.douban.com/subject/26801839/?icn=index-latestbook-subject",
+      "note": "秘鲁的银矿，如何同时牵动明朝和西班牙帝国的国运？非洲的疟原虫，如何影响美国南北的政治经济？为什么墨西哥城是最早的真正意义上全球化的城市？1492年，哥伦布抵达的不只是一片陆地，更是一个全新的纪元：同质世",
+      "draft": false
+    },
+    {
+      "title": "茅海建 《天朝的崩溃：鸦片战争再研究》",
+      "category": "history",
+      "url": "https://weread.qq.com/web/reader/68c32bf05e22aa68c605298",
+      "note": "我们很难真正理解历史，如果不是站在当时人们的视角",
+      "draft": false
+    },
+    {
+      "title": "阿兰·佩雷菲特 《停滞的帝国：两个世界的撞击》",
+      "category": "history",
+      "url": "https://book.douban.com/subject/25733152/",
+      "note": "今天在中国，人们更多记住的是鸦片战争，却往往忽略在这之前47年东西方最强大帝国的一次“外交”",
       "draft": false
     }
   ]
