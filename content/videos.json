@@ -68,24 +68,14 @@
   ],
   "entries": [
     {
-      "title": "MIT OpenCourseWare｜开放课程",
+      "title": "陈文捷 西方古代建筑艺术史",
       "category": "courses",
-      "url": "https://ocw.mit.edu/",
-      "note": "按课程查找讲义、作业与部分课程的视频。",
-      "draft": false,
       "subjects": [
-        "interdisciplinary"
-      ]
-    },
-    {
-      "title": "TED｜演讲",
-      "category": "talks",
-      "url": "https://www.ted.com/talks",
-      "note": "跨领域演讲入口，适合发现新问题与进一步追踪原始资料。",
-      "draft": false,
-      "subjects": [
-        "interdisciplinary"
-      ]
+        "humanities"
+      ],
+      "url": "https://www.bilibili.com/video/BV1754y1i715/?spm_id_from=333.337.search-card.all.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
+      "note": "我心中的五大古代建筑：\n1 希腊帕特农神庙\n2 中国北京故宫\n3 意大利古罗马斗兽场\n4 中国万里长城\n5 印度泰姬陵",
+      "draft": false
     }
   ]
 }
