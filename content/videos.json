@@ -118,7 +118,7 @@
       "draft": false
     },
     {
-      "title": "迈克尔·桑德尔 《公正：一场思辨之旅》",
+      "title": "迈克尔·桑德尔 公正：一场思辨之旅",
       "category": "courses",
       "subjects": [
         "interdisciplinary"
@@ -165,6 +165,46 @@
       ],
       "url": "https://www.bilibili.com/video/BV1XK4y1n7gp/?spm_id_from=333.337.search-card.all.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
       "note": "很好的社会学通识课",
+      "draft": false
+    },
+    {
+      "title": "Steven Bartlett The Diary of a CEO",
+      "category": "podcasts",
+      "subjects": [
+        "interdisciplinary"
+      ],
+      "url": "https://baike.baidu.com/item/CEO%E6%97%A5%E8%AE%B0/68057587",
+      "note": "",
+      "draft": false
+    },
+    {
+      "title": "Lex Fridman Lex Fridman Podcast",
+      "category": "podcasts",
+      "subjects": [
+        "interdisciplinary"
+      ],
+      "url": "https://lexfridman.com/podcast/",
+      "note": "Lex真正做到了专精和通识完美的结合",
+      "draft": false
+    },
+    {
+      "title": "Joe Rogan The Joe Rogan Experience",
+      "category": "podcasts",
+      "subjects": [
+        "interdisciplinary"
+      ],
+      "url": "https://baike.baidu.com/item/%E4%B9%94%C2%B7%E7%BD%97%E6%A0%B9%E4%BD%93%E9%AA%8C/68554181?fr=aladdin",
+      "note": "",
+      "draft": false
+    },
+    {
+      "title": "Chris Williamson Modern Wisdom Podcast",
+      "category": "podcasts",
+      "subjects": [
+        "interdisciplinary"
+      ],
+      "url": "https://chriswillx.com/",
+      "note": "",
       "draft": false
     }
   ]
