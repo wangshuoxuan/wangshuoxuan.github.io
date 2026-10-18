@@ -59,24 +59,64 @@
   ],
   "entries": [
     {
-      "title": "Paul Graham｜Essays",
+      "title": "Paul Graham 个人网站",
       "category": "blogs",
       "url": "https://paulgraham.com/articles.html",
-      "note": "关于写作、创造、创业与思考的文章目录。",
+      "note": "硅谷创业风投教父的人生沉淀",
       "draft": false,
       "subjects": [
         "interdisciplinary"
       ]
     },
     {
-      "title": "Patrick Collison｜个人网站",
+      "title": "Patrick Collison 个人网站",
       "category": "blogs",
       "url": "https://patrickcollison.com/",
-      "note": "从问题清单、阅读与研究机构等主题继续探索。",
+      "note": "一位年轻科技精英的心路历程",
       "draft": false,
       "subjects": [
         "interdisciplinary"
       ]
+    },
+    {
+      "title": "Sam Altman 个人网站",
+      "category": "blogs",
+      "url": "https://blog.samaltman.com/",
+      "note": "当今世界最具影响力的年轻精英。尤其推荐productivity和how to be successful两篇文章",
+      "draft": false,
+      "subjects": []
+    },
+    {
+      "title": "Naval Ravikant 文章与访谈",
+      "category": "blogs",
+      "url": "https://nav.al/",
+      "note": "Naval 是我最重要的人生导师之一，他引导我正确看待财富和幸福",
+      "draft": false,
+      "subjects": []
+    },
+    {
+      "title": "Lex Fridman 个人网站",
+      "category": "blogs",
+      "url": "https://lexfridman.com/",
+      "note": "",
+      "draft": false,
+      "subjects": []
+    },
+    {
+      "title": "Kevin Kelly 个人网站",
+      "category": "blogs",
+      "url": "https://kk.org",
+      "note": "中国科技界无比熟悉的名字",
+      "draft": false,
+      "subjects": []
+    },
+    {
+      "title": "Andrej Karpathy 个人网站",
+      "category": "blogs",
+      "url": "https://karpathy.ai",
+      "note": "尤其推荐 A survival guide to a PhD 太多人为读博士而迷茫了",
+      "draft": false,
+      "subjects": []
     }
   ]
 }
