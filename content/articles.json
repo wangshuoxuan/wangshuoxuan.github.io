@@ -117,6 +117,22 @@
       "note": "尤其推荐 A survival guide to a PhD 太多人为读博士而迷茫了",
       "draft": false,
       "subjects": []
+    },
+    {
+      "title": "Tim Ferriss 个人网站",
+      "category": "blogs",
+      "url": "https://tim.blog",
+      "note": "Tim 广泛地与各界成功人士交流，这里有他的心得体会",
+      "draft": false,
+      "subjects": []
+    },
+    {
+      "title": "Gates Notes",
+      "category": "blogs",
+      "url": "https://www.gatesnotes.com/",
+      "note": "我受Gates启发，做一个书籍季度推荐",
+      "draft": false,
+      "subjects": []
     }
   ]
 }
