@@ -133,6 +133,30 @@
       "note": "我受Gates启发，做一个书籍季度推荐",
       "draft": false,
       "subjects": []
+    },
+    {
+      "title": "吴军 硅谷来信等系列",
+      "category": "newsletters",
+      "url": "https://m.igetget.com/native/mine/account#/user/detail?enId=w7EJVerpWml1p7dABA8ygvaj4ZLq90",
+      "note": "吴军老师是我人生的引路人，他写的书大都值得一读",
+      "draft": false,
+      "subjects": []
+    },
+    {
+      "title": "万维钢 精英日课等系列",
+      "category": "newsletters",
+      "url": "https://m.igetget.com/native/mine/account#/user/detail?enId=vNBaAbwjq5nMoamqzZ1GLKkzgPXy9o",
+      "note": "这是我听过的最佳专栏",
+      "draft": false,
+      "subjects": []
+    },
+    {
+      "title": "薛兆丰 薛兆丰的经济学科",
+      "category": "newsletters",
+      "url": "https://m.igetget.com/native/mine/account#/user/detail?enId=bADWzRoEa7wmxd90ovMN2BV0YZLGP9",
+      "note": "得到排名第一的课程，经济学通识的意义再怎么强调都不为过",
+      "draft": false,
+      "subjects": []
     }
   ]
 }
