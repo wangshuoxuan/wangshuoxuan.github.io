@@ -3,50 +3,100 @@
     {
       "id": "humanities",
       "name": {
-        "zh": "人文与艺术",
-        "en": "Humanities & arts"
+        "zh": "人文、历史与艺术",
+        "en": "Humanities, history & arts"
+      },
+      "description": {
+        "zh": "历史、哲学、文学、语言、宗教与艺术。",
+        "en": ""
       }
     },
     {
       "id": "social",
       "name": {
-        "zh": "社会科学与商业",
-        "en": "Social sciences & business"
+        "zh": "经济、社会与商业",
+        "en": "Economics, society & business"
+      },
+      "description": {
+        "zh": "经济学、社会学、政治、法律、教育、管理与商业；心理学另列。",
+        "en": ""
+      }
+    },
+    {
+      "id": "psychology",
+      "name": {
+        "zh": "心理学与认知",
+        "en": "Psychology & cognition"
+      },
+      "description": {
+        "zh": "认知、情绪、人格、社会心理、决策与行为；临床诊疗放医学，脑的生物机制可同时选生命科学。",
+        "en": ""
+      }
+    },
+    {
+      "id": "math",
+      "name": {
+        "zh": "数学、统计与逻辑",
+        "en": "Mathematics, statistics & logic"
+      },
+      "description": {
+        "zh": "数学、统计、概率、逻辑与通用定量方法。",
+        "en": ""
       }
     },
     {
       "id": "natural",
       "name": {
-        "zh": "自然科学与数学",
-        "en": "Natural sciences & mathematics"
-      }
-    },
-    {
-      "id": "engineering",
-      "name": {
-        "zh": "工程与信息技术",
-        "en": "Engineering & information technology"
-      }
-    },
-    {
-      "id": "health",
-      "name": {
-        "zh": "医学与健康",
-        "en": "Medicine & health"
+        "zh": "物理、化学与地球科学",
+        "en": "Physical, chemical & earth sciences"
+      },
+      "description": {
+        "zh": "物理、化学、天文、地理、地质与气候等非生命自然科学。",
+        "en": ""
       }
     },
     {
       "id": "agriculture",
       "name": {
-        "zh": "农业与食品科学",
-        "en": "Agriculture & food science"
+        "zh": "生命、环境与农业",
+        "en": "Life sciences, environment & agriculture"
+      },
+      "description": {
+        "zh": "生物、神经生物学、生态、农业与食品生产；人体健康、营养和诊疗另放医学类。",
+        "en": ""
+      }
+    },
+    {
+      "id": "engineering",
+      "name": {
+        "zh": "工程、计算机与AI",
+        "en": "Engineering, computing & AI"
+      },
+      "description": {
+        "zh": "工程设计、电子、计算机、软件、人工智能及技术系统。",
+        "en": ""
+      }
+    },
+    {
+      "id": "health",
+      "name": {
+        "zh": "医学、营养与运动",
+        "en": "Medicine, nutrition & exercise"
+      },
+      "description": {
+        "zh": "疾病、临床医学、公共卫生、人体营养、运动与健康实践；一般心理学另列。",
+        "en": ""
       }
     },
     {
       "id": "interdisciplinary",
       "name": {
-        "zh": "跨学科与综合",
-        "en": "Interdisciplinary & general"
+        "zh": "综合与跨领域",
+        "en": "General & cross-disciplinary"
+      },
+      "description": {
+        "zh": "覆盖多个领域且难定主线的综合内容或资源入口；明确的交叉主题优先多选对应学科。",
+        "en": ""
       }
     }
   ]

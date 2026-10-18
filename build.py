@@ -206,6 +206,8 @@ def sync_editor():
         if key in ('videos','questions','articles'):
             subjects=json.loads((DATA/('media-subjects.json' if key in ('articles','videos') else 'subjects.json')).read_text(encoding='utf-8'))['subjects']
             next(f for f in entry_fields if f['name']=='subjects')['options']=[{'value':c['id'],'label':text(c,'name','zh')} for c in subjects]
+            if key in ('articles','videos'):
+                next(f for f in entry_fields if f['name']=='subjects')['hint']='按主题多选：心理与认知单列；疾病诊疗、营养运动选医学；生物、生态、农业选生命。明确的交叉主题可多选，综合仅用于难定主线的内容。'
     def validate_selects(node):
         if isinstance(node,dict):
             if node.get('widget')=='select' and 'default' in node:

@@ -389,8 +389,8 @@ collections:
           en: ''
       - id: general
         name:
-          zh: 综合/跨学科
-          en: General / interdisciplinary
+          zh: 综合阅读与资源网站
+          en: General reading & resources
         description:
           zh: 跨学科书籍、综合书库与阅读网站。
           en: Cross-disciplinary books and reading websites.
@@ -428,7 +428,7 @@ collections:
         - value: creation
           label: 创造与实践
         - value: general
-          label: 综合/跨学科
+          label: 综合阅读与资源网站
       - name: url
         label: 访问链接
         widget: string
@@ -531,19 +531,24 @@ collections:
         multiple: true
         options:
         - value: humanities
-          label: 人文与艺术
+          label: 人文、历史与艺术
         - value: social
-          label: 社会科学与商业
+          label: 经济、社会与商业
+        - value: psychology
+          label: 心理学与认知
+        - value: math
+          label: 数学、统计与逻辑
         - value: natural
-          label: 自然科学与数学
-        - value: engineering
-          label: 工程与信息技术
-        - value: health
-          label: 医学与健康
+          label: 物理、化学与地球科学
         - value: agriculture
-          label: 农业与食品科学
+          label: 生命、环境与农业
+        - value: engineering
+          label: 工程、计算机与AI
+        - value: health
+          label: 医学、营养与运动
         - value: interdisciplinary
-          label: 跨学科与综合
+          label: 综合与跨领域
+        hint: 按主题多选：心理与认知单列；疾病诊疗、营养运动选医学；生物、生态、农业选生命。明确的交叉主题可多选，综合仅用于难定主线的内容。
       - name: url
         label: 访问链接
         widget: string
@@ -655,19 +660,24 @@ collections:
         multiple: true
         options:
         - value: humanities
-          label: 人文与艺术
+          label: 人文、历史与艺术
         - value: social
-          label: 社会科学与商业
+          label: 经济、社会与商业
+        - value: psychology
+          label: 心理学与认知
+        - value: math
+          label: 数学、统计与逻辑
         - value: natural
-          label: 自然科学与数学
-        - value: engineering
-          label: 工程与信息技术
-        - value: health
-          label: 医学与健康
+          label: 物理、化学与地球科学
         - value: agriculture
-          label: 农业与食品科学
+          label: 生命、环境与农业
+        - value: engineering
+          label: 工程、计算机与AI
+        - value: health
+          label: 医学、营养与运动
         - value: interdisciplinary
-          label: 跨学科与综合
+          label: 综合与跨领域
+        hint: 按主题多选：心理与认知单列；疾病诊疗、营养运动选医学；生物、生态、农业选生命。明确的交叉主题可多选，综合仅用于难定主线的内容。
       collapsed: true
       summary: '{{fields.title}}'
       hint: 填写名称、分类和链接；推荐语可留空。可放单篇内容，也可放平台入口。

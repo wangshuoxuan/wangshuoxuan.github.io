@@ -85,6 +85,8 @@ def collection(data,key,lang):
     b='<div class="filters" hidden>'+select('subject','Subject' if en else '学科',subject_names)+select('category',('Format' if en else ('媒介类型' if key=='articles' else '内容形式')) if key in ('videos','articles') else ('Topic' if en else '问题主题'),categories)
     if key=='questions':b+=select('stage','Stage' if en else '探索状态',stages)
     b+='<button type="button" data-reset>'+(('Back to start' if en else '回到起始') if key in ('articles','videos') else ('Reset' if en else '重置'))+'</button></div>'
+    if key in ('articles','videos'):
+        b+='<details class="subject-guide"><summary>'+('Subject guide' if en else '学科怎么选？')+'</summary><ul>'+''.join('<li><strong>'+esc(localized(x['name'],lang))+'</strong>：'+esc(localized(x.get('description',''),lang))+'</li>' for x in subjects)+'</ul></details>'
     b+=f'<p class="collection-count" data-count aria-live="polite">{len(entries)} '+('entries' if en else '条内容')+'</p><div class="filtered-list">'
     grouped=key in ('videos','articles')
     if grouped:
