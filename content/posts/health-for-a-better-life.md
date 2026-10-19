@@ -14,7 +14,7 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   适合你的生活习惯，很可能与我的不同。睡眠、饮食、运动和工作环境，都值得你亲自尝试、调整。你可能因此完成更多事情，也可能过得更开心，更有自由决定如何度过一天。仅凭这一点，这些尝试就值得。
 
 
-  我粗略估计，坚持这些习惯时，我的效率比不做时高出约1到1.5倍。我没有实际测量过，也说不清每项习惯分别贡献了多少。但在平常的一天里，我能明显感到差别。
+  我粗略估计，坚持这些习惯时，我的效率比不做时高出约1到1.5倍。我没有实际测量过，也说不清每项习惯分别贡献了多少。这种差别，描述起来比计算起来容易。以前，早餐吃了较多精制碳水后，我常在九十点钟犯困，不得不中断上午的学习、休息一下。按现在这套习惯，尤其是有咖啡因的帮助，我往往能连续四个多小时保持高强度学习，不需要中途休息。更重要的是，一个状态好的上午，让我愿意去做有创造性、需要费脑的事；换个状态，我可能一整天都在回避它。只要按平常的安排执行，这样的上午通常就能比较稳定地重现。
 
 
   我也希望自己能长久地保持健康。我还有很多想学、想做的事，也希望能亲眼见到未来世界的许多变化。
@@ -32,7 +32,7 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   对我更有用的一条规则，是晚上十点前回到房间。我需要时间准备睡觉，让自己慢慢安静下来。有一次，我和朋友玩桌游到快十一点，回去时又晚了一些，以为自己还可以像平常一样入睡。结果，我一直很兴奋，过了午夜才睡着。晚归对我的影响，远不止在外面多待的那段时间。
 
 
-  如果某天睡晚了，我会尽快恢复平常的作息。一次破例，很容易变成新的就寝时间。跨时区旅行时，我也会提前安排睡眠，而不是等到了当地，再想该怎么办。
+  如果某天睡晚了，我可能会七点左右起床，而不是六点，之后再恢复平常的作息。偶尔破例，似乎没有太大影响；让它变成新的就寝时间，才会。跨时区旅行时，我也会提前安排睡眠，而不是等到了当地，再想该怎么办。
 
 
   我用Sleep Cycle记录睡眠，但通常不设早晨的闹钟。我醒来后几乎不赖床。对我而言，自然醒比被闹钟从睡梦中叫醒舒服得多，尤其是在需要临时早起的时候。如果身体需要多睡一点，我更愿意为它留出余地。
@@ -77,7 +77,10 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   我的房间朝南。北京的秋冬，早上六七点拉开窗帘、看向窗外，是我一天里最平静的时刻之一。我的头脑很清醒，有一会儿，感觉几乎像在冥想。骑车经过居民楼，看到人们开始各自的一天，也让我觉得自己与这座城市有了更多联系。当生活的大部分都发生在大学里时，我很容易失去这种感觉。
 
 
-  如果你在宿舍睡得舒服，和室友也相处融洽，你可能完全没有必要做同样的取舍。对我来说，相比这份自由，短暂的通勤只是很小的代价，有时甚至是收益的一部分。
+  我考虑这笔开销时，会想一个状态更好的一天对我值多少钱，包括我希望未来能完成的工作。这不是精确的计算。宿舍生活带来的不适，本来就已经到了让我必须改变的程度。我的睡眠还有很大改善空间；我怀疑，同样的钱再花在更多补剂、不同的食物或运动器材上，能不能带来同样的变化。对我来说，下一块钱花在这里，似乎最有用。
+
+
+  我对光线、噪声和别人的作息比较敏感。有些同学想睡就能睡着，我做不到。如果你没那么敏感，本来就睡得晚，或者能和室友舒服地商量好作息，同样的开销对你可能就没那么值。对我来说，相比这份自由，短暂的通勤只是很小的代价，有时甚至是收益的一部分。
 
 
   ### 午睡
@@ -263,7 +266,7 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   午餐后，我会补充维生素D3和K2、B族维生素，以及Omega-3鱼油。如果当天吃的水果很少，我可能也会补充维生素C。傍晚运动、吃完晚饭后，我会把三到五克肌酸一水合物粉末兑水喝下。我也在晚饭后服用假马齿苋（Bacopa monnieri，也叫婆罗米），希望长期对记忆有所帮助，但我不能说它已经明确改善了我的工作记忆。
 
 
-  睡前几小时，我会补镁，临近就寝时再服用前面提到的褪黑素。有些肠胃不舒服的时期，有时是吃得油腻之后，我还加过益生菌，偶尔额外补充维生素。我仍然需要更清楚地弄明白，其中哪些有用，为什么用。
+  睡前几小时，我会补镁，临近就寝时再服用前面提到的褪黑素。有些肠胃不舒服的时期，有时是吃得油腻之后，我还加过益生菌，偶尔额外补充维生素。镁用于治疗失眠，还没有充分的证据；益生菌是否有用，则取决于菌株和具体要处理的问题。两者都不能只凭感觉，就认定自己需要。
 
 
   ### 我还不清楚的部分
@@ -272,7 +275,13 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   我总体感觉身体不错，也很少生病，所以很容易想把功劳归给补充剂。但我同时改变了好几件事。感觉好，不能说明是哪一种补充剂起了作用；没有察觉问题，也不能证明这个组合安全。我已经感受到的过度刺激，是让我更谨慎看待叠加使用的理由，不能证明这是一套适合别人的习惯。
 
 
-  我更看重Omega-3和咖啡因，而不是收集一长串产品。其他许多补充剂的边际收益，我还不清楚。我更愿意弄明白自己实际需要什么，而不是只因为某个解释听起来合理，就不断往清单上加东西。
+  我不用健康手表或持续血糖监测仪，也没有请医生评估这个组合、检查自己是否缺乏某些营养素。我主要凭感受判断，有时借助AI整理自己观察到的情况。这有助于描述体验，但不能确认我缺什么、这个组合是否安全，或者功劳到底属于哪一粒。我不想让健康监测变成另一份全职工作。这也限制了我能对结果作出多大的判断。
+
+
+  我会寻找人体研究，而不只是一个吸引人的作用机制，但清单里各项补剂的证据并不一样强。肌酸对力量和反复高强度运动有较好的研究支持；这不能证明它对我的学习也有帮助。假马齿苋的研究结果并不一致：一些试验发现了特定记忆任务上的改善，另一些则没有发现比安慰剂更好的认知表现。这些都不足以让我声称，它可靠地改善了我自己的工作记忆。对于健康学生长期规律使用Alpha-GPC，我就更没有理由那么有把握，尤其是我已经感受过刺激过强。
+
+
+  比起收集产品，我更看重Omega-3和咖啡因。但维生素、鱼油，与纠正营养缺乏或好好吃饭，并不能互相替代；感觉到兴奋剂的作用，也不能证明组合里的其他东西有效。对于其中许多产品，边际收益对我仍不清楚。我更愿意留下一份较短、自己能说清理由的清单。
 
 
   ## 压力与人际关系
@@ -347,13 +356,34 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   我不是素食主义者，我希望自己的饮食里保留肉类。我会限制甜食，但我也喜欢吃，不指望每次甜食就在手边时，都能靠说服自己忍住。
 
 
-  把零食放在桌边，很容易不知不觉就吃掉。我发现，最简单的办法是不买、不把它们放在学习工作的地方，也不点那些自己原本就想避免的菜。和朋友偶尔破例，比让桌边的零食整天考验我的克制，要容易接受得多。'
+  把零食放在桌边，很容易不知不觉就吃掉。我发现，最简单的办法是不买、不把它们放在学习工作的地方，也不点那些自己原本就想避免的菜。和朋友偶尔破例，比让桌边的零食整天考验我的克制，要容易接受得多。
+
+
+  ## 当计划被打乱时
+
+
+  ### 旅行与考试
+
+
+  旅行，尤其是跨时区旅行时，精确的时间表就不再现实。我会保留那些容易随身带走的习惯：吃得尽量接近平常，有条件就短暂午睡、散步，以及带上平常用的补剂。保留这些熟悉的做法，不代表它们能补回缺少的睡眠。我也不指望每次飞行后，都能守住原来的就寝时间。
+
+
+  考试带来的变化小一些。我更愿意早起，而不是晚睡，大部分准备也在平时完成。复习落后时，我有时把睡眠缩短到六小时左右，极少数时候只有四个半小时。我以前会想，自己可以保住最有价值的深睡时段，削减剩下的部分。但睡眠并不是这样运转的：深睡不固定在晚上十一点到凌晨三点，后半夜的睡眠也有它的作用。这些短睡的夜晚，是我在压力下做过的事，不是我认为能用更短时间获得同样恢复的办法。一段紧张的日子结束后，我会恢复平常的作息。
+
+
+  ### 重新开始
+
+
+  这套习惯的理想版本，我大概能做到百分之八十到九十。少做一部分，不会让我把剩下的也放弃。晚睡可能改变我几点起床，但不必决定我吃什么，或者还要不要散步。
+
+
+  不想工作时，我通常发现，自己只是不想开始，而不是需要休息一整天。我会先做一件与工作有关、难度较低的事，再慢慢增加难度。短暂散步往往也有用。如果我确实身体不适或筋疲力尽，我就休息；我不会把身体的每个信号，都当成必须硬撑过去的问题。时间表有用，是因为它让我工作和生活得更好，不是因为我能完美执行它。'
 ---
 It took me about a year of trying things to find a routine that works reasonably well for me. I used to be much less consistent about my health. I now feel better, work more steadily, and spend less of the day trying to recover from something I did the night before.
 
 Your routine will probably look different from mine. Sleep, food, exercise, and the place you work are worth experimenting with. You may get more done, but you may also feel happier and have more freedom to choose how you spend the day. That alone makes the effort worthwhile.
 
-My rough guess is that I'm 1–1.5× more productive when I keep up these habits than when I don't. I haven't measured that, and I couldn't tell you how much each habit contributes. But the difference in an ordinary day feels large.
+My rough guess is that I'm 1–1.5× more productive when I keep up these habits than when I don't. I haven't measured that, and I couldn't tell you how much each habit contributes. The difference is easier to describe than to calculate. After a breakfast heavy in refined carbohydrates, I used to feel sleepy around 9 or 10 and interrupt the morning to rest. With my current routine, especially caffeine, I can often work hard for more than four hours without needing a break. More importantly, a good morning lets me attempt something creative or mentally difficult that I might otherwise spend the day avoiding. Keeping the schedule usually makes that kind of morning fairly repeatable.
 
 I also want to stay healthy for a long time. There is a lot I want to learn and do, and a lot about the future I would like to be around to see.
 
@@ -365,7 +395,7 @@ I try to keep the same sleep schedule throughout the week. Seven to seven and a 
 
 The more useful rule is to be back in my room by 10. I need time to get ready for bed and settle down. Once I played board games until almost 11, got back a little later, and assumed I could still fall asleep more or less as usual. Instead, I stayed excited and didn't sleep until after midnight. Getting home late costs me more than the time spent out.
 
-If I have a late night, I try to return to my usual schedule soon afterward. It is easy for one exception to become the new bedtime. I also plan sleep when traveling across time zones, rather than treating it as something to deal with after arrival.
+If I have a late night, I may wake around 7 instead of 6, then return to my usual schedule. An occasional exception doesn't seem to disrupt much; letting it become the new bedtime does. I also plan sleep when traveling across time zones, rather than treating it as something to deal with after arrival.
 
 I use Sleep Cycle to keep track of sleep, but usually don't set a morning alarm. I almost never stay in bed after waking. Waking naturally feels much easier to me than being pulled out of sleep by an alarm, especially for an unusually early start. If I need a little more sleep, I prefer to leave room for it.
 
@@ -395,7 +425,9 @@ The bike ride takes about ten minutes, and I like it. Leaving in the morning put
 
 My room faces south. Around 6 or 7 on an autumn or winter morning, opening the curtains onto the Beijing view is one of the quietest parts of my day. My head is clear, and for a while it feels almost like meditation. Riding past residential buildings and seeing people going about their mornings also makes me feel more connected to the city. It is easy to lose that feeling when most of life happens inside a university.
 
-If you sleep comfortably in a dorm and get along well with your roommates, you may have no reason to make the same trade. For me, the short commute is a small price for the freedom, and sometimes part of the benefit.
+I thought about the cost in terms of what a better day was worth to me, including the work I hope to do in the future. That isn't a precise calculation. The discomfort of dorm life was already enough to make a change necessary. Sleep still had a lot of room to improve; I doubted that spending the same amount on more supplements, different food, or exercise equipment would do as much. This was where the next yuan seemed most useful.
+
+I am sensitive to light, noise, and other people's schedules. Some classmates can fall asleep whenever they decide to; I can't. If you are less sensitive, keep later hours, or can comfortably agree on a routine with your roommates, the same expense may buy you much less. For me, the short commute is a small price for the freedom, and sometimes part of the benefit.
 
 ### Naps
 
@@ -519,13 +551,17 @@ I have also used L-tyrosine on occasions when poor sleep, an early start, a late
 
 After lunch I take vitamin D3 with K2, B vitamins, and omega-3 fish oil. If I have eaten little fruit that day, I may also take vitamin C. After my evening workout and dinner, I mix 3 to 5 grams of creatine monohydrate powder into water. I also take Bacopa monnieri after dinner, with the hope of improving memory over time, although I can't claim a clear improvement in working memory from it.
 
-A few hours before bed I take magnesium, and melatonin closer to bedtime as described above. During periods of stomach discomfort, sometimes after oily meals, I have added probiotics and occasionally extra vitamins. I still need a better account of which of these are useful and why.
+A few hours before bed I take magnesium, and melatonin closer to bedtime as described above. During periods of stomach discomfort, sometimes after oily meals, I have added probiotics and occasionally extra vitamins. Magnesium isn't a well-established treatment for insomnia, and whether a probiotic helps depends on the strain and the problem being treated. Neither is something I can assume I need from the feeling alone.
 
 ### What I don't know yet
 
 I have generally felt healthy and haven't been ill much, which made it tempting to credit the supplements. But I changed several things at once. Feeling well doesn't show which supplement helped, and not noticing a problem doesn't prove that a combination is safe. The stimulation I have felt is a reason to be more cautious about the stack, not evidence that it is a good routine for someone else.
 
-I care more about omega-3 and caffeine than about collecting a long list of products. For many of the rest, the marginal benefit is unclear to me. I would rather find out what I actually need than keep adding things because the explanation sounds plausible.
+I don't use a health watch or continuous glucose monitor, and I haven't had a clinician assess this combination or check for particular deficiencies. I mostly go by how I feel, sometimes using AI to help organize what I have noticed. That is useful for describing my experience, but it can't establish what I am deficient in, whether a combination is safe, or which pill deserves the credit. I don't want monitoring my health to become another full-time project. That also limits what I can claim about the results.
+
+I look for human research rather than an attractive mechanism, but the evidence isn't equally strong across this list. Creatine has good support for strength and repeated high-intensity exercise; that doesn't make it a proven study aid for me. Bacopa results are mixed: some trials report benefits on particular memory tasks, while others find no cognitive advantage over placebo. Neither gives me a basis to claim a reliable improvement in my own working memory. I have much less reason to be confident about regular Alpha-GPC use in a healthy student, especially given the overstimulation I have felt.
+
+I care more about omega-3 and caffeine than about collecting products. But vitamins and fish oil aren't interchangeable with treating a deficiency or eating well, and a noticeable stimulant effect isn't proof that the rest of the combination helps. For many of these products, the marginal benefit is still unclear to me. I would rather have a shorter list I can justify.
 
 ## Stress and Other People
 
@@ -576,3 +612,18 @@ Some mornings I felt unusually clear around 8 or 9, but later became foggy, slee
 I am not vegetarian. Meat is something I want in my diet. I try to limit sweets, but I like them and don't expect to win an argument with myself every time one is within reach.
 
 Keeping snacks beside the desk makes it easy to eat them without noticing. The simplest solution has been not buying them, not leaving them in the place I work, and not ordering dishes I already know I would rather avoid. Occasional exceptions with friends are easier to live with than a desk that asks for restraint all day.
+
+
+## When the Schedule Breaks
+
+### Travel and exams
+
+Travel, especially across time zones, is where the exact schedule stops being realistic. I keep what is easy to carry with me: reasonably familiar meals, a short nap when possible, walking, and the supplements I normally bring. Keeping those familiar doesn't mean they can make up for lost sleep. I don't expect the bedtime to survive every flight.
+
+Exams change less. I prefer getting up earlier to staying up later, and most of the preparation happens during the term. When I have fallen behind, I have sometimes cut sleep to about six hours; on rare occasions, to four and a half. I used to justify this by thinking I could preserve the most valuable hours of deep sleep and cut the rest. That isn't how sleep works: deep sleep isn't confined to 11 p.m. to 3 a.m., and later sleep matters too. Those short nights describe what I have done under pressure, not a way I think I can get the same recovery in less time. After a compressed stretch I return to my normal hours.
+
+### Starting again
+
+I probably follow the ideal version of this routine 80–90% of the time. Missing part of it doesn't make me abandon the rest. A late night might change when I wake; it needn't decide what I eat or whether I take a walk.
+
+When I feel reluctant to work, I usually find that I don't want to begin, rather than that I need a whole day off. I start with an easier task connected to the work, then gradually make it harder. A short walk often helps. If I am actually unwell or exhausted, I rest; I don't treat every signal from my body as a problem to push through. The schedule is useful because it helps me work and feel better, not because I can execute it perfectly.
