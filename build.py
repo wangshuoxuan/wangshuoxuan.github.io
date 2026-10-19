@@ -10,6 +10,7 @@ import xml.etree.ElementTree as ET
 import markdown
 import yaml
 import personal
+import bilingual
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'docs'
@@ -155,7 +156,7 @@ def posts():
         if isinstance(d.get('date'),date):d['date']=d['date'].isoformat()[:10]
         date.fromisoformat(d['date'])
         if not d.get('title') or not d.get('summary'):raise ValueError('Published posts need title and summary')
-        d.update(slug=slug,body=markdown.markdown(body,extensions=['fenced_code','tables','footnotes','toc']))
+        d.update(slug=slug,raw_body=body,body=markdown.markdown(body,extensions=['fenced_code','tables','footnotes','toc']))
         result.append(d)
     return sorted(result,key=lambda d:(d['date'],d['slug']),reverse=True)
 
@@ -171,7 +172,9 @@ def blog(lang,items):
         filtered=[d for d in items if (d.get('category')==cat or (cat=='other' and d.get('category') not in ['research','essay','reading']))]
         if not filtered:body+='<p class="muted">'+('No posts yet.' if en else '尚未发布文章。')+'</p>'
         for d in filtered:
-            body+=f'<article class="library-entry"><p class="meta"><time datetime="{esc(d["date"])}">{esc(d["date"])}</time></p><h3><a href="post-{d["slug"]}.html">{esc(d["title"])}</a></h3><p>{esc(d["summary"])}</p></article>'
+            display_title=d.get('title_zh') if not en and d.get('title_zh') else d['title']
+            display_summary=d.get('summary_zh') if not en and d.get('summary_zh') else d['summary']
+            body+=f'<article class="library-entry"><p class="meta"><time datetime="{esc(d["date"])}">{esc(d["date"])}</time></p><h3><a href="post-{d["slug"]}.html">{esc(display_title)}</a></h3><p>{esc(display_summary)}</p></article>'
         body+='</section>'
     return shell('blog',lang,title,'Essays and notes by Wangshuoxuan.',body)
 
@@ -248,8 +251,15 @@ def build():
     for lang in ('zh','en'):(OUT/file('blog',lang)).write_text(blog(lang,items),encoding='utf-8')
     for d in items:
         lang=d.get('lang','zh');en=lang=='en'
-        body=f'<header class="page-header"><a href="{file("blog",lang)}">← '+('Blog' if en else '返回博客')+f'</a><h1>{esc(d["title"])}</h1><p class="meta"><time datetime="{d["date"]}">{d["date"]}</time></p></header><article class="prose">{d["body"]}</article>'
+        if d.get('body_zh'):
+            lang='en';en=True
+            title=f'<span class="post-en" lang="en">{esc(d["title"])}</span><span class="post-zh" lang="zh-CN" hidden>{esc(d.get("title_zh",d["title"]))}</span>'
+            summary=f'<p class="page-description"><span class="post-en" lang="en">{esc(d["summary"])}</span><span class="post-zh" lang="zh-CN" hidden>{esc(d.get("summary_zh",d["summary"]))}</span></p>'
+            body=f'<header class="page-header"><a href="blog-en.html">Blog</a><h1>{title}</h1>{summary}<p class="meta">Wang Shuoxuan · <time datetime="{d["date"]}">{d["date"]}</time></p></header><article class="essay-prose">{bilingual.render(d)}</article>'
+        else:
+            body=f'<header class="page-header"><a href="{file("blog",lang)}">← '+('Blog' if en else '返回博客')+f'</a><h1>{esc(d["title"])}</h1><p class="meta"><time datetime="{d["date"]}">{d["date"]}</time></p></header><article class="prose">{d["body"]}</article>'
         page=shell('blog',lang,d['title'],d['summary'],body)
+        if d.get('body_zh'):page=bilingual.assets(page)
         # A post has no translated counterpart unless its author writes one.
         page=re.sub(r'<link rel="alternate" hreflang="[^"]+" href="[^"]+">','',page)
         page=page.replace('class="language"','class="language no-print"')

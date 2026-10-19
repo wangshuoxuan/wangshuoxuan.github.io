@@ -4,6 +4,20 @@ import tempfile,shutil,json,unittest
 import build
 
 class PublishingTests(unittest.TestCase):
+    def test_bilingual_essay_starts_in_english(self):
+        source=Path(__file__).resolve().parent/'content/posts/health-for-a-better-life.md'
+        if not source.exists():self.skipTest('Published essay not present')
+        build.build()
+        page=(build.OUT/'post-health-for-a-better-life.html').read_text(encoding='utf-8')
+        self.assertIn('data-reading="en"',page)
+        self.assertIn('class="post-zh" lang="zh-CN" hidden',page)
+        self.assertEqual(page.count('<h1>'),1)
+        for view in ['en','zh','both']:
+            self.assertIn(f'data-reading="{view}" aria-pressed=',page)
+        self.assertIn('RMB 120',page)
+        self.assertIn('research group meeting',page)
+        self.assertIn('我目前会吃',page)
+
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory()
         self.root=Path(self.tmp.name)
@@ -59,8 +73,9 @@ class PublishingTests(unittest.TestCase):
     def test_cms_yaml_frontmatter(self):
         (build.DATA/'posts'/'20261017-120000.md').write_text('---\ntitle: CMS test\ndate: 2026-10-17\nsummary: >-\n  A multiline summary\n  from a visual editor.\ncategory: essay\nlang: zh\ndraft: false\n---\n\n## Body\n\nA paragraph.\n',encoding='utf-8')
         items=build.posts()
-        self.assertEqual(items[0]['date'],'2026-10-17')
-        self.assertEqual(items[0]['summary'],'A multiline summary from a visual editor.')
+        item=next(d for d in items if d['title']=='CMS test')
+        self.assertEqual(item['date'],'2026-10-17')
+        self.assertEqual(item['summary'],'A multiline summary from a visual editor.')
     def test_question_notebook_and_draft_privacy(self):
         self.write('questions',[{'title':'A question','category':'methods','subjects':['math'],'stage':'exploring','materials':[{'title':'Reference','url':'https://example.org','note':'Helpful'}],'thoughts':'A <thought>','summary':'A synthesis'},{'title':'PRIVATE','category':'methods','draft':True}])
         page=build.collection('questions','zh')

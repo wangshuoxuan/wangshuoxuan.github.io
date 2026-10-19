@@ -256,7 +256,7 @@ collections:
   summary: '{{title}}'
   fields:
   - name: title
-    label: 文章标题
+    label: English title（默认）
     widget: string
     required: true
   - name: date
@@ -267,7 +267,7 @@ collections:
     time_format: false
     format: YYYY-MM-DD
   - name: summary
-    label: 文章摘要
+    label: English summary（默认）
     widget: text
     required: true
   - name: category
@@ -288,7 +288,7 @@ collections:
     label: 文章语言
     widget: select
     required: false
-    default: zh
+    default: en
     options:
     - value: zh
       label: 中文
@@ -301,12 +301,28 @@ collections:
     default: true
     hint: 保存为草稿仍会写入公开仓库，不适合存放私密内容。
   - name: body
-    label: 正文
+    label: English正文（默认）
     widget: richtext
     required: false
     format: markdown
     modes:
     - rich_text
+  - name: title_zh
+    label: 中文标题
+    widget: string
+    required: false
+  - name: summary_zh
+    label: 中文摘要
+    widget: text
+    required: false
+  - name: body_zh
+    label: 中文译文
+    widget: richtext
+    format: markdown
+    modes:
+    - rich_text
+    required: false
+    hint: 与英文保持相同的二级、三级标题数量和顺序。中文保留英文中的第一人称。
 - name: books
   label: 书籍
   files:

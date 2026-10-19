@@ -1,0 +1,20 @@
+.essay-page .page-header h1 { color:#28587e; font-size:clamp(30px,4.5vw,46px); line-height:1.18; letter-spacing:-.025em; max-width:850px; }
+.essay-page .page-description { max-width:720px; font-size:16px; line-height:1.8; }
+.essay-page .essay-prose { max-width:760px; }
+.essay-page .essay-prose p { font-size:17px; line-height:1.9; margin:0 0 22px; }
+.essay-page .essay-prose h2 { color:#20262d; font-size:26px; font-weight:750; margin:48px 0 24px; line-height:1.4; }
+.essay-page .essay-prose h3 { color:#48535e; font-size:18px; font-weight:650; margin:25px 0 15px; line-height:1.5; }
+.essay-page .essay-prose [lang="zh-CN"] p { line-height:2; }
+.reading-controls { position:sticky; top:0; z-index:4; display:flex; flex-wrap:wrap; gap:8px; padding:14px 0; margin:12px 0 28px; background:rgba(250,249,246,.97); border-bottom:1px solid var(--line); }
+.reading-controls button { font:inherit; font-size:14px; padding:8px 18px; border:1px solid #d6dce0; border-radius:7px; cursor:pointer; background:#fff; color:#4d5863; }
+.reading-controls button[aria-pressed="true"] { background:#e9f0f5; color:#245576; border-color:#a7bece; }
+.reading-controls button:focus-visible { outline:3px solid #8bafc8; outline-offset:3px; }
+.essay-page[data-reading="both"] .essay-prose { max-width:none; }
+.essay-page[data-reading="both"] .reader-pair { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:36px; }
+.essay-page[data-reading="both"] .reader-pair>.post-zh { border-left:1px solid var(--line); padding-left:26px; }
+.essay-page[data-reading="both"] .layout { max-width:1450px; }
+.essay-page .reader-pair>div { min-width:0; overflow-wrap:break-word; }
+.essay-page .essay-prose section { scroll-margin-top:90px; }
+@media(max-width:960px) { .essay-page[data-reading="both"] .reader-pair { grid-template-columns:1fr; gap:12px; } .essay-page[data-reading="both"] .reader-pair>.post-zh { border-left:0; border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:15px; } }
+@media(max-width:640px) { .essay-page .essay-prose p { font-size:16px; line-height:1.85; } .essay-page .essay-prose h2 { font-size:23px; margin-top:34px; } .essay-page .essay-prose h3 { font-size:17px; } .reading-controls { gap:6px; } .reading-controls button { padding:8px 15px; } }
+@media print { .reading-controls,.private-messages { display:none; } .essay-page .essay-prose p { font-size:11pt; } .essay-page .essay-prose h2,.essay-page .essay-prose h3 { break-after:avoid; } }
