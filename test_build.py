@@ -16,7 +16,7 @@ class PublishingTests(unittest.TestCase):
             self.assertIn(f'data-reading="{view}" aria-pressed=',page)
         self.assertIn('RMB 120',page)
         self.assertIn('research group meeting',page)
-        self.assertIn('我目前会吃',page)
+        self.assertIn('我目前服用',page)
 
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory()
