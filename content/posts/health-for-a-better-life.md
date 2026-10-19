@@ -65,16 +65,19 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   ### 一个自己的住处
 
 
-  我搬出了宿舍，每天花大约120元住在校外。最初主要是为了睡眠，现在我白天的大部分时间也仍然在别处。但这个房间的用处，远不止睡觉。
+  我搬出了宿舍，每天花大约120元住在校外。最初主要是为了睡眠，但更大的变化，是有了一个自己的小家。我可以把东西放在自己想放的位置，洗衣服、晾衣服，自主安排时间，不必每个细节都与人协商。在四人宿舍里，生活安排总是四个人妥协的结果。在这里，我可以自己决定。
 
 
-  整个空间都由我自己使用。我可以把东西放在自己想放的位置，洗衣服、晾衣服，自主安排房间和时间，不必每一个细节都和室友协调。这让我感觉像有了一个自己的小家。
+  我也更容易停止工作。在宿舍里，可能还有人在学习，我会感到一种无形的压力，觉得自己也应该继续。独处时，我不觉得有人在看着，也不必表现得很忙。我可以真正放松下来。
 
 
-  住在合用的房间里，别人的晚睡、灯光和噪声，都会成为你作息的一部分。我觉得反复协商很累。在这里，我可以决定一天什么时候结束，房间保持什么样子。我愿意付这笔钱，很大一部分也是为了这份自由。
+  骑车通勤大约需要十分钟，我挺喜欢这段路程。早上出门，让我进入另一种状态；晚上骑车回家，又帮我从那种状态里退出来。这段路为工作和休息划出了边界，而当两者都发生在校园里时，这条边界就没那么清楚。通勤成了一种小小的日常仪式，算不上多大的负担。
 
 
-  如果你在宿舍睡得舒服，和室友也相处融洽，你可能完全没有必要做同样的取舍。但对我来说，能自主安排自己的空间，值得这笔开销。
+  我的房间朝南。北京的秋冬，早上六七点拉开窗帘、看向窗外，是我一天里最平静的时刻之一。我的头脑很清醒，有一会儿，感觉几乎像在冥想。骑车经过居民楼，看到人们开始各自的一天，也让我觉得自己与这座城市有了更多联系。当生活的大部分都发生在大学里时，我很容易失去这种感觉。
+
+
+  如果你在宿舍睡得舒服，和室友也相处融洽，你可能完全没有必要做同样的取舍。对我来说，相比这份自由，短暂的通勤只是很小的代价，有时甚至是收益的一部分。
 
 
   ### 午睡
@@ -177,6 +180,18 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
 
 
   ## 我学习工作的地方
+
+
+  ### 一个稳定的后方
+
+
+  我很重视自己决定如何生活。学习、研究，以及决定下一步做什么，本来就充满不确定性。我无法可靠地控制结果，也无法控制世界给我的反馈。把日常生活安排好，让我有了一些自己能够影响的事情；知道至少这部分运转得不错，也给了我信心。
+
+
+  我把日常习惯看作承载那些有意思的工作的环境。我希望有一个稳定的后方，让自己能在学习和探索上多冒一些险。一天的工作已经可以有足够多的波折，我不希望回家后还要继续面对这些。
+
+
+  这也有代价。有时，我并不想按平常的时间睡觉或起床。我会羡慕那些不做攻略就出发旅行的朋友：他们的时间利用也许没那么高效，却可能遇到一些我无法事先安排的事情。我不希望把生活规划得连意外都没有。我比较喜欢的折中，是把整体结构固定下来，给里面的内容留出变化的余地。楼的框架需要稳固，房间里的布置却不必一成不变。一个空出来的上午，可以用来做四小时困难的工作，也可以用来追随某个突然让我感兴趣的念头。
 
 
   ### 留住状态最好的时间
@@ -296,7 +311,7 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   我在大学里关系较近的朋友，大多来自信科和物理学院，尤其是信科。我们很容易理解彼此，但这个圈子也会渐渐变得可预测。我希望认识其他院系、其他学校的人，接触不同的经历和思考方式。
 
 
-  社团对我来说有适合的地方，也有不适合的地方，因为它们固定的活动时间，我不一定能长期配合。约咖啡、下午茶，或从微信上的聊天慢慢转到线下，都更灵活。但共同做事仍然很重要，社团也能创造这样的机会，我不想否定它的价值。
+  社团对我来说，并不完全合适。我会把上午和下午留给工作，更愿意在晚上参加活动，但成为一个团体的一员，也意味着需要出勤，有时还要承担组织工作。我既想要这种联系，又不想让出太多对时间的自主权；这个矛盾，我还没有完全解决。咖啡、下午茶，或者先在微信上聊、再转到线下的交流，都更灵活。代价是，我错过了一些固定见面的机会——有了这些机会，友谊本可以不必每次都专门安排，也能慢慢生长。
 
 
   我会参加有意思的活动，有时也自己组织小范围的聚会：吃饭、旅行、桌游、散步，或者在公园度过一个下午。有时大家原本就认识，有时我会把不同院系的朋友约到一起。我希望接触更多不同的人，而不只是让通讯录里多几个名字。
@@ -334,9 +349,6 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
 
   把零食放在桌边，很容易不知不觉就吃掉。我发现，最简单的办法是不买、不把它们放在学习工作的地方，也不点那些自己原本就想避免的菜。和朋友偶尔破例，比让桌边的零食整天考验我的克制，要容易接受得多。'
 ---
-
-
-
 It took me about a year of trying things to find a routine that works reasonably well for me. I used to be much less consistent about my health. I now feel better, work more steadily, and spend less of the day trying to recover from something I did the night before.
 
 Your routine will probably look different from mine. Sleep, food, exercise, and the place you work are worth experimenting with. You may get more done, but you may also feel happier and have more freedom to choose how you spend the day. That alone makes the effort worthwhile.
@@ -375,13 +387,15 @@ For roughly six months I have also used melatonin about half an hour to an hour 
 
 ### A place of my own
 
-I moved out of the dorm and spend about RMB 120 a day on a place off campus. Sleep was the main reason, and I still spend most of the day elsewhere. But the room is useful for much more than sleeping.
+I moved out of the dorm and spend about RMB 120 a day on a place off campus. Sleep was the main reason, but the larger difference is having a small home of my own. I can keep my things where I want, do laundry, hang clothes to dry, and arrange my time without negotiating each detail. In a four-person room, the arrangement is always a compromise among four people. Here I get to decide.
 
-The whole space is mine to use. I can keep my things where I want, do laundry, hang clothes to dry, and arrange the room and my time without having to coordinate each detail with a roommate. It feels like having a small home of my own.
+I also find it easier to stop working. In a dorm, someone may still be studying, and I can feel an unspoken pressure to do the same. Alone, I don't feel watched or obliged to look productive. I can actually relax.
 
-In a shared room, other people's late nights, lights, and noise become part of your schedule. I found the repeated negotiations tiring. Here I can decide when the day ends and what the room is like. The freedom is a large part of what I am paying for.
+The bike ride takes about ten minutes, and I like it. Leaving in the morning puts me into a different mode; riding home helps me leave that mode behind. The trip gives work and rest a boundary that was less clear when both happened on campus. It has become a small daily ritual rather than much of a cost.
 
-If you sleep comfortably in a dorm and get along well with your roommates, you may have no reason to make the same trade. For me, having control over the space has been worth it.
+My room faces south. Around 6 or 7 on an autumn or winter morning, opening the curtains onto the Beijing view is one of the quietest parts of my day. My head is clear, and for a while it feels almost like meditation. Riding past residential buildings and seeing people going about their mornings also makes me feel more connected to the city. It is easy to lose that feeling when most of life happens inside a university.
+
+If you sleep comfortably in a dorm and get along well with your roommates, you may have no reason to make the same trade. For me, the short commute is a small price for the freedom, and sometimes part of the benefit.
 
 ### Naps
 
@@ -450,6 +464,14 @@ I also get up when sitting starts to feel stiff, sore, or numb. Small movements 
 I haven't had an overtraining problem. If anything, I am cautious about hard contact and injuries. A fracture could disrupt a lot of things I care about. I am more willing to take risks in intellectual work than in a sport I am doing mainly to stay well.
 
 ## The Place I Work
+
+### A stable base
+
+I care a lot about being able to decide how I live. Studying, research, and figuring out what to do next already involve enough uncertainty. I can't reliably control the results or the response I get from the world. Keeping my daily life in order gives me something I can influence, and the confidence of knowing that at least this part is working.
+
+I think of the routine as the environment in which the interesting work happens. I want a steady base so I can take chances with what I learn and explore. A day of work can have enough drama without bringing it home.
+
+There is a cost. Sometimes I don't want to go to bed or get up at the usual time. I envy friends who travel without an itinerary: they may use their time less efficiently, but they also find things I couldn't have planned. I don't want to organize every surprise out of my life. The compromise I like is a fairly fixed structure with room to change what goes inside it. A building needs a sound frame; the rooms don't have to stay arranged the same way. A free morning can be four hours of difficult work, or time to follow something that suddenly interests me.
 
 ### Protecting the good hours
 
@@ -529,7 +551,7 @@ I try to contact friends every day, though not necessarily in person. It might b
 
 Most of my close university contacts are in information science and physics, especially information science. We understand each other easily, but the circle can become predictable. I want to meet people from other departments and universities, with different experiences and ways of thinking.
 
-Clubs are a mixed fit for me because their regular meeting times can be hard to keep. Coffee, afternoon tea, or a conversation that begins on WeChat and moves offline are more flexible. Still, doing things together matters, and clubs create occasions for that which I wouldn't want to dismiss.
+Clubs are a mixed fit for me. I protect mornings and afternoons for work and prefer activities in the evening, but belonging to a group also means showing up and sometimes organizing things. I want that connection without giving up much control over my time; I haven't fully resolved the tension. Coffee, afternoon tea, or a conversation that begins on WeChat and moves offline are more flexible. The cost is that I miss some of the regular contact that lets friendships grow without arranging every meeting.
 
 I join interesting events and sometimes organize small groups myself: a meal, a trip, a board game, a walk, or an afternoon in a park. Sometimes everyone already knows each other; sometimes I bring together friends from different departments. I want a wider mix of people, not just more names in my contacts.
 
