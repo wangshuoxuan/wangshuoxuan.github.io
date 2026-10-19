@@ -14,7 +14,7 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   适合你的生活习惯，很可能与我的不同。睡眠、饮食、运动和工作环境，都值得你亲自尝试、调整。你可能因此完成更多事情，也可能过得更开心，更有自由决定如何度过一天。仅凭这一点，这些尝试就值得。
 
 
-  我粗略估计，坚持这些习惯时，我的效率比不做时高出约1到1.5倍。我没有实际测量过，也说不清每项习惯分别贡献了多少。这种差别，描述起来比计算起来容易。以前，早餐吃了较多精制碳水后，我常在九十点钟犯困，不得不中断上午的学习、休息一下。按现在这套习惯，尤其是有咖啡因的帮助，我往往能连续四个多小时保持高强度学习，不需要中途休息。更重要的是，一个状态好的上午，让我愿意去做有创造性、需要费脑的事；换个状态，我可能一整天都在回避它。只要按平常的安排执行，这样的上午通常就能比较稳定地重现。
+  我粗略估计，坚持这些习惯时，我的效率比不做时高出约1到1.5倍。我没有实际测量过，也说不清每项习惯分别贡献了多少。以前，早餐吃了较多精制碳水后，我常在九点到十点犯困，不得不中断上午的学习、休息一下。按现在这套习惯，尤其是有咖啡因的帮助，我往往能连续四个多小时保持高强度学习，不需要中途休息。更重要的是，一个状态好的上午，让我愿意去做有创造性、需要费脑的事；换个状态，我可能一整天都在回避它。只要按平常的安排执行，这样的上午通常就能比较稳定地重现。
 
 
   我也希望自己能长久地保持健康。我还有很多想学、想做的事，也希望能亲眼见到未来世界的许多变化。
@@ -77,7 +77,7 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   我考虑这笔开销时，会想一个状态更好的一天对我值多少钱，包括我希望未来能完成的工作。这不是精确的计算。宿舍生活带来的不适，本来就已经到了让我必须改变的程度。我的睡眠还有很大改善空间；我怀疑，同样的钱再花在更多补剂、不同的食物或运动器材上，能不能带来同样的变化。对我来说，下一块钱花在这里，似乎最有用。
 
 
-  我对光线、噪声和别人的作息比较敏感。有些同学想睡就能睡着，我做不到。如果你没那么敏感，本来就睡得晚，或者能和室友舒服地商量好作息，同样的开销对你可能就没那么值。对我来说，相比这份自由，短暂的通勤只是很小的代价，有时甚至是收益的一部分。
+  我对光线、噪声和别人的作息比较敏感。有些同学想睡就能睡着，我做不到。如果你没那么敏感，本来就睡得晚，或者能和室友舒服地商量好作息，同样的开销对你可能就没那么值。
 
 
   ### 午睡
@@ -161,7 +161,7 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   散步是我坚持得最稳定的活动。我早餐后会走一会儿，午晚餐后各走二十分钟左右，有时慢走，有时快走。我也骑车在校园里通勤。其他时候，我可能慢跑、划船，或出于好玩去体验一项不熟悉的活动，不追求每项都练得很好。
 
 
-  没有体育课的学期，我通常每周去三到四次健身房，每次三十到四十分钟。我一般安排在傍晚六点到七点，尤其是六点半以后、晚餐之前。我会结合有氧和力量训练：划船机、快走、骑行、举重、一些拉伸，偶尔短距离冲刺。清晨也是我会考虑的时间，但傍晚更容易坚持。晚饭后，我就以散步为主。
+  没有体育课的学期，我通常每周去三到四次健身房，每次三十到四十分钟。我一般安排在傍晚六点到七点，尤其是六点半以后、晚餐之前。我会结合有氧和力量训练：划船机、快走、骑行、举重、一些拉伸，偶尔短距离冲刺。清晨也是我会考虑的时间，但傍晚更容易坚持。
 
 
   每周进行一百五十分钟中等强度有氧活动的建议，对我来说是一个有用的参考。但我去了几次健身房，并不自动等于达到了这个标准；还要看持续时间和强度，举重和拉伸也属于不同的活动。散步和骑行，同样是我保持活动的一部分。
@@ -206,7 +206,7 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   ### 光线与熟悉的环境
 
 
-  我通常会坐在图书馆同一个安静的角落，最好在南侧、靠近自然光。我喜欢清楚东西放在哪里，也能方便地把自己的物品放在身边。学习工作本身已经有足够多的新问题，我不需要每天早晨再适应一个不同的环境。
+  我通常会坐在图书馆同一个安静的角落，最好在南侧、靠近自然光。我喜欢清楚东西放在哪里，也能方便地把自己的物品放在身边。
 
 
   我喜欢明亮的房间，窗帘拉开，但没有刺眼的阳光或屏幕反光。博雅塔附近有些较暗的位置，晚上会让我犯困，所以我会避开。自然光让我感觉更清醒，心情也更好。出去待一小会儿，同样有帮助。
@@ -287,7 +287,7 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   我的很多焦虑，都来自一件重要、却还没有开始做的事。第一步是认清它。如果能开始，哪怕只做一点，我通常也会好受一些。如果暂时做不了，把它写进清单也有帮助。一旦写下来，我就不必一直提醒自己还有这件事。
 
 
-  我把清单当作一个外脑。它帮我记住任务和需要留意的事情，我就不必同时把一切装在脑子里。疲惫时，我可能会换一本轻松的书、找人聊聊，或做点自己感兴趣的事，而不是一直逼着自己推进同一项任务。
+  我把清单当作一个外脑。疲惫时，我可能会换一本轻松的书、找人聊聊，或做点自己感兴趣的事，而不是一直逼着自己推进同一项任务。
 
 
   我一天通常能做四五个小时真正高强度的工作，其余时间可以轻一些。我不指望把所有清醒的时间都放在图书馆或实验室，不运动、不见朋友、没有自己的兴趣，长期下来还能把工作做得更好。
@@ -377,7 +377,7 @@ It took me about a year of trying things to find a routine that works reasonably
 
 Your routine will probably look different from mine. Sleep, food, exercise, and the place you work are worth experimenting with. You may get more done, but you may also feel happier and have more freedom to choose how you spend the day. That alone makes the effort worthwhile.
 
-My rough guess is that I'm 1–1.5× more productive when I keep up these habits than when I don't. I haven't measured that, and I couldn't tell you how much each habit contributes. The difference is easier to describe than to calculate. After a breakfast heavy in refined carbohydrates, I used to feel sleepy around 9 or 10 and interrupt the morning to rest. With my current routine, especially caffeine, I can often work hard for more than four hours without needing a break. More importantly, a good morning lets me attempt something creative or mentally difficult that I might otherwise spend the day avoiding. Keeping the schedule usually makes that kind of morning fairly repeatable.
+My rough guess is that I'm 1–1.5× more productive when I keep up these habits than when I don't. I haven't measured that, and I couldn't tell you how much each habit contributes. After a breakfast heavy in refined carbohydrates, I used to feel sleepy around 9 or 10 and interrupt the morning to rest. With my current routine, especially caffeine, I can often work hard for more than four hours without needing a break. More importantly, a good morning lets me attempt something creative or mentally difficult that I might otherwise spend the day avoiding. Keeping the schedule usually makes that kind of morning fairly repeatable.
 
 I also want to stay healthy for a long time. There is a lot I want to learn and do, and a lot about the future I would like to be around to see.
 
@@ -419,13 +419,13 @@ My room faces south. Opening the curtains is the first thing I do after waking; 
 
 I thought about the cost in terms of what a better day was worth to me, including the work I hope to do in the future. That isn't a precise calculation. The discomfort of dorm life was already enough to make a change necessary. Sleep still had a lot of room to improve; I doubted that spending the same amount on more supplements, different food, or exercise equipment would do as much. This was where the next yuan seemed most useful.
 
-I am sensitive to light, noise, and other people's schedules. Some classmates can fall asleep whenever they decide to; I can't. If you are less sensitive, keep later hours, or can comfortably agree on a routine with your roommates, the same expense may buy you much less. For me, the short commute is a small price for the freedom, and sometimes part of the benefit.
+I am sensitive to light, noise, and other people's schedules. Some classmates can fall asleep whenever they decide to; I can't. If you are less sensitive, keep later hours, or can comfortably agree on a routine with your roommates, the same expense may buy you much less.
 
 ### Naps
 
 I usually make time for a 20-minute nap. If I have an early afternoon class, I move it earlier. Otherwise I finish lunch after 1, return to the library around 1:20, walk for another 20 minutes or so, and rest around 1:45 or 2.
 
-I carry earplugs, an eye mask, and a small cushion. I don't like sleeping with my head on the desk: my neck is bent, my head feels heavy, and I can come up feeling groggy. I prefer a sofa with a back and a wide armrest, ideally beside a wall. I put the cushion on the inner side so I can recline a little with my head and neck supported. It feels more like my usual sleeping position than resting against a hard chair back.
+I carry earplugs, an eye mask, and a small cushion. I don't like sleeping with my head on the desk: my neck is bent, my head feels heavy, and I can wake feeling groggy. I prefer a sofa with a back and a wide armrest, ideally beside a wall. I put the cushion on the inner side so I can recline a little with my head and neck supported. It feels more like my usual sleeping position than resting against a hard chair back.
 
 Going back to the dorm adds a trip in each direction, and the room may not be quiet when I get there. Someone else's movements or a sound can wake me, and being in bed doesn't necessarily make it easier to fall asleep quickly. For a short nap, the library is usually less trouble. If there isn't a suitable seat, I close my eyes or do a short non-sleep deep rest session. Resting still helps when I don't fall asleep.
 
@@ -475,7 +475,7 @@ Exercise is not the part of this routine I am best at. I haven't put much into a
 
 Walking is the most consistent thing. I walk a little after breakfast and about 20 minutes after lunch and dinner, sometimes slowly and sometimes briskly. I also cycle to get around campus. At other times I might jog, go rowing, or try an unfamiliar activity for fun, without trying to become good at all of them.
 
-In semesters without a PE class, I usually go to the gym three or four times a week for 30 to 40 minutes. The usual slot is between 6 and 7 in the evening, especially after 6:30, before dinner. I mix cardio and weights: the rowing machine, brisk walking, cycling, lifting, some stretching, and occasionally a short sprint. Early morning is another time I would consider, but evenings are easier to keep. After dinner I stick to walking.
+In semesters without a PE class, I usually go to the gym three or four times a week for 30 to 40 minutes. The usual slot is between 6 and 7 in the evening, especially after 6:30, before dinner. I mix cardio and weights: the rowing machine, brisk walking, cycling, lifting, some stretching, and occasionally a short sprint. Early morning is another time I would consider, but evenings are easier to keep.
 
 The guideline of 150 minutes of moderate aerobic activity a week has been a useful reference. My gym visits don't automatically add up to that; duration and intensity matter, and lifting and stretching are different activities. Walking and cycling are also part of how I stay active.
 
@@ -505,7 +505,7 @@ I keep the schedule fairly open when I can. For courses where independent study 
 
 ### Light and familiarity
 
-I tend to use the same quiet corner of the library, preferably on the south side near daylight. I like knowing where everything goes and being able to put my things around me without a fuss. There are enough new problems in the work itself; I don't need a different setting every morning.
+I tend to use the same quiet corner of the library, preferably on the south side near daylight. I like knowing where everything goes and being able to put my things around me without a fuss.
 
 I like a bright room, with the curtains open but without harsh sun or reflections on the screen. Some of the dimmer seats near Boya Tower make me sleepy in the evening, so I avoid them. Daylight makes me feel more awake and puts me in a better mood. Going outside for a little while helps too.
 
@@ -559,7 +559,7 @@ I care more about omega-3 and caffeine than about collecting products. But vitam
 
 A lot of my anxiety is an important task I haven't started. The first step is to identify it. If I can begin, even doing a small part usually makes me feel better. If I can't, putting it on a list helps. Once it is written down, I don't have to keep reminding myself that it exists.
 
-I think of the list as an external memory. It holds tasks and things to watch so I don't have to hold them all at once. When I am worn out, I may switch to an easier book, a conversation, or something I am interested in rather than keep forcing the same task.
+I think of the list as an external memory. When I am worn out, I may switch to an easier book, a conversation, or something I am interested in rather than keep forcing the same task.
 
 I can usually do about four or five hours of genuinely demanding work in a day. The rest can be less intense. I don't expect spending every waking hour in a library or lab, with no exercise, friends, or interests, to give me better work over the long run.
 
