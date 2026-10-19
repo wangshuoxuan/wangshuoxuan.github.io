@@ -85,6 +85,7 @@ def shell(key,lang,title,description,body):
 <meta name="theme-color" content="#faf9f6"><link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css?v={hashlib.sha256((OUT / 'styles.css').read_bytes()).hexdigest()[:12]}"><link rel="alternate" type="application/atom+xml" title="Blog" href="feed.xml">
 <link rel="alternate" hreflang="{'zh-CN' if en else 'en'}" href="{other}">
+<link rel="stylesheet" href="services.css?v=1"><script src="services-config.js?v=1" defer></script><script src="site-services.js?v=1" defer></script>
 </head><body><a class="skip" href="#main">{'Skip to content' if en else '跳至正文'}</a>
 <div class="layout"><header class="sidebar"><a class="wordmark" href="{'en.html' if en else 'index.html'}">{name}<span aria-hidden="true" style="color:var(--accent)">.</span></a><span class="side-caption">A PERSONAL WEBSITE</span>
 <div class="desktop-menu">{nav}</div><details class="mobile-menu"><summary>{'Explore this site' if en else '浏览全站目录'} <span>11</span></summary>{nav}</details>
