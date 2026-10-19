@@ -116,6 +116,9 @@ footer { border-top: 1px solid var(--line); color: var(--muted); padding: 22px 0
 .nav-label { font-size: 10px; letter-spacing: .09em; color: var(--muted); margin-bottom: 6px; }
 .site-nav a { min-height: 30px; font-size: 14px; }
 .site-nav a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+.site-nav a.pending-link, a.pending-link { color: #6c756f; font-weight: 400; }
+.pending-label { display: inline-block; margin-left: 6px; padding: 0 4px; border: 1px solid #dfe3dd; border-radius: 3px; color: #626c65; background: #f0f2ed; font: 10px/1.6 var(--sans); white-space: nowrap; vertical-align: middle; }
+a.pending-link:hover { color: var(--accent); }
 .nav-contact { border-top: 1px solid var(--line); margin-top: 18px; padding-top: 12px; }
 .language { margin-top: 20px; }
 .side-note { margin-top: 20px; font-size: 11px; }

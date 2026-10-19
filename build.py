@@ -65,9 +65,10 @@ def navigation(lang,current):
     ]
     parts=[]
     for eg,zg,items in groups:
-        items=[item for item in items if item[0]=='blog' or personal.has_content(DATA,item[0])]
-        if eg!='About' and not items:continue
-        links=''.join(f'<a href="{href}"'+(' aria-current="page"' if current==k else '')+f'>{esc(e if en else z)}</a>' for k,z,e,href in items)
+        links=''
+        for k,z,e,href in items:
+            pending=k!='blog' and not personal.has_content(DATA,k)
+            links+=f'<a href="{href}"'+(' class="pending-link" title="'+('No content yet; more will be added.' if en else '尚无内容，后续会逐步补充。')+'"' if pending else '')+(' aria-current="page"' if current==k else '')+f'>{esc(e if en else z)}'+('<small class="pending-label">'+('To come' if en else '待补充')+'</small>' if pending else '')+'</a>'
         parts.append(f'<div class="nav-group"><a class="nav-label" href="{home}">{eg if en else zg}</a></div>' if not items else f'<div class="nav-group"><div class="nav-label">{eg if en else zg}</div>{links}</div>')
     parts.append(f'<div class="nav-contact"><a href="{file("contact",lang)}"'+(' aria-current="page"' if current=='contact' else '')+f'>{"Contact" if en else "联系我"}</a></div>')
     return '<nav class="nav site-nav" aria-label="'+('Site navigation' if en else '全站目录')+'">'+''.join(parts)+'</nav>'
@@ -129,7 +130,7 @@ def collection(key,lang):
     entries=[e for e in d['entries'] if not e.get('draft',False)]
     if key=='books':
         entries=[dict(e,category=e.get('category') or 'general') for e in entries]
-    visible_categories=[c for c in d['categories'] if any(e.get('category')==c['id'] for e in entries)]
+    visible_categories=sorted(d['categories'],key=lambda c:not any(e.get('category')==c['id'] for e in entries))
     if any(e.get('category') not in ids for e in entries):raise ValueError('Unknown category')
     en=lang=='en'; _,zh,eng,zd,ed=NAMES[key]
     title=eng if en else zh
@@ -137,14 +138,15 @@ def collection(key,lang):
     if key=='articles':intro+='<p class="text-links"><a href="'+file('papers',lang)+'">'+('Research papers ↗' if en else '论文 ↗')+'</a></p>'
     count=f'{len(entries)} '+('entries' if en else '条记录')
     intro+=f'<p class="collection-count">{count}</p>'
-    intro+='<nav class="category-index" aria-label="'+('Categories' if en else '分类索引')+'">'+''.join(f'<a href="#cat-{c["id"]}">{esc(text(c,"name",lang))}<span>{sum(e["category"]==c["id"] for e in entries)}</span></a>' for c in visible_categories)+'</nav>'
+    intro+='<nav class="category-index" aria-label="'+('Categories' if en else '分类索引')+'">'+''.join(f'<a href="#cat-{c["id"]}"'+(' class="pending-link"' if not any(e['category']==c['id'] for e in entries) else '')+f'>{esc(text(c,"name",lang))}<span>'+ (str(sum(e['category']==c['id'] for e in entries)) if any(e['category']==c['id'] for e in entries) else ('To come' if en else '待补充'))+'</span></a>' for c in visible_categories)+'</nav>'
     if not entries:
-        intro+='<p class="collection-empty">'+('No personal entries have been added yet. Categories are ready for future additions.' if en else '尚未添加个人条目。分类已备好，后续逐条补充。')+'</p>'
+        intro+='<p class="collection-empty">'+('No content yet. More will be added over time.' if en else '这里暂时还没有内容，后续会逐步补充。')+'</p>'
     for c in visible_categories:
         items=[e for e in entries if e['category']==c['id']]
         desc=c.get('description',{}).get(lang,'')
         intro+=f'<section class="library-category" id="cat-{c["id"]}"><div class="section-heading"><h2>{esc(text(c,"name",lang))}</h2><span>{len(items):02}</span></div>'+ (f'<p class="category-description">{esc(desc)}</p>' if desc else '')
         intro+=''.join(render_item(e,lang,key) for e in items)
+        if not items:intro+='<p class="muted">'+('No content yet. More will be added over time.' if en else '暂无内容，后续会逐步补充。')+'</p>'
         intro+='</section>'
     return shell(key,lang,title,ed if en else zd,intro)
 
@@ -183,12 +185,13 @@ def blog(lang,items):
     body=heading(title,'Blog & notes','Essays, research notes, and working thoughts.' if en else '长文、研究笔记与日常思考，都可以从这里开始。',lang)
     body+='<p class="collection-count">'+str(len(items))+((' published post' if len(items)==1 else ' published posts') if en else '篇已发布文章')+'</p>'
     groups=[('research','Research notes' if en else '研究笔记'),('essay','Essays' if en else '随笔'),('reading','Reading notes' if en else '阅读札记'),('other','Other writing' if en else '其他写作')]
-    groups=[(cat,label) for cat,label in groups if any(d.get('category')==cat or (cat=='other' and d.get('category') not in ['research','essay','reading']) for d in items)]
-    body+='<nav class="category-index" aria-label="Blog categories">'+''.join(f'<a href="#blog-{i}">{esc(label)}</a>' for i,(_,label) in enumerate(groups))+'</nav>'
+    def populated(cat):return any(d.get('category')==cat or (cat=='other' and d.get('category') not in ['research','essay','reading']) for d in items)
+    groups.sort(key=lambda group:not populated(group[0]))
+    body+='<nav class="category-index" aria-label="Blog categories">'+''.join(f'<a href="#blog-{i}"'+(' class="pending-link"' if not populated(cat) else '')+f'>{esc(label)}'+(' <small class="pending-label">'+('To come' if en else '待补充')+'</small>' if not populated(cat) else '')+'</a>' for i,(cat,label) in enumerate(groups))+'</nav>'
     for i,(cat,label) in enumerate(groups):
         body+=f'<section class="library-category" id="blog-{i}"><h2>{label}</h2>'
         filtered=[d for d in items if (d.get('category')==cat or (cat=='other' and d.get('category') not in ['research','essay','reading']))]
-        if not filtered:body+='<p class="muted">'+('No posts yet.' if en else '尚未发布文章。')+'</p>'
+        if not filtered:body+='<p class="muted">'+('No posts yet. More will be added over time.' if en else '暂无文章，后续会逐步补充。')+'</p>'
         for d in filtered:
             display_title=d['title']
             display_summary=d.get('summary_zh') if not en and d.get('summary_zh') else d['summary']

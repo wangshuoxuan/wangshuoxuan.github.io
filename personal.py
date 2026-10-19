@@ -44,7 +44,9 @@ def home(data, lang):
     b+=f'<p class="profile-lead">{esc(p.get("lead",""))}</p>'+p.get('introduction','')
     b+='<p>'+('To get to know me, start with my ' if en else '如果你想快速了解我，可以从我的')+'<a href="'+('blog-en.html' if en else 'blog.html')+'">'+('blog' if en else '博客')+'</a>'+(' or ' if en else '／')+'<a href="'+('thoughts-en.html' if en else 'thoughts.html')+'">'+('short notes' if en else '短文章')+'</a>'+('.' if en else '开始。')+'</p><p><a href="'+('contact-en.html' if en else 'contact.html')+'">'+('Contact me' if en else '联系我')+'</a></p>'
     if not has_content(data,'thoughts'):
-        b=b.replace(' or <a href="thoughts-en.html">short notes</a>','').replace('／<a href="thoughts.html">短文章</a>','')
+        target='thoughts-en.html' if en else 'thoughts.html'
+        label='short notes' if en else '短文章'
+        b=b.replace(f'<a href="{target}">{label}</a>',f'<a class="pending-link" href="{target}">{label}<small class="pending-label">'+('To come' if en else '待补充')+'</small></a>')
     for key,anchor,zh,eng,kind in [('education','education','学业经历','Education','records'),('honors','honors','所获荣誉','Honors','records'),('disciplines','interests','学科兴趣','Academic interests','chips'),('research_summary','research','研究兴趣','Research interests','text'),('hobbies','life','生活与爱好','Beyond study','chips')]:
         if not p.get(key):continue
         b+=f'<section class="profile-section" id="{anchor}"><p class="eyebrow">{eng.upper()}</p><h2>{eng if en else zh}</h2>'
@@ -145,7 +147,7 @@ def collection(data,key,lang):
 def thoughts(data,lang):
     entries=[e for e in read(data,'thoughts.json')['entries'] if not e.get('draft',True)]
     entries.sort(key=lambda e:e.get('date',''),reverse=True)
-    if not entries:return '<p class="collection-empty">'+('Notes will appear here.' if lang=='en' else '新的想法，会陆续记录在这里。')+'</p>'
+    if not entries:return '<p class="collection-empty">'+('No notes yet. More will be added over time.' if lang=='en' else '这里暂时还没有内容，后续会逐步记录和补充。')+'</p>'
     b='<div class="short-notes">'
     for e in entries:
         b+='<article class="short-note"><p class="meta">'+esc(e.get('date',''))+'</p>'+paragraph(localized(e.get('body',''),lang))+'</article>'
