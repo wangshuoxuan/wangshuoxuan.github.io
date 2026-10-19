@@ -248,34 +248,36 @@ body_zh: '我花了大约一年反复尝试，才摸索出一套比较适合自�
   ## 补充剂
 
 
+
   ### 我目前在用什么
 
 
-  我目前服用十几种补充剂，不包括咖啡和茶。我写这些只是如实记录自己的做法，并不是建议所有人照单全收。这也是整套习惯里，我最没有把握的一部分：比起大多数补充剂，我更清楚睡眠、食物和咖啡因对自己的影响。
+
+  我目前服用十几种补充剂，不包括咖啡和茶。我主要围绕学习、训练和睡眠的需要来选择。这是我自己的日常安排，不是一份适合所有人照着吃的清单。
 
 
-  早上喝完咖啡，我会吃一粒茶氨酸，希望自己的状态平静一些。在高强度的学习日，有时也在考试前，我会用Alpha-GPC，大约每周四五天，而不是每天都吃。任务轻时，我就不用。它和咖啡因一起使用，有时会让我感觉刺激过强，包括心跳加快。这种刺激感已经过头了，并不是我想要的状态。
+
+  早上喝完咖啡，我会吃一粒茶氨酸。我使用它，是希望保持平静和专注；茶氨酸与咖啡因搭配的小型试验发现了部分注意任务表现的改善。在高强度的学习日，有时也在考试前，我还会用Alpha-GPC，大约每周四五天。任务轻时，我就不用。它与咖啡因搭配，有时会让我心跳加快，这并不是我想要的效果。
 
 
-  我也用过L-酪氨酸，通常是在睡得不好、早起、熬夜或倒时差让我很疲惫，却仍然要应付高强度一天的时候。我希望靠它度过一段短期压力，但无法单独判断它到底帮了多少。
+
+  我也在睡得不好、早起、熬夜或倒时差让我疲惫，却仍有高强度任务的时候用过L-酪氨酸。我使用它，是希望在短期压力下维持专注；一些研究发现的认知益处，也出现在这类情境中。
 
 
-  午餐后，我会补充维生素D3和K2、B族维生素，以及Omega-3鱼油。如果当天吃的水果很少，我可能也会补充维生素C。傍晚运动、吃完晚饭后，我会把三到五克肌酸一水合物粉末兑水喝下。我也在晚饭后服用假马齿苋（Bacopa monnieri，也叫婆罗米），希望长期对记忆有所帮助。
+
+  午餐后，我会补充维生素D3和K2、B族维生素，以及Omega-3鱼油。如果当天吃的水果很少，我可能也会补充维生素C。傍晚运动、吃完晚饭后，我会把三到五克肌酸一水合物粉末兑水喝下。肌酸有助于力量和反复高强度运动表现，与我的力量训练相契合。我也在晚饭后服用假马齿苋（Bacopa monnieri，也叫婆罗米），着眼于长期的记忆支持；部分试验发现了学习和延迟回忆表现的改善。
 
 
-  睡前几小时，我会补镁，临近就寝时再服用前面提到的褪黑素。有些肠胃不舒服的时期，有时是吃得油腻之后，我还加过益生菌，偶尔额外补充维生素。镁用于治疗失眠，还没有充分的证据；益生菌是否有用，则取决于菌株和具体要处理的问题。两者都不能只凭感觉，就认定自己需要。
+
+  睡前几小时，我会补镁，作为晚间习惯的一部分，临近就寝时再服用前面提到的褪黑素。在肠胃不舒服的时期，有时是吃得油腻之后，我也用过益生菌，希望改善消化舒适度，偶尔还会额外补充维生素。
 
 
-  ### 我还不清楚的部分
+
+  ### 我优先考虑什么
 
 
-  我不用健康手表或持续血糖监测仪，也没有请医生评估这个组合、检查自己是否缺乏某些营养素。我主要根据自己的感受判断，有时会借助 AI 整理观察记录。我总体感觉身体不错，也很少生病，但我同时改变了好几件事。无论这些感受还是AI，都不能告诉我哪一种补剂有用、我缺什么，或者这个组合是否安全。我不想让健康监测变成另一份全职工作；这也限制了我能作出多大的判断。
 
-
-  我会寻找人体研究，而不只是一个吸引人的作用机制，但清单里各项补剂的证据并不一样强。肌酸对力量和反复高强度运动有较好的研究支持；这不能证明它对我的学习也有帮助。假马齿苋的研究结果并不一致：一些试验发现了特定记忆任务上的改善，另一些则没有发现比安慰剂更好的认知表现。这些都不足以让我声称，它可靠地改善了我自己的工作记忆。对于健康学生长期规律使用Alpha-GPC，我就更没有理由那么有把握，尤其是我已经感受过刺激过强。
-
-
-  比起不断添置补剂，我更看重 Omega-3 和咖啡因这类自己比较了解的东西。但维生素、鱼油不能代替好好吃饭；在营养已足够时额外补充，也不同于纠正营养缺乏。对于其中许多产品，边际收益对我仍不清楚。我更愿意留下一份较短、自己能说清理由的清单。
+  我看重人体研究，也希望每一种补充剂都有明确的使用理由。我尤其关注Omega-3和咖啡因，而不是为了增加清单长度不断添置产品。补充剂在我的日常安排中起辅助作用；睡眠、饮食和运动仍是基础。
 
 
   ## 压力与人际关系
@@ -535,23 +537,19 @@ This takes some self-discipline. Someone who does better with company may want m
 
 ### What I have been using
 
-I currently take around a dozen supplements, not counting coffee or tea. That is a description of what I have been doing, not a list I think everyone should copy. This is also the least settled part of the routine: I have a much clearer sense of what sleep, food, and caffeine do for me than of what most of the pills do.
+I currently take around a dozen supplements, not counting coffee or tea. I choose them around the demands of studying, training, and sleep. This is my own routine, not a list for everyone to copy.
 
-After my morning coffee I take one L-theanine capsule, hoping for a calmer feeling. On demanding study days, and sometimes before an exam, I also use Alpha-GPC, roughly four or five days a week rather than every day. On easier days I leave it out. With caffeine, the combination has sometimes felt too stimulating, including a faster heartbeat. That is more arousal than I want.
+After my morning coffee I take one L-theanine capsule. I use it with the aim of staying calm and attentive; small trials of theanine with caffeine have found improvements in some attention tasks. On demanding study days, and sometimes before an exam, I also use Alpha-GPC, roughly four or five days a week. On easier days I leave it out. The combination with caffeine has sometimes made my heart beat faster, which is not a benefit I am looking for.
 
-I have also used L-tyrosine on occasions when poor sleep, an early start, a late night, or jet lag left me tired but I still had a demanding day ahead. The intention was to get through a short period of pressure; I can't isolate how much it helped.
+I have also used L-tyrosine when poor sleep, an early start, a late night, or jet lag left me tired but I still had a demanding day ahead. My reason for using it is to support concentration under short-term pressure, the setting in which some studies have found cognitive benefits.
 
-After lunch I take vitamin D3 with K2, B vitamins, and omega-3 fish oil. If I have eaten little fruit that day, I may also take vitamin C. After my evening workout and dinner, I mix 3 to 5 grams of creatine monohydrate powder into water. I also take Bacopa monnieri after dinner, hoping for a longer-term benefit to memory.
+After lunch I take vitamin D3 with K2, B vitamins, and omega-3 fish oil. If I have eaten little fruit that day, I may also take vitamin C. After my evening workout and dinner, I mix 3 to 5 grams of creatine monohydrate powder into water. Creatine supports strength and repeated high-intensity exercise, which fits the weight training in my routine. I also take Bacopa monnieri after dinner with longer-term memory support in mind; some trials have reported improvements in learning and delayed recall.
 
-A few hours before bed I take magnesium, and melatonin closer to bedtime as described above. During periods of stomach discomfort, sometimes after oily meals, I have added probiotics and occasionally extra vitamins. Magnesium isn't a well-established treatment for insomnia, and whether a probiotic helps depends on the strain and the problem being treated. Neither is something I can assume I need from the feeling alone.
+A few hours before bed I take magnesium as part of my evening routine, and melatonin closer to bedtime as described above. During periods of stomach discomfort, sometimes after oily meals, I have also used probiotics with digestive comfort in mind, and occasionally extra vitamins.
 
-### What I don't know yet
+### What I prioritize
 
-I don't use a health watch or continuous glucose monitor, and I haven't had a clinician assess this combination or check for particular deficiencies. I mostly go by how I feel, sometimes using AI to organize my observations. I have felt healthy and rarely been ill, but I changed several things at once. Neither those feelings nor AI can tell me which supplement helped, what I am deficient in, or whether the combination is safe. I don't want health monitoring to become another full-time project; that also limits what I can claim.
-
-I look for human research rather than an attractive mechanism, but the evidence isn't equally strong across this list. Creatine has good support for strength and repeated high-intensity exercise; that doesn't make it a proven study aid for me. Bacopa results are mixed: some trials report benefits on particular memory tasks, while others find no cognitive advantage over placebo. Neither gives me a basis to claim a reliable improvement in my own working memory. I have much less reason to be confident about regular Alpha-GPC use in a healthy student, especially given the overstimulation I have felt.
-
-I care more about omega-3 and caffeine than about collecting products. But vitamins and fish oil don't replace eating well, and supplementing an adequate diet isn't the same as treating a deficiency. For many of these products, the marginal benefit is still unclear to me. I would rather have a shorter list I can justify.
+I look for human research and a clear reason for taking something. I pay particular attention to omega-3 and caffeine, rather than adding products for the sake of a longer list. Supplements have a supporting role in my routine; sleep, food, and exercise remain the foundation.
 
 ## Stress and Other People
 
