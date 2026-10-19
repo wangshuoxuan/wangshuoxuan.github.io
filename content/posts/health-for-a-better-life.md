@@ -38,10 +38,7 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   我用Sleep Cycle记录睡眠，但通常不设早晨的闹钟。我醒来后几乎不赖床。对我而言，自然醒比被闹钟从睡梦中叫醒舒服得多，尤其是在需要临时早起的时候。如果身体需要多睡一点，我更愿意为它留出余地。
 
 
-  我也试过日出唤醒灯。它会在设定的时间开始亮起，用大约三十分钟逐渐变亮，像在床边模拟一次日出。但我后来发现，它对我的用处不大。我睡得离窗户很近，醒来直接拉开窗帘就好。现在，无论是声音闹钟还是灯光闹钟，我都更愿意用自然醒来代替。
-
-
-  我租的房间朝南。起床后的第一件事，就是拉开窗帘。晨光会让整个房间舒服很多；如果天还没亮，我就开灯。出门吃早餐，再走路或骑车去图书馆，让我在开始学习前有一段待在户外的时间。我不喜欢整个上午都留在自己睡觉的房间里。
+  我也试过日出唤醒灯，它会用大约三十分钟逐渐变亮。我没觉得它有太大用处：我就睡在窗边，自然的晨光已经足够。
 
 
   ### 睡眠环境与睡前过渡
@@ -74,7 +71,7 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   骑车通勤大约需要十分钟，我挺喜欢这段路程。早上出门，让我进入另一种状态；晚上骑车回家，又帮我从那种状态里退出来。这段路为工作和休息划出了边界，而当两者都发生在校园里时，这条边界就没那么清楚。通勤成了一种小小的日常仪式，算不上多大的负担。
 
 
-  我的房间朝南。北京的秋冬，早上六七点拉开窗帘、看向窗外，是我一天里最平静的时刻之一。我的头脑很清醒，有一会儿，感觉几乎像在冥想。骑车经过居民楼，看到人们开始各自的一天，也让我觉得自己与这座城市有了更多联系。当生活的大部分都发生在大学里时，我很容易失去这种感觉。
+  我的房间朝南。起床后的第一件事，就是拉开窗帘；如果天还没亮，我就开灯。北京的秋冬，早上六七点看向窗外，是我一天里最平静的时刻之一。我的头脑很清醒，有一会儿，感觉几乎像在冥想。出门吃早餐，再骑车去图书馆，让我在开始工作前有一段待在户外的时间。经过居民楼，看到人们开始各自的一天，也让我觉得自己与这座城市有了更多联系——当生活的大部分都发生在大学里时，我很容易失去这种感觉。
 
 
   我考虑这笔开销时，会想一个状态更好的一天对我值多少钱，包括我希望未来能完成的工作。这不是精确的计算。宿舍生活带来的不适，本来就已经到了让我必须改变的程度。我的睡眠还有很大改善空间；我怀疑，同样的钱再花在更多补剂、不同的食物或运动器材上，能不能带来同样的变化。对我来说，下一块钱花在这里，似乎最有用。
@@ -245,7 +242,7 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   如果你参加过人人都开着电脑的组会，你可能就知道这种感觉。周围都是敲键盘的声音，我也会不自觉地找些简单的小任务，让自己一直有事做。我可能完成了一大堆小事，却完全没碰那个真正需要认真思考的难题。缓慢的思考和开放式的写作，从旁边看未必显得有效率。当我不需要每隔几分钟就展示一点进展时，我反而工作得更好。
 
 
-  这需要一定的自律。和同伴在一起效率更高的人，可能并不需要我这样强的独立空间。我喜欢能够换个姿势、停一停，或者短暂做一点无关的事，不必把它变成需要大家一起决定的事情。
+  这需要一定的自律。和同伴在一起效率更高的人，可能并不需要我这样强的独立空间。
 
 
   ## 补充剂
@@ -260,10 +257,10 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   早上喝完咖啡，我会吃一粒茶氨酸，希望自己的状态平静一些。在高强度的学习日，有时也在考试前，我会用Alpha-GPC，大约每周四五天，而不是每天都吃。任务轻时，我就不用。它和咖啡因一起使用，有时会让我感觉刺激过强，包括心跳加快。这已经超过了我想要的兴奋程度。
 
 
-  我也用过L-酪氨酸，通常是在睡得不好、早起、熬夜或倒时差让我很疲惫，却仍然要应付高强度一天的时候。我希望靠它度过一段短期压力，但无法单独判断它到底帮了多少。对上午的状态，咖啡因仍然是我最容易察觉到作用的那一种。
+  我也用过L-酪氨酸，通常是在睡得不好、早起、熬夜或倒时差让我很疲惫，却仍然要应付高强度一天的时候。我希望靠它度过一段短期压力，但无法单独判断它到底帮了多少。
 
 
-  午餐后，我会补充维生素D3和K2、B族维生素，以及Omega-3鱼油。如果当天吃的水果很少，我可能也会补充维生素C。傍晚运动、吃完晚饭后，我会把三到五克肌酸一水合物粉末兑水喝下。我也在晚饭后服用假马齿苋（Bacopa monnieri，也叫婆罗米），希望长期对记忆有所帮助，但我不能说它已经明确改善了我的工作记忆。
+  午餐后，我会补充维生素D3和K2、B族维生素，以及Omega-3鱼油。如果当天吃的水果很少，我可能也会补充维生素C。傍晚运动、吃完晚饭后，我会把三到五克肌酸一水合物粉末兑水喝下。我也在晚饭后服用假马齿苋（Bacopa monnieri，也叫婆罗米），希望长期对记忆有所帮助。
 
 
   睡前几小时，我会补镁，临近就寝时再服用前面提到的褪黑素。有些肠胃不舒服的时期，有时是吃得油腻之后，我还加过益生菌，偶尔额外补充维生素。镁用于治疗失眠，还没有充分的证据；益生菌是否有用，则取决于菌株和具体要处理的问题。两者都不能只凭感觉，就认定自己需要。
@@ -272,16 +269,13 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   ### 我还不清楚的部分
 
 
-  我总体感觉身体不错，也很少生病，所以很容易想把功劳归给补充剂。但我同时改变了好几件事。感觉好，不能说明是哪一种补充剂起了作用；没有察觉问题，也不能证明这个组合安全。我已经感受到的过度刺激，是让我更谨慎看待叠加使用的理由，不能证明这是一套适合别人的习惯。
-
-
-  我不用健康手表或持续血糖监测仪，也没有请医生评估这个组合、检查自己是否缺乏某些营养素。我主要凭感受判断，有时借助AI整理自己观察到的情况。这有助于描述体验，但不能确认我缺什么、这个组合是否安全，或者功劳到底属于哪一粒。我不想让健康监测变成另一份全职工作。这也限制了我能对结果作出多大的判断。
+  我不用健康手表或持续血糖监测仪，也没有请医生评估这个组合、检查自己是否缺乏某些营养素。我主要凭感受判断，有时借助AI整理观察。我总体感觉身体不错，也很少生病，但我同时改变了好几件事。无论这些感受还是AI，都不能告诉我哪一种补剂有用、我缺什么，或者这个组合是否安全。我不想让健康监测变成另一份全职工作；这也限制了我能作出多大的判断。
 
 
   我会寻找人体研究，而不只是一个吸引人的作用机制，但清单里各项补剂的证据并不一样强。肌酸对力量和反复高强度运动有较好的研究支持；这不能证明它对我的学习也有帮助。假马齿苋的研究结果并不一致：一些试验发现了特定记忆任务上的改善，另一些则没有发现比安慰剂更好的认知表现。这些都不足以让我声称，它可靠地改善了我自己的工作记忆。对于健康学生长期规律使用Alpha-GPC，我就更没有理由那么有把握，尤其是我已经感受过刺激过强。
 
 
-  比起收集产品，我更看重Omega-3和咖啡因。但维生素、鱼油，与纠正营养缺乏或好好吃饭，并不能互相替代；感觉到兴奋剂的作用，也不能证明组合里的其他东西有效。对于其中许多产品，边际收益对我仍不清楚。我更愿意留下一份较短、自己能说清理由的清单。
+  比起收集产品，我更看重Omega-3和咖啡因。但维生素、鱼油不能代替好好吃饭；在营养已足够时额外补充，也不同于纠正营养缺乏。对于其中许多产品，边际收益对我仍不清楚。我更愿意留下一份较短、自己能说清理由的清单。
 
 
   ## 压力与人际关系
@@ -320,7 +314,7 @@ body_zh: '我花了大约一年不断尝试，才找到一套比较适合自己�
   我在大学里关系较近的朋友，大多来自信科和物理学院，尤其是信科。我们很容易理解彼此，但这个圈子也会渐渐变得可预测。我希望认识其他院系、其他学校的人，接触不同的经历和思考方式。
 
 
-  社团对我来说，并不完全合适。我会把上午和下午留给工作，更愿意在晚上参加活动，但成为一个团体的一员，也意味着需要出勤，有时还要承担组织工作。我既想要这种联系，又不想让出太多对时间的自主权；这个矛盾，我还没有完全解决。咖啡、下午茶，或者先在微信上聊、再转到线下的交流，都更灵活。代价是，我错过了一些固定见面的机会——有了这些机会，友谊本可以不必每次都专门安排，也能慢慢生长。
+  社团对我来说，并不完全合适。我更愿意在晚上参加活动，但成为一个团体的一员，也意味着需要出勤，有时还要承担组织工作。我既想要这种联系，又不想让出太多对时间的自主权；这个矛盾，我还没有完全解决。咖啡、下午茶，或者先在微信上聊、再转到线下的交流，都更灵活。
 
 
   我会参加有意思的活动，有时也自己组织小范围的聚会：吃饭、旅行、桌游、散步，或者在公园度过一个下午。有时大家原本就认识，有时我会把不同院系的朋友约到一起。我希望接触更多不同的人，而不只是让通讯录里多几个名字。
@@ -399,9 +393,7 @@ If I have a late night, I may wake around 7 instead of 6, then return to my usua
 
 I use Sleep Cycle to keep track of sleep, but usually don't set a morning alarm. I almost never stay in bed after waking. Waking naturally feels much easier to me than being pulled out of sleep by an alarm, especially for an unusually early start. If I need a little more sleep, I prefer to leave room for it.
 
-I also tried a sunrise alarm lamp. At a set time it would gradually brighten over about 30 minutes, a little artificial sunrise beside the bed. I didn't end up finding it very useful. I sleep close to a window and can simply open the curtains when I wake. These days I prefer waking naturally to being woken at a set time, whether by sound or by light.
-
-My rented room faces south. The first thing I do after getting up is open the curtains. The morning light makes the room a much nicer place to be. If it is still dark, I turn on a light. Breakfast and the walk or bike ride to the library give me some time outside before I start working; I don't like spending the whole morning in the room where I slept.
+I also tried a sunrise alarm lamp, which gradually brightened over about 30 minutes. I didn't find it very useful: I sleep beside a window, and the real morning light is enough.
 
 ### The room and the wind-down
 
@@ -423,7 +415,7 @@ I also find it easier to stop working. In a dorm, someone may still be studying,
 
 The bike ride takes about ten minutes, and I like it. Leaving in the morning puts me into a different mode; riding home helps me leave that mode behind. The trip gives work and rest a boundary that was less clear when both happened on campus. It has become a small daily ritual rather than much of a cost.
 
-My room faces south. Around 6 or 7 on an autumn or winter morning, opening the curtains onto the Beijing view is one of the quietest parts of my day. My head is clear, and for a while it feels almost like meditation. Riding past residential buildings and seeing people going about their mornings also makes me feel more connected to the city. It is easy to lose that feeling when most of life happens inside a university.
+My room faces south. Opening the curtains is the first thing I do after waking; if it is still dark, I turn on a light. Around 6 or 7 on an autumn or winter morning, the Beijing view is one of the quietest parts of my day. My head is clear, and for a while it feels almost like meditation. Breakfast and the ride to the library give me some time outside before work. Passing residential buildings and seeing people begin their day makes me feel more connected to the city—something I can lose when most of life happens inside a university.
 
 I thought about the cost in terms of what a better day was worth to me, including the work I hope to do in the future. That isn't a precise calculation. The discomfort of dorm life was already enough to make a change necessary. Sleep still had a lot of room to improve; I doubted that spending the same amount on more supplements, different food, or exercise equipment would do as much. This was where the next yuan seemed most useful.
 
@@ -537,7 +529,7 @@ I also prefer working alone. Studying with friends can help me finish tasks, but
 
 If you've sat through a research group meeting with everyone on their laptops, you may know the feeling. There is typing all around you, and I find myself reaching for small, easy tasks that let me keep moving too. I can get a lot of those done without touching the difficult thing I actually need to think about. Slow thinking and open-ended writing don't always look productive from the next chair. I work better when I don't feel the need to demonstrate progress every few minutes.
 
-This takes some self-discipline. Someone who does better with company may want much less separation than I do. I like being able to change position, pause, or do something unrelated for a moment without making it a group decision.
+This takes some self-discipline. Someone who does better with company may want much less separation than I do.
 
 ## Supplements
 
@@ -547,21 +539,19 @@ I currently take around a dozen supplements, not counting coffee or tea. That is
 
 After my morning coffee I take one L-theanine capsule, hoping for a calmer feeling. On demanding study days, and sometimes before an exam, I also use Alpha-GPC, roughly four or five days a week rather than every day. On easier days I leave it out. With caffeine, the combination has sometimes felt too stimulating, including a faster heartbeat. That is more arousal than I want.
 
-I have also used L-tyrosine on occasions when poor sleep, an early start, a late night, or jet lag left me tired but I still had a demanding day ahead. The intention was to get through a short period of pressure; I can't isolate how much it helped. Caffeine is the one whose effect on my morning is easiest to notice.
+I have also used L-tyrosine on occasions when poor sleep, an early start, a late night, or jet lag left me tired but I still had a demanding day ahead. The intention was to get through a short period of pressure; I can't isolate how much it helped.
 
-After lunch I take vitamin D3 with K2, B vitamins, and omega-3 fish oil. If I have eaten little fruit that day, I may also take vitamin C. After my evening workout and dinner, I mix 3 to 5 grams of creatine monohydrate powder into water. I also take Bacopa monnieri after dinner, with the hope of improving memory over time, although I can't claim a clear improvement in working memory from it.
+After lunch I take vitamin D3 with K2, B vitamins, and omega-3 fish oil. If I have eaten little fruit that day, I may also take vitamin C. After my evening workout and dinner, I mix 3 to 5 grams of creatine monohydrate powder into water. I also take Bacopa monnieri after dinner, hoping for a longer-term benefit to memory.
 
 A few hours before bed I take magnesium, and melatonin closer to bedtime as described above. During periods of stomach discomfort, sometimes after oily meals, I have added probiotics and occasionally extra vitamins. Magnesium isn't a well-established treatment for insomnia, and whether a probiotic helps depends on the strain and the problem being treated. Neither is something I can assume I need from the feeling alone.
 
 ### What I don't know yet
 
-I have generally felt healthy and haven't been ill much, which made it tempting to credit the supplements. But I changed several things at once. Feeling well doesn't show which supplement helped, and not noticing a problem doesn't prove that a combination is safe. The stimulation I have felt is a reason to be more cautious about the stack, not evidence that it is a good routine for someone else.
-
-I don't use a health watch or continuous glucose monitor, and I haven't had a clinician assess this combination or check for particular deficiencies. I mostly go by how I feel, sometimes using AI to help organize what I have noticed. That is useful for describing my experience, but it can't establish what I am deficient in, whether a combination is safe, or which pill deserves the credit. I don't want monitoring my health to become another full-time project. That also limits what I can claim about the results.
+I don't use a health watch or continuous glucose monitor, and I haven't had a clinician assess this combination or check for particular deficiencies. I mostly go by how I feel, sometimes using AI to organize my observations. I have felt healthy and rarely been ill, but I changed several things at once. Neither those feelings nor AI can tell me which supplement helped, what I am deficient in, or whether the combination is safe. I don't want health monitoring to become another full-time project; that also limits what I can claim.
 
 I look for human research rather than an attractive mechanism, but the evidence isn't equally strong across this list. Creatine has good support for strength and repeated high-intensity exercise; that doesn't make it a proven study aid for me. Bacopa results are mixed: some trials report benefits on particular memory tasks, while others find no cognitive advantage over placebo. Neither gives me a basis to claim a reliable improvement in my own working memory. I have much less reason to be confident about regular Alpha-GPC use in a healthy student, especially given the overstimulation I have felt.
 
-I care more about omega-3 and caffeine than about collecting products. But vitamins and fish oil aren't interchangeable with treating a deficiency or eating well, and a noticeable stimulant effect isn't proof that the rest of the combination helps. For many of these products, the marginal benefit is still unclear to me. I would rather have a shorter list I can justify.
+I care more about omega-3 and caffeine than about collecting products. But vitamins and fish oil don't replace eating well, and supplementing an adequate diet isn't the same as treating a deficiency. For many of these products, the marginal benefit is still unclear to me. I would rather have a shorter list I can justify.
 
 ## Stress and Other People
 
@@ -587,7 +577,7 @@ I try to contact friends every day, though not necessarily in person. It might b
 
 Most of my close university contacts are in information science and physics, especially information science. We understand each other easily, but the circle can become predictable. I want to meet people from other departments and universities, with different experiences and ways of thinking.
 
-Clubs are a mixed fit for me. I protect mornings and afternoons for work and prefer activities in the evening, but belonging to a group also means showing up and sometimes organizing things. I want that connection without giving up much control over my time; I haven't fully resolved the tension. Coffee, afternoon tea, or a conversation that begins on WeChat and moves offline are more flexible. The cost is that I miss some of the regular contact that lets friendships grow without arranging every meeting.
+Clubs are a mixed fit for me. I prefer activities in the evening, but belonging to a group means showing up and sometimes organizing things. I want that connection without giving up much control over my time; I haven't fully resolved the tension. Coffee, afternoon tea, or a conversation that begins on WeChat and moves offline are more flexible.
 
 I join interesting events and sometimes organize small groups myself: a meal, a trip, a board game, a walk, or an afternoon in a park. Sometimes everyone already knows each other; sometimes I bring together friends from different departments. I want a wider mix of people, not just more names in my contacts.
 
