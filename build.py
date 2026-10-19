@@ -176,7 +176,7 @@ def blog(lang,items):
         filtered=[d for d in items if (d.get('category')==cat or (cat=='other' and d.get('category') not in ['research','essay','reading']))]
         if not filtered:body+='<p class="muted">'+('No posts yet.' if en else '尚未发布文章。')+'</p>'
         for d in filtered:
-            display_title=d.get('title_zh') if not en and d.get('title_zh') else d['title']
+            display_title=d['title']
             display_summary=d.get('summary_zh') if not en and d.get('summary_zh') else d['summary']
             body+=f'<article class="library-entry"><p class="meta"><time datetime="{esc(d["date"])}">{esc(d["date"])}</time></p><h3><a href="{file("post-"+d["slug"],lang)}">{esc(display_title)}</a></h3><p>{esc(display_summary)}</p></article>'
         body+='</section>'
