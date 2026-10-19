@@ -28,7 +28,6 @@ def render(post):
 
 def assets(page):
     page=page.replace('</head>','<link rel="stylesheet" href="reader.css?v=1">\n</head>')
-    page=page.replace('</body>','<script src="reader.js?v=1" defer></script></body>')
+    page=page.replace('</body>','<script src="reader.js?v=2" defer></script></body>')
     page=page.replace('<body>','<body class="essay-page" data-reading="en">')
-    page=re.sub(r'<div class="language(?: no-print)?">.*?</div>','',page)
     return page

@@ -70,10 +70,11 @@ def navigation(lang,current):
     parts.append(f'<div class="nav-contact"><a href="{file("contact",lang)}"'+(' aria-current="page"' if current=='contact' else '')+f'>{"Contact" if en else "联系我"}</a></div>')
     return '<nav class="nav site-nav" aria-label="'+('Site navigation' if en else '全站目录')+'">'+''.join(parts)+'</nav>'
 
-def shell(key,lang,title,description,body):
+def shell(key,lang,title,description,body,language_target=None):
     en=lang=='en'
     this = ('en.html' if en else 'index.html') if key=='home' else file(key,lang)
     other = ('index.html' if en else 'en.html') if key=='home' else file(key,'zh' if en else 'en')
+    if language_target:other=language_target
     nav=navigation(lang,key)
     name=esc(site_data().get('name_en' if en else 'name_zh','Wangshuoxuan' if en else '王烁瑄'))
     language=f'<a href="{other}" lang="'+('zh-CN">中文' if en else 'en">English')+'</a>'
@@ -87,7 +88,7 @@ def shell(key,lang,title,description,body):
 <link rel="alternate" hreflang="{'zh-CN' if en else 'en'}" href="{other}">
 <link rel="stylesheet" href="services.css?v=1"><script src="services-config.js?v=1" defer></script><script src="site-services.js?v=1" defer></script>
 <script src="analytics.js?v=1" defer></script>
-<script src="firebase-config.js?v=2" defer></script><script src="firebase-messages.js?v=2" defer></script>
+<script src="firebase-config.js?v=2" defer></script><script src="firebase-messages.js?v=3" defer></script>
 </head><body><a class="skip" href="#main">{'Skip to content' if en else '跳至正文'}</a>
 <div class="layout"><header class="sidebar"><a class="wordmark" href="{'en.html' if en else 'index.html'}">{name}<span aria-hidden="true" style="color:var(--accent)">.</span></a><span class="side-caption">A PERSONAL WEBSITE</span>
 <div class="desktop-menu">{nav}</div><details class="mobile-menu"><summary>{'Explore this site' if en else '浏览全站目录'} <span>11</span></summary>{nav}</details>
@@ -177,7 +178,7 @@ def blog(lang,items):
         for d in filtered:
             display_title=d.get('title_zh') if not en and d.get('title_zh') else d['title']
             display_summary=d.get('summary_zh') if not en and d.get('summary_zh') else d['summary']
-            body+=f'<article class="library-entry"><p class="meta"><time datetime="{esc(d["date"])}">{esc(d["date"])}</time></p><h3><a href="post-{d["slug"]}.html">{esc(display_title)}</a></h3><p>{esc(display_summary)}</p></article>'
+            body+=f'<article class="library-entry"><p class="meta"><time datetime="{esc(d["date"])}">{esc(d["date"])}</time></p><h3><a href="{file("post-"+d["slug"],lang)}">{esc(display_title)}</a></h3><p>{esc(display_summary)}</p></article>'
         body+='</section>'
     return shell('blog',lang,title,'Essays and notes by Wangshuoxuan.',body)
 
@@ -253,22 +254,21 @@ def build():
     items=posts()
     for lang in ('zh','en'):(OUT/file('blog',lang)).write_text(blog(lang,items),encoding='utf-8')
     for d in items:
-        lang=d.get('lang','zh');en=lang=='en'
-        if d.get('body_zh'):
-            lang='en';en=True
-            title=f'<span class="post-en" lang="en">{esc(d["title"])}</span><span class="post-zh" lang="zh-CN" hidden>{esc(d.get("title_zh",d["title"]))}</span>'
-            summary=f'<p class="page-description"><span class="post-en" lang="en">{esc(d["summary"])}</span><span class="post-zh" lang="zh-CN" hidden>{esc(d.get("summary_zh",d["summary"]))}</span></p>'
-            if d['slug']=='health-for-a-better-life':
-                summary+='<p class="meta"><span lang="en">Recommended: read the English original.</span> <span lang="zh-CN">建议阅读英文原文。</span></p>'
-            body=f'<header class="page-header"><a href="blog-en.html">Blog</a><h1>{title}</h1>{summary}<p class="meta">Wang Shuoxuan · <time datetime="{d["date"]}">{d["date"]}</time></p></header><article class="essay-prose">{bilingual.render(d)}</article>'
-        else:
-            body=f'<header class="page-header"><a href="{file("blog",lang)}">← '+('Blog' if en else '返回博客')+f'</a><h1>{esc(d["title"])}</h1><p class="meta"><time datetime="{d["date"]}">{d["date"]}</time></p></header><article class="prose">{d["body"]}</article>'
-        page=shell('blog',lang,d['title'],d['summary'],body)
-        if d.get('body_zh'):page=bilingual.assets(page)
-        # A post has no translated counterpart unless its author writes one.
-        page=re.sub(r'<link rel="alternate" hreflang="[^"]+" href="[^"]+">','',page)
-        page=page.replace('class="language"','class="language no-print"')
-        (OUT/f'post-{d["slug"]}.html').write_text(page,encoding='utf-8')
+        for lang in ('zh','en'):
+            en=lang=='en'
+            if d.get('body_zh'):
+                title=f'<span class="post-en" lang="en">{esc(d["title"])}</span><span class="post-zh" lang="zh-CN" hidden>{esc(d.get("title_zh",d["title"]))}</span>'
+                summary=f'<p class="page-description"><span class="post-en" lang="en">{esc(d["summary"])}</span><span class="post-zh" lang="zh-CN" hidden>{esc(d.get("summary_zh",d["summary"]))}</span></p>'
+                if d['slug']=='health-for-a-better-life':
+                    summary+='<p class="meta">'+('Recommended: read the English original.' if en else '建议阅读英文原文。')+'</p>'
+                body=f'<header class="page-header"><a href="{file("blog",lang)}">'+('Blog' if en else '我的博客')+f'</a><h1>{title}</h1>{summary}<p class="meta">'+('Wang Shuoxuan' if en else '王烁瑄')+f' · <time datetime="{d["date"]}">{d["date"]}</time></p></header><article class="essay-prose">{bilingual.render(d)}</article>'
+            else:
+                body=f'<header class="page-header"><a href="{file("blog",lang)}">← '+('Blog' if en else '返回博客')+f'</a><h1>{esc(d["title"])}</h1><p class="meta"><time datetime="{d["date"]}">{d["date"]}</time></p></header><article class="prose">{d["body"]}</article>'
+            other=file('post-'+d['slug'],'zh' if en else 'en')
+            page=shell('blog',lang,d['title'],d['summary'],body,language_target=other)
+            if d.get('body_zh'):page=bilingual.assets(page)
+            page=page.replace('class="language"','class="language no-print"')
+            (OUT/file('post-'+d['slug'],lang)).write_text(page,encoding='utf-8')
     feed(items)
     sync_editor()
     print(f'Built {len(list(OUT.glob("*.html")))} pages and {len(items)} published posts.')

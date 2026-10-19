@@ -17,6 +17,14 @@ class PublishingTests(unittest.TestCase):
         self.assertIn('RMB 120',page)
         self.assertIn('research group meeting',page)
         self.assertIn('我目前服用',page)
+        self.assertIn('<html lang="zh-CN">',page)
+        self.assertIn('href="blog.html">我的博客',page)
+        self.assertIn('href="post-health-for-a-better-life-en.html" lang="en">English',page)
+        english=(build.OUT/'post-health-for-a-better-life-en.html').read_text(encoding='utf-8')
+        self.assertIn('<html lang="en">',english)
+        self.assertIn('href="blog-en.html">Blog',english)
+        self.assertIn('href="post-health-for-a-better-life.html" lang="zh-CN">中文',english)
+        self.assertIn('href="post-health-for-a-better-life-en.html"',(build.OUT/'blog-en.html').read_text(encoding='utf-8'))
 
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory()
