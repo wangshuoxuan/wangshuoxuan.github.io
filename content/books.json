@@ -113,8 +113,8 @@
     {
       "id": "general",
       "name": {
-        "zh": "综合阅读与资源网站",
-        "en": "General reading & resources"
+        "zh": "综合／跨学科",
+        "en": "General & interdisciplinary"
       },
       "description": {
         "zh": "跨学科书籍、综合书库与阅读网站。",
@@ -124,7 +124,7 @@
   ],
   "entries": [
     {
-      "title": "马特·里德利 《理性乐观派：一部人类经济进步史》",
+      "title": "马特·里德利《理性乐观派：一部人类经济进步史》",
       "category": "economics",
       "url": "https://weread.qq.com/web/reader/f0532c00727d9ee9f051afa",
       "note": "这本书让我成为了一名坚定的理性乐观主义者",
@@ -134,7 +134,7 @@
       "title": "格里高利·曼昆《经济学原理》微观",
       "category": "economics",
       "url": "https://zh.eng101.ru/book/gB8MxZXAq5/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%88%86%E5%86%8C-%E7%AC%AC8%E7%89%88-principles-of-economics.html",
-      "note": "今天如果问英语世界各大学经济学系学生：你的第一本经济学教材是什么？曼昆必定高居榜首",
+      "note": "曼昆的《经济学原理》，是英语世界大学里很常见的入门教材",
       "draft": false
     },
     {
@@ -145,297 +145,297 @@
       "draft": false
     },
     {
-      "title": "哈尔·罗纳德·范里安 《中级微观经济学：现代方法》",
+      "title": "哈尔·罗纳德·范里安《中级微观经济学：现代方法》",
       "category": "economics",
       "url": "https://zh.eng101.ru/book/4VN3dO0gYR/%E4%B8%AD%E7%BA%A7%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%8E%B0%E4%BB%A3%E6%96%B9%E6%B3%95%E7%AC%AC%E5%85%AB%E7%89%88-%E8%8C%83%E9%87%8C%E5%AE%89%E5%90%AB%E7%9B%AE%E5%BD%95-%E6%9B%B9%E4%B9%BE%E8%AF%91.html",
       "note": "于我而言，经济学最大的魅力在于微观",
       "draft": false
     },
     {
-      "title": "马修·杰克逊 《人类网络：社会位置决定命运》",
+      "title": "马修·杰克逊《人类网络：社会位置决定命运》",
       "category": "economics",
       "url": "https://weread.qq.com/web/bookDetail/60e32710718caa2b60e1c59",
       "note": "流量的逻辑，社群的建构，金融的危机、疾病的传播，无不与人类网络相关",
       "draft": false
     },
     {
-      "title": "摩根·豪泽尔 《一如既往》",
+      "title": "摩根·豪泽尔《一如既往》",
       "category": "economics",
       "url": "https://weread.qq.com/web/reader/f8e322b0813ab8db0g01952e",
-      "note": "当我们问未来可能变成的各种模样时，往往轻视了那些底层永恒不变的东西，它们与人性相关：复利、时间、风险、运气、知足⋯⋯",
+      "note": "当我们问未来可能变成的各种模样时，往往轻视了那些底层永恒不变的东西，它们与人性相关：复利、时间、风险、运气、知足……",
       "draft": false
     },
     {
-      "title": "丹尼尔·卡尼曼 《思考，快与慢》",
+      "title": "丹尼尔·卡尼曼《思考，快与慢》",
       "category": "economics",
       "url": "https://weread.qq.com/web/reader/af83263058c217af81f8979",
-      "note": "若行为经济学是经济与心理合铸的桂冠，此书便是其上最核心的荣光",
+      "note": "在我看来，这是经济学与心理学交汇处很有分量的一本书",
       "draft": false
     },
     {
-      "title": "乔治·吉尔德 《后资本主义生活：财富的意义、经济的未来与货币的时间理论》",
+      "title": "乔治·吉尔德《后资本主义生活：财富的意义、经济的未来与货币的时间理论》",
       "category": "economics",
       "url": "https://weread.qq.com/web/reader/9c832080813ab94f8g0171bd",
       "note": "在智能时代，财富的本质在于知识的积累，而经济的增长源自学习和创新的过程。做个“知本家”",
       "draft": false
     },
     {
-      "title": "张玮 《历史的温度》",
+      "title": "张玮《历史的温度》",
       "category": "history",
       "url": "https://weread.qq.com/web/bookDetail/c3c323c0813ab7d85g013e27",
       "note": "人生的喜悦、悲伤、恐惧、生气、厌恶、惊讶、羞愧、激动、无助、平静…… 跨越时空，总有另一个人深深地与我共情",
       "draft": false
     },
     {
-      "title": "理查德·J.埃文斯 《第三帝国三部曲：战时的第三帝国》",
+      "title": "理查德·J.埃文斯《第三帝国三部曲：战时的第三帝国》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/961327a07202572e9616526",
       "note": "一位元首，一群狂人，一场战争，一个时代",
       "draft": false
     },
     {
-      "title": "戴维·迈尔斯 《社会心理学》",
+      "title": "戴维·迈尔斯《社会心理学》",
       "category": "philosophy",
       "url": "https://weread.qq.com/web/bookDetail/71e32c00813ab7be9g013f0e",
       "note": "心理学中我最喜欢的部分",
       "draft": false
     },
     {
-      "title": "M·斯科特·派克 《少有人走的路》",
+      "title": "M·斯科特·派克《少有人走的路》",
       "category": "philosophy",
       "url": "https://weread.qq.com/web/reader/6fa32ab07203c29e6fa3a18",
       "note": "我从此再不觉得看心理医生是件令人羞耻的事",
       "draft": false
     },
     {
-      "title": "张纯如 《南京大屠杀》",
+      "title": "张纯如《南京大屠杀》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/ed4325105af547ed45154e5",
       "note": "一个人的力量！",
       "draft": false
     },
     {
-      "title": "史蒂芬·沃克 《广岛倒计时》",
+      "title": "史蒂芬·沃克《广岛倒计时》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/c58322f0723bdc65c587665",
       "note": "AI是否会成为那颗原子弹呢？",
       "draft": false
     },
     {
-      "title": "凯文·凯利 《宝贵的人生建议》",
+      "title": "凯文·凯利《宝贵的人生建议》",
       "category": "creation",
       "url": "https://weread.qq.com/web/reader/a2c32190813ab822fg014a9a",
       "note": "\"Don't Be The Best, Be The Only.\"",
       "draft": false
     },
     {
-      "title": "马可•奥勒留",
+      "title": "马可·奥勒留《沉思录》",
       "category": "philosophy",
       "url": "https://weread.qq.com/web/reader/56532600813abab7fg01859c",
-      "note": "任何人看完这本书，都会获得内心的平静吧",
+      "note": "读这本书时，我常能获得一些内心的平静",
       "draft": false
     },
     {
-      "title": "比尔·盖茨 《源代码》",
+      "title": "比尔·盖茨《源代码》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/b7932540813ab9ecdg014812",
       "note": "比起等待好运的眷顾，不如先构建一套强大的系统。当命运来敲门，你需要有足够的实力来迎接它",
       "draft": false
     },
     {
-      "title": "沃尔特·艾萨克森 《史蒂夫·乔布斯传》",
+      "title": "沃尔特·艾萨克森《史蒂夫·乔布斯传》",
       "category": "history",
       "url": "https://weread.qq.com/web/bookDetail/a5132d4059b34aa51b14735",
       "note": "我看的第一本传记",
       "draft": false
     },
     {
-      "title": "沃尔特·艾萨克森 《埃隆·马斯克传》",
+      "title": "沃尔特·艾萨克森《埃隆·马斯克传》",
       "category": "history",
       "url": "https://weread.qq.com/web/bookDetail/d2e325c0813ab8234g019ba2",
       "note": "我第一次知道Elon Musk是什么时候？2019年，初中外教老师给我们上课。他滔滔不绝讲了很多伟大的成就，然后说：“记住做出它们的这个人，以后你们也会经常听到他。”",
       "draft": false
     },
     {
-      "title": "戴尔·卡耐基 《人性的弱点》",
+      "title": "戴尔·卡耐基《人性的弱点》",
       "category": "creation",
       "url": "https://weread.qq.com/web/reader/83932dd05cdbab839b48eb8",
       "note": "值得一读再读",
       "draft": false
     },
     {
-      "title": "斯蒂芬·茨威格 《人类群星闪耀时》",
+      "title": "斯蒂芬·茨威格《人类群星闪耀时》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/8e0321c0718a6c928e0ab0e",
-      "note": "我从未对身为人类一份子感到如此自豪",
+      "note": "我从未对身为人类的一员感到如此自豪",
       "draft": false
     },
     {
-      "title": "斯蒂芬·茨威格 《昨日的世界》",
+      "title": "斯蒂芬·茨威格《昨日的世界》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/80a324f0716b1a6480af682",
       "note": "献给欧罗巴最深沉的情书",
       "draft": false
     },
     {
-      "title": "劳伦斯·贝尔格林 《黄金香料与殖民地》",
+      "title": "劳伦斯·贝尔格林《黄金香料与殖民地》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/eb5326f0723f40b7eb5653fk9bf32f301f9bf31c7ff0a60",
-      "note": "人类历史上最伟大的一次航行",
+      "note": "人类历史上很了不起的一次航行",
       "draft": false
     },
     {
-      "title": "威廉·曼彻斯特 《光荣与梦想》",
+      "title": "威廉·曼彻斯特《光荣与梦想》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/7d03234059b3ef7d008dc6c",
       "note": "一个世界帝国的崛起，强盛与危机。回望历史，走好前路",
       "draft": false
     },
     {
-      "title": "汉普顿·塞兹 《冰雪王国：美国军舰珍妮特号的极地远征》",
+      "title": "汉普顿·塞兹《冰雪王国：美国军舰珍妮特号的极地远征》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/bab32750813ab7534g01702cke4d32d5015e4da3b7fbb1fa",
       "note": "19世纪关于极地，20世纪关于太空，21世纪关于哪里呢？但无论如何，人类对未知的探索永不停止",
       "draft": false
     },
     {
-      "title": "韦德·戴维斯 《印加帝国的末日》",
+      "title": "金·麦夸里《印加帝国的末日》",
       "category": "history",
       "url": "https://weread.qq.com/web/bookDetail/8b9327f0813ab757bg019c93",
       "note": "下一次发生类似的事情，大概是人类与外星人相遇",
       "draft": false
     },
     {
-      "title": "伊恩·托尔 《太平洋战争三部曲》",
+      "title": "伊恩·托尔《太平洋战争三部曲》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/e8332cc072a2010ee83998a",
-      "note": "几乎满足一个军迷所有的兴趣。中途岛海战应该被写进所有著名商学院的教科书里",
+      "note": "很能满足我作为军迷的兴趣。中途岛海战，也值得放进商学院讨论",
       "draft": false
     },
     {
-      "title": "盖伊·萨杰 《被遗忘的士兵：一个德国士兵的苏德战争回忆录》",
+      "title": "盖伊·萨杰《被遗忘的士兵：一个德国士兵的苏德战争回忆录》",
       "category": "history",
       "url": "https://weread.qq.com/web/bookDetail/af132a40813ab6c68g017142",
-      "note": "无数的政治宣传，都不如这一本回忆录震撼心灵",
+      "note": "比起许多政治宣传，这本回忆录更让我震撼",
       "draft": false
     },
     {
-      "title": "约翰·戴维森·洛克菲勒 《洛克菲勒家书》",
+      "title": "约翰·戴维森·洛克菲勒《洛克菲勒家书》",
       "category": "creation",
       "url": "https://weread.qq.com/web/reader/55632e80537b48556e231a4",
       "note": "到现在为止，我总共读了三遍。我想，以后自己也会像他一样给孩子写家书",
       "draft": false
     },
     {
-      "title": "劳伦斯·里斯 《奥斯维辛：一部历史》",
+      "title": "劳伦斯·里斯《奥斯维辛：一部历史》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/e51320b05ceb6ae51abac7b",
       "note": "奥斯维辛，再也不是一个简单的符号",
       "draft": false
     },
     {
-      "title": "田谷治子 西奥多·F·库克 《日本人口述二战史》",
+      "title": "田谷治子 西奥多·F·库克《日本人口述二战史》",
       "category": "history",
       "url": "https://weread.qq.com/web/bookDetail/0f532e60723bdc7e0f5f188",
       "note": "历史不只是政治，军事和经济。每个个体鲜活的生命经历，都应该被看到",
       "draft": false
     },
     {
-      "title": "威尔·杜兰特 阿里尔·杜兰特 《历史的教训》",
+      "title": "威尔·杜兰特 阿里尔·杜兰特《历史的教训》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/82432980813aba0bag012d60",
       "note": "如果你想在短时间内充分获得历史学泰斗的思想精华",
       "draft": false
     },
     {
-      "title": "康拉德·H.雅劳施 《破碎的生活：普通德国人经历的20世纪》",
+      "title": "康拉德·H.雅劳施《破碎的生活：普通德国人经历的20世纪》",
       "category": "history",
       "url": "https://weread.qq.com/web/bookDetail/06b32460813ab6c24g018160",
       "note": "德国人，过去一个世纪再没有哪国国民比它意味着更多了",
       "draft": false
     },
     {
-      "title": "凯文·凯利 《2049：未来10000天的可能》",
+      "title": "凯文·凯利《2049：未来10000天的可能》",
       "category": "creation",
       "url": "https://weread.qq.com/web/reader/bdd325d0813aba18dg0142a8",
       "note": "预测未来的最好方法，就是去创造未来。——彼得·德鲁克",
       "draft": false
     },
     {
-      "title": "弗兰克·维尔切克 《万物原理》",
+      "title": "弗兰克·维尔切克《万物原理》",
       "category": "physics",
       "url": "https://weread.qq.com/web/reader/d5932b607292e18dd59c7b9",
       "note": "“Physics is the law, and everything else is a recommendation”——Elon Musk",
       "draft": false
     },
     {
-      "title": "薄世宁 《薄世宁医学通识讲义》",
+      "title": "薄世宁《薄世宁医学通识讲义》",
       "category": "physics",
       "url": "https://weread.qq.com/web/bookDetail/c76325b0811e33b0dg015a3c",
       "note": "有幸在北大聆听薄老师讲课",
       "draft": false
     },
     {
-      "title": "尤瓦尔·赫拉利 《智人之上 ——从石器时代到 AI 时代的信息网络简史》",
+      "title": "尤瓦尔·赫拉利《智人之上 ——从石器时代到 AI 时代的信息网络简史》",
       "category": "society",
       "url": "https://weread.qq.com/web/reader/a24329f0813ab950ag015395",
       "note": "赫拉利是我们时代罕见的通专结合，并能紧随时代潮流，在公众领域积极发声的知识分子",
       "draft": false
     },
     {
-      "title": "安妮·弗兰克 《安妮日记》",
+      "title": "安妮·弗兰克《安妮日记》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/7cc320d059ef237cc6cec93",
-      "note": "对纳粹暴政最有力的控诉！",
+      "note": "对纳粹暴政有力的控诉！",
       "draft": false
     },
     {
-      "title": "巴巴拉·塔奇曼 《八月炮火》",
+      "title": "巴巴拉·塔奇曼《八月炮火》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/3393231071bfd28e3395b69",
       "note": "John F. Kennedy用这本书帮助自己度过古巴导弹危机",
       "draft": false
     },
     {
-      "title": "纳尔逊·曼德拉 《漫漫自由路》",
+      "title": "纳尔逊·曼德拉《漫漫自由路》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/53832d205a1eaf5384ce2fbkc81322c012c81e728d9d180",
       "note": "人们常看到他成为总统，获得诺奖的荣光，却看不到家庭分崩离析的悲剧，27年牢狱之灾的艰辛",
       "draft": false
     },
     {
-      "title": "罗兰·米勒 《亲密关系》",
+      "title": "罗兰·米勒《亲密关系》",
       "category": "philosophy",
       "url": "https://weread.qq.com/web/reader/16832420813ab90f3g019f92",
-      "note": "每段亲密关系中，我大概都会至少读遍它",
+      "note": "每段亲密关系中，我大概都会把它至少读一遍",
       "draft": false
     },
     {
-      "title": "吴国盛 《科学的历程》",
+      "title": "吴国盛《科学的历程》",
       "category": "general",
       "url": "https://weread.qq.com/web/reader/39332d60716516c8393abcb",
       "note": "我想，每个有志于做出重要成就的理工科学生都需要一本科学史",
       "draft": false
     },
     {
-      "title": "项飙 《你好，陌生人》",
+      "title": "项飙《你好，陌生人》",
       "category": "society",
       "url": "https://weread.qq.com/web/reader/9f532000813aba09ag011847",
       "note": "我常以此书自我勉励，自我检讨",
       "draft": false
     },
     {
-      "title": "刘擎 严飞 《世界作为参考答案》",
+      "title": "刘擎 严飞《世界作为参考答案》",
       "category": "society",
       "url": "https://weread.qq.com/web/reader/4d232400813ab9fb2g010557",
       "note": "我会把这本书推荐给每个在内耗中的中国学生",
       "draft": false
     },
     {
-      "title": "杰弗里·韦斯特 《规模：复杂世界的简单法则》",
+      "title": "杰弗里·韦斯特《规模：复杂世界的简单法则》",
       "category": "general",
       "url": "https://weread.qq.com/web/reader/11e32230715554c811e0e9f",
-      "note": "再复杂的系统，从第一型原理的角度考虑，往往能回归到一个变量：规模",
+      "note": "从第一性原理的角度看复杂系统，规模往往是一个值得抓住的变量",
       "draft": false
     },
     {
@@ -446,42 +446,42 @@
       "draft": false
     },
     {
-      "title": "弗兰克·M.斯诺登 《流行病与社会：从黑死病开始的瘟疫史》",
+      "title": "弗兰克·M.斯诺登《流行病与社会：从黑死病开始的瘟疫史》",
       "category": "society",
       "url": "https://weread.qq.com/web/reader/42c32fa0813ab8623g013695",
       "note": "永远不要忽视生物学对人类的影响",
       "draft": false
     },
     {
-      "title": "查尔斯·C·曼恩 《1493：物种大交换开创的世界史》",
+      "title": "查尔斯·C·曼恩《1493：物种大交换开创的世界史》",
       "category": "general",
       "url": "https://book.douban.com/subject/26801839/?icn=index-latestbook-subject",
       "note": "秘鲁的银矿，如何同时牵动明朝和西班牙帝国的国运？非洲的疟原虫，如何影响美国南北的政治经济？为什么墨西哥城是最早的真正意义上全球化的城市？1492年，哥伦布抵达的不只是一片陆地，更是一个全新的纪元：同质世",
       "draft": false
     },
     {
-      "title": "茅海建 《天朝的崩溃：鸦片战争再研究》",
+      "title": "茅海建《天朝的崩溃：鸦片战争再研究》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/68c32bf05e22aa68c605298",
       "note": "我们很难真正理解历史，如果不是站在当时人们的视角",
       "draft": false
     },
     {
-      "title": "阿兰·佩雷菲特 《停滞的帝国：两个世界的撞击》",
+      "title": "阿兰·佩雷菲特《停滞的帝国：两个世界的撞击》",
       "category": "history",
       "url": "https://book.douban.com/subject/25733152/",
       "note": "今天在中国，人们更多记住的是鸦片战争，却往往忽略在这之前47年东西方最强大帝国的一次“外交”",
       "draft": false
     },
     {
-      "title": "埃里克·乔根森 《纳瓦尔宝典》",
+      "title": "埃里克·乔根森《纳瓦尔宝典》",
       "category": "general",
       "url": "https://weread.qq.com/web/bookDetail/e1e32b00729fc94fe1e824d",
       "note": "我读的第一本思想建议类书籍，它影响我很深",
       "draft": false
     },
     {
-      "title": "罗杰·克劳利 《1453：君士坦丁堡之战》",
+      "title": "罗杰·克劳利《1453：君士坦丁堡之战》",
       "category": "history",
       "url": "https://weread.qq.com/web/reader/27532fb0813ab8180g016fee",
       "note": "如果能让我穿越到历史上任何一个时间任何一个地点待上一段时间且过程可逆，我首先会选择1453年5月29日清晨君士坦丁堡的城墙上",

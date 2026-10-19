@@ -19,6 +19,21 @@ def link(value):
 def paragraph(value):
     return ''.join('<p>'+esc(p).replace('\n','<br>')+'</p>' for p in str(value or '').split('\n\n') if p.strip())
 
+def resource_entries(data,key):
+    entries=read(data,key+'.json')['entries'][:]
+    if key=='courses':entries += [e for e in read(data,'videos.json')['entries'] if e.get('category')=='courses']
+    if key=='videos':entries += [dict(e,category='courses') for e in read(data,'courses.json')['entries']]
+    seen=set();result=[]
+    for e in entries:
+        identity=e.get('url') or str(e.get('title'))
+        if identity in seen:continue
+        seen.add(identity);result.append(e)
+    return result
+
+def has_content(data,key):
+    entries=resource_entries(data,key)
+    return any(not e.get('draft',key=='thoughts') for e in entries)
+
 def home(data, lang):
     d=read(data,'site.json');p=d[lang];en=lang=='en'
     avatar=d.get('avatar','assets/profile.jpg')
@@ -28,6 +43,8 @@ def home(data, lang):
     b=f'<section class="profile-hero" id="about"><img class="profile-avatar" src="{esc(avatar,quote=True)}" width="2048" height="966" alt="'+('Personal profile image' if en else '个人头像')+f'"><div><p class="eyebrow">LEARN · THINK · EXPLORE · DEEPEN</p><h1>{esc(name)}</h1><p class="identity">{esc(p["identity"])}</p></div></section>'
     b+=f'<p class="profile-lead">{esc(p.get("lead",""))}</p>'+p.get('introduction','')
     b+='<p>'+('To get to know me, start with my ' if en else '如果你想快速了解我，可以从我的')+'<a href="'+('blog-en.html' if en else 'blog.html')+'">'+('blog' if en else '博客')+'</a>'+(' or ' if en else '／')+'<a href="'+('thoughts-en.html' if en else 'thoughts.html')+'">'+('short notes' if en else '短文章')+'</a>'+('.' if en else '开始。')+'</p><p><a href="'+('contact-en.html' if en else 'contact.html')+'">'+('Contact me' if en else '联系我')+'</a></p>'
+    if not has_content(data,'thoughts'):
+        b=b.replace(' or <a href="thoughts-en.html">short notes</a>','').replace('／<a href="thoughts.html">短文章</a>','')
     for key,anchor,zh,eng,kind in [('education','education','学业经历','Education','records'),('honors','honors','所获荣誉','Honors','records'),('disciplines','interests','学科兴趣','Academic interests','chips'),('research_summary','research','研究兴趣','Research interests','text'),('hobbies','life','生活与爱好','Beyond study','chips')]:
         if not p.get(key):continue
         b+=f'<section class="profile-section" id="{anchor}"><p class="eyebrow">{eng.upper()}</p><h2>{eng if en else zh}</h2>'
@@ -64,7 +81,8 @@ def contacts(data,lang):
     return b
 
 def collection(data,key,lang):
-    d=read(data,key+'.json');en=lang=='en';subjects=read(data,'media-subjects.json' if key in ('articles','videos') else 'subjects.json')['subjects']
+    d=read(data,key+'.json');en=lang=='en';subjects=read(data,'media-subjects.json')['subjects']
+    d['entries']=resource_entries(data,key)
     if key=='articles':
         papers=read(data,'papers.json')
         mapping={'electronics':'engineering','math':'natural','economics':'social','social':'social','natural':'natural','methods':'interdisciplinary'}
@@ -82,13 +100,13 @@ def collection(data,key,lang):
         entries.append(e)
     def select(name,label,options):
         return '<label>'+label+f'<select data-filter="{name}"><option value="">'+('All' if en else '全部')+'</option>'+''.join(f'<option value="{esc(k,quote=True)}">{esc(v)}</option>' for k,v in options.items())+'</select></label>'
-    b='<div class="filters" hidden>'+select('subject','Subject' if en else '学科',subject_names)+select('category',('Format' if en else ('媒介类型' if key=='articles' else '内容形式')) if key in ('videos','articles') else ('Topic' if en else '问题主题'),categories)
+    b='<div class="filters" hidden>'+select('subject','Subject' if en else '学科',subject_names)+select('category',('Format' if en else ('媒介类型' if key=='articles' else '内容形式')) if key in ('videos','articles','courses') else ('Topic' if en else '问题主题'),categories)
     if key=='questions':b+=select('stage','Stage' if en else '探索状态',stages)
     b+='<button type="button" data-reset>'+(('Back to start' if en else '回到起始') if key in ('articles','videos') else ('Reset' if en else '重置'))+'</button></div>'
     if key in ('articles','videos'):
         b+='<details class="subject-guide"><summary>'+('Subject guide' if en else '学科怎么选？')+'</summary><ul>'+''.join('<li><strong>'+esc(localized(x['name'],lang))+'</strong>：'+esc(localized(x.get('description',''),lang))+'</li>' for x in subjects)+'</ul></details>'
     b+=f'<p class="collection-count" data-count aria-live="polite">{len(entries)} '+('entries' if en else '条内容')+'</p><div class="filtered-list">'
-    grouped=key in ('videos','articles')
+    grouped=key in ('videos','articles','courses')
     if grouped:
         entries.sort(key=lambda e:list(subject_names).index((e.get('subjects') or ['interdisciplinary'])[0]))
     group=None
@@ -107,6 +125,7 @@ def collection(data,key,lang):
         if key=='questions':labels.append(stages[stage])
         b+='<div class="entry-labels">'+''.join('<span>'+esc(v)+'</span>' for v in labels)+'</div><h2>'
         b+=('<a href="'+link(e['url'])+'">'+esc(title)+' ↗</a>' if e.get('url') else esc(title))+'</h2>'
+        if e.get('access_label'):b+='<p class="meta">'+esc(localized(e['access_label'],lang))+'</p>'
         b+=paragraph(localized(e.get('note',''),lang))
         if key=='questions':
             b+='<details class="question-notebook"><summary>'+('Materials, reflections & synthesis' if en else '参考材料 · 我的思考 · 总结心得')+'</summary><h3>'+('Reference materials' if en else '参考材料')+'</h3>'

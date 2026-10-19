@@ -266,6 +266,13 @@ collections:
     date_format: YYYY-MM-DD
     time_format: false
     format: YYYY-MM-DD
+  - name: updated
+    label: 修订日期（可留空）
+    widget: datetime
+    required: false
+    date_format: YYYY-MM-DD
+    time_format: false
+    format: YYYY-MM-DD
   - name: summary
     label: English summary（默认）
     widget: text
@@ -405,8 +412,8 @@ collections:
           en: ''
       - id: general
         name:
-          zh: 综合阅读与资源网站
-          en: General reading & resources
+          zh: 综合／跨学科
+          en: General & interdisciplinary
         description:
           zh: 跨学科书籍、综合书库与阅读网站。
           en: Cross-disciplinary books and reading websites.
@@ -444,7 +451,7 @@ collections:
         - value: creation
           label: 创造与实践
         - value: general
-          label: 综合阅读与资源网站
+          label: 综合／跨学科
       - name: url
         label: 访问链接
         widget: string
@@ -520,7 +527,15 @@ collections:
       fields:
       - name: title
         label: 名称（内容标题或平台名）
-        widget: string
+        widget: object
+        fields:
+        - name: zh
+          label: 中文
+          widget: string
+        - name: en
+          label: English
+          widget: string
+          required: false
       - name: category
         label: 内容形式
         widget: select
@@ -632,7 +647,15 @@ collections:
       fields:
       - name: title
         label: 名称（内容标题或平台名）
-        widget: string
+        widget: object
+        fields:
+        - name: zh
+          label: 中文
+          widget: string
+        - name: en
+          label: English
+          widget: string
+          required: false
       - name: category
         label: 媒介类型
         widget: select
@@ -877,34 +900,24 @@ collections:
         required: false
         multiple: true
         options:
-        - value: history
-          label: 历史
-        - value: economics
-          label: 经济学
-        - value: art
-          label: 艺术
+        - value: humanities
+          label: 人文、历史与艺术
+        - value: social
+          label: 经济、社会与商业
         - value: psychology
-          label: 心理学
-        - value: sociology
-          label: 社会学
-        - value: philosophy
-          label: 哲学
-        - value: business
-          label: 商业
-        - value: geopolitics
-          label: 地缘政治
-        - value: ai
-          label: AI
-        - value: engineering
-          label: 工程学
-        - value: neuroscience
-          label: 神经科学
-        - value: physics
-          label: 物理学
+          label: 心理学与认知
         - value: math
-          label: 数学
+          label: 数学、统计与逻辑
+        - value: natural
+          label: 物理、化学与地球科学
+        - value: agriculture
+          label: 生命、环境与农业
+        - value: engineering
+          label: 工程、计算机与AI
+        - value: health
+          label: 医学、营养与运动
         - value: interdisciplinary
-          label: 跨学科 / 综合
+          label: 综合与跨领域
       - name: stage
         label: 探索状态
         widget: select
@@ -1260,104 +1273,10 @@ collections:
     - name: categories
       widget: hidden
       default:
-      - id: history
+      - id: courses
         name:
-          zh: 历史
-          en: History
-        description:
-          zh: ''
-          en: ''
-      - id: economics
-        name:
-          zh: 经济学
-          en: Economics
-        description:
-          zh: ''
-          en: ''
-      - id: art
-        name:
-          zh: 艺术
-          en: Art
-        description:
-          zh: ''
-          en: ''
-      - id: psychology
-        name:
-          zh: 心理学
-          en: Psychology
-        description:
-          zh: ''
-          en: ''
-      - id: sociology
-        name:
-          zh: 社会学
-          en: Sociology
-        description:
-          zh: ''
-          en: ''
-      - id: philosophy
-        name:
-          zh: 哲学
-          en: Philosophy
-        description:
-          zh: ''
-          en: ''
-      - id: business
-        name:
-          zh: 商业
-          en: Business
-        description:
-          zh: ''
-          en: ''
-      - id: geopolitics
-        name:
-          zh: 地缘政治
-          en: Geopolitics
-        description:
-          zh: ''
-          en: ''
-      - id: ai
-        name:
-          zh: AI
-          en: AI
-        description:
-          zh: ''
-          en: ''
-      - id: engineering
-        name:
-          zh: 工程学
-          en: Engineering
-        description:
-          zh: ''
-          en: ''
-      - id: neuroscience
-        name:
-          zh: 神经科学
-          en: Neuroscience
-        description:
-          zh: ''
-          en: ''
-      - id: physics
-        name:
-          zh: 物理学
-          en: Physics
-        description:
-          zh: ''
-          en: ''
-      - id: math
-        name:
-          zh: 数学
-          en: Mathematics
-        description:
-          zh: ''
-          en: ''
-      - id: interdisciplinary
-        name:
-          zh: 跨学科 / 综合
-          en: Interdisciplinary
-        description:
-          zh: ''
-          en: ''
+          zh: 课程与系列教程
+          en: Courses & tutorials
     - name: entries
       label: 推荐课程
       widget: list
@@ -1369,36 +1288,34 @@ collections:
       - name: category
         label: 学科 / 门类
         widget: select
-        default: interdisciplinary
+        default: courses
         options:
-        - value: history
-          label: 历史
-        - value: economics
-          label: 经济学
-        - value: art
-          label: 艺术
+        - value: courses
+          label: 课程与系列教程
+      - name: subjects
+        label: 学科（可多选）
+        widget: select
+        multiple: true
+        required: false
+        options:
+        - value: humanities
+          label: 人文、历史与艺术
+        - value: social
+          label: 经济、社会与商业
         - value: psychology
-          label: 心理学
-        - value: sociology
-          label: 社会学
-        - value: philosophy
-          label: 哲学
-        - value: business
-          label: 商业
-        - value: geopolitics
-          label: 地缘政治
-        - value: ai
-          label: AI
-        - value: engineering
-          label: 工程学
-        - value: neuroscience
-          label: 神经科学
-        - value: physics
-          label: 物理学
+          label: 心理学与认知
         - value: math
-          label: 数学
+          label: 数学、统计与逻辑
+        - value: natural
+          label: 物理、化学与地球科学
+        - value: agriculture
+          label: 生命、环境与农业
+        - value: engineering
+          label: 工程、计算机与AI
+        - value: health
+          label: 医学、营养与运动
         - value: interdisciplinary
-          label: 跨学科 / 综合
+          label: 综合与跨领域
       - name: url
         label: 访问链接
         widget: string
@@ -1416,7 +1333,7 @@ collections:
         default: false
       collapsed: true
       summary: '{{fields.title}}'
-      hint: 填写名称、学科和完整链接；推荐语可留空。综合书库或跨学科网站可选择「综合阅读与资源网站」。
+      hint: 这里新增的课程也显示在视频页；视频中的课程也会自动显示在这里。相同条目只需在原来的位置维护一次。
 - name: thoughts
   label: 短文章 · 思想记录
   files:

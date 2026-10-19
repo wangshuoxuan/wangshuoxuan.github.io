@@ -68,137 +68,185 @@
   ],
   "entries": [
     {
-      "title": "陈文捷 西方古代建筑艺术史",
+      "title": {
+        "zh": "陈文捷 西方古代建筑艺术史",
+        "en": "陈文捷 西方古代建筑艺术史"
+      },
       "category": "courses",
       "subjects": [
         "humanities"
       ],
-      "url": "https://www.bilibili.com/video/BV1754y1i715/?spm_id_from=333.337.search-card.all.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
+      "url": "https://www.bilibili.com/video/BV1754y1i715/",
       "note": "我心中的世界五大古代建筑：\n1 希腊帕特农神庙\n2 中国北京故宫\n3 意大利古罗马斗兽场\n4 中国万里长城\n5 印度泰姬陵",
       "draft": false
     },
     {
-      "title": "陈文捷 世界近现代建筑史",
+      "title": {
+        "zh": "陈文捷 世界近现代建筑史",
+        "en": "陈文捷 世界近现代建筑史"
+      },
       "category": "courses",
       "subjects": [
         "humanities"
       ],
-      "url": "https://www.bilibili.com/video/BV13h411Y7EK/?spm_id_from=333.1387.favlist.content.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
+      "url": "https://www.bilibili.com/video/BV13h411Y7EK/",
       "note": "我心中的世界五大近现代建筑：\n1 法国巴黎埃菲尔铁塔\n2 美国宾州流水别墅\n3 美国纽约帝国大厦\n4 美国芝加哥威利斯大厦\n5 法国巴黎蓬皮杜艺术中心",
       "draft": false
     },
     {
-      "title": "孙乃树 西方美术欣赏",
+      "title": {
+        "zh": "孙乃树 西方美术欣赏",
+        "en": "孙乃树 西方美术欣赏"
+      },
       "category": "courses",
       "subjects": [
         "humanities"
       ],
-      "url": "https://www.bilibili.com/video/BV1u8411k7nA/?spm_id_from=333.1387.favlist.content.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
-      "note": "我心中的西方十大名画（印象派前）：\n1 拉斐尔 《雅典学院》\n2 达·芬奇《蒙娜丽莎》\n3 欧仁·德拉克罗瓦 《自由引导人民》\n4 雅克-路易·大卫 《跨越阿尔卑斯山圣伯纳隘口的拿破仑》\n5 托马斯 • 科尔《帝国的历程：毁灭》\n6 约翰内斯·维米尔 《戴珍珠耳环的少女》\n7 雅克-路易·大卫 《劫夺萨宾妇女》\n8 约瑟夫·透纳 《被拖去解体的战舰无畏号》\n9 伦勃朗 《夜巡》\n10 戈雅 《1808年5月3日夜枪杀起义者》\n\n我心中的西方十大名画（印象派及以后）：\n1 文森特 • 梵高 《星月夜》\n2 莫奈 《日出·印象》\n3 萨尔瓦多·达利 《记忆的永恒》\n4 雷诺阿《煎饼磨坊的舞会》\n5 马克·夏加尔 《生日》\n6 巴勃罗·毕加索 《格尔尼卡》\n7 莫奈 《睡莲》\n8 安迪·沃霍尔 《玛丽莲·梦露》\n9 杰克逊 • 波洛克《蓝柱》\n10 瓦西里·康定斯基 《构图八号》",
+      "url": "https://www.bilibili.com/video/BV1u8411k7nA/",
+      "note": "我心中的西方十大名画（印象派前）：\n1 拉斐尔 《雅典学院》\n2 达·芬奇《蒙娜丽莎》\n3 欧仁·德拉克罗瓦 《自由引导人民》\n4 雅克-路易·大卫 《跨越阿尔卑斯山圣伯纳隘口的拿破仑》\n5 托马斯·科尔《帝国的历程：毁灭》\n6 约翰内斯·维米尔 《戴珍珠耳环的少女》\n7 雅克-路易·大卫 《劫夺萨宾妇女》\n8 约瑟夫·透纳 《被拖去解体的战舰无畏号》\n9 伦勃朗 《夜巡》\n10 戈雅 《1808年5月3日夜枪杀起义者》\n\n我心中的西方十大名画（印象派及以后）：\n1 文森特·梵高 《星月夜》\n2 莫奈 《日出·印象》\n3 萨尔瓦多·达利 《记忆的永恒》\n4 雷诺阿《煎饼磨坊的舞会》\n5 马克·夏加尔 《生日》\n6 巴勃罗·毕加索 《格尔尼卡》\n7 莫奈 《睡莲》\n8 安迪·沃霍尔 《玛丽莲·梦露》\n9 杰克逊·波洛克《蓝柱》\n10 瓦西里·康定斯基 《构图八号》",
       "draft": false
     },
     {
-      "title": "MIT 心理学与经济学(又名行为经济学)",
+      "title": {
+        "zh": "MIT 心理学与经济学(又名行为经济学)",
+        "en": "MIT 心理学与经济学(又名行为经济学)"
+      },
       "category": "courses",
       "subjects": [
-        "interdisciplinary"
+        "social",
+        "psychology"
       ],
-      "url": "https://www.bilibili.com/video/BV11U4y1g78u/?spm_id_from=333.1387.favlist.content.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
+      "url": "https://www.bilibili.com/video/BV11U4y1g78u/",
       "note": "课程中有不少定量计算，这让我愉快",
       "draft": false
     },
     {
-      "title": "泰勒-本-沙哈尔 积极心理学",
+      "title": {
+        "zh": "泰勒·本-沙哈尔 积极心理学",
+        "en": "泰勒-本-沙哈尔 积极心理学"
+      },
       "category": "courses",
       "subjects": [
         "psychology"
       ],
-      "url": "https://www.bilibili.com/video/BV1Ka411w7qd/?spm_id_from=333.337.search-card.all.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
+      "url": "https://www.bilibili.com/video/BV1Ka411w7qd/",
       "note": "我到大学后听的第一门网络公开课",
       "draft": false
     },
     {
-      "title": "迈克尔·桑德尔 公正：一场思辨之旅",
+      "title": {
+        "zh": "迈克尔·桑德尔 公正：一场思辨之旅",
+        "en": "迈克尔·桑德尔 公正：一场思辨之旅"
+      },
       "category": "courses",
       "subjects": [
-        "interdisciplinary"
+        "humanities",
+        "social"
       ],
-      "url": "https://www.bilibili.com/video/BV1ct4y167fM/?spm_id_from=333.337.search-card.all.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
-      "note": "网课永远做不到的一点：高质量的现场互动",
+      "url": "https://www.bilibili.com/video/BV1ct4y167fM/",
+      "note": "现场课很吸引我的一点：高质量的互动",
       "draft": false
     },
     {
-      "title": "Yale 博弈论",
+      "title": {
+        "zh": "Yale 博弈论",
+        "en": "Yale 博弈论"
+      },
       "category": "courses",
       "subjects": [
         "social"
       ],
-      "url": "https://www.bilibili.com/video/BV1xY411Y7Wj/?spm_id_from=333.1387.favlist.content.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
+      "url": "https://www.bilibili.com/video/BV1xY411Y7Wj/",
       "note": "经济学中我最喜欢的就是博弈论",
       "draft": false
     },
     {
-      "title": "马修·杰克逊 社会和经济网络：模型和分析",
+      "title": {
+        "zh": "马修·杰克逊 社会和经济网络：模型和分析",
+        "en": "马修·杰克逊 社会和经济网络：模型和分析"
+      },
       "category": "courses",
       "subjects": [
         "social"
       ],
-      "url": "https://www.bilibili.com/video/BV1Yv4y1v75V/?spm_id_from=333.1387.favlist.content.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
-      "note": "如果你想获得成功，这绝对是最值得上的课之一",
+      "url": "https://www.bilibili.com/video/BV1Yv4y1v75V/",
+      "note": "如果你对成功背后的社会网络感兴趣，这是一门我很推荐的课",
       "draft": false
     },
     {
-      "title": "张志伟 西方哲学史",
+      "title": {
+        "zh": "张志伟 西方哲学史",
+        "en": "张志伟 西方哲学史"
+      },
       "category": "courses",
       "subjects": [
         "humanities"
       ],
-      "url": "https://www.bilibili.com/video/BV1y64y1r7Mt/?spm_id_from=333.1387.favlist.content.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
+      "url": "https://www.bilibili.com/video/BV1y64y1r7Mt/",
       "note": "很好的哲学通识课",
       "draft": false
     },
     {
-      "title": "卢晖临 社会学概论",
+      "title": {
+        "zh": "卢晖临 社会学概论",
+        "en": "卢晖临 社会学概论"
+      },
       "category": "courses",
       "subjects": [
         "social"
       ],
-      "url": "https://www.bilibili.com/video/BV1XK4y1n7gp/?spm_id_from=333.337.search-card.all.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
+      "url": "https://www.bilibili.com/video/BV1XK4y1n7gp/",
       "note": "很好的社会学通识课",
       "draft": false
     },
     {
-      "title": "Steven Bartlett The Diary of a CEO",
+      "title": {
+        "zh": "史蒂文·巴特利特｜The Diary of a CEO",
+        "en": "Steven Bartlett The Diary of a CEO"
+      },
       "category": "podcasts",
       "subjects": [
         "interdisciplinary"
       ],
-      "url": "https://baike.baidu.com/item/CEO%E6%97%A5%E8%AE%B0/68057587",
+      "url": "https://www.thediaryofaceo.com/",
       "note": "",
       "draft": false
     },
     {
-      "title": "Lex Fridman Lex Fridman Podcast",
+      "title": {
+        "zh": "莱克斯·弗里德曼｜Lex Fridman Podcast",
+        "en": "Lex Fridman Lex Fridman Podcast"
+      },
       "category": "podcasts",
       "subjects": [
         "interdisciplinary"
       ],
       "url": "https://lexfridman.com/podcast/",
-      "note": "Lex真正做到了专精和通识完美的结合",
+      "note": "我很欣赏Lex把专精和通识结合起来的方式",
       "draft": false
     },
     {
-      "title": "Joe Rogan The Joe Rogan Experience",
+      "title": {
+        "zh": "乔·罗根｜The Joe Rogan Experience",
+        "en": "Joe Rogan The Joe Rogan Experience"
+      },
       "category": "podcasts",
       "subjects": [
         "interdisciplinary"
       ],
-      "url": "https://baike.baidu.com/item/%E4%B9%94%C2%B7%E7%BD%97%E6%A0%B9%E4%BD%93%E9%AA%8C/68554181?fr=aladdin",
+      "url": "https://feeds.megaphone.fm/GLT1412515089",
       "note": "",
-      "draft": false
+      "draft": false,
+      "access_label": {
+        "zh": "官方音频订阅（RSS）",
+        "en": "Official audio feed (RSS)"
+      }
     },
     {
-      "title": "Chris Williamson Modern Wisdom Podcast",
+      "title": {
+        "zh": "克里斯·威廉森｜Modern Wisdom Podcast",
+        "en": "Chris Williamson Modern Wisdom Podcast"
+      },
       "category": "podcasts",
       "subjects": [
         "interdisciplinary"
@@ -208,12 +256,15 @@
       "draft": false
     },
     {
-      "title": "MIT How to speak",
-      "category": "short",
+      "title": {
+        "zh": "MIT How to speak",
+        "en": "MIT How to speak"
+      },
+      "category": "talks",
       "subjects": [
-        "interdisciplinary"
+        "humanities"
       ],
-      "url": "https://www.bilibili.com/video/BV1tU4y187xz/?spm_id_from=333.337.search-card.all.click&vd_source=d9111a1bfe249da3f8132d0dd0ca3686",
+      "url": "https://www.bilibili.com/video/BV1tU4y187xz/",
       "note": "好的pre是什么样子的",
       "draft": false
     }

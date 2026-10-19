@@ -59,7 +59,10 @@
   ],
   "entries": [
     {
-      "title": "Paul Graham 个人网站",
+      "title": {
+        "zh": "保罗·格雷厄姆｜Paul Graham Essays",
+        "en": "Paul Graham 个人网站"
+      },
       "category": "blogs",
       "url": "https://paulgraham.com/articles.html",
       "note": "硅谷创业风投教父的人生沉淀",
@@ -69,7 +72,10 @@
       ]
     },
     {
-      "title": "Patrick Collison 个人网站",
+      "title": {
+        "zh": "帕特里克·科里森｜Patrick Collison",
+        "en": "Patrick Collison 个人网站"
+      },
       "category": "blogs",
       "url": "https://patrickcollison.com/",
       "note": "一位年轻科技精英的心路历程",
@@ -79,84 +85,134 @@
       ]
     },
     {
-      "title": "Sam Altman 个人网站",
+      "title": {
+        "zh": "山姆·奥特曼｜Sam Altman Blog",
+        "en": "Sam Altman 个人网站"
+      },
       "category": "blogs",
       "url": "https://blog.samaltman.com/",
-      "note": "当今世界最具影响力的年轻精英。尤其推荐productivity和how to be successful两篇文章",
+      "note": "我很关注的一位科技界人物。尤其推荐 Productivity 和 How to Be Successful 两篇文章",
       "draft": false,
-      "subjects": []
+      "subjects": [
+        "interdisciplinary"
+      ]
     },
     {
-      "title": "Naval Ravikant 文章与访谈",
+      "title": {
+        "zh": "纳瓦尔·拉维坎特｜Naval",
+        "en": "Naval Ravikant 文章与访谈"
+      },
       "category": "blogs",
       "url": "https://nav.al/",
-      "note": "Naval 是我最重要的人生导师之一，他引导我正确看待财富和幸福",
+      "note": "Naval 是我最重要的人生导师之一，他引导我重新看待财富和幸福",
       "draft": false,
-      "subjects": []
+      "subjects": [
+        "interdisciplinary"
+      ]
     },
     {
-      "title": "Lex Fridman 个人网站",
+      "title": {
+        "zh": "莱克斯·弗里德曼｜Lex Fridman",
+        "en": "Lex Fridman 个人网站"
+      },
       "category": "blogs",
       "url": "https://lexfridman.com/",
       "note": "",
       "draft": false,
-      "subjects": []
+      "subjects": [
+        "interdisciplinary"
+      ]
     },
     {
-      "title": "Kevin Kelly 个人网站",
+      "title": {
+        "zh": "凯文·凯利｜The Technium",
+        "en": "Kevin Kelly 个人网站"
+      },
       "category": "blogs",
       "url": "https://kk.org",
-      "note": "中国科技界无比熟悉的名字",
+      "note": "中国科技界很熟悉的名字",
       "draft": false,
-      "subjects": []
+      "subjects": [
+        "interdisciplinary"
+      ]
     },
     {
-      "title": "Andrej Karpathy 个人网站",
+      "title": {
+        "zh": "安德烈·卡帕西｜Andrej Karpathy",
+        "en": "Andrej Karpathy 个人网站"
+      },
       "category": "blogs",
       "url": "https://karpathy.ai",
       "note": "尤其推荐 A survival guide to a PhD 太多人为读博士而迷茫了",
       "draft": false,
-      "subjects": []
+      "subjects": [
+        "interdisciplinary"
+      ]
     },
     {
-      "title": "Tim Ferriss 个人网站",
+      "title": {
+        "zh": "蒂姆·费里斯｜Tim Ferriss",
+        "en": "Tim Ferriss 个人网站"
+      },
       "category": "blogs",
       "url": "https://tim.blog",
       "note": "Tim 广泛地与各界成功人士交流，这里有他的心得体会",
       "draft": false,
-      "subjects": []
+      "subjects": [
+        "interdisciplinary"
+      ]
     },
     {
-      "title": "Gates Notes",
+      "title": {
+        "zh": "比尔·盖茨｜Gates Notes",
+        "en": "Gates Notes"
+      },
       "category": "blogs",
       "url": "https://www.gatesnotes.com/",
       "note": "我受Gates启发，做一个书籍季度推荐",
       "draft": false,
-      "subjects": []
+      "subjects": [
+        "interdisciplinary"
+      ]
     },
     {
-      "title": "吴军 硅谷来信等系列",
+      "title": {
+        "zh": "吴军 硅谷来信等系列",
+        "en": "吴军 硅谷来信等系列"
+      },
       "category": "newsletters",
       "url": "https://m.igetget.com/native/mine/account#/user/detail?enId=w7EJVerpWml1p7dABA8ygvaj4ZLq90",
       "note": "吴军老师是我人生的引路人，他写的书大都值得一读",
       "draft": false,
-      "subjects": []
+      "subjects": [
+        "social"
+      ]
     },
     {
-      "title": "万维钢 精英日课等系列",
+      "title": {
+        "zh": "万维钢 精英日课等系列",
+        "en": "万维钢 精英日课等系列"
+      },
       "category": "newsletters",
       "url": "https://m.igetget.com/native/mine/account#/user/detail?enId=vNBaAbwjq5nMoamqzZ1GLKkzgPXy9o",
-      "note": "这是我听过的最佳专栏",
+      "note": "这是我听过的专栏中，很喜欢的一个",
       "draft": false,
-      "subjects": []
+      "subjects": [
+        "social"
+      ]
     },
     {
-      "title": "薛兆丰 薛兆丰的经济学科",
+      "title": {
+        "zh": "薛兆丰《薛兆丰的经济学课》",
+        "en": "薛兆丰 薛兆丰的经济学科"
+      },
       "category": "newsletters",
       "url": "https://m.igetget.com/native/mine/account#/user/detail?enId=bADWzRoEa7wmxd90ovMN2BV0YZLGP9",
-      "note": "得到排名第一的课程，经济学通识的意义再怎么强调都不为过",
+      "note": "我很推荐的经济学通识课",
       "draft": false,
-      "subjects": []
+      "subjects": [
+        "social"
+      ]
     }
   ]
 }

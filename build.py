@@ -65,6 +65,8 @@ def navigation(lang,current):
     ]
     parts=[]
     for eg,zg,items in groups:
+        items=[item for item in items if item[0]=='blog' or personal.has_content(DATA,item[0])]
+        if eg!='About' and not items:continue
         links=''.join(f'<a href="{href}"'+(' aria-current="page"' if current==k else '')+f'>{esc(e if en else z)}</a>' for k,z,e,href in items)
         parts.append(f'<div class="nav-group"><a class="nav-label" href="{home}">{eg if en else zg}</a></div>' if not items else f'<div class="nav-group"><div class="nav-label">{eg if en else zg}</div>{links}</div>')
     parts.append(f'<div class="nav-contact"><a href="{file("contact",lang)}"'+(' aria-current="page"' if current=='contact' else '')+f'>{"Contact" if en else "联系我"}</a></div>')
@@ -76,6 +78,7 @@ def shell(key,lang,title,description,body,language_target=None):
     other = ('index.html' if en else 'en.html') if key=='home' else file(key,'zh' if en else 'en')
     if language_target:other=language_target
     nav=navigation(lang,key)
+    nav_count=nav.count('<a ')
     name=esc(site_data().get('name_en' if en else 'name_zh','Wangshuoxuan' if en else '王烁瑄'))
     language=f'<a href="{other}" lang="'+('zh-CN">中文' if en else 'en">English')+'</a>'
     footer='<footer><small>'+('Keep learning' if en else '持续积累')+'</small></footer>'
@@ -91,7 +94,7 @@ def shell(key,lang,title,description,body,language_target=None):
 <script src="firebase-config.js?v=2" defer></script><script src="firebase-messages.js?v=3" defer></script>
 </head><body><a class="skip" href="#main">{'Skip to content' if en else '跳至正文'}</a>
 <div class="layout"><header class="sidebar"><a class="wordmark" href="{'en.html' if en else 'index.html'}">{name}<span aria-hidden="true" style="color:var(--accent)">.</span></a><span class="side-caption">A PERSONAL WEBSITE</span>
-<div class="desktop-menu">{nav}</div><details class="mobile-menu"><summary>{'Explore this site' if en else '浏览全站目录'} <span>11</span></summary>{nav}</details>
+<div class="desktop-menu">{nav}</div><details class="mobile-menu"><summary>{'Explore this site' if en else '浏览全站目录'} <span>{nav_count}</span></summary>{nav}</details>
 <div class="language">{language}</div></header>
 <main id="main" tabindex="-1">{body}{footer}</main></div></body></html>'''
 
@@ -115,7 +118,7 @@ def render_item(item,lang,kind):
     return f'<article class="library-entry"><h3>{title_html}</h3>{meta_html}{quote_html}'+(f'<p>{esc(note)}</p>' if note else '')+(f'<p class="entry-tags">{esc(" · ".join(tags))}</p>' if tags else '')+'</article>'
 
 def collection(key,lang):
-    if key in ('videos','questions','articles'):
+    if key in ('videos','questions','articles','courses'):
         _,zh,en,zd,ed=NAMES[key]
         return shell(key,lang,en if lang=='en' else zh,ed if lang=='en' else zd,heading(en if lang=='en' else zh,en,ed if lang=='en' else zd,lang)+personal.collection(DATA,key,lang))
     d=json.loads((DATA/f'{key}.json').read_text(encoding='utf-8'))
@@ -126,6 +129,7 @@ def collection(key,lang):
     entries=[e for e in d['entries'] if not e.get('draft',False)]
     if key=='books':
         entries=[dict(e,category=e.get('category') or 'general') for e in entries]
+    visible_categories=[c for c in d['categories'] if any(e.get('category')==c['id'] for e in entries)]
     if any(e.get('category') not in ids for e in entries):raise ValueError('Unknown category')
     en=lang=='en'; _,zh,eng,zd,ed=NAMES[key]
     title=eng if en else zh
@@ -133,16 +137,22 @@ def collection(key,lang):
     if key=='articles':intro+='<p class="text-links"><a href="'+file('papers',lang)+'">'+('Research papers ↗' if en else '论文 ↗')+'</a></p>'
     count=f'{len(entries)} '+('entries' if en else '条记录')
     intro+=f'<p class="collection-count">{count}</p>'
-    intro+='<nav class="category-index" aria-label="'+('Categories' if en else '分类索引')+'">'+''.join(f'<a href="#cat-{c["id"]}">{esc(text(c,"name",lang))}<span>{sum(e["category"]==c["id"] for e in entries)}</span></a>' for c in d['categories'])+'</nav>'
+    intro+='<nav class="category-index" aria-label="'+('Categories' if en else '分类索引')+'">'+''.join(f'<a href="#cat-{c["id"]}">{esc(text(c,"name",lang))}<span>{sum(e["category"]==c["id"] for e in entries)}</span></a>' for c in visible_categories)+'</nav>'
     if not entries:
         intro+='<p class="collection-empty">'+('No personal entries have been added yet. Categories are ready for future additions.' if en else '尚未添加个人条目。分类已备好，后续逐条补充。')+'</p>'
-    for c in d['categories']:
+    for c in visible_categories:
         items=[e for e in entries if e['category']==c['id']]
         desc=c.get('description',{}).get(lang,'')
         intro+=f'<section class="library-category" id="cat-{c["id"]}"><div class="section-heading"><h2>{esc(text(c,"name",lang))}</h2><span>{len(items):02}</span></div>'+ (f'<p class="category-description">{esc(desc)}</p>' if desc else '')
         intro+=''.join(render_item(e,lang,key) for e in items)
         intro+='</section>'
     return shell(key,lang,title,ed if en else zd,intro)
+
+def post_dates(post,lang):
+    en=lang=='en'
+    value=('Published ' if en else '发布于 ')+f'<time datetime="{post["date"]}">{post["date"]}</time>'
+    if post.get('updated'):value+=' · '+('Updated ' if en else '修订于 ')+f'<time datetime="{post["updated"]}">{post["updated"]}</time>'
+    return value
 
 def posts():
     result=[]
@@ -159,6 +169,9 @@ def posts():
         if any(x['slug']==slug for x in result):raise ValueError('Duplicate post slug')
         if isinstance(d.get('date'),date):d['date']=d['date'].isoformat()[:10]
         date.fromisoformat(d['date'])
+        if d.get('updated'):
+            d['updated']=str(d['updated'])[:10]
+            date.fromisoformat(d['updated'])
         if not d.get('title') or not d.get('summary'):raise ValueError('Published posts need title and summary')
         d.update(slug=slug,raw_body=body,body=markdown.markdown(body,extensions=['fenced_code','tables','footnotes','toc']))
         result.append(d)
@@ -168,9 +181,10 @@ def blog(lang,items):
     en=lang=='en'
     title='Blog' if en else '我的博客'
     body=heading(title,'Blog & notes','Essays, research notes, and working thoughts.' if en else '长文、研究笔记与日常思考，都可以从这里开始。',lang)
-    body+='<p class="collection-count">'+str(len(items))+(' published posts' if en else '篇已发布文章')+'</p>'
-    body+='<nav class="category-index" aria-label="Blog categories">'+''.join(f'<a href="#blog-{i}">{esc(label)}</a>' for i,label in enumerate(['研究笔记','随笔','阅读札记','其他写作'] if not en else ['Research notes','Essays','Reading notes','Other writing']))+'</nav>'
+    body+='<p class="collection-count">'+str(len(items))+((' published post' if len(items)==1 else ' published posts') if en else '篇已发布文章')+'</p>'
     groups=[('research','Research notes' if en else '研究笔记'),('essay','Essays' if en else '随笔'),('reading','Reading notes' if en else '阅读札记'),('other','Other writing' if en else '其他写作')]
+    groups=[(cat,label) for cat,label in groups if any(d.get('category')==cat or (cat=='other' and d.get('category') not in ['research','essay','reading']) for d in items)]
+    body+='<nav class="category-index" aria-label="Blog categories">'+''.join(f'<a href="#blog-{i}">{esc(label)}</a>' for i,(_,label) in enumerate(groups))+'</nav>'
     for i,(cat,label) in enumerate(groups):
         body+=f'<section class="library-category" id="blog-{i}"><h2>{label}</h2>'
         filtered=[d for d in items if (d.get('category')==cat or (cat=='other' and d.get('category') not in ['research','essay','reading']))]
@@ -210,8 +224,8 @@ def sync_editor():
         next(f for f in fields if f['name']=='categories')['default']=data['categories']
         entry_fields=next(f for f in fields if f['name']=='entries')['fields']
         next(f for f in entry_fields if f['name']=='category')['options']=[{'value':c['id'],'label':text(c,'name','zh')} for c in data['categories']]
-        if key in ('videos','questions','articles'):
-            subjects=json.loads((DATA/('media-subjects.json' if key in ('articles','videos') else 'subjects.json')).read_text(encoding='utf-8'))['subjects']
+        if key in ('videos','questions','articles','courses'):
+            subjects=json.loads((DATA/'media-subjects.json').read_text(encoding='utf-8'))['subjects']
             next(f for f in entry_fields if f['name']=='subjects')['options']=[{'value':c['id'],'label':text(c,'name','zh')} for c in subjects]
             if key in ('articles','videos'):
                 next(f for f in entry_fields if f['name']=='subjects')['hint']='按主题多选：心理与认知单列；疾病诊疗、营养运动选医学；生物、生态、农业选生命。明确的交叉主题可多选，综合仅用于难定主线的内容。'
@@ -261,9 +275,9 @@ def build():
                 summary=f'<p class="page-description"><span class="post-en" lang="en">{esc(d["summary"])}</span><span class="post-zh" lang="zh-CN" hidden>{esc(d.get("summary_zh",d["summary"]))}</span></p>'
                 if d['slug']=='health-for-a-better-life':
                     summary+='<p class="meta">'+('Recommended: read the English original.' if en else '建议阅读英文原文。')+'</p>'
-                body=f'<header class="page-header"><a href="{file("blog",lang)}">'+('Blog' if en else '我的博客')+f'</a><h1>{title}</h1>{summary}<p class="meta">'+('Wang Shuoxuan' if en else '王烁瑄')+f' · <time datetime="{d["date"]}">{d["date"]}</time></p></header><article class="essay-prose">{bilingual.render(d)}</article>'
+                body=f'<header class="page-header"><a href="{file("blog",lang)}">'+('Blog' if en else '我的博客')+f'</a><h1>{title}</h1>{summary}<p class="meta">'+('Wang Shuoxuan' if en else '王烁瑄')+' · '+post_dates(d,lang)+f'</p></header><article class="essay-prose">{bilingual.render(d)}</article>'
             else:
-                body=f'<header class="page-header"><a href="{file("blog",lang)}">← '+('Blog' if en else '返回博客')+f'</a><h1>{esc(d["title"])}</h1><p class="meta"><time datetime="{d["date"]}">{d["date"]}</time></p></header><article class="prose">{d["body"]}</article>'
+                body=f'<header class="page-header"><a href="{file("blog",lang)}">← '+('Blog' if en else '返回博客')+f'</a><h1>{esc(d["title"])}</h1><p class="meta">{post_dates(d,lang)}</p></header><article class="prose">{d["body"]}</article>'
             other=file('post-'+d['slug'],'zh' if en else 'en')
             page=shell('blog',lang,d['title'],d['summary'],body,language_target=other)
             if d.get('body_zh'):page=bilingual.assets(page)
