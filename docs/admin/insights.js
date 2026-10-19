@@ -1,7 +1,7 @@
 (() => {
  'use strict';
  const api=window.PrivateSite,status=document.getElementById('status'),form=document.getElementById('login'),owner=document.getElementById('owner');
- if(!api?.available){status.textContent='Not connected. Analytics and private messages are disabled. No visitor data is being collected.';form.hidden=true;return;}
+ if(!api?.available){status.textContent='Traffic analytics are available in your private Umami account. Private messages are not connected yet.';form.hidden=true;return;}
  const {el,request}=api;let offset=0;
  function table(target,head,rows){const node=document.getElementById(target);node.replaceChildren();const table=el('table'),tr=el('tr');head.forEach(x=>tr.append(el('th',x)));table.append(tr);rows.forEach(row=>{const tr=el('tr');row.forEach(cell=>tr.append(el('td',cell)));table.append(tr);});node.append(table);}
  form.onsubmit=async e=>{e.preventDefault();try{await api.login(form.elements.email.value.trim());status.textContent='Check your email. Open the link in this browser.';}catch(error){status.textContent=error.message;}};
