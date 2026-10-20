@@ -1,1 +1,41 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Private dashboard · Wang Shuoxuan</title><link rel="stylesheet" href="../services.css"><script src="../services-config.js" defer></script><script src="../site-services.js" defer></script><script src="insights.js" defer></script></head><body><main class="dashboard"><h1>Private dashboard</h1><p>Traffic, reading activity, and private messages.</p><p><a href="index.html">Content editor</a> · <a href="../blog-en.html">Blog</a></p><p><a href="https://cloud.umami.is/analytics/us/websites" target="_blank" rel="noopener noreferrer">Open private traffic analytics (Umami)</a> · <a href="messages.html">Private inbox and replies</a></p><p id="status" role="status">Loading service status…</p><form id="login"><label>Email address<input name="email" type="email" autocomplete="email" required></label><button>Send a sign-in link</button></form><section id="owner" hidden><div class="dashboard-controls"><label>Period<select id="days"><option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option><option value="90">Last 90 days</option></select></label><button id="refresh">Refresh</button><button id="signout">Sign out</button></div><div id="metrics"></div><h2>Pages and articles</h2><div id="pages"></div><h2>Daily traffic</h2><div id="daily"></div><h2>Referrers and devices</h2><div id="sources"></div><h2>Private messages</h2><div id="messages"></div><p><button id="more" hidden>Load more messages</button></p><p>Time is estimated from active, visible browsing, not exact reading. Sessions are tab-scoped estimates, not identified people. Counts can be affected by blockers, network failures, or automated requests.</p></section></main></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>访问统计与留言 · 王烁瑄</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fafaf8;color:#29313a;font:16px/1.8 system-ui,"Microsoft YaHei",sans-serif}main{max-width:960px;margin:56px auto;padding:0 24px 48px}h1{font-size:30px;margin:18px 0 8px}h2{font-size:20px;margin-top:32px}p{margin:8px 0 18px}a{color:#315b7a;text-underline-offset:4px}nav{font-size:14px}.intro,.note{color:#65717c}.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0}.card{display:block;padding:22px;border:1px solid #dce1e5;border-radius:12px;text-decoration:none;background:white}.card:hover{border-color:#315b7a;background:#f5f8fa}.card:focus-visible{outline:3px solid #315b7a;outline-offset:3px}.card strong{font-size:20px;display:block}.card span{display:block;color:#65717c;font-size:14px;margin-top:6px}.primary{background:#edf3f7;border-color:#bacbd8}li{margin:8px 0}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;vertical-align:top;padding:12px 10px;border-bottom:1px solid #dce1e5}th:first-child{width:30%}.notice{background:#eef3f6;border-radius:10px;padding:16px 20px}.note{font-size:13px}@media(max-width:600px){main{margin:28px auto;padding:0 18px 32px}.cards{grid-template-columns:1fr}h1{font-size:26px}}
+</style>
+</head>
+<body><main>
+<nav><a href="index.html">内容编辑器</a> · <a href="../index.html">个人网站</a> · <a href="messages.html">私密留言后台</a></nav>
+<h1>访问统计与留言</h1>
+<p class="intro">从下面进入你的真实统计后台。访问数据保存在 Umami，留言保存在独立的私密留言后台。</p>
+<div class="cards">
+<a class="card primary" href="https://cloud.umami.is/analytics/us/websites/96e0ff79-f76f-4bcf-bf0c-1532d3550f36" target="_blank" rel="noopener noreferrer"><strong>查看全站访问统计</strong><span>访客数、访问次数、页面浏览量、访问时长、来源、设备和地区。</span></a>
+<a class="card" href="https://cloud.umami.is/analytics/us/websites/96e0ff79-f76f-4bcf-bf0c-1532d3550f36?path=eq.%2Fpost-health-for-a-better-life.html" target="_blank" rel="noopener noreferrer"><strong>查看健康文章统计</strong><span>筛选 Health for a Better Life 的主要文章页面，查看访问与阅读情况。</span></a>
+<a class="card" href="https://cloud.umami.is/analytics/us/websites/96e0ff79-f76f-4bcf-bf0c-1532d3550f36/events" target="_blank" rel="noopener noreferrer"><strong>查看阅读行为</strong><span>阅读时长档位、滚动深度、文章语言切换。</span></a>
+<a class="card" href="messages.html"><strong>查看私密留言与回复</strong><span>使用站主账号登录，查看所有读者留言并逐一回复。</span></a>
+</div>
+<p class="note">另有独立英文网址的访问记录：<a href="https://cloud.umami.is/analytics/us/websites/96e0ff79-f76f-4bcf-bf0c-1532d3550f36?path=eq.%2Fpost-health-for-a-better-life-en.html" target="_blank" rel="noopener noreferrer">查看英文网址统计</a>。主文章页面内部切换语言仍属于同一页面。</p>
+<section class="notice"><strong>打开后怎么看？</strong><ol>
+<li>如出现登录页面，使用此前创建 Umami 账号时的同一个 GitHub 登录；内容编辑器和留言后台的登录互相独立。</li>
+<li>右上角选择时间范围，例如 <strong>Last 24 hours</strong>（最近24小时）、<strong>Last 7 days</strong>（最近7天）。确认没有遗留筛选条件。</li>
+<li>在 <strong>Pages</strong> 中点击页面路径，查看该页；<strong>Overview</strong> 是概览，<strong>Events</strong> 是阅读行为，<strong>Realtime</strong> 是实时访问。</li>
+</ol></section>
+<h2>指标对照</h2>
+<table><thead><tr><th>后台名称</th><th>含义</th></tr></thead><tbody>
+<tr><td>Visitors</td><td>所选时段内估算的独立访客数，不等于实名人数，也不能判断某位具体朋友是否来过。</td></tr>
+<tr><td>Visits</td><td>访问会话次数；同一访客可以多次访问。</td></tr>
+<tr><td>Views</td><td>页面浏览次数，包括重复打开与刷新。</td></tr>
+<tr><td>Visit duration</td><td>估算的访问时长，不等于精确阅读时间。</td></tr>
+<tr><td>active-reading</td><td>文章在前台且近期有操作时累计的阅读时长里程碑：30、60、180、300秒。同一次阅读可能触发多档，事件数不是读者数。</td></tr>
+<tr><td>reading-depth</td><td>滚动到页面50%、90%的里程碑；不表示已读懂或逐字读完。</td></tr>
+<tr><td>reading-language</td><td>文章内 English、中文、英中按钮的切换记录。</td></tr>
+</tbody></table>
+<h2>没有看到数据时</h2>
+<p>先确认时间范围、网站选择和登录账号，再刷新后台。旧版空白统计面板已停用，这里无需再填写邮箱或等待邮件登录链接。</p>
+<p class="note">统计仍需网络连接。浏览器拦截、隐私设置或统计服务连接失败可能造成漏记；此前未记录的访问不能补回。来源与地区也不等于访客真实身份或所在地。</p>
+<p class="note">这里仅提供入口和使用说明，没有公开统计数据。实际统计需要你的 Umami 账号登录；未启用公开分享。</p>
+</main></body></html>
