@@ -73,11 +73,9 @@ def friends(data,lang):
         tags=friend.get('tags',[])
         if not isinstance(tags,list):raise ValueError('Friend tags must be a list')
         body+='<div class="entry-labels">'+(''.join('<span>'+esc(localized(tag,lang))+'</span>' for tag in tags if localized(tag,lang)) if tags else '<span>'+('Tags to come' if en else '标签待补充')+'</span>')+'</div>'
-        intro=localized(friend.get('introduction'),lang)
         recommendation=localized(friend.get('recommendation'),lang)
-        body+=paragraph(intro) if intro else '<p class="muted">'+('Introduction to come.' if en else '简介待补充。')+'</p>'
-        body+='<p class="meta">'+('Why I recommend this friend' if en else '我的推荐')+'</p>'
-        body+=paragraph(recommendation) if recommendation else '<p class="muted">'+('A personal recommendation will be added here.' if en else '推荐语待补充。')+'</p>'
+        if recommendation:
+            body+='<p class="meta">'+('Why I recommend this friend' if en else '我的推荐')+'</p>'+paragraph(recommendation)
         body+='</article>'
     return body+'</div>'
 

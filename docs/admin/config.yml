@@ -151,7 +151,7 @@ collections:
       required: false
       collapsed: true
       summary: '{{fields.name}}'
-      hint: 按列表顺序平级展示，不分层级；标签、简介和推荐语可以稍后填写。
+      hint: 按列表顺序平级展示，不分层级；标签和推荐语可以稍后填写
       fields:
       - name: name
         label: 朋友 / 网站名称
@@ -171,20 +171,6 @@ collections:
           name: tag
           label: 标签
           widget: string
-      - name: introduction
-        label: 简短介绍
-        widget: object
-        required: false
-        fields:
-        - name: zh
-          label: 中文介绍
-          widget: text
-          required: false
-          hint: 一两句话，介绍朋友在做什么、关心什么；只填写适合公开的信息。
-        - name: en
-          label: 英文介绍（可留空）
-          widget: text
-          required: false
       - name: recommendation
         label: 我的推荐语
         widget: object
