@@ -99,5 +99,11 @@
       "University | Huatai Securities Science and Technology Scholarship; Peking University Merit Student; among other honors"
     ]
   },
-  "avatar": "assets/profile.jpg"
+  "avatar": "assets/profile.jpg",
+  "friends": [
+    {
+      "name": "AAA WUNDER",
+      "url": "https://hv-skewer.github.io/hv-skewer/"
+    }
+  ]
 }

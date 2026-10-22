@@ -145,6 +145,22 @@ collections:
       label: 个人头像
       widget: image
       required: false
+    - name: friends
+      label: 友链
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.name}}'
+      fields:
+      - name: name
+        label: 网站名称
+        widget: string
+      - name: url
+        label: 网站链接
+        widget: string
+        pattern:
+        - ^https?://.+
+        - 请填写完整的 http:// 或 https:// 链接。
 - name: contact
   label: 联系方式 · 填写格子
   files:

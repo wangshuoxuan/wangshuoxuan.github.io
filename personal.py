@@ -59,6 +59,13 @@ def home(data, lang):
         if kind=='text':b+='<p>'+esc(p[key])+'</p>'
         else:b+='<ul class="'+('profile-records' if kind=='records' else 'interest-list')+'">'+''.join('<li>'+esc(v)+'</li>' for v in p[key])+'</ul>'
         b+='</section>'
+    friends=d.get('friends',[])
+    if friends:
+        b+='<section class="profile-section" id="friends"><p class="eyebrow">FRIENDS</p><h2>'+('Friends’ websites' if en else '友链')+'</h2><ul class="profile-records">'
+        for friend in friends:
+            if friend.get('name') and friend.get('url'):
+                b+='<li><a href="'+link(friend['url'])+'">'+esc(localized(friend['name'],lang))+'</a></li>'
+        b+='</ul></section>'
     return b
 
 def contacts(data,lang):
