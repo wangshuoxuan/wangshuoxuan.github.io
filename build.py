@@ -152,8 +152,11 @@ def collection(key,lang):
 
 def post_dates(post,lang):
     en=lang=='en'
-    value=('Published ' if en else '发布于 ')+f'<time datetime="{post["date"]}">{post["date"]}</time>'
-    if post.get('updated'):value+=' · '+('Updated ' if en else '修订于 ')+f'<time datetime="{post["updated"]}">{post["updated"]}</time>'
+    version=post.get('version',1)
+    value=('Version '+str(version) if en else '第'+str(version)+'版')+' · '
+    value+=('Published ' if en else '发布于 ')+f'<time datetime="{post["date"]}">{post["date"]}</time>'
+    revision=post.get('updated') or post['date']
+    value+=' · '+('Version updated ' if en else '本版更新于 ')+f'<time datetime="{revision}">{revision}</time>'
     return value
 
 def posts():
@@ -174,6 +177,7 @@ def posts():
         if d.get('updated'):
             d['updated']=str(d['updated'])[:10]
             date.fromisoformat(d['updated'])
+        if type(d.get('version',1)) is not int or d.get('version',1)<1:raise ValueError('Post version must be a positive integer')
         if not d.get('title') or not d.get('summary'):raise ValueError('Published posts need title and summary')
         d.update(slug=slug,raw_body=body,body=markdown.markdown(body,extensions=['fenced_code','tables','footnotes','toc']))
         result.append(d)
@@ -183,6 +187,7 @@ def blog(lang,items):
     en=lang=='en'
     title='Blog' if en else '我的博客'
     body=heading(title,'Blog & notes','Essays, research notes, and working thoughts.' if en else '长文、研究笔记与日常思考，都可以从这里开始。',lang)
+    body+=personal.updates_note(lang)
     body+='<p class="collection-count">'+str(len(items))+((' published post' if len(items)==1 else ' published posts') if en else '篇已发布文章')+'</p>'
     groups=[('research','Research notes' if en else '研究笔记'),('essay','Essays' if en else '随笔'),('reading','Reading notes' if en else '阅读札记'),('other','Other writing' if en else '其他写作')]
     def populated(cat):return any(d.get('category')==cat or (cat=='other' and d.get('category') not in ['research','essay','reading']) for d in items)
@@ -195,7 +200,7 @@ def blog(lang,items):
         for d in filtered:
             display_title=d['title']
             display_summary=d.get('summary_zh') if not en and d.get('summary_zh') else d['summary']
-            body+=f'<article class="library-entry"><p class="meta"><time datetime="{esc(d["date"])}">{esc(d["date"])}</time></p><h3><a href="{file("post-"+d["slug"],lang)}">{esc(display_title)}</a></h3><p>{esc(display_summary)}</p></article>'
+            body+=f'<article class="library-entry"><p class="meta">{post_dates(d,lang)}</p><h3><a href="{file("post-"+d["slug"],lang)}">{esc(display_title)}</a></h3><p>{esc(display_summary)}</p></article>'
         body+='</section>'
     return shell('blog',lang,title,'Essays and notes by Wangshuoxuan.',body)
 
@@ -281,6 +286,7 @@ def build():
                 body=f'<header class="page-header"><a href="{file("blog",lang)}">'+('Blog' if en else '我的博客')+f'</a><h1>{title}</h1>{summary}<p class="meta">'+('Wang Shuoxuan' if en else '王烁瑄')+' · '+post_dates(d,lang)+f'</p></header><article class="essay-prose">{bilingual.render(d)}</article>'
             else:
                 body=f'<header class="page-header"><a href="{file("blog",lang)}">← '+('Blog' if en else '返回博客')+f'</a><h1>{esc(d["title"])}</h1><p class="meta">{post_dates(d,lang)}</p></header><article class="prose">{d["body"]}</article>'
+            body+='<aside class="article-update-note">'+personal.updates_note(lang)+'</aside>'
             other=file('post-'+d['slug'],'zh' if en else 'en')
             page=shell('blog',lang,d['title'],d['summary'],body,language_target=other)
             if d.get('body_zh'):page=bilingual.assets(page)

@@ -260,14 +260,23 @@ collections:
     widget: string
     required: true
   - name: date
-    label: 发布日期
+    label: 首次发布日期
+    hint: 保留最早发布当天的日期，不随修订更改。
     widget: datetime
     required: true
     date_format: YYYY-MM-DD
     time_format: false
     format: YYYY-MM-DD
+  - name: version
+    label: 文章版次
+    widget: number
+    value_type: int
+    min: 1
+    default: 1
+    required: false
+    hint: 首次发布为第1版；重要内容修订时递增，同时填写本版更新日期。错别字、标点等小改动不必升版。
   - name: updated
-    label: 修订日期（可留空）
+    label: 本版更新日期（重要修订时填写）
     widget: datetime
     required: false
     date_format: YYYY-MM-DD

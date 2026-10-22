@@ -2,6 +2,7 @@
 title: Health for a Better Life
 title_zh: 健康，让生活更好
 date: '2026-10-19'
+version: 1
 updated: '2026-10-19'
 summary: The routines I use for sleep, food, exercise, focused work, and a social life—and what I learned from the things that did not work for me.
 summary_zh: 我在睡眠、饮食、运动、专注工作和社交生活上的日常安排，以及那些尝试后发现不适合自己的做法。

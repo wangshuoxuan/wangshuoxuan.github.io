@@ -34,6 +34,11 @@ def has_content(data,key):
     entries=resource_entries(data,key)
     return any(not e.get('draft',key=='thoughts') for e in entries)
 
+def updates_note(lang):
+    text = ('I update this website regularly and do my best to reply to messages and emails promptly.'
+            if lang == 'en' else '我会定期更新网站，也会尽量及时回复留言和邮件。')
+    return '<p class="meta site-update-note">' + esc(text) + '</p>'
+
 def home(data, lang):
     d=read(data,'site.json');p=d[lang];en=lang=='en'
     avatar=d.get('avatar','assets/profile.jpg')
@@ -43,6 +48,7 @@ def home(data, lang):
     b=f'<section class="profile-hero" id="about"><img class="profile-avatar" src="{esc(avatar,quote=True)}" width="2048" height="966" alt="'+('Personal profile image' if en else '个人头像')+f'"><div><p class="eyebrow">LEARN · THINK · EXPLORE · DEEPEN</p><h1>{esc(name)}</h1><p class="identity">{esc(p["identity"])}</p></div></section>'
     b+=f'<p class="profile-lead">{esc(p.get("lead",""))}</p>'+p.get('introduction','')
     b+='<p>'+('To get to know me, start with my ' if en else '如果你想快速了解我，可以从我的')+'<a href="'+('blog-en.html' if en else 'blog.html')+'">'+('blog' if en else '博客')+'</a>'+(' or ' if en else '／')+'<a href="'+('thoughts-en.html' if en else 'thoughts.html')+'">'+('short notes' if en else '短文章')+'</a>'+('.' if en else '开始。')+'</p><p><a href="'+('contact-en.html' if en else 'contact.html')+'">'+('Contact me' if en else '联系我')+'</a></p>'
+    b+=updates_note(lang)
     if not has_content(data,'thoughts'):
         target='thoughts-en.html' if en else 'thoughts.html'
         label='short notes' if en else '短文章'
@@ -56,7 +62,7 @@ def home(data, lang):
     return b
 
 def contacts(data,lang):
-    d=read(data,'contact.json');en=lang=='en';b=paragraph(localized(d['intro'],lang))
+    d=read(data,'contact.json');en=lang=='en';b=paragraph(localized(d['intro'],lang))+updates_note(lang)
     primary_email=next((x.get('email') for x in d['routes'] if x.get('email')),'')
     b+='<div class="contact-card"><strong>'+('WeChat' if en else '微信')+'</strong><p>'+esc(next((x.get('value','') for x in d['socials'] if x['name']=='微信'),''))+'</p><strong>'+('Email' if en else '邮箱')+'</strong><p><a href="mailto:'+esc(primary_email,quote=True)+'">'+esc(primary_email)+'</a></p></div>'
     routes=[]
