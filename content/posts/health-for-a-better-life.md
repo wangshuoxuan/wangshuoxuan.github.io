@@ -209,7 +209,7 @@ body_zh: '我花了大约一年反复尝试，才摸索出一套比较适合自�
   我通常会坐在图书馆同一个安静的角落，最好在南侧、靠近自然光。我喜欢清楚东西放在哪里，也能方便地把自己的物品放在身边。
 
 
-  我喜欢明亮的房间，窗帘拉开，但没有刺眼的阳光或屏幕反光。博雅塔附近有些较暗的位置，晚上会让我犯困，所以我会避开。自然光让我感觉更清醒，心情也更好。出去待一小会儿，同样有帮助。
+  我喜欢明亮的房间，窗帘拉开，但没有刺眼的阳光或屏幕反光。图书馆1楼“小博雅塔”附近有些较暗的位置，晚上会让我犯困，所以我会避开。自然光让我感觉更清醒，心情也更好。出去待一小会儿，同样有帮助。
 
 
   我试过在桌边养绿植，但总记不住照顾它们。相比之下，看窗外的绿意更可靠。有时，最好的调节就是走出去，看看校园，感受一下当天的天气。
@@ -509,7 +509,7 @@ I keep the schedule fairly open when I can. For courses where independent study 
 
 I tend to use the same quiet corner of the library, preferably on the south side near daylight. I like knowing where everything goes and being able to put my things around me without a fuss.
 
-I like a bright room, with the curtains open but without harsh sun or reflections on the screen. Some of the dimmer seats near Boya Tower make me sleepy in the evening, so I avoid them. Daylight makes me feel more awake and puts me in a better mood. Going outside for a little while helps too.
+I like a bright room, with the curtains open but without harsh sun or reflections on the screen. Some of the dimmer seats near the “Little Boya Tower” on the library’s first floor make me sleepy in the evening, so I avoid them. Daylight makes me feel more awake and puts me in a better mood. Going outside for a little while helps too.
 
 I tried keeping plants beside my desk, but wasn't good at remembering to care for them. Looking at greenery outside the window is more reliable. Sometimes the best adjustment is just to step outside and notice the campus and the weather.
 
