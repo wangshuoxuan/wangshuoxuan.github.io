@@ -31,6 +31,7 @@ def resource_entries(data,key):
     return result
 
 def has_content(data,key):
+    if key=='friends':return any(not e.get('draft',False) and e.get('name') and e.get('url') for e in read(data,'site.json').get('friends',[]))
     entries=resource_entries(data,key)
     return any(not e.get('draft',key=='thoughts') for e in entries)
 
@@ -59,14 +60,26 @@ def home(data, lang):
         if kind=='text':b+='<p>'+esc(p[key])+'</p>'
         else:b+='<ul class="'+('profile-records' if kind=='records' else 'interest-list')+'">'+''.join('<li>'+esc(v)+'</li>' for v in p[key])+'</ul>'
         b+='</section>'
-    friends=d.get('friends',[])
-    if friends:
-        b+='<section class="profile-section" id="friends"><p class="eyebrow">FRIENDS</p><h2>'+('Friends’ websites' if en else '友链')+'</h2><ul class="profile-records">'
-        for friend in friends:
-            if friend.get('name') and friend.get('url'):
-                b+='<li><a href="'+link(friend['url'])+'">'+esc(localized(friend['name'],lang))+'</a></li>'
-        b+='</ul></section>'
     return b
+
+def friends(data,lang):
+    en=lang=='en'
+    entries=[e for e in read(data,'site.json').get('friends',[]) if not e.get('draft',False) and e.get('name') and e.get('url')]
+    if not entries:
+        return '<p class="muted">'+('Friends’ websites will be added here.' if en else '朋友的网站会陆续放在这里。')+'</p>'
+    body='<div class="friends-list">'
+    for friend in entries:
+        body+='<article class="resource-card friend-card"><h2><a href="'+link(friend['url'])+'">'+esc(localized(friend['name'],lang))+'</a></h2>'
+        tags=friend.get('tags',[])
+        if not isinstance(tags,list):raise ValueError('Friend tags must be a list')
+        body+='<div class="entry-labels">'+(''.join('<span>'+esc(localized(tag,lang))+'</span>' for tag in tags if localized(tag,lang)) if tags else '<span>'+('Tags to come' if en else '标签待补充')+'</span>')+'</div>'
+        intro=localized(friend.get('introduction'),lang)
+        recommendation=localized(friend.get('recommendation'),lang)
+        body+=paragraph(intro) if intro else '<p class="muted">'+('Introduction to come.' if en else '简介待补充。')+'</p>'
+        body+='<p class="meta">'+('Why I recommend this friend' if en else '我的推荐')+'</p>'
+        body+=paragraph(recommendation) if recommendation else '<p class="muted">'+('A personal recommendation will be added here.' if en else '推荐语待补充。')+'</p>'
+        body+='</article>'
+    return body+'</div>'
 
 def contacts(data,lang):
     d=read(data,'contact.json');en=lang=='en';b=paragraph(localized(d['intro'],lang))+updates_note(lang)

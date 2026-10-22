@@ -61,7 +61,7 @@ def navigation(lang,current):
     groups = [
       ('About','关于我', []),
       ('Writing & thinking','写作与思考',[('blog','我的博客','Blog',file('blog',lang)),('questions','感兴趣的问题','Questions',file('questions',lang)),('thoughts','短文章','Short notes',file('thoughts',lang))]),
-      ('Library','收藏与推荐',[(k,z,e,file(k,lang)) for k,z,e,*_ in SECTIONS if k in ['books','videos','articles','courses','apps','quotes']]),
+      ('Library','收藏与推荐',[(k,z,e,file(k,lang)) for k,z,e,*_ in SECTIONS if k in ['books','videos','articles','courses','apps','quotes']]+[('friends','友链','Friends',file('friends',lang))]),
     ]
     parts=[]
     for eg,zg,items in groups:
@@ -264,6 +264,9 @@ def build():
         (OUT/('en.html' if lang=='en' else 'index.html')).write_text(shell('home',lang,'Home' if lang=='en' else '首页','Personal website of Wangshuoxuan.',source),encoding='utf-8')
         for key,*_ in SECTIONS:(OUT/file(key,lang)).write_text(collection(key,lang),encoding='utf-8')
         en=lang=='en'
+        title='Friends’ websites' if en else '友链'
+        body=heading(title,'Friends','Personal websites by friends, with a few words about each of them.' if en else '朋友的个人网站，以及我想与你分享的介绍与推荐。',lang)+personal.friends(DATA,lang)
+        (OUT/file('friends',lang)).write_text(shell('friends',lang,title,'Friends’ personal websites.',body),encoding='utf-8')
         title='Contact' if en else '联系我'
         body=heading(title,'Contact','Say hello. Let’s get to know each other.' if en else '欢迎认识我，也让我认识你。',lang)
         body+=personal.contacts(DATA,lang)

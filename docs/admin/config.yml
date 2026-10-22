@@ -146,14 +146,15 @@ collections:
       widget: image
       required: false
     - name: friends
-      label: 友链
+      label: 友链（独立页面）
       widget: list
       required: false
       collapsed: true
       summary: '{{fields.name}}'
+      hint: 按列表顺序平级展示，不分层级；标签、简介和推荐语可以稍后填写。
       fields:
       - name: name
-        label: 网站名称
+        label: 朋友 / 网站名称
         widget: string
       - name: url
         label: 网站链接
@@ -161,6 +162,48 @@ collections:
         pattern:
         - ^https?://.+
         - 请填写完整的 http:// 或 https:// 链接。
+      - name: tags
+        label: 标签（建议2—4个）
+        widget: list
+        required: false
+        hint: 用简短词语介绍朋友的兴趣、研究方向或个人特点；不用于分级排名。
+        field:
+          name: tag
+          label: 标签
+          widget: string
+      - name: introduction
+        label: 简短介绍
+        widget: object
+        required: false
+        fields:
+        - name: zh
+          label: 中文介绍
+          widget: text
+          required: false
+          hint: 一两句话，介绍朋友在做什么、关心什么；只填写适合公开的信息。
+        - name: en
+          label: 英文介绍（可留空）
+          widget: text
+          required: false
+      - name: recommendation
+        label: 我的推荐语
+        widget: object
+        required: false
+        fields:
+        - name: zh
+          label: 中文推荐语
+          widget: text
+          required: false
+          hint: 写一个真实的欣赏理由、相处印象，或值得读者去看看的内容；自然真诚即可。
+        - name: en
+          label: 英文推荐语（可留空）
+          widget: text
+          required: false
+      - name: draft
+        label: 暂不公开
+        widget: boolean
+        required: false
+        default: false
 - name: contact
   label: 联系方式 · 填写格子
   files:

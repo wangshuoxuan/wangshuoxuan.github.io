@@ -103,7 +103,17 @@
   "friends": [
     {
       "name": "AAA WUNDER",
-      "url": "https://hv-skewer.github.io/hv-skewer/"
+      "url": "https://hv-skewer.github.io/hv-skewer/",
+      "tags": [],
+      "introduction": {
+        "zh": "",
+        "en": ""
+      },
+      "recommendation": {
+        "zh": "",
+        "en": ""
+      },
+      "draft": false
     }
   ]
 }
