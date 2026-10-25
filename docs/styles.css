@@ -256,3 +256,12 @@ h2 { letter-spacing:-.02em; }
  .illustrated-heading--portrait,.profile-photo-row { grid-template-columns:minmax(0,1fr); }
  .illustrated-heading--portrait .place-photo,.profile-photo-row .place-photo { max-width:240px; justify-self:center; }
 }
+
+/* Raise the Paris display frame above the credited bottom border. */
+.place-photo__paris-frame { aspect-ratio:1503 / 1120; overflow:hidden; border-radius:10px; }
+.place-photo__paris-frame img { border-radius:0; }
+.profile-hero>.place-photo { width:100%; }
+.interest-list li { max-width:100%; overflow-wrap:anywhere; }
+@media(max-width:640px) {
+ .place-photo__paris-frame { border-radius:7px; }
+}
