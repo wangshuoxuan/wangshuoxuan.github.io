@@ -11,6 +11,7 @@ import markdown
 import yaml
 import personal
 import bilingual
+import places
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'docs'
@@ -99,8 +100,9 @@ def shell(key,lang,title,description,body,language_target=None):
 <div class="language">{language}</div></header>
 <main id="main" tabindex="-1">{body}{footer}</main></div></body></html>'''
 
-def heading(title,en_title,description,lang):
-    return f'<header class="page-header"><p class="eyebrow">{esc(en_title)}</p><h1>{esc(title)}</h1><p class="page-description">{esc(description)}</p></header>'
+def heading(title,en_title,description,lang,photo_page=None):
+    content=f'<header class="page-header"><p class="eyebrow">{esc(en_title)}</p><h1>{esc(title)}</h1><p class="page-description">{esc(description)}</p></header>'
+    return places.illustrated_heading(content,photo_page,lang)
 
 def render_item(item,lang,kind):
     title=text(item,'title',lang)
@@ -121,7 +123,7 @@ def render_item(item,lang,kind):
 def collection(key,lang):
     if key in ('videos','questions','articles','courses'):
         _,zh,en,zd,ed=NAMES[key]
-        return shell(key,lang,en if lang=='en' else zh,ed if lang=='en' else zd,heading(en if lang=='en' else zh,en,ed if lang=='en' else zd,lang)+personal.collection(DATA,key,lang))
+        return shell(key,lang,en if lang=='en' else zh,ed if lang=='en' else zd,heading(en if lang=='en' else zh,en,ed if lang=='en' else zd,lang,key)+personal.collection(DATA,key,lang))
     d=json.loads((DATA/f'{key}.json').read_text(encoding='utf-8'))
     ids=[c['id'] for c in d['categories']]
     if len(ids)!=len(set(ids)):raise ValueError('Duplicate category id')
@@ -134,7 +136,7 @@ def collection(key,lang):
     if any(e.get('category') not in ids for e in entries):raise ValueError('Unknown category')
     en=lang=='en'; _,zh,eng,zd,ed=NAMES[key]
     title=eng if en else zh
-    intro=heading(title,eng,ed if en else zd,lang)
+    intro=heading(title,eng,ed if en else zd,lang,key)
     if key=='articles':intro+='<p class="text-links"><a href="'+file('papers',lang)+'">'+('Research papers ↗' if en else '论文 ↗')+'</a></p>'
     count=f'{len(entries)} '+('entries' if en else '条记录')
     intro+=f'<p class="collection-count">{count}</p>'
@@ -186,7 +188,7 @@ def posts():
 def blog(lang,items):
     en=lang=='en'
     title='Blog' if en else '我的博客'
-    body=heading(title,'Blog & notes','Essays, research notes, and working thoughts.' if en else '长文、研究笔记与日常思考，都可以从这里开始。',lang)
+    body=heading(title,'Blog & notes','Essays, research notes, and working thoughts.' if en else '长文、研究笔记与日常思考，都可以从这里开始。',lang,'blog')
     body+=personal.updates_note(lang)
     body+='<p class="collection-count">'+str(len(items))+((' published post' if len(items)==1 else ' published posts') if en else '篇已发布文章')+'</p>'
     groups=[('research','Research notes' if en else '研究笔记'),('essay','Essays' if en else '随笔'),('reading','Reading notes' if en else '阅读札记'),('other','Other writing' if en else '其他写作')]
@@ -265,7 +267,7 @@ def build():
         for key,*_ in SECTIONS:(OUT/file(key,lang)).write_text(collection(key,lang),encoding='utf-8')
         en=lang=='en'
         title='Friends’ websites' if en else '友链'
-        body=heading(title,'Friends','Personal websites by friends, with a few words about each of them.' if en else '朋友的个人网站，以及我想与你分享的介绍与推荐。',lang)+personal.friends(DATA,lang)
+        body=heading(title,'Friends','Personal websites by friends, with a few words about each of them.' if en else '朋友的个人网站，以及我想与你分享的介绍与推荐。',lang,'friends')+personal.friends(DATA,lang)
         (OUT/file('friends',lang)).write_text(shell('friends',lang,title,'Friends’ personal websites.',body),encoding='utf-8')
         title='Contact' if en else '联系我'
         body=heading(title,'Contact','Say hello. Let’s get to know each other.' if en else '欢迎认识我，也让我认识你。',lang)

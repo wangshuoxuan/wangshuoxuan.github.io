@@ -1,5 +1,6 @@
 """Personal profile, contact routes, and browsable learning collections."""
 import json
+import places
 from html import escape as esc
 from urllib.parse import urlsplit
 
@@ -46,7 +47,7 @@ def home(data, lang):
     if avatar.startswith('/') and not avatar.startswith('//'):avatar=avatar[1:]
     if not avatar.startswith('assets/') or '..' in avatar:raise ValueError('Profile image must be in assets/')
     name=d['name_en' if en else 'name_zh']
-    b=f'<section class="profile-hero" id="about"><img class="profile-avatar" src="{esc(avatar,quote=True)}" width="2048" height="966" alt="'+('Personal profile image' if en else '个人头像')+f'"><div><p class="eyebrow">LEARN · THINK · EXPLORE · DEEPEN</p><h1>{esc(name)}</h1><p class="identity">{esc(p["identity"])}</p></div></section>'
+    b=f'<section class="profile-hero" id="about"><figure class="profile-landmark"><img class="profile-avatar" src="{esc(avatar,quote=True)}" width="2048" height="966" alt="'+('The Parthenon in Athens' if en else '雅典帕特农神庙')+'"><figcaption>'+('Athens · Greece' if en else '雅典 · 希腊')+f'</figcaption></figure><div><p class="eyebrow">LEARN · THINK · EXPLORE · DEEPEN</p><h1>{esc(name)}</h1><p class="identity">{esc(p["identity"])}</p></div></section>'
     b+=f'<p class="profile-lead">{esc(p.get("lead",""))}</p>'+p.get('introduction','')
     b+='<p>'+('To get to know me, start with my ' if en else '如果你想快速了解我，可以从我的')+'<a href="'+('blog-en.html' if en else 'blog.html')+'">'+('blog' if en else '博客')+'</a>'+(' or ' if en else '／')+'<a href="'+('thoughts-en.html' if en else 'thoughts.html')+'">'+('short notes' if en else '短文章')+'</a>'+('.' if en else '开始。')+'</p><p><a href="'+('contact-en.html' if en else 'contact.html')+'">'+('Contact me' if en else '联系我')+'</a></p>'
     b+=updates_note(lang)
@@ -57,8 +58,14 @@ def home(data, lang):
     for key,anchor,zh,eng,kind in [('education','education','学业经历','Education','records'),('honors','honors','所获荣誉','Honors','records'),('disciplines','interests','学科兴趣','Academic interests','chips'),('research_summary','research','研究兴趣','Research interests','text'),('hobbies','life','生活与爱好','Beyond study','chips')]:
         if not p.get(key):continue
         b+=f'<section class="profile-section" id="{anchor}"><p class="eyebrow">{eng.upper()}</p><h2>{eng if en else zh}</h2>'
-        if kind=='text':b+='<p>'+esc(p[key])+'</p>'
-        else:b+='<ul class="'+('profile-records' if kind=='records' else 'interest-list')+'">'+''.join('<li>'+esc(v)+'</li>' for v in p[key])+'</ul>'
+        section_body='<p>'+esc(p[key])+'</p>' if kind=='text' else '<ul class="'+('profile-records' if kind=='records' else 'interest-list')+'">'+''.join('<li>'+esc(v)+'</li>' for v in p[key])+'</ul>'
+        if key=='disciplines':
+            b+='<div class="profile-photo-row"><div>'+section_body+'</div>'+places.figure('chicago',lang)+'</div>'
+        elif key=='education':
+            b+=section_body+places.figure('beijing',lang)
+        elif key=='hobbies':
+            b+=places.figure('kyoto',lang)+section_body
+        else:b+=section_body
         b+='</section>'
     return b
 
