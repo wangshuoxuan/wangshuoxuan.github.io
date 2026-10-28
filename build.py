@@ -61,7 +61,7 @@ def navigation(lang,current):
     home = 'en.html' if en else 'index.html'
     groups = [
       ('About','关于我', []),
-      ('Writing & thinking','写作与思考',[('blog','我的博客','Blog',file('blog',lang)),('questions','感兴趣的问题','Questions',file('questions',lang)),('thoughts','短文章','Short notes',file('thoughts',lang))]),
+      ('Writing & thinking','写作与思考',[('updates','动态与更新','News & updates',file('updates',lang)),('blog','我的博客','Blog',file('blog',lang)),('questions','感兴趣的问题','Questions',file('questions',lang)),('thoughts','短文章','Short notes',file('thoughts',lang))]),
       ('Library','收藏与推荐',[(k,z,e,file(k,lang)) for k,z,e,*_ in SECTIONS if k in ['books','videos','articles','courses','apps','quotes']]+[('friends','友链','Friends',file('friends',lang))]),
     ]
     parts=[]
@@ -151,6 +151,41 @@ def collection(key,lang):
         if not items:intro+='<p class="muted">'+('No content yet. More will be added over time.' if en else '暂无内容，后续会逐步补充。')+'</p>'
         intro+='</section>'
     return shell(key,lang,title,ed if en else zd,intro)
+
+def updates_page(lang):
+    en=lang=='en'
+    data=json.loads((DATA/'updates.json').read_text(encoding='utf-8'))
+    entries=[e for e in data.get('entries',[]) if not e.get('draft',False)]
+    for e in entries:
+        date.fromisoformat(e['date'])
+        if not text(e,'title',lang):raise ValueError('Every update needs a title in Chinese and English')
+    entries.sort(key=lambda e:e['date'],reverse=True)
+    title='News & updates' if en else '动态与更新'
+    description=('A dated record of new writing, content changes, and improvements to this website.'
+                  if en else '记录新文章发布、内容补充与网站功能调整，按时间留下这座个人网站的演进。')
+    body=heading(title,'News & updates',description,lang)
+    body+='<div class="updates-timeline">'
+    for e in entries:
+        stamp=e['date']
+        kind=text(e,'type',lang)
+        name=text(e,'title',lang)
+        note=text(e,'body',lang)
+        body+='<article class="update-entry"><div class="update-meta"><time datetime="'+esc(stamp,quote=True)+'">'+esc(stamp)+'</time>'
+        if kind:body+='<span class="update-kind">'+esc(kind)+'</span>'
+        body+='</div><div class="update-content"><h2>'+esc(name)+'</h2>'+personal.paragraph(note)
+        href=e.get('url_en' if en else 'url_zh','').strip()
+        label=text(e,'link_label',lang)
+        if href:
+            if re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*\.html',href):
+                safe_href=esc(href,quote=True)
+            else:
+                safe_href=url(href)
+            body+='<p class="update-link"><a href="'+safe_href+'">'+esc(label or ('Read more ↗' if en else '继续阅读 ↗'))+'</a></p>'
+        body+='</div></article>'
+    if not entries:
+        body+='<p class="collection-empty">'+('No updates yet. New entries will appear here.' if en else '暂无更新记录；之后的新内容会记录在这里。')+'</p>'
+    body+='</div>'
+    return shell('updates',lang,title,description,body)
 
 def post_dates(post,lang):
     en=lang=='en'
@@ -280,6 +315,8 @@ def build():
     for lang in ('zh','en'):
         title='Short notes' if lang=='en' else '短文章'
         (OUT/file('thoughts',lang)).write_text(shell('thoughts',lang,title,title,heading(title,'Short notes','Brief thoughts, recorded and revisited.' if lang=='en' else '简短地记录想法，也为之后的思考留白。',lang)+personal.thoughts(DATA,lang)),encoding='utf-8')
+    for lang in ('zh','en'):
+        (OUT/file('updates',lang)).write_text(updates_page(lang),encoding='utf-8')
     items=posts()
     for lang in ('zh','en'):(OUT/file('blog',lang)).write_text(blog(lang,items),encoding='utf-8')
     for d in items:
