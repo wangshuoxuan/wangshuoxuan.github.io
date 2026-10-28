@@ -18,3 +18,23 @@
 @media(max-width:960px) { .essay-page[data-reading="both"] .reader-pair { grid-template-columns:1fr; gap:12px; } .essay-page[data-reading="both"] .reader-pair>.post-zh { border-left:0; border-bottom:1px solid var(--line); padding:0 0 20px; margin-bottom:15px; } }
 @media(max-width:640px) { .essay-page .essay-prose p { font-size:16px; line-height:1.85; } .essay-page .essay-prose h2 { font-size:23px; margin-top:34px; } .essay-page .essay-prose h3 { font-size:17px; } .reading-controls { gap:6px; } .reading-controls button { padding:8px 15px; } }
 @media print { .reading-controls,.private-messages { display:none; } .essay-page .essay-prose p { font-size:11pt; } .essay-page .essay-prose h2,.essay-page .essay-prose h3 { break-after:avoid; } }
+
+/* In-page navigation for bilingual long-form essays. */
+.essay-page .essay-toc { border:1px solid var(--line); border-radius:10px; background:rgba(255,255,255,.58); padding:18px 22px; margin:18px 0 34px; }
+.essay-page .essay-toc h2 { font-size:18px; line-height:1.5; margin:0 0 12px; color:#28587e; }
+.essay-page .essay-toc ol { margin:0; padding-left:24px; }
+.essay-page .essay-toc ul { margin:5px 0 10px; padding-left:20px; }
+.essay-page .essay-toc li { margin:6px 0; line-height:1.6; }
+.essay-page .essay-toc a { color:#28587e; text-decoration:none; border-bottom:1px solid transparent; }
+.essay-page .essay-toc a:hover { border-bottom-color:currentColor; }
+.essay-page .essay-prose h2[id], .essay-page .essay-prose h3[id] { scroll-margin-top:96px; }
+.essay-page .references { border-top:1px solid var(--line); margin-top:48px; padding-top:20px; }
+.essay-page .references h2 { font-size:22px; margin:0 0 18px; }
+.essay-page .references ol { padding-left:24px; }
+.essay-page .references li { margin:0 0 18px; line-height:1.7; }
+.essay-page .references p { font-size:14px; margin:5px 0 0; color:#626d77; }
+.title-zh { font-weight:500; }
+.essay-page .title-separator { color:#7b8792; padding:0 .12em; font-weight:400; }
+.essay-page[data-reading="both"] .essay-toc { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:24px; }
+.essay-page[data-reading="both"] .essay-toc>.post-zh { border-left:1px solid var(--line); padding-left:24px; }
+@media(max-width:960px) { .essay-page[data-reading="both"] .essay-toc { grid-template-columns:1fr; gap:12px; } .essay-page[data-reading="both"] .essay-toc>.post-zh { border-left:0; border-top:1px solid var(--line); padding:16px 0 0; } }
