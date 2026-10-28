@@ -265,3 +265,16 @@ h2 { letter-spacing:-.02em; }
 @media(max-width:640px) {
  .place-photo__paris-frame { border-radius:7px; }
 }
+
+/* Chronological News & Updates timeline */
+.updates-timeline { position:relative; margin:28px 0 44px; }
+.update-entry { display:grid; grid-template-columns:132px minmax(0,1fr); gap:24px; padding:24px 0 28px; border-top:1px solid var(--line); }
+.update-meta { display:flex; flex-direction:column; align-items:flex-start; gap:8px; color:var(--muted); font-size:12px; line-height:1.6; }
+.update-kind { display:inline-block; border:1px solid #d4ddd0; background:#f0f3ed; color:#47634d; border-radius:3px; padding:2px 8px; font-size:11px; }
+.update-content h2 { font:600 19px/1.5 var(--sans); letter-spacing:0; margin:0 0 9px; }
+.update-content p { margin:8px 0 0; font-size:14px; line-height:1.9; }
+.update-content .update-link { margin-top:12px; font-size:13px; }
+@media (max-width:640px) {
+  .update-entry { grid-template-columns:1fr; gap:8px; padding:20px 0 24px; }
+  .update-meta { flex-direction:row; align-items:center; flex-wrap:wrap; }
+}
