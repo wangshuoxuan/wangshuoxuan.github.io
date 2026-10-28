@@ -1,0 +1,92 @@
+{
+  "entries": [
+    {
+      "date": "2026-10-28",
+      "type": {
+        "zh": "网站更新",
+        "en": "Site update"
+      },
+      "title": {
+        "zh": "新增「动态与更新」栏目",
+        "en": "Added a News & Updates page"
+      },
+      "body": {
+        "zh": "新增一个按日期排列的更新记录页，用来保存新文章发布、内容补充和网站功能调整。后续更新会继续追加到这里，形成可以回看的网站历史。",
+        "en": "A chronological log for new essays, content changes, and site improvements. Future updates will be added here so the site’s development remains visible over time."
+      },
+      "url_zh": "",
+      "url_en": "",
+      "link_label": {
+        "zh": "",
+        "en": ""
+      },
+      "draft": false
+    },
+    {
+      "date": "2026-10-28",
+      "type": {
+        "zh": "文章发布",
+        "en": "Essay published"
+      },
+      "title": {
+        "zh": "发布《我的倍速人生》",
+        "en": "Published “My Life on Fast-Forward”"
+      },
+      "body": {
+        "zh": "一篇中英双语长文，记录我如何使用倍速听课与听书、如何在内容浓缩和完整理解之间取舍，以及为什么有些时刻仍值得慢下来。文章保留八个部分，并提供可点击的章节目录。",
+        "en": "A bilingual essay about accelerated listening, content compression, and the limits of efficiency—along with the moments that are still worth experiencing slowly. The full essay is organized into eight sections with a clickable table of contents."
+      },
+      "url_zh": "post-my-life-on-fast-forward.html",
+      "url_en": "post-my-life-on-fast-forward-en.html",
+      "link_label": {
+        "zh": "阅读《我的倍速人生》",
+        "en": "Read My Life on Fast-Forward"
+      },
+      "draft": false
+    },
+    {
+      "date": "2026-10-28",
+      "type": {
+        "zh": "阅读体验",
+        "en": "Reading experience"
+      },
+      "title": {
+        "zh": "完善博客的双语阅读与章节导航",
+        "en": "Improved bilingual reading and section navigation"
+      },
+      "body": {
+        "zh": "博客文章支持中文、英文和英中对照阅读，并增加可直接跳转到各章节与小节的目录，方便读者按兴趣阅读，也便于回看。",
+        "en": "Blog essays now support English, Chinese, and side-by-side reading, with jump links to sections and subsections for easier navigation."
+      },
+      "url_zh": "blog.html",
+      "url_en": "blog-en.html",
+      "link_label": {
+        "zh": "浏览博客",
+        "en": "Browse the blog"
+      },
+      "draft": false
+    },
+    {
+      "date": "2026-10-19",
+      "type": {
+        "zh": "文章发布",
+        "en": "Essay published"
+      },
+      "title": {
+        "zh": "发布第一篇博客《健康，让生活更好》",
+        "en": "Published the first essay, “Health for a Better Life”"
+      },
+      "body": {
+        "zh": "从睡眠、饮食、运动、专注工作和社交生活中的日常实践出发，记录尝试之后的体会与调整。",
+        "en": "A personal account of experiments and adjustments in sleep, diet, exercise, focused work, and social life."
+      },
+      "url_zh": "post-health-for-a-better-life.html",
+      "url_en": "post-health-for-a-better-life-en.html",
+      "link_label": {
+        "zh": "阅读第一篇博客",
+        "en": "Read the first essay"
+      },
+      "draft": false
+    }
+  ]
+}
