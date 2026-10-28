@@ -200,9 +200,11 @@ def blog(lang,items):
         filtered=[d for d in items if (d.get('category')==cat or (cat=='other' and d.get('category') not in ['research','essay','reading']))]
         if not filtered:body+='<p class="muted">'+('No posts yet. More will be added over time.' if en else '暂无文章，后续会逐步补充。')+'</p>'
         for d in filtered:
-            display_title=d['title']
+            display_title=esc(d['title'])
+            if d.get('body_zh') and d.get('title_zh'):
+                display_title+=' <span class="title-zh" lang="zh-CN">/ '+esc(d['title_zh'])+'</span>'
             display_summary=d.get('summary_zh') if not en and d.get('summary_zh') else d['summary']
-            body+=f'<article class="library-entry"><p class="meta">{post_dates(d,lang)}</p><h3><a href="{file("post-"+d["slug"],lang)}">{esc(display_title)}</a></h3><p>{esc(display_summary)}</p></article>'
+            body+=f'<article class="library-entry"><p class="meta">{post_dates(d,lang)}</p><h3><a href="{file("post-"+d["slug"],lang)}">{display_title}</a></h3><p>{esc(display_summary)}</p></article>'
         body+='</section>'
     return shell('blog',lang,title,'Essays and notes by Wangshuoxuan.',body)
 
@@ -284,11 +286,20 @@ def build():
         for lang in ('zh','en'):
             en=lang=='en'
             if d.get('body_zh'):
-                title=f'<span class="post-en" lang="en">{esc(d["title"])}</span><span class="post-zh" lang="zh-CN" hidden>{esc(d.get("title_zh",d["title"]))}</span>'
+                title=f'<span lang="en">{esc(d["title"])}</span><span class="title-separator" aria-hidden="true"> / </span><span lang="zh-CN">{esc(d.get("title_zh",d["title"]))}</span>'
                 summary=f'<p class="page-description"><span class="post-en" lang="en">{esc(d["summary"])}</span><span class="post-zh" lang="zh-CN" hidden>{esc(d.get("summary_zh",d["summary"]))}</span></p>'
                 if d['slug']=='health-for-a-better-life':
                     summary+='<p class="meta">'+('Recommended: read the English original.' if en else '建议阅读英文原文。')+'</p>'
-                body=f'<header class="page-header"><a href="{file("blog",lang)}">'+('Blog' if en else '我的博客')+f'</a><h1>{title}</h1>{summary}<p class="meta">'+('Wang Shuoxuan' if en else '王烁瑄')+' · '+post_dates(d,lang)+f'</p></header><article class="essay-prose">{bilingual.render(d)}</article>'
+                article_content=bilingual.render(d)
+                if d.get('references'):
+                    article_content+='<section class="references"><h2>资料与注释 / Sources & notes</h2><ol>'
+                    for ref in d['references']:
+                        article_content+=f'<li><a href="{url(ref["url"])}">{esc(ref["title"])}</a>'
+                        if ref.get('note'):
+                            article_content+=f'<p>{esc(ref["note"])}</p>'
+                        article_content+='</li>'
+                    article_content+='</ol></section>'
+                body=f'<header class="page-header"><a href="{file("blog",lang)}">'+('Blog' if en else '我的博客')+f'</a><h1>{title}</h1>{summary}<p class="meta">'+('Wang Shuoxuan' if en else '王烁瑄')+' · '+post_dates(d,lang)+f'</p></header><article class="essay-prose">{article_content}</article>'
             else:
                 body=f'<header class="page-header"><a href="{file("blog",lang)}">← '+('Blog' if en else '返回博客')+f'</a><h1>{esc(d["title"])}</h1><p class="meta">{post_dates(d,lang)}</p></header><article class="prose">{d["body"]}</article>'
             body+='<aside class="article-update-note">'+personal.updates_note(lang)+'</aside>'
