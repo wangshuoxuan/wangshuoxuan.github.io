@@ -1418,3 +1418,87 @@ collections:
         label: 暂存草稿，不公开
         widget: boolean
         default: true
+
+- name: updates
+  label: 新闻与更新
+  files:
+  - name: updates
+    label: 网站动态与更新
+    file: content/updates.json
+    fields:
+    - name: entries
+      label: 更新记录（按日期自动倒序显示）
+      widget: list
+      required: false
+      collapsed: true
+      summary: '{{fields.date}} · {{fields.title.zh}}'
+      fields:
+      - name: date
+        label: 日期（YYYY-MM-DD）
+        widget: string
+        required: true
+      - name: type
+        label: 更新类型
+        widget: object
+        required: false
+        fields:
+        - name: zh
+          label: 中文类型
+          widget: string
+          required: true
+        - name: en
+          label: 英文类型
+          widget: string
+          required: true
+      - name: title
+        label: 标题
+        widget: object
+        required: true
+        fields:
+        - name: zh
+          label: 中文标题
+          widget: string
+          required: true
+        - name: en
+          label: English title
+          widget: string
+          required: true
+      - name: body
+        label: 更新说明
+        widget: object
+        required: true
+        fields:
+        - name: zh
+          label: 中文说明
+          widget: text
+          required: true
+        - name: en
+          label: English description
+          widget: text
+          required: true
+      - name: url_zh
+        label: 中文页面链接（可留空）
+        widget: string
+        required: false
+      - name: url_en
+        label: English page link (optional)
+        widget: string
+        required: false
+      - name: link_label
+        label: 链接文字
+        widget: object
+        required: false
+        fields:
+        - name: zh
+          label: 中文链接文字
+          widget: string
+          required: false
+        - name: en
+          label: English link text
+          widget: string
+          required: false
+      - name: draft
+        label: 暂存草稿，不公开
+        widget: boolean
+        required: false
+        default: false
