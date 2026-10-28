@@ -58,6 +58,20 @@ def toc_side(parts, lang, label):
     return f'<div class="{css_class}" lang="{language}"{hidden}><h2>{label}</h2><ol>' + ''.join(items) + '</ol></div>'
 
 
+def paired_html(left, right):
+    # Matching illustrations get their own shared row, after both text columns.
+    pattern=r'(<p>\s*<img\b[^>]*>\s*</p>)'
+    ls=re.split(pattern,left)
+    rs=re.split(pattern,right)
+    if len(ls)!=len(rs):
+        ls,rs=[left],[right]
+    return ''.join(
+        '<div class="reader-pair'+(' reader-image-pair' if i%2 else '')+'"><div class="post-en" lang="en">'+a+
+        '</div><div class="post-zh" lang="zh-CN" hidden>'+b+'</div></div>'
+        for i,(a,b) in enumerate(zip(ls,rs)) if a.strip() or b.strip()
+    )
+
+
 def render(post):
     en, zh = chunks(post['raw_body']), chunks(post['body_zh'])
     if len(en) != len(zh):
@@ -77,11 +91,7 @@ def render(post):
         if len(ls) != len(rs):
             raise ValueError('English and Chinese subsection counts must match')
         blocks = ''.join(
-            '<div class="reader-pair"><div class="post-en" lang="en">'
-            + html(a, 'en', index, subsection_index)
-            + '</div><div class="post-zh" lang="zh-CN" hidden>'
-            + html(b, 'zh', index, subsection_index)
-            + '</div></div>'
+            paired_html(html(a, 'en', index, subsection_index), html(b, 'zh', index, subsection_index))
             for subsection_index, (a, b) in enumerate(zip(ls, rs))
         )
         pairs.append(f'<section id="essay-section-{index}">{blocks}</section>')
