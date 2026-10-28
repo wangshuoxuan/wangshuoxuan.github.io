@@ -89,7 +89,7 @@ def render(post):
 
 
 def assets(page):
-    page = page.replace('</head>', '<link rel="stylesheet" href="reader.css?v=2">\\n</head>')
+    page = page.replace('</head>', '<link rel="stylesheet" href="reader.css?v=2">\n</head>')
     page = page.replace('</body>', '<script src="reader.js?v=3" defer></script></body>')
     page = page.replace('<body>', '<body class="essay-page" data-reading="en">')
     return page
