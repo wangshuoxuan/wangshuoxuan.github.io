@@ -20,5 +20,5 @@
   });
   setView('en');
   // Browser back/forward caches can retain a previous mode and hidden attributes.
-  addEventListener('pageshow',()=>setView('en'));
+  addEventListener('pageshow',event=>{if(event.persisted)setView('en');});
 })();
