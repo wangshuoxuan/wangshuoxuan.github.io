@@ -247,11 +247,9 @@ body_zh: |
   
   ### 让思绪自己走一会儿
   
-  默认模式网络，Default Mode Network，简称DMN，是一组相互联系的脑区，与回忆个人经历、想象未来等朝向内部的思维活动有关。关于自发思维的研究，给了我们认真看待这类活动的依据：没有接收新信息，不等于头脑没有工作。 [6]
+  后来我才知道，这种让思绪自由游走的状态，和人们所说的默认模式网络（Default Mode Network，DMN）有些关联。它常被用来描述人在没有紧盯外部任务时，回忆往事、想象未来、让念头彼此联结的一类脑活动。
   
-  不过，关掉播客并不会按下一个“创造力开关”。创造性思维也涉及默认网络与执行控制网络的协作；产生联想与判断它有没有用，是不同的工作。一次散步令我舒服，也不能据此判断自己的哪一组脑区正在怎样活动。 [7]
-  
-  对我更切实的提醒是：如果每段空闲都借来别人的思路填上，自己的思路就少了独立生长的机会。有时需要暂停添加，让已经进入脑海的东西彼此相遇。
+  这个概念让我想到，散步时的空白并不是大脑停工；它可能正是在整理已有的记忆和感受，让原本不相干的东西慢慢连起来。对我来说，散步和短暂放空，是给这些联系一点自然形成的空间。
   
   ### 十分钟，不需要交出成果
   
@@ -477,11 +475,9 @@ I do not need a major insight to justify these walks. But I do notice that const
 
 ### Letting the Mind Wander
 
-The default mode network, or DMN, is a set of interacting brain regions associated with internally directed thought, including remembering personal experiences and imagining the future. Research on spontaneous cognition provides a basis for taking this kind of mental activity seriously. An absence of new input is not necessarily an absence of mental work. [6]
+I later learned that this kind of inward, wandering thought is often discussed in connection with the default mode network (DMN). The term is used for brain activity associated with things like remembering, imagining what might happen, and letting thoughts move between ideas when we are not focused on a particular task.
 
-That does not mean switching off a podcast switches on a creativity circuit. Creative thinking also involves cooperation between default and executive-control networks; generating an association and evaluating whether it is useful are different parts of the work. Nor can I tell from a pleasant walk which network was doing what. [7]
-
-For me, the practical point is smaller. If I keep borrowing another person's sequence of thoughts to fill every interval, I leave less room for a sequence of my own. Sometimes I need to stop putting things in and let what is already there meet.
+It gave me a useful way to think about those quiet walks: my mind is not necessarily idle just because I am not feeding it new information. It may be sorting through memories and feelings, allowing connections to form in their own time. For me, a walk or a few quiet minutes is a way to leave room for that process.
 
 ### Ten minutes with nothing to prove
 
