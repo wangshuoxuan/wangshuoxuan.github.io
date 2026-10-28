@@ -105,9 +105,9 @@ body_zh: |
   
   ### 浓缩的力量，在于把我带到精彩之处
   
-  我记得一段讲述，先讲一个带病也坚持参加勒班陀海战的年轻士兵，后来才揭出他的名字：塞万提斯。我原先知道《堂吉诃德》的作者，这一刻却像是看见了一个人怎样为自己的信念冒险。理想主义忽然不再只是文学评价。带病参战有传记材料支持；那个形象给我的震动，则属于我自己的感受。 [1]
+  我记得一段讲述，先讲一个带病也坚持参加勒班陀海战的年轻士兵，后来才揭出他的名字：塞万提斯。我原先知道《堂吉诃德》的作者，这一刻却像是看见了一个人怎样为自己的信念冒险。理想主义忽然不再只是文学评价。带病参战有传记材料支持；那个形象给我的震动，则属于我自己的感受。
   
-  还有一段讲书，把史汀生1926年到访京都，与他后来反对把京都列为原子弹目标联系起来。庞大的历史决策，被放回一座曾经亲自走过的城市。我被“一段寻常经历可能在多年后发生作用”这个念头打动。不过，史料能够确认到访和干预，不能据此认定，仅仅一次旅行就救下了京都。 [2]
+  还有一段讲书，把史汀生1926年到访京都，与他后来反对把京都列为原子弹目标联系起来。庞大的历史决策，被放回一座曾经亲自走过的城市。我被“一段寻常经历可能在多年后发生作用”这个念头打动。不过，史料能够确认到访和干预，不能据此认定，仅仅一次旅行就救下了京都。
   
   这些故事让人难忘，不是因为我把声音调快了，而是因为内容本身，以及讲述者的组织。倍速让我在同样的时间里接触更多解读，好的解读则让我更快抵达有力量的部分。我珍惜这种浓缩，不必再替它附加一个“加速能增强记忆”的结论。
   
@@ -135,17 +135,17 @@ body_zh: |
   
   ### 我不想离开的罗马
   
-  陈文捷的《西方古代建筑艺术史》，尤其讲到罗马诞生的那一节，带给我的却是另一种感受。 [3]
+  陈文捷的《西方古代建筑艺术史》，尤其讲到罗马诞生的那一节，带给我的却是另一种感受。
   
   真正触动我的是历史想象的尺度。我仿佛置身城市上空，看那些建筑沉积着不同时代的痕迹。建筑连着文明的起源、延绵的文脉，也连着无数曾在其间生活的人。我希望图片停得久一点，让自己顺着讲述，把这些联系一点点想出来。
   
   这时候，我完全不想加速。我想在一句话里多待片刻，回看一幅图，让脑海中的城市更清晰。听完之后并没有另一个成果等着领取；此刻能够在想象中抵达那里，已经是我想要的。
   
-  下面这幅画适合放在这里：雅克－路易·大卫1799年创作的《萨宾妇女》。我把它选作一幅愿意反复停留的图像，而不是用它证明课程当时展示了什么。 [4]
+  下面这幅画适合放在这里：雅克－路易·大卫1799年创作的《萨宾妇女》。我把它选作一幅愿意反复停留的图像，而不是用它证明课程当时展示了什么。
   
   ![历史画中的人群、马匹与城墙](https://commons.wikimedia.org/wiki/Special:FilePath/The_Intervention_of_the_Sabine_Women.jpg?width=1200)
   
-  雅克－路易·大卫，《萨宾妇女》，1799。配图由作者提供；作品信息见参考资料 [4] 。
+  雅克－路易·大卫，《萨宾妇女》，1799。
   
   电影、戏剧、音乐会也会给我这样的时刻。一个停顿、一道目光、一句旋律，并没有耽搁下一条信息；它本身就是我想经历的部分。到了这样的地方，我会回看，甚至希望它迟一些结束。
   
@@ -155,7 +155,7 @@ body_zh: |
   
   一段三小时的内容，一小时就听完，我很少把另外两小时空着。通常会再开一门课。能够听得更多，反过来让更多内容进入“值得听”的范围。
   
-  这让我想到杰文斯讨论燃料效率时提出的机制：一种用途所需的资源减少，可能带来更大的需求，抵消原先的节省。我的听课只是一个类比，不能当成对同一现象的测量。但那个方向很熟悉：每门课花的时间少了，总听课时间反而增加。 [5]
+  这让我想到杰文斯讨论燃料效率时提出的机制：一种用途所需的资源减少，可能带来更大的需求，抵消原先的节省。我的听课只是一个类比，不能当成对同一现象的测量。但那个方向很熟悉：每门课花的时间少了，总听课时间反而增加。
   
   其中不少取舍，是我有意识作出的。我本来就喜欢学习，发现一个陌生领域，也是真实的收获。某件事变得更值得做，于是愿意多做一些，不能直接等同于失去自制力。
   
@@ -333,9 +333,9 @@ This is the broader sense in which I live on fast-forward. I often want a well-c
 
 ### Why the concentrated version can be powerful
 
-One account began with a sick young soldier who insisted on fighting at Lepanto. Only later did it give his name: Miguel de Cervantes. Knowing the author of Don Quixote and then encountering him as a person taking a risk for his convictions made idealism feel less like a literary label. Cervantes's participation despite illness is recorded in biographical material; the interpretation that moved me was my own. [1]
+One account began with a sick young soldier who insisted on fighting at Lepanto. Only later did it give his name: Miguel de Cervantes. Knowing the author of Don Quixote and then encountering him as a person taking a risk for his convictions made idealism feel less like a literary label. Cervantes's participation despite illness is recorded in biographical material; the interpretation that moved me was my own.
 
-Another account connected Henry Stimson's visit to Kyoto in 1926 with his later opposition to its use as an atomic-bomb target. The narrative brought a vast historical decision down to the scale of a remembered city. I was moved by the possibility that an ordinary visit could matter years later. The historical record does establish the visit and his intervention, but not the neat claim that a holiday alone saved Kyoto. [2]
+Another account connected Henry Stimson's visit to Kyoto in 1926 with his later opposition to its use as an atomic-bomb target. The narrative brought a vast historical decision down to the scale of a remembered city. I was moved by the possibility that an ordinary visit could matter years later. The historical record does establish the visit and his intervention, but not the neat claim that a holiday alone saved Kyoto.
 
 The stories were not memorable because I played them quickly. They were memorable because of what they revealed and how they were told. Speed let me encounter more such explanations; the narrator's selection brought their strongest moments within reach. That distinction matters. I value the concentration without needing to claim that acceleration improves memory.
 
@@ -363,17 +363,17 @@ The interest does not last forever. After the art course, I wanted to learn much
 
 ### The Rome I did not want to leave
 
-Chen Wenjie's History of Western Ancient Architectural Art gave me a different experience, especially the lecture introducing Rome. [3]
+Chen Wenjie's History of Western Ancient Architectural Art gave me a different experience, especially the lecture introducing Rome.
 
 What moved me was the scale of the historical imagination. I could picture myself above the city, looking at buildings that held traces of different ages. The lecture connected architecture with the beginnings of a civilization, its cultural memory and the lives that had accumulated around it. I wanted the pictures to remain on the screen while I followed those connections.
 
 Here, I wanted the opposite of acceleration. I wanted to stay with a sentence, look again at an image, and allow the imagined city to become more vivid. There was no separate achievement waiting at the end of the listening. Being there in thought was already what I had come for.
 
-The painting below belongs beside that memory: Jacques-Louis David's The Intervention of the Sabine Women , painted in 1799. I chose it as an image I want to spend time looking at, not as a record of what appeared in the lecture. [4]
+The painting below belongs beside that memory: Jacques-Louis David's The Intervention of the Sabine Women , painted in 1799. I chose it as an image I want to spend time looking at, not as a record of what appeared in the lecture.
 
 ![A historical painting with a crowd, horses and a fortified city](https://commons.wikimedia.org/wiki/Special:FilePath/The_Intervention_of_the_Sabine_Women.jpg?width=1200)
 
-Jacques-Louis David, The Intervention of the Sabine Women, 1799. Image supplied by the author; artwork information in reference [4] .
+Jacques-Louis David, The Intervention of the Sabine Women, 1799. 
 
 A film, a play or a concert can make me feel the same way. A pause, a look or a musical phrase is not simply delaying the next piece of information. It is the part I am there to experience. When a moment has that quality, I may replay it rather than move on.
 
@@ -383,7 +383,7 @@ A film, a play or a concert can make me feel the same way. A pause, a look or a 
 
 When I finish a three-hour recording in an hour, I seldom leave the other two hours empty. I open another course. The ability to cover more material makes more material worth considering.
 
-This reminds me of the mechanism behind Jevons's discussion of fuel efficiency: reducing the resources required for a use can expand demand enough to offset the saving. My listening is an analogy, not a measurement of the same phenomenon. But the pattern feels familiar: time per lecture falls while my total time spent listening rises. [5]
+This reminds me of the mechanism behind Jevons's discussion of fuel efficiency: reducing the resources required for a use can expand demand enough to offset the saving. My listening is an analogy, not a measurement of the same phenomenon. But the pattern feels familiar: time per lecture falls while my total time spent listening rises.
 
 I make much of this trade deliberately. I like learning, and discovering an unfamiliar field is a real gain. Spending more time on something because it has become more rewarding is not automatically a failure of self-control.
 

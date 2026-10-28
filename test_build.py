@@ -106,4 +106,26 @@ class PublishingTests(unittest.TestCase):
         self.assertNotIn('id="projects"',home)
         self.assertNotIn('#projects',home)
 
+
+    def test_bilingual_toc_language_attributes_and_anchor_targets(self):
+        from html.parser import HTMLParser
+        import bilingual
+        class Nodes(HTMLParser):
+            def __init__(self):
+                super().__init__(); self.chinese=[]; self.ids=set(); self.links=[]
+            def handle_starttag(self,tag,attrs):
+                attrs=dict(attrs)
+                if 'post-zh' in attrs.get('class','').split():self.chinese.append(attrs)
+                if attrs.get('id'):self.ids.add(attrs['id'])
+                if tag=='a' and attrs.get('href','').startswith('#'):self.links.append(attrs['href'][1:])
+        post={'raw_body':'Intro\n\n## First section\n\n### Detail\n\nText',
+              'body_zh':'开头\n\n## 第一节\n\n### 细节\n\n正文'}
+        parser=Nodes();parser.feed(bilingual.render(post))
+        self.assertTrue(parser.chinese)
+        for attrs in parser.chinese:
+            self.assertEqual(attrs.get('lang'),'zh-CN')
+            self.assertIn('hidden',attrs)
+        self.assertTrue(parser.links)
+        self.assertTrue(set(parser.links).issubset(parser.ids))
+
 if __name__=='__main__':unittest.main()

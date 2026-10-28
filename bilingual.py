@@ -1,5 +1,7 @@
 """Render bilingual essays with language-aware in-page navigation."""
 import re
+import hashlib
+from pathlib import Path
 from html import escape
 import markdown
 
@@ -50,7 +52,10 @@ def toc_side(parts, lang, label):
         items.append(
             f'<li><a href="#{lang}-section-{section_index}">{title_html}</a>{child_html}</li>'
         )
-    return f'<div class="post-{"en" if lang == "en" else "zh"}" lang="{"en" if lang == "en" else "zh-CN"}' + (' hidden' if lang == 'zh' else '') + f'><h2>{label}</h2><ol>' + ''.join(items) + '</ol></div>'
+    css_class='post-en' if lang=='en' else 'post-zh'
+    language='en' if lang=='en' else 'zh-CN'
+    hidden=' hidden' if lang=='zh' else ''
+    return f'<div class="{css_class}" lang="{language}"{hidden}><h2>{label}</h2><ol>' + ''.join(items) + '</ol></div>'
 
 
 def render(post):
@@ -89,7 +94,10 @@ def render(post):
 
 
 def assets(page):
-    page = page.replace('</head>', '<link rel="stylesheet" href="reader.css?v=2">\n</head>')
-    page = page.replace('</body>', '<script src="reader.js?v=3" defer></script></body>')
-    page = page.replace('<body>', '<body class="essay-page" data-reading="en">')
+    directory=Path(__file__).resolve().parent/'docs'
+    css_version=hashlib.sha256((directory/'reader.css').read_bytes()).hexdigest()[:12]
+    js_version=hashlib.sha256((directory/'reader.js').read_bytes()).hexdigest()[:12]
+    page=page.replace('</head>',f'<link rel="stylesheet" href="reader.css?v={css_version}">\n</head>')
+    page=page.replace('</body>',f'<script src="reader.js?v={js_version}" defer></script></body>')
+    page=page.replace('<body>','<body class="essay-page" data-reading="en">')
     return page

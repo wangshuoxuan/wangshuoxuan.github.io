@@ -38,3 +38,17 @@
 .essay-page[data-reading="both"] .essay-toc { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:24px; }
 .essay-page[data-reading="both"] .essay-toc>.post-zh { border-left:1px solid var(--line); padding-left:24px; }
 @media(max-width:960px) { .essay-page[data-reading="both"] .essay-toc { grid-template-columns:1fr; gap:12px; } .essay-page[data-reading="both"] .essay-toc>.post-zh { border-left:0; border-top:1px solid var(--line); padding:16px 0 0; } }
+
+/* Enforce the selected language before JavaScript runs as well as after navigation. */
+.essay-page[data-reading="en"] .post-zh,
+.essay-page[data-reading="zh"] .post-en,
+.essay-page:not([data-reading="both"]) [data-bilingual-only] { display:none !important; }
+.essay-page .essay-prose img { display:block; max-width:100%; height:auto; margin:16px auto; }
+.essay-page .essay-prose figure { min-width:0; max-width:100%; margin:20px 0; }
+.essay-page .essay-prose figcaption { overflow-wrap:anywhere; }
+.essay-page .reader-pair { min-width:0; }
+.essay-page .reader-pair>div { max-width:100%; }
+.essay-page .essay-prose .references { display:none !important; }
+@media(min-width:961px) {
+ .essay-page[data-reading="both"] .layout { width:min(1450px,calc(100% - 96px)); grid-template-columns:180px minmax(0,1fr); }
+}

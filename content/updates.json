@@ -20,7 +20,7 @@
         "zh": "",
         "en": ""
       },
-      "draft": false
+      "draft": true
     },
     {
       "date": "2026-10-28",
@@ -42,7 +42,7 @@
         "zh": "阅读《我的倍速人生》",
         "en": "Read My Life on Fast-Forward"
       },
-      "draft": false
+      "draft": true
     },
     {
       "date": "2026-10-28",
@@ -64,7 +64,7 @@
         "zh": "浏览博客",
         "en": "Browse the blog"
       },
-      "draft": false
+      "draft": true
     },
     {
       "date": "2026-10-19",
@@ -86,7 +86,7 @@
         "zh": "阅读第一篇博客",
         "en": "Read the first essay"
       },
-      "draft": false
+      "draft": true
     }
   ]
 }

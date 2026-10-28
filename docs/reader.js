@@ -1,17 +1,24 @@
-/* Each visit starts in English; a reader's earlier choice never overrides it. */
+/* Article language is independent of the surrounding website language. */
 (() => {
   'use strict';
-  const root = document.body;
-  document.querySelectorAll('[data-reading]').forEach(button => {
-    if (button.tagName !== 'BUTTON') return;
-    button.addEventListener('click', () => {
-      const view = button.dataset.reading;
-      if (!['en', 'zh', 'both'].includes(view)) return;
-      root.dataset.reading = view;
-      document.querySelectorAll('.post-en').forEach(e => { e.hidden = view === 'zh'; });
-      document.querySelectorAll('.post-zh').forEach(e => { e.hidden = view === 'en'; });
-      document.querySelectorAll('button[data-reading]').forEach(e => e.setAttribute('aria-pressed', String(e === button)));
-      root.dispatchEvent(new CustomEvent('reading-language', { detail: view }));
+  const root=document.body;
+  const controls=document.querySelector('.reading-controls');
+  if(!controls)return;
+  function setView(view,announce=false) {
+    if(!['en','zh','both'].includes(view))view='en';
+    root.dataset.reading=view;
+    document.querySelectorAll('.post-en').forEach(node=>{node.hidden=view==='zh';});
+    document.querySelectorAll('.post-zh').forEach(node=>{node.hidden=view==='en';});
+    document.querySelectorAll('[data-bilingual-only]').forEach(node=>{node.hidden=view!=='both';});
+    controls.querySelectorAll('button[data-reading]').forEach(button=>{
+      button.setAttribute('aria-pressed',String(button.dataset.reading===view));
     });
+    if(announce)root.dispatchEvent(new CustomEvent('reading-language',{detail:view}));
+  }
+  controls.querySelectorAll('button[data-reading]').forEach(button=>{
+    button.addEventListener('click',()=>setView(button.dataset.reading,true));
   });
+  setView('en');
+  // Browser back/forward caches can retain a previous mode and hidden attributes.
+  addEventListener('pageshow',()=>setView('en'));
 })();

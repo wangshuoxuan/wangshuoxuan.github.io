@@ -69,7 +69,7 @@ def navigation(lang,current):
         links=''
         for k,z,e,href in items:
             pending=k!='blog' and not personal.has_content(DATA,k)
-            links+=f'<a href="{href}"'+(' class="pending-link" title="'+('No content yet; more will be added.' if en else '尚无内容，后续会逐步补充。')+'"' if pending else '')+(' aria-current="page"' if current==k else '')+f'>{esc(e if en else z)}'+('<small class="pending-label">'+('To come' if en else '待补充')+'</small>' if pending else '')+'</a>'
+            links+=f'<a href="{href}"'+(' class="pending-link" title="'+('No content yet; more will be added.' if en else '尚无内容，后续会逐步补充。')+'"' if pending else '')+(' aria-current="page"' if current==k else '')+f'>{esc(e if en else z)}'+('<small class="pending-label">'+(('To be updated' if k=='updates' else 'To come') if en else ('待更新' if k=='updates' else '待补充'))+'</small>' if pending else '')+'</a>'
         parts.append(f'<div class="nav-group"><a class="nav-label" href="{home}">{eg if en else zg}</a></div>' if not items else f'<div class="nav-group"><div class="nav-label">{eg if en else zg}</div>{links}</div>')
     parts.append(f'<div class="nav-contact"><a href="{file("contact",lang)}"'+(' aria-current="page"' if current=='contact' else '')+f'>{"Contact" if en else "联系我"}</a></div>')
     return '<nav class="nav site-nav" aria-label="'+('Site navigation' if en else '全站目录')+'">'+''.join(parts)+'</nav>'
@@ -183,7 +183,7 @@ def updates_page(lang):
             body+='<p class="update-link"><a href="'+safe_href+'">'+esc(label or ('Read more ↗' if en else '继续阅读 ↗'))+'</a></p>'
         body+='</div></article>'
     if not entries:
-        body+='<p class="collection-empty">'+('No updates yet. New entries will appear here.' if en else '暂无更新记录；之后的新内容会记录在这里。')+'</p>'
+        body+='<p class="collection-empty">'+('Updates coming soon' if en else '待更新')+'</p>'
     body+='</div>'
     return shell('updates',lang,title,description,body)
 
@@ -323,19 +323,11 @@ def build():
         for lang in ('zh','en'):
             en=lang=='en'
             if d.get('body_zh'):
-                title=f'<span lang="en">{esc(d["title"])}</span><span class="title-separator" aria-hidden="true"> / </span><span lang="zh-CN">{esc(d.get("title_zh",d["title"]))}</span>'
+                title=f'<span class="post-en" lang="en">{esc(d["title"])}</span><span class="title-separator" data-bilingual-only hidden aria-hidden="true"> / </span><span class="post-zh title-zh" lang="zh-CN" hidden>{esc(d.get("title_zh",d["title"]))}</span>'
                 summary=f'<p class="page-description"><span class="post-en" lang="en">{esc(d["summary"])}</span><span class="post-zh" lang="zh-CN" hidden>{esc(d.get("summary_zh",d["summary"]))}</span></p>'
                 if d['slug']=='health-for-a-better-life':
                     summary+='<p class="meta">'+('Recommended: read the English original.' if en else '建议阅读英文原文。')+'</p>'
                 article_content=bilingual.render(d)
-                if d.get('references'):
-                    article_content+='<section class="references"><h2>资料与注释 / Sources & notes</h2><ol>'
-                    for ref in d['references']:
-                        article_content+=f'<li><a href="{url(ref["url"])}">{esc(ref["title"])}</a>'
-                        if ref.get('note'):
-                            article_content+=f'<p>{esc(ref["note"])}</p>'
-                        article_content+='</li>'
-                    article_content+='</ol></section>'
                 body=f'<header class="page-header"><a href="{file("blog",lang)}">'+('Blog' if en else '我的博客')+f'</a><h1>{title}</h1>{summary}<p class="meta">'+('Wang Shuoxuan' if en else '王烁瑄')+' · '+post_dates(d,lang)+f'</p></header><article class="essay-prose">{article_content}</article>'
             else:
                 body=f'<header class="page-header"><a href="{file("blog",lang)}">← '+('Blog' if en else '返回博客')+f'</a><h1>{esc(d["title"])}</h1><p class="meta">{post_dates(d,lang)}</p></header><article class="prose">{d["body"]}</article>'
