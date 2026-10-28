@@ -22,7 +22,7 @@ references:
   note: 核对姓名“陈文捷”与《西方古代建筑艺术史》课程名称；用户提供的罗马一讲视频：https://www.bilibili.com/video/BV1754y1i715/?p=18 。没有复制未经核验的课程长段讲稿。
 - title: Musée du Louvre：Jacques-Louis David, Les Sabines, 1799
   url: https://collections.louvre.fr/en/ark:/53355/cl010065426
-  note: 核对画作名称、作者与年代。图片文件为用户在当前对话中提供的复制图，不是从卢浮宫下载的图片。
+  note: 核对画作名称、作者与年代。网页配图使用该作品的公开图像；作品名称、作者与年代以卢浮宫馆藏条目核对。
 - title: W. S. Jevons：The Coal Question, Chapter VII, Of the Economy of Fuel
   url: https://www.econlib.org/library/YPDBooks/Jevons/jvnCQ.html?chapter_num=9
   note: 效率提升与总需求扩大的原始论述。博客仅作机制类比，没有把个人访谈当作需求弹性的实证估计。
